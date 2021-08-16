@@ -27,7 +27,7 @@ Bu listeye bakacak olursak ```Date``` adlı bir anahtar/Kart görürüz. Bu anah
 ```
 from astropy.io import fits as fts
 
-header = fts.getheader(r"C:\Users\mshem\Desktop\pix.fits")
+header = fts.getheader(r"[Dosy Yolu]")
 print(header["Date"])
 ```
 Çıktı:
