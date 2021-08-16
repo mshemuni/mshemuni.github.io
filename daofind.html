@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>photutils &#8212; ALÜP 2021</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Python Kalibrasyon" href="calibration.html" />
+    <link rel="prev" title="Astropy" href="astropy.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo_b.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ALÜP 2021</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Lisansütü Bilgilendirme ve Uygulama Programı
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="gozlem.html">
+   Gözlem
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="astropy.html">
+   Astropy
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   photutils
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="calibration.html">
+   Python Kalibrasyon
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="isikolcum.html">
+   Python Işıkölçüm
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/daofind.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://mshemuni.github.io/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://mshemuni.github.io//issues/new?title=Issue%20on%20page%20%2Fdaofind.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kaynak-tespiti">
+   Kaynak tespiti
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="photutils">
+<h1>photutils<a class="headerlink" href="#photutils" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">photutils</span></code> Astropy’ın bağlı paketlerinden olup kaynak tesbiti ve photometry için kullanılır</p>
+<div class="section" id="kaynak-tespiti">
+<h2>Kaynak tespiti<a class="headerlink" href="#kaynak-tespiti" title="Permalink to this headline">¶</a></h2>
+<p>Source extraction olarak da bilinen kaynak tespiti, sayısal bir görüntü üzerinde verilen parametrelere uygun
+kaynakların listesini çıkarma işlemidir.</p>
+<p>Parametreler, eğiriklik, eliptiklik vb olabilir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">photutils</span></code>’in <code class="docutils literal notranslate"><span class="pre">DAOStarFinder</span></code> metodu çıktı olarak görüntü üzerindeki kaynaklar ile ilgili çokça bilgi sunar.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">photutils.detection</span> <span class="kn">import</span> <span class="n">DAOStarFinder</span>
+
+<span class="c1"># # Veriyi okuma</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">fts</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\mshem\Desktop\pix.fits&quot;</span><span class="p">)</span>
+
+<span class="c1"># Verinin istatistiki değerleri</span>
+<span class="n">average</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">median</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Daofind Objesi oluşturma</span>
+<span class="n">daofind</span> <span class="o">=</span> <span class="n">DAOStarFinder</span><span class="p">(</span><span class="n">fwhm</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="n">std</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="n">daofind</span><span class="p">(</span><span class="n">data</span> <span class="o">-</span> <span class="n">median</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">sources</span><span class="o">.</span><span class="n">colnames</span><span class="p">:</span>
+    <span class="n">sources</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%.8g</span><span class="s1">&#39;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sources</span><span class="o">.</span><span class="n">info</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sources</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Çıktı:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Table</span> <span class="n">length</span><span class="o">=</span><span class="mi">194</span><span class="o">&gt;</span>
+   <span class="n">name</span>     <span class="n">dtype</span>  <span class="nb">format</span>
+<span class="o">----------</span> <span class="o">-------</span> <span class="o">------</span>
+        <span class="nb">id</span>   <span class="n">int32</span>   <span class="o">%</span><span class="mf">.8</span><span class="n">g</span>
+ <span class="n">xcentroid</span> <span class="n">float64</span>   <span class="o">%</span><span class="mf">.8</span><span class="n">g</span>
+ <span class="n">ycentroid</span> <span class="n">float64</span>   <span class="o">%</span><span class="mf">.8</span><span class="n">g</span>
+ <span class="n">sharpness</span> <span class="n">float64</span>   <span class="o">%</span><span class="mf">.8</span><span class="n">g</span>
+<span class="n">roundness1</span> <span class="n">float64</span>   <span class="o">%</span><span class="mf">.8</span><span class="n">g</span>
+<span class="n">roundness2</span> <span class="n">float64</span>   <span class="o">%</span><span class="mf">.8</span><span class="n">g</span>
+      <span class="n">npix</span>   <span class="n">int32</span>   <span class="o">%</span><span class="mf">.8</span><span class="n">g</span>
+       <span class="n">sky</span> <span class="n">float64</span>   <span class="o">%</span><span class="mf">.8</span><span class="n">g</span>
+      <span class="n">peak</span> <span class="n">float64</span>   <span class="o">%</span><span class="mf">.8</span><span class="n">g</span>
+      <span class="n">flux</span> <span class="n">float64</span>   <span class="o">%</span><span class="mf">.8</span><span class="n">g</span>
+       <span class="n">mag</span> <span class="n">float64</span>   <span class="o">%</span><span class="mf">.8</span><span class="n">g</span>
+
+ <span class="nb">id</span> <span class="n">xcentroid</span> <span class="n">ycentroid</span> <span class="n">sharpness</span>  <span class="o">...</span> <span class="n">sky</span> <span class="n">peak</span>    <span class="n">flux</span>       <span class="n">mag</span>     
+<span class="o">---</span> <span class="o">---------</span> <span class="o">---------</span> <span class="o">----------</span> <span class="o">...</span> <span class="o">---</span> <span class="o">----</span> <span class="o">---------</span> <span class="o">------------</span>
+  <span class="mi">1</span> <span class="mf">319.04705</span> <span class="mf">31.808405</span> <span class="mf">0.67146743</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">497</span> <span class="mf">6.6075863</span>   <span class="o">-</span><span class="mf">2.0501071</span>
+  <span class="mi">2</span> <span class="mf">274.15089</span> <span class="mf">57.848914</span> <span class="mf">0.63074223</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">179</span> <span class="mf">1.7218201</span>  <span class="o">-</span><span class="mf">0.58996943</span>
+  <span class="mi">3</span> <span class="mf">136.36658</span> <span class="mf">60.760379</span> <span class="mf">0.76806332</span> <span class="o">...</span>   <span class="mi">0</span>   <span class="mi">81</span> <span class="mf">1.4975172</span>  <span class="o">-</span><span class="mf">0.43842954</span>
+  <span class="mi">4</span> <span class="mf">464.54548</span>  <span class="mf">61.11959</span>  <span class="mf">0.6186316</span> <span class="o">...</span>   <span class="mi">0</span> <span class="mi">2107</span> <span class="mf">26.501931</span>   <span class="o">-</span><span class="mf">3.5581938</span>
+  <span class="mi">5</span> <span class="mf">179.60694</span> <span class="mf">62.645596</span> <span class="mf">0.55819851</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">246</span> <span class="mf">1.6369339</span>  <span class="o">-</span><span class="mf">0.53507787</span>
+  <span class="mi">6</span> <span class="mf">180.68815</span> <span class="mf">64.117479</span> <span class="mf">0.60273718</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">206</span> <span class="mf">1.2872968</span>  <span class="o">-</span><span class="mf">0.27419672</span>
+  <span class="mi">7</span>  <span class="mf">378.1257</span> <span class="mf">65.836786</span>  <span class="mf">0.6522953</span> <span class="o">...</span>   <span class="mi">0</span> <span class="mi">3938</span> <span class="mf">50.556246</span>    <span class="o">-</span><span class="mf">4.259437</span>
+  <span class="mi">8</span> <span class="mf">475.23853</span> <span class="mf">66.465479</span> <span class="mf">0.60086971</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">126</span> <span class="mf">1.4910236</span>  <span class="o">-</span><span class="mf">0.43371129</span>
+  <span class="mi">9</span> <span class="mf">286.20348</span> <span class="mf">75.854891</span> <span class="mf">0.58829051</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">167</span>  <span class="mf">1.187624</span>  <span class="o">-</span><span class="mf">0.18669741</span>
+ <span class="mi">10</span> <span class="mf">149.99227</span> <span class="mf">82.326207</span> <span class="mf">0.61004338</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">231</span> <span class="mf">2.5788183</span>   <span class="o">-</span><span class="mf">1.0285519</span>
+<span class="o">...</span>       <span class="o">...</span>       <span class="o">...</span>        <span class="o">...</span> <span class="o">...</span> <span class="o">...</span>  <span class="o">...</span>       <span class="o">...</span>          <span class="o">...</span>
+<span class="mi">184</span> <span class="mf">200.05744</span> <span class="mf">435.84366</span> <span class="mf">0.64885926</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">196</span> <span class="mf">1.0767634</span>  <span class="o">-</span><span class="mf">0.08030076</span>
+<span class="mi">185</span> <span class="mf">216.28365</span> <span class="mf">438.41401</span> <span class="mf">0.58249838</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">484</span> <span class="mf">4.7202186</span>   <span class="o">-</span><span class="mf">1.6849053</span>
+<span class="mi">186</span> <span class="mf">182.01186</span> <span class="mf">441.40545</span> <span class="mf">0.57127931</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">212</span> <span class="mf">1.1980294</span>  <span class="o">-</span><span class="mf">0.19616869</span>
+<span class="mi">187</span> <span class="mf">224.30995</span>   <span class="mf">441.647</span> <span class="mf">0.62444513</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">121</span> <span class="mf">1.2425457</span>  <span class="o">-</span><span class="mf">0.23578096</span>
+<span class="mi">188</span> <span class="mf">126.07077</span> <span class="mf">443.73957</span> <span class="mf">0.60246264</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">189</span> <span class="mf">1.5284987</span>  <span class="o">-</span><span class="mf">0.46066268</span>
+<span class="mi">189</span> <span class="mf">506.64813</span> <span class="mf">444.71712</span> <span class="mf">0.62612885</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">913</span> <span class="mf">12.340806</span>   <span class="o">-</span><span class="mf">2.7283588</span>
+<span class="mi">190</span> <span class="mf">173.11656</span> <span class="mf">446.14601</span> <span class="mf">0.61189083</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">156</span> <span class="mf">1.0932713</span> <span class="o">-</span><span class="mf">0.096819832</span>
+<span class="mi">191</span> <span class="mf">68.571759</span> <span class="mf">459.77075</span> <span class="mf">0.62146054</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">419</span> <span class="mf">4.3917835</span>   <span class="o">-</span><span class="mf">1.6066023</span>
+<span class="mi">192</span>  <span class="mf">84.62802</span> <span class="mf">480.68366</span> <span class="mf">0.95615514</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">214</span> <span class="mf">3.2011865</span>   <span class="o">-</span><span class="mf">1.2632774</span>
+<span class="mi">193</span>  <span class="mf">196.7117</span> <span class="mf">482.58339</span> <span class="mf">0.99380269</span> <span class="o">...</span>   <span class="mi">0</span>   <span class="mi">94</span>  <span class="mf">1.559089</span>  <span class="o">-</span><span class="mf">0.48217727</span>
+<span class="mi">194</span> <span class="mf">206.68325</span> <span class="mf">505.29963</span> <span class="mf">0.62073956</span> <span class="o">...</span>   <span class="mi">0</span>  <span class="mi">486</span>  <span class="mf">6.598198</span>   <span class="o">-</span><span class="mf">2.0485634</span>
+<span class="n">Length</span> <span class="o">=</span> <span class="mi">194</span> <span class="n">rows</span>
+
+<span class="n">Process</span> <span class="n">finished</span> <span class="k">with</span> <span class="n">exit</span> <span class="n">code</span> <span class="mi">0</span>
+
+</pre></div>
+</div>
+<p>Burada:</p>
+<ul class="simple">
+<li><p>id: Tespit edilen kaynak için ayırt edici bir değer. (1’den başlayarak artarak devam eder)</p></li>
+<li><p>xcentroid: centroid yöntemiyle elde edilen kaynağın merkezinin x koordinatı</p></li>
+<li><p>ycentroid: centroid yöntemiyle elde edilen kaynağın merkezinin y koordinatı</p></li>
+<li><p>sharpness: Tespit edilen kaynağın keskinliği</p></li>
+<li><p>roundness1: simetriye göre kaynak yuvarlaklığı</p></li>
+<li><p>roundness2: Gauss fite göre kaynak yuvarlaklığı</p></li>
+<li><p>npix: Gauss çekirdeğinin düştüğü piksel sayısı</p></li>
+<li><p>sky: Girdi gökyüzü parametresi</p></li>
+<li><p>peak: Objenin dağıldığı piksellerde en büyük değer</p></li>
+<li><p>flux: Akı</p></li>
+<li><p>mag: Parlaklık</p></li>
+</ul>
+<p>Görüntü üzerinde tespit edilen kaynakların listesini görmek için ise <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>’den yararlanabiliriz.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">photutils.detection</span> <span class="kn">import</span> <span class="n">DAOStarFinder</span>
+
+<span class="c1"># # Veriyi okuma</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">fts</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\mshem\Desktop\pix.fits&quot;</span><span class="p">)</span>
+
+<span class="c1"># Verinin istatistiki değerleri</span>
+<span class="n">average</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">median</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Daofind Objesi oluşturma</span>
+<span class="n">daofind</span> <span class="o">=</span> <span class="n">DAOStarFinder</span><span class="p">(</span><span class="n">fwhm</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="n">std</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sources</span> <span class="o">=</span> <span class="n">daofind</span><span class="p">(</span><span class="n">data</span> <span class="o">-</span> <span class="n">median</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">sources</span><span class="o">.</span><span class="n">colnames</span><span class="p">:</span>
+    <span class="n">sources</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%.8g</span><span class="s1">&#39;</span>
+
+
+
+<span class="c1"># Anlamlı görüntü oluşturmak için matplotlib işlemleri</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">,</span>
+           <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="n">average</span> <span class="o">-</span> <span class="n">std</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">average</span> <span class="o">+</span> <span class="n">std</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">,</span>
+           <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="n">average</span> <span class="o">-</span> <span class="n">std</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">average</span> <span class="o">+</span> <span class="n">std</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">sources</span><span class="p">:</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">source</span><span class="p">[</span><span class="s2">&quot;xcentroid&quot;</span><span class="p">],</span> <span class="n">source</span><span class="p">[</span><span class="s2">&quot;ycentroid&quot;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;M51 (IRAF dev$pix Verisi)&quot;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Görüntü&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Kaynaklar&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([])</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">([])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+</pre></div>
+</div>
+<p>Çıktı</p>
+<p><img alt="source" src="_images/sources.png" /></p>
+<p>Kaynak tespiti</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="astropy.html" title="previous page">Astropy</a>
+    <a class='right-next' id="next-link" href="calibration.html" title="next page">Python Kalibrasyon</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mohammad S.Niaei<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
