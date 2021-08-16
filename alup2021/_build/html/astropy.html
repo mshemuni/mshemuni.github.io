@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astropy &#8212; ALÜP 2021</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Işıkölçüm Gözlemi" href="gozlem.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo_b.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ALÜP 2021</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Lisansütü Bilgilendirme ve Uygulama Programı
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="gozlem.html">
+   Işıkölçüm Gözlemi
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Astropy
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/astropy.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://mshemuni.github.io/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://mshemuni.github.io//issues/new?title=Issue%20on%20page%20%2Fastropy.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fits-veri">
+   Fits veri
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#baslik">
+     Başlık
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#veri">
+     Veri
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#astropy-ile-fits">
+   Astropy ile FITS
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getdata">
+     getdata
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getheader">
+     getheader
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open">
+     open
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#istatistik">
+   İstatistik
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="astropy">
+<h1>Astropy<a class="headerlink" href="#astropy" title="Permalink to this headline">¶</a></h1>
+<p>Astropy, astronomların kullanımına sunulmuş, pyhton programa dili ile yazılmış, bir yazılımlar koleksyonudur.</p>
+<div class="section" id="fits-veri">
+<h2>Fits veri<a class="headerlink" href="#fits-veri" title="Permalink to this headline">¶</a></h2>
+<p>Her bilim topluluğu ortak veri türleri ile çalışır. Astronomide kullanılan veri türü ise
+FITS’tir.(Flexible Image Transport System)</p>
+<p>FITS, Header ve Veri olmak üzere iki parçadan oluşur. FITS’in Header kısmı ascii formatında olup human-readable’dır
+(insan tarafından okunabilir). Veri kısmı ise, yer tarasarrufu adına Binaty olup human-readable değildir.</p>
+<p>FITS format kayıpsız bir formattır. Dolayısıyla diskte çokça yer kaplar ve gerektiğinde çeşitli sıkıştırma
+algoritmalarıyla (zip, tar gibi) sıkıştırılabilir.</p>
+<div class="section" id="baslik">
+<h3>Başlık<a class="headerlink" href="#baslik" title="Permalink to this headline">¶</a></h3>
+<p>Bir FITS başlığı ascii formatında olup iki kolonlu bir tablo olarak algılanabilir. Bu tablonun ilk kolonunda başlık
+anahtarı/kartı ikinci kolonda ise anahtara karşılık gelen değer yer almaktadır.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SIMPLE</span>  <span class="o">=</span>                    <span class="n">T</span> <span class="o">/</span> <span class="n">Fits</span> <span class="n">standard</span>                                  
+<span class="n">BITPIX</span>  <span class="o">=</span>                   <span class="mi">16</span> <span class="o">/</span> <span class="n">Bits</span> <span class="n">per</span> <span class="n">pixel</span>                                 
+<span class="n">NAXIS</span>   <span class="o">=</span>                    <span class="mi">2</span> <span class="o">/</span> <span class="n">Number</span> <span class="n">of</span> <span class="n">axes</span>                                 
+<span class="n">NAXIS1</span>  <span class="o">=</span>                  <span class="mi">512</span> <span class="o">/</span> <span class="n">Axis</span> <span class="n">length</span>                                    
+<span class="n">NAXIS2</span>  <span class="o">=</span>                  <span class="mi">512</span> <span class="o">/</span> <span class="n">Axis</span> <span class="n">length</span>                                    
+<span class="n">EXTEND</span>  <span class="o">=</span>                    <span class="n">F</span> <span class="o">/</span> <span class="n">File</span> <span class="n">may</span> <span class="n">contain</span> <span class="n">extensions</span>                    
+<span class="n">ORIGIN</span>  <span class="o">=</span> <span class="s1">&#39;NOAO-IRAF FITS Image Kernel July 2003&#39;</span> <span class="o">/</span> <span class="n">FITS</span> <span class="n">file</span> <span class="n">originator</span>        
+<span class="n">DATE</span>    <span class="o">=</span> <span class="s1">&#39;2021-08-16T08:23:55&#39;</span> <span class="o">/</span> <span class="n">Date</span> <span class="n">FITS</span> <span class="n">file</span> <span class="n">was</span> <span class="n">generated</span>                  
+<span class="n">IRAF</span><span class="o">-</span><span class="n">TLM</span><span class="o">=</span> <span class="s1">&#39;2021-08-16T08:23:55&#39;</span> <span class="o">/</span> <span class="n">Time</span> <span class="n">of</span> <span class="n">last</span> <span class="n">modification</span>                     
+<span class="n">OBJECT</span>  <span class="o">=</span> <span class="s1">&#39;m51  B  600s&#39;</span>       <span class="o">/</span> <span class="n">Name</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">object</span> <span class="n">observed</span>                    
+<span class="n">IRAF</span><span class="o">-</span><span class="n">MAX</span><span class="o">=</span>           <span class="mf">1.993600E4</span>  <span class="o">/</span>  <span class="n">DATA</span> <span class="n">MAX</span>                                     
+<span class="n">IRAF</span><span class="o">-</span><span class="n">MIN</span><span class="o">=</span>          <span class="o">-</span><span class="mf">1.000000E0</span>  <span class="o">/</span>  <span class="n">DATA</span> <span class="n">MIN</span>                                     
+<span class="n">CCDPICNO</span><span class="o">=</span>                   <span class="mi">53</span>  <span class="o">/</span>  <span class="n">ORIGINAL</span> <span class="n">CCD</span> <span class="n">PICTURE</span> <span class="n">NUMBER</span>                  
+<span class="n">ITIME</span>   <span class="o">=</span>                  <span class="mi">600</span>  <span class="o">/</span>  <span class="n">REQUESTED</span> <span class="n">INTEGRATION</span> <span class="n">TIME</span> <span class="p">(</span><span class="n">SECS</span><span class="p">)</span>            
+<span class="n">TTIME</span>   <span class="o">=</span>                  <span class="mi">600</span>  <span class="o">/</span>  <span class="n">TOTAL</span> <span class="n">ELAPSED</span> <span class="n">TIME</span> <span class="p">(</span><span class="n">SECS</span><span class="p">)</span>                    
+<span class="n">OTIME</span>   <span class="o">=</span>                  <span class="mi">600</span>  <span class="o">/</span>  <span class="n">ACTUAL</span> <span class="n">INTEGRATION</span> <span class="n">TIME</span> <span class="p">(</span><span class="n">SECS</span><span class="p">)</span>               
+<span class="n">DATA</span><span class="o">-</span><span class="n">TYP</span><span class="o">=</span> <span class="s1">&#39;OBJECT (0)&#39;</span>          <span class="o">/</span>  <span class="n">OBJECT</span><span class="p">,</span><span class="n">DARK</span><span class="p">,</span><span class="n">BIAS</span><span class="p">,</span><span class="n">ETC</span><span class="o">.</span>                        
+<span class="n">DATE</span><span class="o">-</span><span class="n">OBS</span><span class="o">=</span> <span class="s1">&#39;05/04/87&#39;</span>            <span class="o">/</span>  <span class="n">DATE</span> <span class="n">DD</span><span class="o">/</span><span class="n">MM</span><span class="o">/</span><span class="n">YY</span>                                
+<span class="n">RA</span>      <span class="o">=</span> <span class="s1">&#39;13:29:24.00&#39;</span>         <span class="o">/</span>  <span class="n">RIGHT</span> <span class="n">ASCENSION</span>                              
+<span class="n">DEC</span>     <span class="o">=</span> <span class="s1">&#39;47:15:34.00&#39;</span>         <span class="o">/</span>  <span class="n">DECLINATION</span>                                  
+<span class="n">EPOCH</span>   <span class="o">=</span>                 <span class="mf">0.00</span>  <span class="o">/</span>  <span class="n">EPOCH</span> <span class="n">OF</span> <span class="n">RA</span> <span class="n">AND</span> <span class="n">DEC</span>                          
+<span class="n">ZD</span>      <span class="o">=</span> <span class="s1">&#39;22:14:00.00&#39;</span>         <span class="o">/</span>  <span class="n">ZENITH</span> <span class="n">DISTANCE</span>                              
+<span class="n">UT</span>      <span class="o">=</span> <span class="s1">&#39; 9:27:27.00&#39;</span>         <span class="o">/</span>  <span class="n">UNIVERSAL</span> <span class="n">TIME</span>                               
+<span class="n">ST</span>      <span class="o">=</span> <span class="s1">&#39;14:53:42.00&#39;</span>         <span class="o">/</span>  <span class="n">SIDEREAL</span> <span class="n">TIME</span>                                
+<span class="n">CAM</span><span class="o">-</span><span class="n">ID</span>  <span class="o">=</span>                    <span class="mi">1</span>  <span class="o">/</span>  <span class="n">CAMERA</span> <span class="n">HEAD</span> <span class="n">ID</span>                               
+<span class="n">CAM</span><span class="o">-</span><span class="n">TEMP</span><span class="o">=</span>              <span class="o">-</span><span class="mf">106.22</span>  <span class="o">/</span>  <span class="n">CAMERA</span> <span class="n">TEMPERATURE</span><span class="p">,</span> <span class="n">DEG</span> <span class="n">C</span>                    
+<span class="n">DEW</span><span class="o">-</span><span class="n">TEMP</span><span class="o">=</span>              <span class="o">-</span><span class="mf">180.95</span>  <span class="o">/</span>  <span class="n">DEWAR</span> <span class="n">TEMPRATURE</span><span class="p">,</span> <span class="n">DEG</span> <span class="n">C</span>                      
+<span class="n">F1POS</span>   <span class="o">=</span>                    <span class="mi">2</span>  <span class="o">/</span>  <span class="n">FILTER</span> <span class="n">BOLT</span> <span class="n">I</span> <span class="n">POSITION</span>                       
+<span class="n">F2POS</span>   <span class="o">=</span>                    <span class="mi">0</span>  <span class="o">/</span>  <span class="n">FILTER</span> <span class="n">BOLT</span> <span class="n">II</span> <span class="n">POSITION</span>                      
+<span class="n">TVFILT</span>  <span class="o">=</span>                    <span class="mi">0</span>  <span class="o">/</span>  <span class="n">TV</span> <span class="n">FILTER</span>                                    
+<span class="n">CMP</span><span class="o">-</span><span class="n">LAMP</span><span class="o">=</span>                    <span class="mi">0</span>  <span class="o">/</span>  <span class="n">COMPARISON</span> <span class="n">LAMP</span>                              
+<span class="n">TILT</span><span class="o">-</span><span class="n">POS</span><span class="o">=</span>                    <span class="mi">0</span>  <span class="o">/</span>  <span class="n">TILT</span> <span class="n">POSITION</span>                                
+<span class="n">BIAS</span><span class="o">-</span><span class="n">PIX</span><span class="o">=</span>                    <span class="mi">0</span>  <span class="o">/</span>                                               
+<span class="n">BI</span><span class="o">-</span><span class="n">FLAG</span> <span class="o">=</span>                    <span class="mi">0</span>  <span class="o">/</span>  <span class="n">BIAS</span> <span class="n">SUBTRACT</span> <span class="n">FLAG</span>                           
+<span class="n">BP</span><span class="o">-</span><span class="n">FLAG</span> <span class="o">=</span>                    <span class="mi">0</span>  <span class="o">/</span>  <span class="n">BAD</span> <span class="n">PIXEL</span> <span class="n">FLAG</span>                               
+<span class="n">CR</span><span class="o">-</span><span class="n">FLAG</span> <span class="o">=</span>                    <span class="mi">0</span>  <span class="o">/</span>  <span class="n">BAD</span> <span class="n">PIXEL</span> <span class="n">FLAG</span>                               
+<span class="n">DK</span><span class="o">-</span><span class="n">FLAG</span> <span class="o">=</span>                    <span class="mi">0</span>  <span class="o">/</span>  <span class="n">DARK</span> <span class="n">SUBTRACT</span> <span class="n">FLAG</span>                           
+<span class="n">FR</span><span class="o">-</span><span class="n">FLAG</span> <span class="o">=</span>                    <span class="mi">0</span>  <span class="o">/</span>  <span class="n">FRINGE</span> <span class="n">FLAG</span>                                  
+<span class="n">FR</span><span class="o">-</span><span class="n">SCALE</span><span class="o">=</span>                 <span class="mf">0.00</span>  <span class="o">/</span>  <span class="n">FRINGE</span> <span class="n">SCALING</span> <span class="n">PARAMETER</span>                     
+<span class="n">TRIM</span>    <span class="o">=</span> <span class="s1">&#39;Apr 22 14:11 Trim image section is [3:510,3:510]&#39;</span>                    
+<span class="n">BT</span><span class="o">-</span><span class="n">FLAG</span> <span class="o">=</span> <span class="s1">&#39;Apr 22 14:11 Overscan correction strip is [515:544,3:510]&#39;</span>           
+<span class="n">FF</span><span class="o">-</span><span class="n">FLAG</span> <span class="o">=</span> <span class="s1">&#39;Apr 22 14:11 Flat field image is Flat1.imh with scale=183.9447&#39;</span>      
+<span class="n">CCDPROC</span> <span class="o">=</span> <span class="s1">&#39;Apr 22 14:11 CCD processing done&#39;</span>                                    
+<span class="n">AIRMASS</span> <span class="o">=</span>    <span class="mf">1.08015632629395</span>   <span class="o">/</span> <span class="n">AIRMASS</span>                                       
+<span class="n">HISTORY</span> <span class="s1">&#39;KPNO-IRAF&#39;</span>                                                             
+<span class="n">HISTORY</span> <span class="s1">&#39;24-04-87&#39;</span>                                                              
+<span class="n">HISTORY</span> <span class="s1">&#39;KPNO-IRAF&#39;</span>           <span class="o">/</span>                                                 
+<span class="n">HISTORY</span> <span class="s1">&#39;08-04-92&#39;</span>            <span class="o">/</span>                                                 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+<span class="n">END</span>                                                                             
+
+
+</pre></div>
+</div>
+<p>Başlık kuraları:</p>
+<ol class="simple">
+<li><p>Başlıkların anahtar kelimeleri en fazla 8 karakter olabilir</p></li>
+<li><p>Başlığın anahtar kelimesi ve değerine ek olarak açıklama da yazılabilir. <code class="docutils literal notranslate"><span class="pre">/</span></code></p></li>
+<li><p>Başlık, nümerik, metin ve mantıksal olmak üzere 3 çeşit veri tipi taşıyabilir.</p></li>
+<li><p>Başlık bloğunun tamamı 32 ve katları satır sayısından oluşmak zorunda. <code class="docutils literal notranslate"><span class="pre">END</span></code> ile son başlık anahtarı arasındaki boşluk
+32’nin katına tamamlamak için bırakılöıştır.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bir FITS dosyasının FITS olabilmesi için gerekli olan en az 4 anahtar bulunmakta. Bunlar:</p>
+<ul class="simple">
+<li><p>SIMPLE</p></li>
+<li><p>BITPIX</p></li>
+<li><p>NAXIS</p></li>
+<li><p>NAXIS1</p></li>
+</ul>
+<p>dir.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>SIMPLE</strong> başlığı mantıksal bir veri taşır. T veya F değeri alır ve söz konusu dosyaının basit bir FITS dosyasıolup
+olmadığını ifade der.</p>
+</div>
+</div>
+<div class="section" id="veri">
+<h3>Veri<a class="headerlink" href="#veri" title="Permalink to this headline">¶</a></h3>
+<p>FITS de diğer sayısal görüntü formatlarında olduğu gibi veriyi 2 boyutlu bir matris şeklinde tutar. Söz konusu matrisin
+her hücresindeki değer, sayısal görüntünün aynı pikseline karşılık gelen değeri olacaktır.</p>
+<p><img alt="pix" src="_images/pix.png" /></p>
+<p>IRAF <code class="docutils literal notranslate"><span class="pre">dev$pix</span></code> görüntüsü</p>
+</div>
+</div>
+<div class="section" id="astropy-ile-fits">
+<h2>Astropy ile FITS<a class="headerlink" href="#astropy-ile-fits" title="Permalink to this headline">¶</a></h2>
+<p>Astropy astronomların ihtiyaç duyabileceği bir çok kütüphaneyi barındıran bir sistemdir. Bu sistem ile zaman hesabı,
+koordinat dönüşümleri ve modelleme gibi bir çok işlem yapılablir.</p>
+<p>Astropy’ın sunduğu hizmetlerden biri de FIST veri işlemleridir. Bunun için Astropy’ın Inpu/Output modülünün altında Fits
+objesi kullanılır:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">fts</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">fits</span></code> bir çok şekilde kullanılabilir. <code class="docutils literal notranslate"><span class="pre">fits</span></code>’te en çok kullanacağımz metodlar:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">getdata</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getheader</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">open</span></code></p></li>
+</ul>
+<p>olacaktır.</p>
+<div class="section" id="getdata">
+<h3>getdata<a class="headerlink" href="#getdata" title="Permalink to this headline">¶</a></h3>
+<p>Bir FITS dosyasının Veri kısmına ulaşmak için kullanılır. Dosya üzerinde güncelleme’ye izin vermez.
+Yalnızca veriyi döndürür.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">fts</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Dosya Yolu]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+</pre></div>
+</div>
+<p>Çıktı:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[[38 43 35 ... 45 43 41]
+ [36 41 37 ... 42 41 39]
+ [38 45 37 ... 42 35 43]
+ ...
+ [49 52 49 ... 41 35 39]
+ [57 52 49 ... 40 41 43]
+ [53 57 57 ... 39 35 45]]
+ 
+&lt;class &#39;numpy.ndarray&#39;&gt;
+</pre></div>
+</div>
+<p>getdata veriyi 2 boyutlu* bir <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> olarak verir.</p>
+</div>
+<div class="section" id="getheader">
+<h3>getheader<a class="headerlink" href="#getheader" title="Permalink to this headline">¶</a></h3>
+<p>Bir FITS dosyasının Başlık kısmına ulaşmak için kullanılır. Dosya üzerinde güncelleme’ye izin vermez.
+Yalnızca başlığı döndürür.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="n">fts</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Dosya Yolu]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">header</span><span class="p">))</span>
+
+
+</pre></div>
+</div>
+<p>Çıktı:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>SIMPLE  =                    T / Fits standard                                  BITPIX  =                   16 / Bits per pixel                                 NAXIS   =                    2 / Number of axes                                 NAXIS1  =                  512 / Axis length                                    NAXIS2  =                  512 / Axis length                                    EXTEND  =                    F / File may contain extensions                    ORIGIN  = &#39;NOAO-IRAF FITS Image Kernel July 2003&#39; / FITS file originator        DATE    = &#39;2021-08-16T08:23:55&#39; / Date FITS file was generated                  IRAF-TLM= &#39;2021-08-16T08:23:55&#39; / Time of last modification                     OBJECT  = &#39;m51  B  600s&#39;       / Name of the object observed                    IRAF-MAX=           1.993600E4  /  DATA MAX                                     IRAF-MIN=          -1.000000E0  /  DATA MIN                                     CCDPICNO=                   53  /  ORIGINAL CCD PICTURE NUMBER                  ITIME   =                  600  /  REQUESTED INTEGRATION TIME (SECS)            TTIME   =                  600  /  TOTAL ELAPSED TIME (SECS)                    OTIME   =                  600  /  ACTUAL INTEGRATION TIME (SECS)               DATA-TYP= &#39;OBJECT (0)&#39;          /  OBJECT,DARK,BIAS,ETC.                        DATE-OBS= &#39;05/04/87&#39;            /  DATE DD/MM/YY                                RA      = &#39;13:29:24.00&#39;         /  RIGHT ASCENSION                              DEC     = &#39;47:15:34.00&#39;         /  DECLINATION                                  EPOCH   =                 0.00  /  EPOCH OF RA AND DEC                          ZD      = &#39;22:14:00.00&#39;         /  ZENITH DISTANCE                              UT      = &#39; 9:27:27.00&#39;         /  UNIVERSAL TIME                               ST      = &#39;14:53:42.00&#39;         /  SIDEREAL TIME                                CAM-ID  =                    1  /  CAMERA HEAD ID                               CAM-TEMP=              -106.22  /  CAMERA TEMPERATURE, DEG C                    DEW-TEMP=              -180.95  /  DEWAR TEMPRATURE, DEG C                      F1POS   =                    2  /  FILTER BOLT I POSITION                       F2POS   =                    0  /  FILTER BOLT II POSITION                      TVFILT  =                    0  /  TV FILTER                                    CMP-LAMP=                    0  /  COMPARISON LAMP                              TILT-POS=                    0  /  TILT POSITION                                BIAS-PIX=                    0  /                                               BI-FLAG =                    0  /  BIAS SUBTRACT FLAG                           BP-FLAG =                    0  /  BAD PIXEL FLAG                               CR-FLAG =                    0  /  BAD PIXEL FLAG                               DK-FLAG =                    0  /  DARK SUBTRACT FLAG                           FR-FLAG =                    0  /  FRINGE FLAG                                  FR-SCALE=                 0.00  /  FRINGE SCALING PARAMETER                     TRIM    = &#39;Apr 22 14:11 Trim image section is [3:510,3:510]&#39;                    BT-FLAG = &#39;Apr 22 14:11 Overscan correction strip is [515:544,3:510]&#39;           FF-FLAG = &#39;Apr 22 14:11 Flat field image is Flat1.imh with scale=183.9447&#39;      CCDPROC = &#39;Apr 22 14:11 CCD processing done&#39;                                    AIRMASS =    1.08015632629395   / AIRMASS                                       HISTORY &#39;KPNO-IRAF&#39;                                                             HISTORY &#39;24-04-87&#39;                                                              HISTORY &#39;KPNO-IRAF&#39;           /                                                 HISTORY &#39;08-04-92&#39;            /                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 END                                                                             
+
+&lt;class &#39;astropy.io.fits.header.Header&#39;&gt;
+
+
+</pre></div>
+</div>
+<p>getheader veriyi bir <code class="docutils literal notranslate"><span class="pre">fits.header</span></code> olarak verir.</p>
+</div>
+<div class="section" id="open">
+<h3>open<a class="headerlink" href="#open" title="Permalink to this headline">¶</a></h3>
+<p>FITS dosyası açar. Dosyanın içeriğini bir obje olarak tutar. Dosyayı açma biçimine bağlı olarak güncellemeye izin
+veriri.</p>
+<p><code class="docutils literal notranslate"><span class="pre">open</span></code> ile dosyanın veri ve başlığına erişilebilir.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
+
+<span class="n">hdu</span> <span class="o">=</span> <span class="n">fts</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Dosya Yolu]&quot;</span><span class="p">,</span> <span class="s2">&quot;readonly&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">hdu</span><span class="p">))</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">hdu</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+
+<span class="n">header</span> <span class="o">=</span> <span class="n">hdu</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">header</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">header</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">header</span><span class="p">))</span>
+
+</pre></div>
+</div>
+<p>Çıktı:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+&lt;class &#39;astropy.io.fits.hdu.hdulist.HDUList&#39;&gt;
+
+[[38 43 35 ... 45 43 41]
+ [36 41 37 ... 42 41 39]
+ [38 45 37 ... 42 35 43]
+ ...
+ [49 52 49 ... 41 35 39]
+ [57 52 49 ... 40 41 43]
+ [53 57 57 ... 39 35 45]]
+&lt;class &#39;numpy.ndarray&#39;&gt;
+SIMPLE  =                    T / Fits standard                                  BITPIX  =                   16 / Bits per pixel                                 NAXIS   =                    2 / Number of axes                                 NAXIS1  =                  512 / Axis length                                    NAXIS2  =                  512 / Axis length                                    EXTEND  =                    F / File may contain extensions                    ORIGIN  = &#39;NOAO-IRAF FITS Image Kernel July 2003&#39; / FITS file originator        DATE    = &#39;2021-08-16T08:23:55&#39; / Date FITS file was generated                  IRAF-TLM= &#39;2021-08-16T08:23:55&#39; / Time of last modification                     OBJECT  = &#39;m51  B  600s&#39;       / Name of the object observed                    IRAF-MAX=           1.993600E4  /  DATA MAX                                     IRAF-MIN=          -1.000000E0  /  DATA MIN                                     CCDPICNO=                   53  /  ORIGINAL CCD PICTURE NUMBER                  ITIME   =                  600  /  REQUESTED INTEGRATION TIME (SECS)            TTIME   =                  600  /  TOTAL ELAPSED TIME (SECS)                    OTIME   =                  600  /  ACTUAL INTEGRATION TIME (SECS)               DATA-TYP= &#39;OBJECT (0)&#39;          /  OBJECT,DARK,BIAS,ETC.                        DATE-OBS= &#39;05/04/87&#39;            /  DATE DD/MM/YY                                RA      = &#39;13:29:24.00&#39;         /  RIGHT ASCENSION                              DEC     = &#39;47:15:34.00&#39;         /  DECLINATION                                  EPOCH   =                 0.00  /  EPOCH OF RA AND DEC                          ZD      = &#39;22:14:00.00&#39;         /  ZENITH DISTANCE                              UT      = &#39; 9:27:27.00&#39;         /  UNIVERSAL TIME                               ST      = &#39;14:53:42.00&#39;         /  SIDEREAL TIME                                CAM-ID  =                    1  /  CAMERA HEAD ID                               CAM-TEMP=              -106.22  /  CAMERA TEMPERATURE, DEG C                    DEW-TEMP=              -180.95  /  DEWAR TEMPRATURE, DEG C                      F1POS   =                    2  /  FILTER BOLT I POSITION                       F2POS   =                    0  /  FILTER BOLT II POSITION                      TVFILT  =                    0  /  TV FILTER                                    CMP-LAMP=                    0  /  COMPARISON LAMP                              TILT-POS=                    0  /  TILT POSITION                                BIAS-PIX=                    0  /                                               BI-FLAG =                    0  /  BIAS SUBTRACT FLAG                           BP-FLAG =                    0  /  BAD PIXEL FLAG                               CR-FLAG =                    0  /  BAD PIXEL FLAG                               DK-FLAG =                    0  /  DARK SUBTRACT FLAG                           FR-FLAG =                    0  /  FRINGE FLAG                                  FR-SCALE=                 0.00  /  FRINGE SCALING PARAMETER                     TRIM    = &#39;Apr 22 14:11 Trim image section is [3:510,3:510]&#39;                    BT-FLAG = &#39;Apr 22 14:11 Overscan correction strip is [515:544,3:510]&#39;           FF-FLAG = &#39;Apr 22 14:11 Flat field image is Flat1.imh with scale=183.9447&#39;      CCDPROC = &#39;Apr 22 14:11 CCD processing done&#39;                                    AIRMASS =    1.08015632629395   / AIRMASS                                       HISTORY &#39;KPNO-IRAF&#39;                                                             HISTORY &#39;24-04-87&#39;                                                              HISTORY &#39;KPNO-IRAF&#39;           /                                                 HISTORY &#39;08-04-92&#39;            /                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 END                                                                             
+
+&lt;class &#39;astropy.io.fits.header.Header&#39;&gt;
+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="istatistik">
+<h2>İstatistik<a class="headerlink" href="#istatistik" title="Permalink to this headline">¶</a></h2>
+<p>Astropy bir FITS verisini <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> tipinde verdiği için istatistiki işlemlerde numpy’ın gücü kullanılabilir.
+Bir verinin ortalaması, ortancası, standart satpması gibi değerlerine ulaşmak için numpd.ndarray objesi kullanılabilir.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">hdu</span> <span class="o">=</span> <span class="n">fts</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Dosya Yolu]&quot;</span><span class="p">,</span> <span class="s2">&quot;readonly&quot;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">hdu</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span>
+
+<span class="n">average</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">median</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">average</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">median</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">std</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Çıktı:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">average</span><span class="o">=</span><span class="mf">108.3154067993164</span><span class="p">,</span> <span class="n">median</span><span class="o">=</span><span class="mf">88.0</span><span class="p">,</span> <span class="n">std</span><span class="o">=</span><span class="mf">131.29777476298327</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="gozlem.html" title="previous page">Işıkölçüm Gözlemi</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mohammad S.Niaei<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

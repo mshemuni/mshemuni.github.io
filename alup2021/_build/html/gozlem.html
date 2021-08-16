@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Işıkölçüm Gözlemi &#8212; ALÜP 2021</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="astropy.html" />
+    <link rel="prev" title="Lisansütü Bilgilendirme ve Uygulama Programı" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo_b.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">ALÜP 2021</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Lisansütü Bilgilendirme ve Uygulama Programı
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Işıkölçüm Gözlemi
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/gozlem.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://mshemuni.github.io/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://mshemuni.github.io//issues/new?title=Issue%20on%20page%20%2Fgozlem.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#isikolcum-photometry-nedir">
+   Işıkölçüm (Photometry) nedir?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#geerekli-tanimlar">
+   Geerekli tanımlar:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zaman">
+     Zaman:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aydinlatma-gucu">
+     Aydınlatma gücü:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aki">
+     Akı:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parlaklik">
+     Parlaklık
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gorunur-parlaklik">
+       Görünür parlaklık
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gorsel-parlaklik">
+       Görsel parlaklık
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mutlak-parlaklik">
+       Mutlak parlaklık
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aletsel-parlaklik">
+       Aletsel parlaklık
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gozlem">
+   Gözlem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hava-kosullari">
+     Hava koşulları
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gozlem-programi">
+     Gözlem programı
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kalibrasyon-olcumleri">
+     Kalibrasyon ölçümleri
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="isikolcum-gozlemi">
+<h1>Işıkölçüm Gözlemi<a class="headerlink" href="#isikolcum-gozlemi" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="isikolcum-photometry-nedir">
+<h2>Işıkölçüm (Photometry) nedir?<a class="headerlink" href="#isikolcum-photometry-nedir" title="Permalink to this headline">¶</a></h2>
+<p><strong>Işıkölçüm</strong> bir astronomik nesnenin ışık akısı veya elektromanyetik radyasyonunun yoğunluğunun ölçülmesi ile ilgili bir astronomi tekniğidir.</p>
+</div>
+<div class="section" id="geerekli-tanimlar">
+<h2>Geerekli tanımlar:<a class="headerlink" href="#geerekli-tanimlar" title="Permalink to this headline">¶</a></h2>
+<p>Işıkölçüm’de ise bir gök cisminin parlaklığındaki değişimin incelenmesi hedeflenir. Buradaki anahtar kelime <em>zamana bağlı parlaklık</em>’tır.</p>
+<div class="section" id="zaman">
+<h3>Zaman:<a class="headerlink" href="#zaman" title="Permalink to this headline">¶</a></h3>
+<p>Fizikte en hassas ölçülebilen nicelik zamandır. Zamanın ise faklı biçimleri vardır:</p>
+<ul class="simple">
+<li><p>Yerel zaman</p></li>
+<li><p>Evrensel zaman</p></li>
+<li><p>vs</p></li>
+</ul>
+<p>Yerel zaman konuma bağlılık gösterir. Dolayısıyla gözlemin yapıldığı gözlemevinin konumu önem gösterir.</p>
+<p>Yerel zaman kullanarak yapılan gözlemlerde aynı gök cisminin faklı konum ve zamanlardaki gözlemlerini birleştirmek
+sorunlara neden olacağından, gözlemlerde genelde <strong>Evrensel Zaman</strong> kullanılır.</p>
+<p>Eşgüdümlü Evrensel Zaman ya da özgün kısaltmasıyla UTC (Coordinated Universal Time), pek çok ülkede baz alınan bilimsel zamandır.
+Astronomide ise çoğunlukla UTC zaman biçiminde olan JD kullanılır.</p>
+<p>Jülyen günü (<strong>JD</strong>), Jülyen tarih sisteminde yer alan ve astronomi topluluğu tarafından bilimsel çalışmalarda
+kullanılan bir zaman ölçüm sistemidir. Jülyen günü, MÖ 1 Ocak 4713 tarihi Pazartesi günü Evrensel zaman (UTC) ile öğle
+vaktinden itibaren bir günün zaman aralığını gün ve günün kesirleri halinde sunar.</p>
+</div>
+<div class="section" id="aydinlatma-gucu">
+<h3>Aydınlatma gücü:<a class="headerlink" href="#aydinlatma-gucu" title="Permalink to this headline">¶</a></h3>
+<p>Bir kaynağın birim zamanda, bütün dalga boylarında, bütün yüzeyinden yaydığı energiye Aydınlatma Gücü veya Işınım gücü denir.</p>
+<div class="math notranslate nohighlight">
+\[
+  L = 4 \pi r^2 \sigma T^4
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(L\)</span> ışınım gücü, <span class="math notranslate nohighlight">\(\sigma\)</span> Stefan–Boltzmann sabiti ve <span class="math notranslate nohighlight">\(T\)</span> sıcaklık olmak üzere</p>
+</div>
+<p>olarak ifade edilir.</p>
+</div>
+<div class="section" id="aki">
+<h3>Akı:<a class="headerlink" href="#aki" title="Permalink to this headline">¶</a></h3>
+<p>Akı (Flux), bir kaynağın belirli bir uzaklığa yaydığı, birim zamanda, birim yüzeyde, birim katı açıda enerji miktarıdır.</p>
+<div class="math notranslate nohighlight">
+\[
+  F = \frac{L}{4 \pi r^2}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(F\)</span> akı, <span class="math notranslate nohighlight">\(L\)</span> ışınım gücü, <span class="math notranslate nohighlight">\(r\)</span> uzaklık olmak üzere</p>
+</div>
+<p>olarak ifade edilir.</p>
+</div>
+<div class="section" id="parlaklik">
+<h3>Parlaklık<a class="headerlink" href="#parlaklik" title="Permalink to this headline">¶</a></h3>
+<p>Parlaklık, bir kaynağın (ürettiği ve/veya yansıttığı) ışığının görsel olarak algılanması ile oluşan bir niceliktir.</p>
+<p>Astronomide parlaklık (Magnitude) bir oran cinsinden verilir. Dolayısıyla birimsiz olup kadir sistemiyle ifade edilir.</p>
+<p>Kullanılan farklı parlaklık ölçümler:</p>
+<ul class="simple">
+<li><p>Görünür parlaklık</p></li>
+<li><p>Görsel parlaklık</p></li>
+<li><p>Mutlak parlaklık</p></li>
+<li><p>Aletsel parlaklık</p></li>
+</ul>
+<div class="section" id="gorunur-parlaklik">
+<h4>Görünür parlaklık<a class="headerlink" href="#gorunur-parlaklik" title="Permalink to this headline">¶</a></h4>
+<p>Görünür parlaklık, bir kaynağın çıplak göz ile ölçülen parlaklığıdır. Bu parlaklık objenin ışın gününe ve uzaklığına
+bağlılık gösterir.</p>
+<div class="math notranslate nohighlight">
+\[
+m = -5 log(\frac{F}{F_0})
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(m\)</span> görünür parlaklık, <span class="math notranslate nohighlight">\(F\)</span> cismin akısı ve <span class="math notranslate nohighlight">\(F_0\)</span> referans akı olmak üzere</p>
+</div>
+<p>olarak ifade edilir.</p>
+</div>
+<div class="section" id="gorsel-parlaklik">
+<h4>Görsel parlaklık<a class="headerlink" href="#gorsel-parlaklik" title="Permalink to this headline">¶</a></h4>
+<p>Görsel parlaklık bir kaynağın elektromanyetik tayfın görsel bölgesinde (yaklaşık <span class="math notranslate nohighlight">\(0.4 - 0.7 \mu m\)</span>) yaydığı energinin
+neden olduğu parlaklıktır.</p>
+</div>
+<div class="section" id="mutlak-parlaklik">
+<h4>Mutlak parlaklık<a class="headerlink" href="#mutlak-parlaklik" title="Permalink to this headline">¶</a></h4>
+<p>Diğer parlaklık türlerine göre uzaklıktan bağımsız bir parlaklık değeridir.</p>
+<p>Mutlak parlaklık, bir kaynağın 10 parsek uzaklıktaki görünür parlaklık değeridir. Dolayısıyla görünür parlaklığı ve
+uzaklığı bilinen bir kaynağın parlaklığı</p>
+<div class="math notranslate nohighlight">
+\[
+M = m + 5 log(\frac{1}{\pi})
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(M\)</span> mutlak parlaklılk, <span class="math notranslate nohighlight">\(m\)</span> görünür parlaklık ve <span class="math notranslate nohighlight">\(\pi\)</span> paralaks olmak üzere</p>
+</div>
+<p>olarak ifade edilir.</p>
+</div>
+<div class="section" id="aletsel-parlaklik">
+<h4>Aletsel parlaklık<a class="headerlink" href="#aletsel-parlaklik" title="Permalink to this headline">¶</a></h4>
+<p>Aletsel parlaklık bir kaynağın bir optik sistem (Teleskop, filtre, dedektör vb) ile ölçülen parlaklık değeridir.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ders süresince Aletsel Parlaklık yerine sıkça <em>Parlaklık</em> terimini kullanacağız</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="gozlem">
+<h2>Gözlem<a class="headerlink" href="#gozlem" title="Permalink to this headline">¶</a></h2>
+<p>Bilimsel yöntemde veri elde etmenin iki yöntemi var.</p>
+<ol class="simple">
+<li><p>Deney</p></li>
+<li><p>Gözlem</p></li>
+</ol>
+<p>Deney ve gözlem arasındaki en belirgin fark, deneyin kontrollü gözlemin ise kontrolsüz olmasıdır.</p>
+<p>Bir deneyde çevreyi ve ilerleyişi kontrol edebilirsiziniz, gözlemde ise gerçekleşe duran bir olay gözleyebiliriz.</p>
+<p>Astronomik gözlemler bir çok yötem ile yapılabilir. Biz ise ışıkölçüm gözlemi ile ilgileniyoruz.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ders süresince ışıkölçüm gözlemler yerine sıkça <em>gözlem</em> termini kullanacağız</p>
+</div>
+<p>Bir gözlemde dikkat edilmesi gereken unsurlar:</p>
+<ol class="simple">
+<li><p>Günün hava koşulları</p></li>
+<li><p>Günün gözlem programı</p></li>
+<li><p>Ekipmanın sağlığı</p></li>
+</ol>
+<div class="section" id="hava-kosullari">
+<h3>Hava koşulları<a class="headerlink" href="#hava-kosullari" title="Permalink to this headline">¶</a></h3>
+<p>Yer tabanlı gözlemevlerinde yaptığımız bütün gözlemlerin, atmosfer dediğimiz, opak bir katmanın içinden gerçekleştiğini
+unutmamamız gerek.</p>
+<p>Gözlemin yapılacağı günde, gözlemevinin bulunduğu bölgenin hava koşulları hayati önem taşımakta. Söz konusu günün hava
+koşulları gözlem şeklini, gözlenecek objeleri ve gözlemin yapılıp yapılamayacağını belirler.</p>
+</div>
+<div class="section" id="gozlem-programi">
+<h3>Gözlem programı<a class="headerlink" href="#gozlem-programi" title="Permalink to this headline">¶</a></h3>
+<p>Gözleme başlamadan önce gözlenecek objelerin ne olduğu bilinmeli.</p>
+<p>Gözlem programı genelde bir tablo halinde sunulur ve aşağıdaki bilgileri barındırır:</p>
+<ul class="simple">
+<li><p>Obje adı</p></li>
+<li><p>Obje parlaklığı</p></li>
+<li><p>Objenin parlaklık değişimi</p></li>
+<li><p>Objenin parlaklık değişim periodu</p></li>
+<li><p>Objenin koordinatları</p></li>
+<li><p>Objenin söz konusu gün için doğma ve batma zamanları (Bazen gözlenebilirlik eğirisi olarak sunulabilir)</p></li>
+<li><p>Gözleme başlama zamanı</p></li>
+<li><p>Gözlemin yapılacağı filtre ve her filtre için poz süresi (Sönümleme kat sayıları bulunan gözlemevleri için)</p></li>
+<li><p>Gözlemin bitiş zamanı</p></li>
+<li><p>Gözlenecek objenin bir görüntüsü (Seçimli)</p></li>
+</ul>
+<p>Yukarıdaki bilgiler gün içerisinde gözlenecek bütün objeler için ayrı ayrı verilir.</p>
+</div>
+<div class="section" id="kalibrasyon-olcumleri">
+<h3>Kalibrasyon ölçümleri<a class="headerlink" href="#kalibrasyon-olcumleri" title="Permalink to this headline">¶</a></h3>
+<p>Işıkölçüm gözlemlerinde, bilinen görüntü hatalarını düzeltmek için kalibrasyon verisi alınır. Bunlar:</p>
+<ul class="simple">
+<li><p>Bias (Sıfır düzey)</p></li>
+<li><p>Dark (Kara akım)</p></li>
+<li><p>Flat (Düz alan)</p></li>
+</ul>
+<p>görüntüleridir.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Lisansütü Bilgilendirme ve Uygulama Programı</a>
+    <a class='right-next' id="next-link" href="astropy.html" title="next page">&lt;no title&gt;</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mohammad S.Niaei<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
