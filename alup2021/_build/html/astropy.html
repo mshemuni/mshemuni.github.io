@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -37,11 +37,14 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -270,7 +273,7 @@
 <p>Her bilim topluluğu ortak veri türleri ile çalışır. Astronomide kullanılan veri türü ise
 FITS’tir.(Flexible Image Transport System)</p>
 <p>FITS, Header ve Veri olmak üzere iki parçadan oluşur. FITS’in Header kısmı ascii formatında olup human-readable’dır
-(insan tarafından okunabilir). Veri kısmı ise, yer tarasarrufu adına Binaty olup human-readable değildir.</p>
+(insan tarafından okunabilir). Veri kısmı ise, yer tarasarrufu adına Binary olup human-readable değildir.</p>
 <p>FITS format kayıpsız bir formattır. Dolayısıyla diskte çokça yer kaplar ve gerektiğinde çeşitli sıkıştırma
 algoritmalarıyla (zip, tar gibi) sıkıştırılabilir.</p>
 <div class="section" id="baslik">
@@ -358,8 +361,8 @@ anahtarı/kartı ikinci kolonda ise anahtara karşılık gelen değer yer almakt
 <li><p>Başlıkların anahtar kelimeleri en fazla 8 karakter olabilir</p></li>
 <li><p>Başlığın anahtar kelimesi ve değerine ek olarak açıklama da yazılabilir. <code class="docutils literal notranslate"><span class="pre">/</span></code></p></li>
 <li><p>Başlık, nümerik, metin ve mantıksal olmak üzere 3 çeşit veri tipi taşıyabilir.</p></li>
-<li><p>Başlık bloğunun tamamı 32 ve katları satır sayısından oluşmak zorunda. <code class="docutils literal notranslate"><span class="pre">END</span></code> ile son başlık anahtarı arasındaki boşluk
-32’nin katına tamamlamak için bırakılöıştır.</p></li>
+<li><p>Başlık bloğunun tamamı 32 ve katları satır sayısından oluşmak zorunda. <code class="docutils literal notranslate"><span class="pre">END</span></code> ile son başlık anahtarı arasındaki boşluk,
+32’nin katına tamamlamak için bırakılmıştır.</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -374,8 +377,8 @@ anahtarı/kartı ikinci kolonda ise anahtara karşılık gelen değer yer almakt
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>SIMPLE</strong> başlığı mantıksal bir veri taşır. T veya F değeri alır ve söz konusu dosyaının basit bir FITS dosyasıolup
-olmadığını ifade der.</p>
+<p><strong>SIMPLE</strong> başlığı mantıksal bir veri taşır. T veya F değeri alır ve söz konusu dosyanın basit bir FITS dosyası olup
+olmadığını ifade eder.</p>
 </div>
 </div>
 <div class="section" id="veri">
@@ -390,7 +393,7 @@ her hücresindeki değer, sayısal görüntünün aynı pikseline karşılık ge
 <h2>Astropy ile FITS<a class="headerlink" href="#astropy-ile-fits" title="Permalink to this headline">¶</a></h2>
 <p>Astropy astronomların ihtiyaç duyabileceği bir çok kütüphaneyi barındıran bir sistemdir. Bu sistem ile zaman hesabı,
 koordinat dönüşümleri ve modelleme gibi bir çok işlem yapılablir.</p>
-<p>Astropy’ın sunduğu hizmetlerden biri de FIST veri işlemleridir. Bunun için Astropy’ın Inpu/Output modülünün altında Fits
+<p>Astropy’ın sunduğu hizmetlerden biri de FIST veri işlemleridir. Bunun için Astropy’ın Input/Output modülünün altında Fits
 objesi kullanılır:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
 
@@ -467,7 +470,7 @@ Yalnızca başlığı döndürür.</p>
 <div class="section" id="open">
 <h3>open<a class="headerlink" href="#open" title="Permalink to this headline">¶</a></h3>
 <p>FITS dosyası açar. Dosyanın içeriğini bir obje olarak tutar. Dosyayı açma biçimine bağlı olarak güncellemeye izin
-veriri.</p>
+verir.</p>
 <p><code class="docutils literal notranslate"><span class="pre">open</span></code> ile dosyanın veri ve başlığına erişilebilir.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
 

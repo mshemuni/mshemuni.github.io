@@ -8,7 +8,7 @@ Her bilim topluluğu ortak veri türleri ile çalışır. Astronomide kullanıla
 FITS'tir.(Flexible Image Transport System)
 
 FITS, Header ve Veri olmak üzere iki parçadan oluşur. FITS'in Header kısmı ascii formatında olup human-readable'dır 
-(insan tarafından okunabilir). Veri kısmı ise, yer tarasarrufu adına Binaty olup human-readable değildir.
+(insan tarafından okunabilir). Veri kısmı ise, yer tarasarrufu adına Binary olup human-readable değildir.
 
 FITS format kayıpsız bir formattır. Dolayısıyla diskte çokça yer kaplar ve gerektiğinde çeşitli sıkıştırma 
 algoritmalarıyla (zip, tar gibi) sıkıştırılabilir.
@@ -98,8 +98,8 @@ Başlık kuraları:
 1. Başlıkların anahtar kelimeleri en fazla 8 karakter olabilir
 2. Başlığın anahtar kelimesi ve değerine ek olarak açıklama da yazılabilir. ```/```
 3. Başlık, nümerik, metin ve mantıksal olmak üzere 3 çeşit veri tipi taşıyabilir.
-4. Başlık bloğunun tamamı 32 ve katları satır sayısından oluşmak zorunda. ```END``` ile son başlık anahtarı arasındaki boşluk 
-   32'nin katına tamamlamak için bırakılöıştır.
+4. Başlık bloğunun tamamı 32 ve katları satır sayısından oluşmak zorunda. ```END``` ile son başlık anahtarı arasındaki boşluk, 
+   32'nin katına tamamlamak için bırakılmıştır.
 
 :::{note}
 Bir FITS dosyasının FITS olabilmesi için gerekli olan en az 4 anahtar bulunmakta. Bunlar: 
@@ -113,8 +113,8 @@ dir.
 :::
 
 :::{note}
-**SIMPLE** başlığı mantıksal bir veri taşır. T veya F değeri alır ve söz konusu dosyaının basit bir FITS dosyasıolup 
-olmadığını ifade der.
+**SIMPLE** başlığı mantıksal bir veri taşır. T veya F değeri alır ve söz konusu dosyanın basit bir FITS dosyası olup 
+olmadığını ifade eder.
 :::
 
 
@@ -131,7 +131,7 @@ M51 (IRAF ```dev$pix``` görüntüsü)
 Astropy astronomların ihtiyaç duyabileceği bir çok kütüphaneyi barındıran bir sistemdir. Bu sistem ile zaman hesabı, 
 koordinat dönüşümleri ve modelleme gibi bir çok işlem yapılablir.
 
-Astropy'ın sunduğu hizmetlerden biri de FIST veri işlemleridir. Bunun için Astropy'ın Inpu/Output modülünün altında Fits 
+Astropy'ın sunduğu hizmetlerden biri de FIST veri işlemleridir. Bunun için Astropy'ın Input/Output modülünün altında Fits 
 objesi kullanılır:
 
 ```
@@ -212,7 +212,7 @@ print([card[0] for card in header.cards if card[0] != ""])
 
 ### open
 FITS dosyası açar. Dosyanın içeriğini bir obje olarak tutar. Dosyayı açma biçimine bağlı olarak güncellemeye izin 
-veriri.
+verir.
 
 ```open``` ile dosyanın veri ve başlığına erişilebilir.
 
