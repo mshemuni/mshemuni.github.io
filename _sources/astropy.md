@@ -1,4 +1,4 @@
-# Astropy
+# Astropy 
 
 Astropy, astronomların kullanımına sunulmuş, pyhton programa dili ile yazılmış, bir yazılımlar koleksyonudur.
 
@@ -116,13 +116,15 @@ dir.
 **SIMPLE** başlığı mantıksal bir veri taşır. T veya F değeri alır ve söz konusu dosyaının basit bir FITS dosyasıolup 
 olmadığını ifade der.
 :::
+
+
 ### Veri
 FITS de diğer sayısal görüntü formatlarında olduğu gibi veriyi 2 boyutlu bir matris şeklinde tutar. Söz konusu matrisin 
 her hücresindeki değer, sayısal görüntünün aynı pikseline karşılık gelen değeri olacaktır.
 
 ![pix](../pix.png)
 
-IRAF ```dev$pix``` görüntüsü
+M51 (IRAF ```dev$pix``` görüntüsü)
 
 
 ## Astropy ile FITS
@@ -194,6 +196,19 @@ SIMPLE  =                    T / Fits standard                                  
 
 ```
 getheader veriyi bir ```fits.header``` olarak verir.
+
+
+Bir FITS dosyasında başlıkların listesini almak için ise
+```
+from astropy.io import fits as fts
+
+header = fts.getheader(r"[Dosya Yolu]")
+print([card[0] for card in header.cards if card[0] != ""])
+```
+Çıktı:
+```
+['SIMPLE', 'BITPIX', 'NAXIS', 'NAXIS1', 'NAXIS2', 'EXTEND', 'ORIGIN', 'DATE', 'IRAF-TLM', 'OBJECT', 'IRAF-MAX', 'IRAF-MIN', 'CCDPICNO', 'ITIME', 'TTIME', 'OTIME', 'DATA-TYP', 'DATE-OBS', 'RA', 'DEC', 'EPOCH', 'ZD', 'UT', 'ST', 'CAM-ID', 'CAM-TEMP', 'DEW-TEMP', 'F1POS', 'F2POS', 'TVFILT', 'CMP-LAMP', 'TILT-POS', 'BIAS-PIX', 'BI-FLAG', 'BP-FLAG', 'CR-FLAG', 'DK-FLAG', 'FR-FLAG', 'FR-SCALE', 'TRIM', 'BT-FLAG', 'FF-FLAG', 'CCDPROC', 'AIRMASS', 'HISTORY', 'HISTORY', 'HISTORY', 'HISTORY']
+```
 
 ### open
 FITS dosyası açar. Dosyanın içeriğini bir obje olarak tutar. Dosyayı açma biçimine bağlı olarak güncellemeye izin 

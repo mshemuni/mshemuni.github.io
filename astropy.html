@@ -51,7 +51,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Işıkölçüm Gözlemi" href="gozlem.html" />
+    <link rel="next" title="photutils" href="daofind.html" />
+    <link rel="prev" title="Gözlem" href="gozlem.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -91,12 +92,27 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="gozlem.html">
-   Işıkölçüm Gözlemi
+   Gözlem
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Astropy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="daofind.html">
+   photutils
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="calibration.html">
+   Python Kalibrasyon
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="isikolcum.html">
+   Python Işıkölçüm
   </a>
  </li>
 </ul>
@@ -362,7 +378,7 @@ olmadığını ifade der.</p>
 <p>FITS de diğer sayısal görüntü formatlarında olduğu gibi veriyi 2 boyutlu bir matris şeklinde tutar. Söz konusu matrisin
 her hücresindeki değer, sayısal görüntünün aynı pikseline karşılık gelen değeri olacaktır.</p>
 <p><img alt="pix" src="_images/pix.png" /></p>
-<p>IRAF <code class="docutils literal notranslate"><span class="pre">dev$pix</span></code> görüntüsü</p>
+<p>M51 (IRAF <code class="docutils literal notranslate"><span class="pre">dev$pix</span></code> görüntüsü)</p>
 </div>
 </div>
 <div class="section" id="astropy-ile-fits">
@@ -431,6 +447,17 @@ Yalnızca başlığı döndürür.</p>
 </pre></div>
 </div>
 <p>getheader veriyi bir <code class="docutils literal notranslate"><span class="pre">fits.header</span></code> olarak verir.</p>
+<p>Bir FITS dosyasında başlıkların listesini almak için ise</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="n">fts</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Dosya Yolu]&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">card</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">card</span> <span class="ow">in</span> <span class="n">header</span><span class="o">.</span><span class="n">cards</span> <span class="k">if</span> <span class="n">card</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Çıktı:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;SIMPLE&#39;</span><span class="p">,</span> <span class="s1">&#39;BITPIX&#39;</span><span class="p">,</span> <span class="s1">&#39;NAXIS&#39;</span><span class="p">,</span> <span class="s1">&#39;NAXIS1&#39;</span><span class="p">,</span> <span class="s1">&#39;NAXIS2&#39;</span><span class="p">,</span> <span class="s1">&#39;EXTEND&#39;</span><span class="p">,</span> <span class="s1">&#39;ORIGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;DATE&#39;</span><span class="p">,</span> <span class="s1">&#39;IRAF-TLM&#39;</span><span class="p">,</span> <span class="s1">&#39;OBJECT&#39;</span><span class="p">,</span> <span class="s1">&#39;IRAF-MAX&#39;</span><span class="p">,</span> <span class="s1">&#39;IRAF-MIN&#39;</span><span class="p">,</span> <span class="s1">&#39;CCDPICNO&#39;</span><span class="p">,</span> <span class="s1">&#39;ITIME&#39;</span><span class="p">,</span> <span class="s1">&#39;TTIME&#39;</span><span class="p">,</span> <span class="s1">&#39;OTIME&#39;</span><span class="p">,</span> <span class="s1">&#39;DATA-TYP&#39;</span><span class="p">,</span> <span class="s1">&#39;DATE-OBS&#39;</span><span class="p">,</span> <span class="s1">&#39;RA&#39;</span><span class="p">,</span> <span class="s1">&#39;DEC&#39;</span><span class="p">,</span> <span class="s1">&#39;EPOCH&#39;</span><span class="p">,</span> <span class="s1">&#39;ZD&#39;</span><span class="p">,</span> <span class="s1">&#39;UT&#39;</span><span class="p">,</span> <span class="s1">&#39;ST&#39;</span><span class="p">,</span> <span class="s1">&#39;CAM-ID&#39;</span><span class="p">,</span> <span class="s1">&#39;CAM-TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;DEW-TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;F1POS&#39;</span><span class="p">,</span> <span class="s1">&#39;F2POS&#39;</span><span class="p">,</span> <span class="s1">&#39;TVFILT&#39;</span><span class="p">,</span> <span class="s1">&#39;CMP-LAMP&#39;</span><span class="p">,</span> <span class="s1">&#39;TILT-POS&#39;</span><span class="p">,</span> <span class="s1">&#39;BIAS-PIX&#39;</span><span class="p">,</span> <span class="s1">&#39;BI-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;BP-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;CR-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;DK-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;FR-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;FR-SCALE&#39;</span><span class="p">,</span> <span class="s1">&#39;TRIM&#39;</span><span class="p">,</span> <span class="s1">&#39;BT-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;FF-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;CCDPROC&#39;</span><span class="p">,</span> <span class="s1">&#39;AIRMASS&#39;</span><span class="p">,</span> <span class="s1">&#39;HISTORY&#39;</span><span class="p">,</span> <span class="s1">&#39;HISTORY&#39;</span><span class="p">,</span> <span class="s1">&#39;HISTORY&#39;</span><span class="p">,</span> <span class="s1">&#39;HISTORY&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="open">
 <h3>open<a class="headerlink" href="#open" title="Permalink to this headline">¶</a></h3>
@@ -523,7 +550,8 @@ Bir verinin ortalaması, ortancası, standart satpması gibi değerlerine ulaşm
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="gozlem.html" title="previous page">Işıkölçüm Gözlemi</a>
+    <a class='left-prev' id="prev-link" href="gozlem.html" title="previous page">Gözlem</a>
+    <a class='right-next' id="next-link" href="daofind.html" title="next page">photutils</a>
 
         </div>
         

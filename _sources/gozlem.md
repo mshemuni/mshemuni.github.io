@@ -1,10 +1,10 @@
-# Işıkölçüm Gözlemi
+# Gözlem
 
 ## Işıkölçüm (Photometry) nedir?
 
 **Işıkölçüm** bir astronomik nesnenin ışık akısı veya elektromanyetik radyasyonunun yoğunluğunun ölçülmesi ile ilgili bir astronomi tekniğidir.
 
-## Geerekli tanımlar:
+## Gerekli tanımlar:
 
 Işıkölçüm'de ise bir gök cisminin parlaklığındaki değişimin incelenmesi hedeflenir. Buradaki anahtar kelime *zamana bağlı parlaklık*'tır.
 
