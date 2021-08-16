@@ -1,6 +1,6 @@
 # Astropy 
 
-Astropy, astronomların kullanımına sunulmuş, pyhton programa dili ile yazılmış, bir yazılımlar koleksyonudur.
+```Astropy```, astronomların kullanımına sunulmuş, pyhton programa dili ile yazılmış, bir yazılımlar koleksyonudur.
 
 ## Fits veri
 
