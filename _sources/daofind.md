@@ -15,7 +15,7 @@ import numpy as np
 from photutils.detection import DAOStarFinder
 
 # # Veriyi okuma
-data = fts.getdata(r"C:\Users\mshem\Desktop\pix.fits")
+data = fts.getdata(r"[Dosy Yolu]")
 
 # Verinin istatistiki değerleri
 average = np.mean(data)
@@ -101,7 +101,7 @@ import numpy as np
 from photutils.detection import DAOStarFinder
 
 # # Veriyi okuma
-data = fts.getdata(r"C:\Users\mshem\Desktop\pix.fits")
+data = fts.getdata(r"[Dosy Yolu]")
 
 # Verinin istatistiki değerleri
 average = np.mean(data)
