@@ -8,7 +8,7 @@ Her bilim topluluğu ortak veri türleri ile çalışır. Astronomide kullanıla
 FITS'tir.(Flexible Image Transport System)
 
 FITS, Header ve Veri olmak üzere iki parçadan oluşur. FITS'in Header kısmı ascii formatında olup human-readable'dır 
-(insan tarafından okunabilir). Veri kısmı ise, yer tarasarrufu adına Binaty olup human-readable değildir.
+(insan tarafından okunabilir). Veri kısmı ise, yer tarasarrufu adına Binary olup human-readable değildir.
 
 FITS format kayıpsız bir formattır. Dolayısıyla diskte çokça yer kaplar ve gerektiğinde çeşitli sıkıştırma 
 algoritmalarıyla (zip, tar gibi) sıkıştırılabilir.
