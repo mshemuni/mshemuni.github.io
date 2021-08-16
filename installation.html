@@ -349,7 +349,9 @@ yapmalısınız.</p>
 <p><a class="reference external" href="https://sourceforge.net/projects/xming/">Bu</a> adresten xming kurulum dosyasını indirip kurduktan sonra
 <code class="docutils literal notranslate"><span class="pre">Xming</span> <span class="pre">Server</span></code>’ı çalıştırın.</p>
 <p>Son olarak windows’ta açtığınız ubuntu terminalde</p>
-<p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">DISPLAY=$(route.exe</span> <span class="pre">print</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">0.0.0.0</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">-1</span> <span class="pre">|</span> <span class="pre">awk</span> <span class="pre">'{print</span> <span class="pre">$4}'):0.0</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export DISPLAY=$(route.exe print | grep 0.0.0.0 | head -1 | awk &#39;{print $4}&#39;):0.0
+</pre></div>
+</div>
 <p>komutunu çalıştırınız.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
