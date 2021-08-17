@@ -12,21 +12,20 @@ En az hassasiyete sahip olan göz ile yapılmış gözlemler, bir gözlemcinin g
 göre parlaklığını (Göz kararınca demek yanlış olmaz) kaydetmesinden ibarettir. 
 
 En düşük hassasiyete sahip bu tür gözlemler, öznel olup gözlemi yapan kişiye bağlılık gösterir. Kayıt esnasına 
-gerçekleşebilecen hataların düzeltilmesi olası değildir.
+gerçekleşebilecek hataların düzeltilmesi olası değildir.
 
 Ayrıca göz logaritmik bir dedektördür. Dolayısıyla akıda oluşan değişime logaritmik olarak yant verir. Yani, eğer akıda 
-2 kat değişim olursa gözlemcinin kaydedeceği değer iki katına çıkmnaz.
+2 kat değişim olursa gözlemcinin kaydedeceği değer iki katına çıkmaz.
 
 
 ## Fotoğraf plağı
 Bu tür gözlemlerde, teleskobun odak düzlemine yerleştirilen ışıkduyar bir düzlem ile ifade edilebilir. Söz konusu 
-düzleme gözlem esnasında düşen ışık plak üzerinde kimyasal reaksyona neden olur ve böylece kayıt altına alınır.
+düzleme gözlem esnasında düşen ışık plaka üzerinde kimyasal reaksyona neden olur ve böylece kayıt altına alınır.
 
 Avantajlar:
 - Kişiden bağımsızdır
 - Tekrar incelenebilir
 - Gözlenen ve çevresindeki kaynakları kaydeder
-- Ucuzdur
 
 Dezavantajları:
 - Kuantum etkinliği azdır (Üzerine düşen ışığın küçük bir kısmına yanıt verir)
@@ -51,7 +50,7 @@ Dezavantajları:
 - yalnızca gözlenen cismin akısını kaydeder
 
 ## CMOS/CCD
-Bu cihazları, bir fotokatlandırıcı dizisi olarak algılayabiliriz. n satır ve m sütundan pikselden oluşan bir CCD $n*m$ 
+Bu cihazları, bir fotokatlandırıcı dizisi olarak algılayabiliriz. n satır ve m sütundan oluşan bir CCD $n x m$ 
 piksele sahip olup, çıktı olarak sayısal görüntü verir.
 
 Avantajlar:

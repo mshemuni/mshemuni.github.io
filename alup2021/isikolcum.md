@@ -7,7 +7,7 @@ Daha önce zaman kavramları ve FITS dosyaları üzerinde konuştuk.
 
 Fiziksel bir olayın geçekleşmesini anlamak için, olayın gerçekleşme zamanını bilmek önemlidir. Dolayısıyla bir FITS 
 dosyası oluşturulurken başlığında FITS dosyasının kaydetmeye çalıştığı olayın 
-(bizim durumumuzda gök cisminin parlaklığı) zamanı da FITS'in başlığına yazılır. Söz konusu zaman türü değişiklik 
+(bizim durumumuzda gök cisminin parlaklığı) zamanı da yazılır. Söz konusu zaman türü değişiklik 
 gösterebilir (JD, UTC, Yerel gibi). Fakat zamanın kaydedildiğine emin olabiliriz.
 
 ## Zaman
@@ -22,7 +22,7 @@ print([card[0] for card in header.cards if card[0] != ""])
 ```
 ['SIMPLE', 'BITPIX', 'NAXIS', 'NAXIS1', 'NAXIS2', 'EXTEND', 'ORIGIN', 'DATE', 'IRAF-TLM', 'OBJECT', 'IRAF-MAX', 'IRAF-MIN', 'CCDPICNO', 'ITIME', 'TTIME', 'OTIME', 'DATA-TYP', 'DATE-OBS', 'RA', 'DEC', 'EPOCH', 'ZD', 'UT', 'ST', 'CAM-ID', 'CAM-TEMP', 'DEW-TEMP', 'F1POS', 'F2POS', 'TVFILT', 'CMP-LAMP', 'TILT-POS', 'BIAS-PIX', 'BI-FLAG', 'BP-FLAG', 'CR-FLAG', 'DK-FLAG', 'FR-FLAG', 'FR-SCALE', 'TRIM', 'BT-FLAG', 'FF-FLAG', 'CCDPROC', 'AIRMASS', 'HISTORY', 'HISTORY', 'HISTORY', 'HISTORY']
 ```
-Bu listeye bakacak olursak ```Date``` adlı bir anahtar/Kart görürüz. Bu anahtardaki değer verinin alındığı zamanı gösterecektir.
+Bu listeye bakacak olursak ```Date``` adlı bir anahtar/kart görürüz. Bu anahtardaki değer, verinin alındığı zamanı gösterecektir.
 
 ```
 from astropy.io import fits as fts
@@ -38,7 +38,7 @@ print(header["Date"])
 Dolayısıyla zaman bilgisini başlıktan alabileceğimizi öğrendik.
 
 ## Parlaklık
-Daha önce bir FITS verisinin bir matris olduğunu belirtmiştik. Mu matristeki her bir eleman sayısal görüntüdeki bir 
+Daha önce bir FITS verisinin bir matris olduğunu belirtmiştik. Bu matristeki her bir eleman sayısal görüntüdeki bir 
 piksele karşılık geldiğini de biliyoruz.
 
 ### Kaynak profilleri
@@ -50,7 +50,7 @@ oluşturduğu şekil ise Point Spread Function (PSF, Nokta Dağılım Fonksiyonu
 
 ![psf](../psf.png)
 
-Noıkta Dağılımı
+Nokta Dağılımı
 
 PSF bir noktanın görüntü üzerinde dağıldığı alanı matematiksel olarak ifade eder. Bu ise bize kaynağımızın akısının 
 hangi piksellerde olduğunu gösterir.
@@ -76,12 +76,12 @@ sum = \sum_{n}^{a}{p_n}
 $$
 
 :::{note}
-$sum$ toplam sayım, $p_n$ n. piksel ve $a$ acıklık altında kalan piksel olmak üzere
+$sum$ toplam sayım, $p_n$ n. piksel ve $a$ acıklık altında kalan pikseller olmak üzere
 :::
 
 olarak ifade edilir.
 
-Akıyı ```birim zamanda, birim katı açıda, birim alana düşen toplam enerji miktarı``` olarak tanımlamıştık.
+Akıyı ```birim zamanda, birim alana düşen toplam enerji miktarı``` olarak tanımlamıştık.
 
 Sonuç olarak akı
 

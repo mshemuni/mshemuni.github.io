@@ -6,7 +6,7 @@
 
 ## Gerekli tanımlar:
 
-Işıkölçüm'de ise bir gök cisminin parlaklığındaki değişimin incelenmesi hedeflenir. Buradaki anahtar kelime *zamana bağlı parlaklık*'tır.
+Işıkölçüm'de bir gök cisminin parlaklığındaki değişimin incelenmesi hedeflenir. Buradaki anahtar kelime *zamana bağlı parlaklık*'tır.
 
 ### Zaman:
 Fizikte en hassas ölçülebilen nicelik zamandır. Zamanın ise faklı biçimleri vardır:
@@ -27,6 +27,8 @@ Jülyen günü (**JD**), Jülyen tarih sisteminde yer alan ve astronomi toplulu�
 kullanılan bir zaman ölçüm sistemidir. Jülyen günü, MÖ 1 Ocak 4713 tarihi Pazartesi günü Evrensel zaman (UTC) ile öğle 
 vaktinden itibaren bir günün zaman aralığını gün ve günün kesirleri halinde sunar.
 
+2021-08-17 12:30:25 -> 2459444.02112
+
 ### Aydınlatma gücü:
 
 Bir kaynağın birim zamanda, bütün dalga boylarında, bütün yüzeyinden yaydığı energiye Aydınlatma Gücü veya Işınım gücü denir.
@@ -37,21 +39,21 @@ $$
 $$
 
 :::{note}
-$L$ ışınım gücü, $\sigma$ Stefan–Boltzmann sabiti ve $T$ sıcaklık olmak üzere
+$L$ ışınım gücü, $r$ kaynağın yarıçapı, $\sigma$ Stefan–Boltzmann sabiti ve $T$ sıcaklık olmak üzere
 :::
 
 olarak ifade edilir.
 
 ### Akı:
 
-Akı (Flux), bir kaynağın belirli bir uzaklığa yaydığı, birim zamanda, birim yüzeyde, birim katı açıda enerji miktarıdır.
+Akı (Flux), bir kaynağın belirli bir uzaklığa, birim zamanda, birim yüzeyden yaydığı enerji miktarıdır.
 
 $$
-  F = \frac{L}{4 \pi r^2}
+  F = \frac{L}{4 \pi R^2}
 $$
 
 :::{note}
-$F$ akı, $L$ ışınım gücü, $r$ uzaklık olmak üzere
+$F$ akı, $L$ ışınım gücü ve $R$ uzaklık olmak üzere
 :::
 
 olarak ifade edilir.
@@ -70,7 +72,7 @@ Kullanılan farklı parlaklık ölçümler:
 - Aletsel parlaklık
 
 #### Görünür parlaklık
-Görünür parlaklık, bir kaynağın çıplak göz ile ölçülen parlaklığıdır. Bu parlaklık objenin ışın gününe ve uzaklığına 
+Görünür parlaklık, bir kaynağın çıplak göz ile ölçülen parlaklığıdır. Bu parlaklık objenin ışınım gücüne ve uzaklığına 
 bağlılık gösterir.
 
 $$
@@ -93,7 +95,7 @@ neden olduğu parlaklıktır.
 Diğer parlaklık türlerine göre uzaklıktan bağımsız bir parlaklık değeridir.
 
 Mutlak parlaklık, bir kaynağın 10 parsek uzaklıktaki görünür parlaklık değeridir. Dolayısıyla görünür parlaklığı ve 
-uzaklığı bilinen bir kaynağın parlaklığı
+uzaklığı bilinen bir kaynağın mutlak parlaklığı
 
 $$
 M = m + 5 log(\frac{1}{\pi})
@@ -122,7 +124,7 @@ Bilimsel yöntemde veri elde etmenin iki yöntemi var.
 
 Deney ve gözlem arasındaki en belirgin fark, deneyin kontrollü gözlemin ise kontrolsüz olmasıdır.
 
-Bir deneyde çevreyi ve ilerleyişi kontrol edebilirsiziniz, gözlemde ise gerçekleşe duran bir olay gözleyebiliriz.
+Bir deneyde ortamı ve ilerleyişi kontrol edebilirsiziniz, gözlemde ise gerçekleşe duran bir olayı takip edebiliriz.
 
 Astronomik gözlemler bir çok yötem ile yapılabilir. Biz ise ışıkölçüm gözlemi ile ilgileniyoruz.
 
@@ -164,6 +166,9 @@ Gözlem programı genelde bir tablo halinde sunulur ve aşağıdaki bilgileri ba
 
 Yukarıdaki bilgiler gün içerisinde gözlenecek bütün objeler için ayrı ayrı verilir.
 
+### Ekipmanın sağlığı
+Gözleme başlamadan önce gözlemde kullanacağımız ekipmanların (Teleskop, dedektör, Filtre gibi) sağlığını kontrol etmeli, 
+olumsuz bir durum ile karşılaşıldığında ise gözleme başlamadan teknik ekip bilgilendirilmeli.
 
 ### Kalibrasyon ölçümleri
 

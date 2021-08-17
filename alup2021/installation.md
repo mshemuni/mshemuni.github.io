@@ -15,7 +15,7 @@ Lütfen python'ın 3. (python3.6 ve üstü) versiyonunu kurunuz.
 :::
 
 ### Python kütüphaneleri
-ALÜP 2021 çalıştayoında kullanılacak kütüphaneler:
+ALÜP 2021 çalıştayında kullanılacak kütüphaneler:
 
 - ```astropy```
 - ```photutils```

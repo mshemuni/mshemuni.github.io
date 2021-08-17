@@ -10,12 +10,12 @@ FITS'tir.(Flexible Image Transport System)
 FITS, Header ve Veri olmak üzere iki parçadan oluşur. FITS'in Header kısmı ascii formatında olup human-readable'dır 
 (insan tarafından okunabilir). Veri kısmı ise, yer tarasarrufu adına Binaty olup human-readable değildir.
 
-FITS format kayıpsız bir formattır. Dolayısıyla diskte çokça yer kaplar ve gerektiğinde çeşitli sıkıştırma 
+FITS formatı kayıpsız bir formattır. Dolayısıyla diskte çokça yer kaplar ve gerektiğinde çeşitli sıkıştırma 
 algoritmalarıyla (zip, tar gibi) sıkıştırılabilir.
 
 ### Başlık
 Bir FITS başlığı ascii formatında olup iki kolonlu bir tablo olarak algılanabilir. Bu tablonun ilk kolonunda başlık 
-anahtarı/kartı ikinci kolonda ise anahtara karşılık gelen değer yer almaktadır.
+anahtarı/kartıları, ikinci kolonda ise anahtara karşılık gelen değer yer almaktadır.
 ```
 SIMPLE  =                    T / Fits standard                                  
 BITPIX  =                   16 / Bits per pixel                                 
@@ -93,12 +93,12 @@ END
 
 ```
 
-Başlık kuraları:
+#### Başlık kuraları:
 
 1. Başlıkların anahtar kelimeleri en fazla 8 karakter olabilir
 2. Başlığın anahtar kelimesi ve değerine ek olarak açıklama da yazılabilir. ```/```
-3. Başlık, nümerik, metin ve mantıksal olmak üzere 3 çeşit veri tipi taşıyabilir.
-4. Başlık bloğunun tamamı 32 ve katları satır sayısından oluşmak zorunda. ```END``` ile son başlık anahtarı arasındaki boşluk 
+3. Başlık nümerik, metin ve mantıksal olmak üzere 3 çeşit veri tipi taşıyabilir.
+4. Başlık bloğunun tamamı 32 ve katları satırdan oluşmak zorunda. ```END``` ile son başlık anahtarı arasındaki boşluk 
    32'nin katına tamamlamak için bırakılöıştır.
 
 :::{note}
@@ -119,7 +119,7 @@ olmadığını ifade der.
 
 
 ### Veri
-FITS de diğer sayısal görüntü formatlarında olduğu gibi veriyi 2 boyutlu bir matris şeklinde tutar. Söz konusu matrisin 
+FITS formatı, diğer sayısal görüntü formatlarında olduğu gibi veriyi 2 boyutlu bir matris şeklinde tutar. Söz konusu matrisin 
 her hücresindeki değer, sayısal görüntünün aynı pikseline karşılık gelen değeri olacaktır.
 
 ![pix](../pix.png)
@@ -140,7 +140,7 @@ from astropy.io import fits as fts
 help(fts)
 ```
 
-```fits``` bir çok şekilde kullanılabilir. ```fits```'te en çok kullanacağımz metodlar:
+```fits```'te en çok kullanacağımz metodlar:
 
 - ```getdata```
 - ```getheader```
@@ -150,7 +150,7 @@ olacaktır.
 
 ### getdata
 Bir FITS dosyasının Veri kısmına ulaşmak için kullanılır. Dosya üzerinde güncelleme'ye izin vermez. 
-Yalnızca veriyi döndürür.
+Yalnızca veriyi sunar.
 ```
 from astropy.io import fits as fts
 
@@ -174,10 +174,13 @@ print(type(data))
 
 getdata veriyi 2 boyutlu* bir ```numpy.ndarray``` olarak verir.
 
+:::{note}
+*: Bir FITS dosyasında birden fazla görüntü taşınabilir. Bu durumda veri 3 boyutlu matris olarak sunulur.
+:::
 
 ### getheader
 Bir FITS dosyasının Başlık kısmına ulaşmak için kullanılır. Dosya üzerinde güncelleme'ye izin vermez. 
-Yalnızca başlığı döndürür.
+Yalnızca başlığı sunar.
 ```
 from astropy.io import fits as fts
 
@@ -252,8 +255,8 @@ SIMPLE  =                    T / Fits standard                                  
 ```
 
 ## İstatistik
-Astropy bir FITS verisini ```numpy.ndarray``` tipinde verdiği için istatistiki işlemlerde numpy'ın gücü kullanılabilir.
-Bir verinin ortalaması, ortancası, standart satpması gibi değerlerine ulaşmak için numpd.ndarray objesi kullanılabilir.
+Astropy bir FITS verisini ```numpy.ndarray``` tipinde sunduğu için istatistiki işlemlerde numpy'ın gücü kullanılabilir.
+Bir verinin ortalaması, ortancası, standart satpması gibi değerlerine ulaşmak için ```numpy``` kullanılabilir.
 
 ```
 from astropy.io import fits as fts
