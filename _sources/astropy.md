@@ -1,4 +1,4 @@
-# Astropy 
+# astropy 
 
 ```Astropy```, astronomların kullanımına sunulmuş, pyhton programa dili ile yazılmış, bir yazılımlar koleksyonudur.
 
@@ -96,16 +96,10 @@ END
 #### Başlık kuraları:
 
 1. Başlıkların anahtar kelimeleri en fazla 8 karakter olabilir
-2. Başlığın anahtar kelimesi ve değerine ek olarak açıklama da yazılabilir. ```/```
-<<<<<<< HEAD
+2. Başlığın anahtar kelimesi ve değerine ek olarak açıklama da yazılabilir.
 3. Başlık nümerik, metin ve mantıksal olmak üzere 3 çeşit veri tipi taşıyabilir.
 4. Başlık bloğunun tamamı 32 ve katları satırdan oluşmak zorunda. ```END``` ile son başlık anahtarı arasındaki boşluk 
    32'nin katına tamamlamak için bırakılöıştır.
-=======
-3. Başlık, nümerik, metin ve mantıksal olmak üzere 3 çeşit veri tipi taşıyabilir.
-4. Başlık bloğunun tamamı 32 ve katları satır sayısından oluşmak zorunda. ```END``` ile son başlık anahtarı arasındaki boşluk, 
-   32'nin katına tamamlamak için bırakılmıştır.
->>>>>>> 316c42445f51f58e4142bb1c679200536069133d
 
 :::{note}
 Bir FITS dosyasının FITS olabilmesi için gerekli olan en az 4 anahtar bulunmakta. Bunlar: 
