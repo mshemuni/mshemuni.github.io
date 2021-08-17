@@ -14,6 +14,22 @@ Python'ı farklı kaynaklardan kuaracak katılımcıların dikkatine.
 Lütfen python'ın 3. (python3.6 ve üstü) versiyonunu kurunuz.
 :::
 
+### IDE
+IDE (Integrated Development Environment, Tümleşik Geliştirme Ortamı) herhangi bir programlama/betik dilinde kod yazarken 
+renklendirme veya öneriler ile yardımcı olan bir yazılımdır.
+
+Python için çok sayıda IDE bulabilirsiniz. Günümüzde en yaygın kullanılan Python IDE'ler arasında
+- Pycharm 
+- Visual Studio Code
+- Spyder
+
+yer almaktadır.
+
+:::{note}
+Katılımcının kullandığı IDE ile ilgili oluşabilecek sorunlar Uzman ve Teknik ekip tarafından çözülemeyebilir.
+Dolayısıyla tecrübeli olduğunuz veya yaygın kullanılan IDE'leri tercih etmeniz rica olunur.
+:::
+
 ### Python kütüphaneleri
 ALÜP 2021 çalıştayında kullanılacak kütüphaneler:
 
