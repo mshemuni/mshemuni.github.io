@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -37,14 +37,11 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -52,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Python Kalibrasyon" href="calibration.html" />
@@ -249,7 +248,7 @@
 <p>Daha önce zaman kavramları ve FITS dosyaları üzerinde konuştuk.</p>
 <p>Fiziksel bir olayın geçekleşmesini anlamak için, olayın gerçekleşme zamanını bilmek önemlidir. Dolayısıyla bir FITS
 dosyası oluşturulurken başlığında FITS dosyasının kaydetmeye çalıştığı olayın
-(bizim durumumuzda gök cisminin parlaklığı) zamanı da FITS’in başlığına yazılır. Söz konusu zaman türü değişiklik
+(bizim durumumuzda gök cisminin parlaklığı) zamanı da yazılır. Söz konusu zaman türü değişiklik
 gösterebilir (JD, UTC, Yerel gibi). Fakat zamanın kaydedildiğine emin olabiliriz.</p>
 <div class="section" id="zaman">
 <h2>Zaman<a class="headerlink" href="#zaman" title="Permalink to this headline">¶</a></h2>
@@ -264,7 +263,7 @@ gösterebilir (JD, UTC, Yerel gibi). Fakat zamanın kaydedildiğine emin olabili
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;SIMPLE&#39;</span><span class="p">,</span> <span class="s1">&#39;BITPIX&#39;</span><span class="p">,</span> <span class="s1">&#39;NAXIS&#39;</span><span class="p">,</span> <span class="s1">&#39;NAXIS1&#39;</span><span class="p">,</span> <span class="s1">&#39;NAXIS2&#39;</span><span class="p">,</span> <span class="s1">&#39;EXTEND&#39;</span><span class="p">,</span> <span class="s1">&#39;ORIGIN&#39;</span><span class="p">,</span> <span class="s1">&#39;DATE&#39;</span><span class="p">,</span> <span class="s1">&#39;IRAF-TLM&#39;</span><span class="p">,</span> <span class="s1">&#39;OBJECT&#39;</span><span class="p">,</span> <span class="s1">&#39;IRAF-MAX&#39;</span><span class="p">,</span> <span class="s1">&#39;IRAF-MIN&#39;</span><span class="p">,</span> <span class="s1">&#39;CCDPICNO&#39;</span><span class="p">,</span> <span class="s1">&#39;ITIME&#39;</span><span class="p">,</span> <span class="s1">&#39;TTIME&#39;</span><span class="p">,</span> <span class="s1">&#39;OTIME&#39;</span><span class="p">,</span> <span class="s1">&#39;DATA-TYP&#39;</span><span class="p">,</span> <span class="s1">&#39;DATE-OBS&#39;</span><span class="p">,</span> <span class="s1">&#39;RA&#39;</span><span class="p">,</span> <span class="s1">&#39;DEC&#39;</span><span class="p">,</span> <span class="s1">&#39;EPOCH&#39;</span><span class="p">,</span> <span class="s1">&#39;ZD&#39;</span><span class="p">,</span> <span class="s1">&#39;UT&#39;</span><span class="p">,</span> <span class="s1">&#39;ST&#39;</span><span class="p">,</span> <span class="s1">&#39;CAM-ID&#39;</span><span class="p">,</span> <span class="s1">&#39;CAM-TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;DEW-TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;F1POS&#39;</span><span class="p">,</span> <span class="s1">&#39;F2POS&#39;</span><span class="p">,</span> <span class="s1">&#39;TVFILT&#39;</span><span class="p">,</span> <span class="s1">&#39;CMP-LAMP&#39;</span><span class="p">,</span> <span class="s1">&#39;TILT-POS&#39;</span><span class="p">,</span> <span class="s1">&#39;BIAS-PIX&#39;</span><span class="p">,</span> <span class="s1">&#39;BI-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;BP-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;CR-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;DK-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;FR-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;FR-SCALE&#39;</span><span class="p">,</span> <span class="s1">&#39;TRIM&#39;</span><span class="p">,</span> <span class="s1">&#39;BT-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;FF-FLAG&#39;</span><span class="p">,</span> <span class="s1">&#39;CCDPROC&#39;</span><span class="p">,</span> <span class="s1">&#39;AIRMASS&#39;</span><span class="p">,</span> <span class="s1">&#39;HISTORY&#39;</span><span class="p">,</span> <span class="s1">&#39;HISTORY&#39;</span><span class="p">,</span> <span class="s1">&#39;HISTORY&#39;</span><span class="p">,</span> <span class="s1">&#39;HISTORY&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Bu listeye bakacak olursak <code class="docutils literal notranslate"><span class="pre">Date</span></code> adlı bir anahtar/Kart görürüz. Bu anahtardaki değer verinin alındığı zamanı gösterecektir.</p>
+<p>Bu listeye bakacak olursak <code class="docutils literal notranslate"><span class="pre">Date</span></code> adlı bir anahtar/kart görürüz. Bu anahtardaki değer, verinin alındığı zamanı gösterecektir.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
 
 <span class="n">header</span> <span class="o">=</span> <span class="n">fts</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Dosy Yolu]&quot;</span><span class="p">)</span>
@@ -279,7 +278,7 @@ gösterebilir (JD, UTC, Yerel gibi). Fakat zamanın kaydedildiğine emin olabili
 </div>
 <div class="section" id="parlaklik">
 <h2>Parlaklık<a class="headerlink" href="#parlaklik" title="Permalink to this headline">¶</a></h2>
-<p>Daha önce bir FITS verisinin bir matris olduğunu belirtmiştik. Mu matristeki her bir eleman sayısal görüntüdeki bir
+<p>Daha önce bir FITS verisinin bir matris olduğunu belirtmiştik. Bu matristeki her bir eleman sayısal görüntüdeki bir
 piksele karşılık geldiğini de biliyoruz.</p>
 <div class="section" id="kaynak-profilleri">
 <h3>Kaynak profilleri<a class="headerlink" href="#kaynak-profilleri" title="Permalink to this headline">¶</a></h3>
@@ -288,7 +287,7 @@ Atmosfer dışında bir de yıldızlar arası ortam etkin olacaktır.</p>
 <p>Bir kaynağın ışığı atmosferden geçtikten sonra dedektör düzlemine düşer. Söz konusu kaynağın dedektör üzerinde
 oluşturduğu şekil ise Point Spread Function (PSF, Nokta Dağılım Fonksiyonu) ile ifade edilebilir.</p>
 <p><img alt="psf" src="_images/psf.png" /></p>
-<p>Noıkta Dağılımı</p>
+<p>Nokta Dağılımı</p>
 <p>PSF bir noktanın görüntü üzerinde dağıldığı alanı matematiksel olarak ifade eder. Bu ise bize kaynağımızın akısının
 hangi piksellerde olduğunu gösterir.</p>
 <p>Kaynağın merkezini ve ne kadarlık alana dağıldığını bilirsek, söz konusu kaynağın akısın hesaplayabiliriz.</p>
@@ -312,10 +311,10 @@ sum = \sum_{n}^{a}{p_n}
 \]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><span class="math notranslate nohighlight">\(sum\)</span> toplam sayım, <span class="math notranslate nohighlight">\(p_n\)</span> n. piksel ve <span class="math notranslate nohighlight">\(a\)</span> acıklık altında kalan piksel olmak üzere</p>
+<p><span class="math notranslate nohighlight">\(sum\)</span> toplam sayım, <span class="math notranslate nohighlight">\(p_n\)</span> n. piksel ve <span class="math notranslate nohighlight">\(a\)</span> acıklık altında kalan pikseller olmak üzere</p>
 </div>
 <p>olarak ifade edilir.</p>
-<p>Akıyı <code class="docutils literal notranslate"><span class="pre">birim</span> <span class="pre">zamanda,</span> <span class="pre">birim</span> <span class="pre">katı</span> <span class="pre">açıda,</span> <span class="pre">birim</span> <span class="pre">alana</span> <span class="pre">düşen</span> <span class="pre">toplam</span> <span class="pre">enerji</span> <span class="pre">miktarı</span></code> olarak tanımlamıştık.</p>
+<p>Akıyı <code class="docutils literal notranslate"><span class="pre">birim</span> <span class="pre">zamanda,</span> <span class="pre">birim</span> <span class="pre">alana</span> <span class="pre">düşen</span> <span class="pre">toplam</span> <span class="pre">enerji</span> <span class="pre">miktarı</span></code> olarak tanımlamıştık.</p>
 <p>Sonuç olarak akı</p>
 <div class="math notranslate nohighlight">
 \[

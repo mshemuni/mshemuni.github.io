@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -37,14 +37,11 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -52,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Python Işıkölçüm" href="isikolcum.html" />
@@ -278,20 +277,19 @@ listelemek gerekirse:</p>
 <p>En az hassasiyete sahip olan göz ile yapılmış gözlemler, bir gözlemcinin gök yüzünde gördüğü kaynakların bir birine
 göre parlaklığını (Göz kararınca demek yanlış olmaz) kaydetmesinden ibarettir.</p>
 <p>En düşük hassasiyete sahip bu tür gözlemler, öznel olup gözlemi yapan kişiye bağlılık gösterir. Kayıt esnasına
-gerçekleşebilecen hataların düzeltilmesi olası değildir.</p>
+gerçekleşebilecek hataların düzeltilmesi olası değildir.</p>
 <p>Ayrıca göz logaritmik bir dedektördür. Dolayısıyla akıda oluşan değişime logaritmik olarak yant verir. Yani, eğer akıda
-2 kat değişim olursa gözlemcinin kaydedeceği değer iki katına çıkmnaz.</p>
+2 kat değişim olursa gözlemcinin kaydedeceği değer iki katına çıkmaz.</p>
 </div>
 <div class="section" id="fotograf-plagi">
 <h2>Fotoğraf plağı<a class="headerlink" href="#fotograf-plagi" title="Permalink to this headline">¶</a></h2>
 <p>Bu tür gözlemlerde, teleskobun odak düzlemine yerleştirilen ışıkduyar bir düzlem ile ifade edilebilir. Söz konusu
-düzleme gözlem esnasında düşen ışık plak üzerinde kimyasal reaksyona neden olur ve böylece kayıt altına alınır.</p>
+düzleme gözlem esnasında düşen ışık plaka üzerinde kimyasal reaksyona neden olur ve böylece kayıt altına alınır.</p>
 <p>Avantajlar:</p>
 <ul class="simple">
 <li><p>Kişiden bağımsızdır</p></li>
 <li><p>Tekrar incelenebilir</p></li>
 <li><p>Gözlenen ve çevresindeki kaynakları kaydeder</p></li>
-<li><p>Ucuzdur</p></li>
 </ul>
 <p>Dezavantajları:</p>
 <ul class="simple">
@@ -322,7 +320,7 @@ Böylece sayısal ortamda (Bilgisayarda) işlenebilir.</p>
 </div>
 <div class="section" id="cmos-ccd">
 <h2>CMOS/CCD<a class="headerlink" href="#cmos-ccd" title="Permalink to this headline">¶</a></h2>
-<p>Bu cihazları, bir fotokatlandırıcı dizisi olarak algılayabiliriz. n satır ve m sütundan pikselden oluşan bir CCD <span class="math notranslate nohighlight">\(n*m\)</span>
+<p>Bu cihazları, bir fotokatlandırıcı dizisi olarak algılayabiliriz. n satır ve m sütundan oluşan bir CCD <span class="math notranslate nohighlight">\(n x m\)</span>
 piksele sahip olup, çıktı olarak sayısal görüntü verir.</p>
 <p>Avantajlar:</p>
 <ul class="simple">

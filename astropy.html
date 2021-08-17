@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -37,14 +37,11 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -219,6 +216,13 @@
     <a class="reference internal nav-link" href="#baslik">
      Başlık
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#baslik-kuralari">
+       Başlık kuraları:
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#veri">
@@ -274,12 +278,12 @@
 FITS’tir.(Flexible Image Transport System)</p>
 <p>FITS, Header ve Veri olmak üzere iki parçadan oluşur. FITS’in Header kısmı ascii formatında olup human-readable’dır
 (insan tarafından okunabilir). Veri kısmı ise, yer tarasarrufu adına Binary olup human-readable değildir.</p>
-<p>FITS format kayıpsız bir formattır. Dolayısıyla diskte çokça yer kaplar ve gerektiğinde çeşitli sıkıştırma
+<p>FITS formatı kayıpsız bir formattır. Dolayısıyla diskte çokça yer kaplar ve gerektiğinde çeşitli sıkıştırma
 algoritmalarıyla (zip, tar gibi) sıkıştırılabilir.</p>
 <div class="section" id="baslik">
 <h3>Başlık<a class="headerlink" href="#baslik" title="Permalink to this headline">¶</a></h3>
 <p>Bir FITS başlığı ascii formatında olup iki kolonlu bir tablo olarak algılanabilir. Bu tablonun ilk kolonunda başlık
-anahtarı/kartı ikinci kolonda ise anahtara karşılık gelen değer yer almaktadır.</p>
+anahtarı/kartıları, ikinci kolonda ise anahtara karşılık gelen değer yer almaktadır.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SIMPLE</span>  <span class="o">=</span>                    <span class="n">T</span> <span class="o">/</span> <span class="n">Fits</span> <span class="n">standard</span>                                  
 <span class="n">BITPIX</span>  <span class="o">=</span>                   <span class="mi">16</span> <span class="o">/</span> <span class="n">Bits</span> <span class="n">per</span> <span class="n">pixel</span>                                 
 <span class="n">NAXIS</span>   <span class="o">=</span>                    <span class="mi">2</span> <span class="o">/</span> <span class="n">Number</span> <span class="n">of</span> <span class="n">axes</span>                                 
@@ -356,14 +360,35 @@ anahtarı/kartı ikinci kolonda ise anahtara karşılık gelen değer yer almakt
 
 </pre></div>
 </div>
-<p>Başlık kuraları:</p>
+<div class="section" id="baslik-kuralari">
+<h4>Başlık kuraları:<a class="headerlink" href="#baslik-kuralari" title="Permalink to this headline">¶</a></h4>
 <ol class="simple">
 <li><p>Başlıkların anahtar kelimeleri en fazla 8 karakter olabilir</p></li>
-<li><p>Başlığın anahtar kelimesi ve değerine ek olarak açıklama da yazılabilir. <code class="docutils literal notranslate"><span class="pre">/</span></code></p></li>
+<li><p>Başlığın anahtar kelimesi ve değerine ek olarak açıklama da yazılabilir. <code class="docutils literal notranslate"><span class="pre">/</span></code>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p></li>
+<li><p>Başlık nümerik, metin ve mantıksal olmak üzere 3 çeşit veri tipi taşıyabilir.</p></li>
+<li><p>Başlık bloğunun tamamı 32 ve katları satırdan oluşmak zorunda. <code class="docutils literal notranslate"><span class="pre">END</span></code> ile son başlık anahtarı arasındaki boşluk
+32’nin katına tamamlamak için bırakılöıştır.
+=======</p></li>
 <li><p>Başlık, nümerik, metin ve mantıksal olmak üzere 3 çeşit veri tipi taşıyabilir.</p></li>
 <li><p>Başlık bloğunun tamamı 32 ve katları satır sayısından oluşmak zorunda. <code class="docutils literal notranslate"><span class="pre">END</span></code> ile son başlık anahtarı arasındaki boşluk,
 32’nin katına tamamlamak için bırakılmıştır.</p></li>
 </ol>
+<blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><blockquote>
+<div><p>316c42445f51f58e4142bb1c679200536069133d</p>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Bir FITS dosyasının FITS olabilmesi için gerekli olan en az 4 anahtar bulunmakta. Bunlar:</p>
@@ -381,9 +406,10 @@ anahtarı/kartı ikinci kolonda ise anahtara karşılık gelen değer yer almakt
 olmadığını ifade eder.</p>
 </div>
 </div>
+</div>
 <div class="section" id="veri">
 <h3>Veri<a class="headerlink" href="#veri" title="Permalink to this headline">¶</a></h3>
-<p>FITS de diğer sayısal görüntü formatlarında olduğu gibi veriyi 2 boyutlu bir matris şeklinde tutar. Söz konusu matrisin
+<p>FITS formatı, diğer sayısal görüntü formatlarında olduğu gibi veriyi 2 boyutlu bir matris şeklinde tutar. Söz konusu matrisin
 her hücresindeki değer, sayısal görüntünün aynı pikseline karşılık gelen değeri olacaktır.</p>
 <p><img alt="pix" src="_images/pix.png" /></p>
 <p>M51 (IRAF <code class="docutils literal notranslate"><span class="pre">dev$pix</span></code> görüntüsü)</p>
@@ -400,7 +426,7 @@ objesi kullanılır:</p>
 <span class="n">help</span><span class="p">(</span><span class="n">fts</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">fits</span></code> bir çok şekilde kullanılabilir. <code class="docutils literal notranslate"><span class="pre">fits</span></code>’te en çok kullanacağımz metodlar:</p>
+<p><code class="docutils literal notranslate"><span class="pre">fits</span></code>’te en çok kullanacağımz metodlar:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">getdata</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">getheader</span></code></p></li>
@@ -410,7 +436,7 @@ objesi kullanılır:</p>
 <div class="section" id="getdata">
 <h3>getdata<a class="headerlink" href="#getdata" title="Permalink to this headline">¶</a></h3>
 <p>Bir FITS dosyasının Veri kısmına ulaşmak için kullanılır. Dosya üzerinde güncelleme’ye izin vermez.
-Yalnızca veriyi döndürür.</p>
+Yalnızca veriyi sunar.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">fts</span><span class="o">.</span><span class="n">getdata</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Dosya Yolu]&quot;</span><span class="p">)</span>
@@ -432,11 +458,15 @@ Yalnızca veriyi döndürür.</p>
 </pre></div>
 </div>
 <p>getdata veriyi 2 boyutlu* bir <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> olarak verir.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>*: Bir FITS dosyasında birden fazla görüntü taşınabilir. Bu durumda veri 3 boyutlu matris olarak sunulur.</p>
+</div>
 </div>
 <div class="section" id="getheader">
 <h3>getheader<a class="headerlink" href="#getheader" title="Permalink to this headline">¶</a></h3>
 <p>Bir FITS dosyasının Başlık kısmına ulaşmak için kullanılır. Dosya üzerinde güncelleme’ye izin vermez.
-Yalnızca başlığı döndürür.</p>
+Yalnızca başlığı sunar.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
 
 <span class="n">header</span> <span class="o">=</span> <span class="n">fts</span><span class="o">.</span><span class="n">getheader</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[Dosya Yolu]&quot;</span><span class="p">)</span>
@@ -510,8 +540,8 @@ SIMPLE  =                    T / Fits standard                                  
 </div>
 <div class="section" id="istatistik">
 <h2>İstatistik<a class="headerlink" href="#istatistik" title="Permalink to this headline">¶</a></h2>
-<p>Astropy bir FITS verisini <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> tipinde verdiği için istatistiki işlemlerde numpy’ın gücü kullanılabilir.
-Bir verinin ortalaması, ortancası, standart satpması gibi değerlerine ulaşmak için numpd.ndarray objesi kullanılabilir.</p>
+<p>Astropy bir FITS verisini <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code> tipinde sunduğu için istatistiki işlemlerde numpy’ın gücü kullanılabilir.
+Bir verinin ortalaması, ortancası, standart satpması gibi değerlerine ulaşmak için <code class="docutils literal notranslate"><span class="pre">numpy</span></code> kullanılabilir.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.io</span> <span class="kn">import</span> <span class="n">fits</span> <span class="k">as</span> <span class="n">fts</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 

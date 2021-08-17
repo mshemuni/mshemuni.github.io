@@ -15,7 +15,7 @@ Lütfen python'ın 3. (python3.6 ve üstü) versiyonunu kurunuz.
 :::
 
 ### Python kütüphaneleri
-ALÜP 2021 çalıştayoında kullanılacak kütüphaneler:
+ALÜP 2021 çalıştayında kullanılacak kütüphaneler:
 
 - ```astropy```
 - ```photutils```
@@ -84,7 +84,9 @@ yapmalısınız.
 
 Son olarak windows'ta açtığınız ubuntu terminalde 
 
-```export DISPLAY=$(route.exe print | grep 0.0.0.0 | head -1 | awk '{print $4}'):0.0```
+```
+export DISPLAY=$(route.exe print | grep 0.0.0.0 | head -1 | awk '{print $4}'):0.0
+```
 
 komutunu çalıştırınız.
 

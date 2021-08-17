@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -37,14 +37,11 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -52,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Astropy" href="astropy.html" />
@@ -280,6 +279,11 @@
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ekipmanin-sagligi">
+     Ekipmanın sağlığı
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kalibrasyon-olcumleri">
      Kalibrasyon ölçümleri
     </a>
@@ -305,7 +309,7 @@
 </div>
 <div class="section" id="gerekli-tanimlar">
 <h2>Gerekli tanımlar:<a class="headerlink" href="#gerekli-tanimlar" title="Permalink to this headline">¶</a></h2>
-<p>Işıkölçüm’de ise bir gök cisminin parlaklığındaki değişimin incelenmesi hedeflenir. Buradaki anahtar kelime <em>zamana bağlı parlaklık</em>’tır.</p>
+<p>Işıkölçüm’de bir gök cisminin parlaklığındaki değişimin incelenmesi hedeflenir. Buradaki anahtar kelime <em>zamana bağlı parlaklık</em>’tır.</p>
 <div class="section" id="zaman">
 <h3>Zaman:<a class="headerlink" href="#zaman" title="Permalink to this headline">¶</a></h3>
 <p>Fizikte en hassas ölçülebilen nicelik zamandır. Zamanın ise faklı biçimleri vardır:</p>
@@ -322,6 +326,7 @@ Astronomide ise çoğunlukla UTC zaman biçiminde olan JD kullanılır.</p>
 <p>Jülyen günü (<strong>JD</strong>), Jülyen tarih sisteminde yer alan ve astronomi topluluğu tarafından bilimsel çalışmalarda
 kullanılan bir zaman ölçüm sistemidir. Jülyen günü, MÖ 1 Ocak 4713 tarihi Pazartesi günü Evrensel zaman (UTC) ile öğle
 vaktinden itibaren bir günün zaman aralığını gün ve günün kesirleri halinde sunar.</p>
+<p>2021-08-17 12:30:25 -&gt; 2459444.02112</p>
 </div>
 <div class="section" id="aydinlatma-gucu">
 <h3>Aydınlatma gücü:<a class="headerlink" href="#aydinlatma-gucu" title="Permalink to this headline">¶</a></h3>
@@ -332,20 +337,20 @@ vaktinden itibaren bir günün zaman aralığını gün ve günün kesirleri hal
 \]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><span class="math notranslate nohighlight">\(L\)</span> ışınım gücü, <span class="math notranslate nohighlight">\(\sigma\)</span> Stefan–Boltzmann sabiti ve <span class="math notranslate nohighlight">\(T\)</span> sıcaklık olmak üzere</p>
+<p><span class="math notranslate nohighlight">\(L\)</span> ışınım gücü, <span class="math notranslate nohighlight">\(r\)</span> kaynağın yarıçapı, <span class="math notranslate nohighlight">\(\sigma\)</span> Stefan–Boltzmann sabiti ve <span class="math notranslate nohighlight">\(T\)</span> sıcaklık olmak üzere</p>
 </div>
 <p>olarak ifade edilir.</p>
 </div>
 <div class="section" id="aki">
 <h3>Akı:<a class="headerlink" href="#aki" title="Permalink to this headline">¶</a></h3>
-<p>Akı (Flux), bir kaynağın belirli bir uzaklığa yaydığı, birim zamanda, birim yüzeyde, birim katı açıda enerji miktarıdır.</p>
+<p>Akı (Flux), bir kaynağın belirli bir uzaklığa, birim zamanda, birim yüzeyden yaydığı enerji miktarıdır.</p>
 <div class="math notranslate nohighlight">
 \[
-  F = \frac{L}{4 \pi r^2}
+  F = \frac{L}{4 \pi R^2}
 \]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><span class="math notranslate nohighlight">\(F\)</span> akı, <span class="math notranslate nohighlight">\(L\)</span> ışınım gücü, <span class="math notranslate nohighlight">\(r\)</span> uzaklık olmak üzere</p>
+<p><span class="math notranslate nohighlight">\(F\)</span> akı, <span class="math notranslate nohighlight">\(L\)</span> ışınım gücü ve <span class="math notranslate nohighlight">\(R\)</span> uzaklık olmak üzere</p>
 </div>
 <p>olarak ifade edilir.</p>
 </div>
@@ -362,7 +367,7 @@ vaktinden itibaren bir günün zaman aralığını gün ve günün kesirleri hal
 </ul>
 <div class="section" id="gorunur-parlaklik">
 <h4>Görünür parlaklık<a class="headerlink" href="#gorunur-parlaklik" title="Permalink to this headline">¶</a></h4>
-<p>Görünür parlaklık, bir kaynağın çıplak göz ile ölçülen parlaklığıdır. Bu parlaklık objenin ışın gününe ve uzaklığına
+<p>Görünür parlaklık, bir kaynağın çıplak göz ile ölçülen parlaklığıdır. Bu parlaklık objenin ışınım gücüne ve uzaklığına
 bağlılık gösterir.</p>
 <div class="math notranslate nohighlight">
 \[
@@ -383,7 +388,7 @@ neden olduğu parlaklıktır.</p>
 <h4>Mutlak parlaklık<a class="headerlink" href="#mutlak-parlaklik" title="Permalink to this headline">¶</a></h4>
 <p>Diğer parlaklık türlerine göre uzaklıktan bağımsız bir parlaklık değeridir.</p>
 <p>Mutlak parlaklık, bir kaynağın 10 parsek uzaklıktaki görünür parlaklık değeridir. Dolayısıyla görünür parlaklığı ve
-uzaklığı bilinen bir kaynağın parlaklığı</p>
+uzaklığı bilinen bir kaynağın mutlak parlaklığı</p>
 <div class="math notranslate nohighlight">
 \[
 M = m + 5 log(\frac{1}{\pi})
@@ -412,7 +417,7 @@ M = m + 5 log(\frac{1}{\pi})
 <li><p>Gözlem</p></li>
 </ol>
 <p>Deney ve gözlem arasındaki en belirgin fark, deneyin kontrollü gözlemin ise kontrolsüz olmasıdır.</p>
-<p>Bir deneyde çevreyi ve ilerleyişi kontrol edebilirsiziniz, gözlemde ise gerçekleşe duran bir olay gözleyebiliriz.</p>
+<p>Bir deneyde ortamı ve ilerleyişi kontrol edebilirsiziniz, gözlemde ise gerçekleşe duran bir olayı takip edebiliriz.</p>
 <p>Astronomik gözlemler bir çok yötem ile yapılabilir. Biz ise ışıkölçüm gözlemi ile ilgileniyoruz.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -448,6 +453,11 @@ koşulları gözlem şeklini, gözlenecek objeleri ve gözlemin yapılıp yapıl
 <li><p>Gözlenecek objenin bir görüntüsü (Seçimli)</p></li>
 </ul>
 <p>Yukarıdaki bilgiler gün içerisinde gözlenecek bütün objeler için ayrı ayrı verilir.</p>
+</div>
+<div class="section" id="ekipmanin-sagligi">
+<h3>Ekipmanın sağlığı<a class="headerlink" href="#ekipmanin-sagligi" title="Permalink to this headline">¶</a></h3>
+<p>Gözleme başlamadan önce gözlemde kullanacağımız ekipmanların (Teleskop, dedektör, Filtre gibi) sağlığını kontrol etmeli,
+olumsuz bir durum ile karşılaşıldığında ise gözleme başlamadan teknik ekip bilgilendirilmeli.</p>
 </div>
 <div class="section" id="kalibrasyon-olcumleri">
 <h3>Kalibrasyon ölçümleri<a class="headerlink" href="#kalibrasyon-olcumleri" title="Permalink to this headline">¶</a></h3>
