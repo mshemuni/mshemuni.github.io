@@ -31,7 +31,7 @@ vaktinden itibaren bir günün zaman aralığını gün ve günün kesirleri hal
 
 ### Aydınlatma gücü:
 
-Bir kaynağın birim zamanda, bütün dalga boylarında, bütün yüzeyinden yaydığı energiye Aydınlatma Gücü veya Işınım gücü denir.
+Bir kaynağın birim zamanda, bütün dalga boylarında, bütün yüzeyinden yaydığı enerjiye Aydınlatma Gücü veya Işınım gücü denir.
 
 
 $$
@@ -143,7 +143,7 @@ Bir gözlemde dikkat edilmesi gereken unsurlar:
 Yer tabanlı gözlemevlerinde yaptığımız bütün gözlemlerin, atmosfer dediğimiz, opak bir katmanın içinden gerçekleştiğini 
 unutmamamız gerek.
 
-Gözlemin yapılacağı günde, gözlemevinin bulunduğu bölgenin hava koşulları hayati önem taşımakta. Söz konusu günün hava 
+Gözlemin yapılacağı günde, gözlemevinin bulunduğu bölgenin hava koşulları hayati önem taşımaktadır. Söz konusu günün hava 
 koşulları gözlem şeklini, gözlenecek objeleri ve gözlemin yapılıp yapılamayacağını belirler.
 
 

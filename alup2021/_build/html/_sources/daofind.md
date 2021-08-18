@@ -1,5 +1,5 @@
 # photutils
-```photutils``` Astropy'ın bağlı paketlerinden olup kaynak tesbiti ve photometry için kullanılır
+```photutils``` Astropy'ın bağlı paketlerinden olup kaynak tesbiti ve photometry için kullanılır.
 
 ## Kaynak tespiti
 Source extraction olarak da bilinen kaynak tespiti, sayısal bir görüntü üzerinde verilen parametrelere uygun 
