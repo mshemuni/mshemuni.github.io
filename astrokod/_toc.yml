@@ -12,6 +12,7 @@ chapters:
     - file: containers
     - file: booleans_others
     - file: modules
+    - file: first_examples
   - file: tools
     sections:
       - file: operators
@@ -23,7 +24,13 @@ chapters:
       - file: conditions
       - file: loops
       - file: functions
+        sections:
+          - file: recursion
+      - file: second_examples
       - file: classes
+        sections:
+          - file: class_method
+          - file: class_attribute
 
 
 #  - file: modules
