@@ -1,0 +1,30 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+  - file: installation
+  - file: hello_world
+  - file: programming
+    sections:
+    - file: numeric
+    - file: containers
+    - file: booleans_others
+    - file: modules
+  - file: tools
+    sections:
+      - file: operators
+        sections:
+          - file: arithmetic_operators
+          - file: comparison_operators
+          - file: logical_operators
+          - file: other_operators
+      - file: conditions
+      - file: loops
+      - file: functions
+      - file: classes
+
+
+#  - file: modules
+#- file: notebooks

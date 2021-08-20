@@ -2,4 +2,5 @@
 /shelf/
 /workspace.xml
 .idea/
-/astrokod
+astrokod/.ipynb_checkpoints
+astrokod/_build
