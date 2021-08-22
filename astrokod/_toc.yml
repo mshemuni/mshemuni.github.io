@@ -6,11 +6,11 @@ root: intro
 chapters:
   - file: installation
   - file: hello_world
-  - file: programming
+  - file: data_types
     sections:
     - file: numeric
     - file: containers
-    - file: booleans_others
+    - file: others_types
     - file: modules
     - file: first_examples
   - file: tools
@@ -31,7 +31,8 @@ chapters:
         sections:
           - file: class_method
           - file: class_attribute
-
+          - file: class_example
+  - file: file_op
 
 #  - file: modules
-#- file: notebooks
+#- file: notebooks packages
