@@ -33,6 +33,15 @@ chapters:
           - file: class_attribute
           - file: class_example
   - file: file_op
+  - file: rules
+    sections:
+      - file: typing
+  - file: default_moduls
+    sections:
+      - file: third_party_moduls
+      - file: my_modul
+        sections:
+          - file: mprt/name_main
 
 #  - file: modules
 #- file: notebooks packages

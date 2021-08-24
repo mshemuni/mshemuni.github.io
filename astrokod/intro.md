@@ -181,14 +181,14 @@ Haydi programlama ve betiği karşılaştıralım. Bu sırada puan da verelim.
    Programlama dilinde kaynak kodu gizleyebilirsiniz. Böylece insanlar yazdığınız şiirimsi içerikten mahrum kalabilir. 
    Betik dilinde kaynağı paylaşmak zorundasınız.(Buradan kimseye puan çıkmaz)
    
-   Programlama:0
+   Programlama: 0
    
    Betik: 0
 2. **Round**:
    Programlama dilinde oluşturduğunuz programı paylaşırsınız. Tek başına çalışır.
    Betik dilinde kodu paylaşırsınız ve yorumlayıcıya ihtiyaç duyulur.
    
-   Programlama:1
+   Programlama: 1
    
    Betik: 0
 
@@ -196,29 +196,30 @@ Haydi programlama ve betiği karşılaştıralım. Bu sırada puan da verelim.
    Programlama dilinde direkt işletim sistemi çekirği ile muhattap olduğunuzdan teoride, betik diline göre çok daha 
    hızlıdır.
 
-   Programlama:2
+   Programlama: 2
    
    Betik: 0
 4. **Round**: 
    Programlama dilleri bir defa derlenir, sonra defalarca çalıştırılabilir.
    Betik dillerinde her çalıştırmada kod yorumlanmak zorunda.
    
-   Programlama:3
+   Programlama: 3
    
    Betik: 0
 5. **Round**: 
    Programlama dilleri donanımın tüm kaynaklarından yararlanabilir, betik dillerinde ise bu kaynaklar çok 
    daha kısıtlıdır.
    
-   Programlama:4
+   Programlama: 4
    
    Betik: 0
 6. **Round**: Programlama dillerinin kullanımı daha zordur ve maliyeti daha fazladır. Betik dillerinde ise kullanım 
    daha kolay ve maliyeti daha azdır.
    
-   Programlama:4
+   Programlama: 4
    
    Betik: 65535
+
    ```{image} ../images/one_billion_point.png
    :class: bg-primary mb-1
    :width: 400px
