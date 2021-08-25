@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Comprehension &#8212; Tembeller için programlama</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/me.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Tembeller için programlama</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Giriş
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Hazırlık
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hello_world.html">
+   Merhaba dünya
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="data_types.html">
+   Veri tipleri
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric.html">
+     Nümerik veriler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="containers.html">
+     Konteynerler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="others_types.html">
+     Diğer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="modules.html">
+     Python modüller
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="first_examples.html">
+     Egzersizler
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="tools.html">
+   Araçlar
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="operators.html">
+     Operatörler
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="arithmetic_operators.html">
+       Aritmetik operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="comparison_operators.html">
+       Karşılaştırma operatörleri
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="logical_operators.html">
+       Mantıksal operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="other_operators.html">
+       Diğer operatörler
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conditions.html">
+     Koşullu ifadeler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="loops.html">
+     Döngüler
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="simple">
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="functions.html">
+     Fonksiyonlar
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recursion.html">
+       Özyenilemeli fonksiyonlar
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="second_examples.html">
+     Egzersizler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="classes.html">
+     Sınıf
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_method.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         method
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_attribute.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         attribute
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_example.html">
+       Sınıf Örnek
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="file_op.html">
+   Dosya işlemleri
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rules.html">
+   Kurallar
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="typing.html">
+     Tip açıklamaları
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="default_moduls.html">
+   Kütüphane/Modül
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="third_party_moduls.html">
+     Varsayılan olmayan modüller
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="my_modul.html">
+     Özel modüller
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mprt/name_main.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         if
+        </span>
+        <span class="pre">
+         __name__
+        </span>
+        <span class="pre">
+         ==
+        </span>
+        <span class="pre">
+         "__main__"
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="optimisation.html">
+   Optimizason
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="multithread.html">
+     Çoklu işlem
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/list_comprehension .ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://mshemuni.github.io/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://mshemuni.github.io//issues/new?title=Issue%20on%20page%20%2Flist_comprehension .html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="list-comprehension">
+<h1>List Comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this headline">¶</a></h1>
+<p>Python dongüler için kısa bir yazım şekli sunar. Bunlara ise <code class="docutils literal notranslate"><span class="pre">List</span> <span class="pre">Comprehension</span></code> denir.</p>
+<p>Öncelikle list comprehension ile bir <code class="docutils literal notranslate"><span class="pre">container</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">set</span></code> veya <code class="docutils literal notranslate"><span class="pre">tuple</span></code>) elde edebileceğimizi unutmamalıyız.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/list.gif"><img alt="_images/list.gif" class="bg-primary mb-1 align-center" src="_images/list.gif" style="width: 400px;" /></a>
+<p>Yazım kuraı:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">DEĞER</span>
+ <span class="n">DÖNGÜ</span> <span class="n">ve</span> <span class="n">KOŞULLAR</span>
+ <span class="p">]</span>
+
+</pre></div>
+</div>
+<p>Çokça karşılaşabileceğimiz bir örnekle açıklamayaçalışalım.</p>
+<hr>
+<p>Örnek</p>
+<p><span class="math notranslate nohighlight">\([1523, 2655]\)</span> aralığında <span class="math notranslate nohighlight">\(17\)</span>’ye tam bölünebilen sayıların listesini oluşturunuz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">listem</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1523</span><span class="p">,</span> <span class="mi">2656</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">17</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">listem</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="n">listem</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1530, 1547, 1564, 1581, 1598, 1615, 1632, 1649, 1666, 1683, 1700, 1717, 1734, 1751, 1768, 1785, 1802, 1819, 1836, 1853, 1870, 1887, 1904, 1921, 1938, 1955, 1972, 1989, 2006, 2023, 2040, 2057, 2074, 2091, 2108, 2125, 2142, 2159, 2176, 2193, 2210, 2227, 2244, 2261, 2278, 2295, 2312, 2329, 2346, 2363, 2380, 2397, 2414, 2431, 2448, 2465, 2482, 2499, 2516, 2533, 2550, 2567, 2584, 2601, 2618, 2635, 2652]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Şimdi de list comprehension kullanalım:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">listem</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1523</span><span class="p">,</span> <span class="mi">2656</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">17</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">listem</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1530, 1547, 1564, 1581, 1598, 1615, 1632, 1649, 1666, 1683, 1700, 1717, 1734, 1751, 1768, 1785, 1802, 1819, 1836, 1853, 1870, 1887, 1904, 1921, 1938, 1955, 1972, 1989, 2006, 2023, 2040, 2057, 2074, 2091, 2108, 2125, 2142, 2159, 2176, 2193, 2210, 2227, 2244, 2261, 2278, 2295, 2312, 2329, 2346, 2363, 2380, 2397, 2414, 2431, 2448, 2465, 2482, 2499, 2516, 2533, 2550, 2567, 2584, 2601, 2618, 2635, 2652]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Lütfen yazımda <code class="docutils literal notranslate"><span class="pre">for</span></code> ve <code class="docutils literal notranslate"><span class="pre">if</span></code> satırlarının sonunda <code class="docutils literal notranslate"><span class="pre">:</span></code> olmadığına dikkat edin.</p>
+</div>
+<p>Burada list comprehension’in ilk satırı bir döngü satırı olduğu sürece, <code class="docutils literal notranslate"><span class="pre">for</span></code> ve <code class="docutils literal notranslate"><span class="pre">if</span></code>’lerin sırası ve sayısının bir kuralı yok.</p>
+<hr>
+<p>Örnek</p>
+<p><code class="docutils literal notranslate"><span class="pre">astropy.coordinates</span></code>’un <code class="docutils literal notranslate"><span class="pre">attribute</span></code>’larının listesini gösteriniz.</p>
+<p>Hazırlık:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da <code class="docutils literal notranslate"><span class="pre">dir</span></code>adlı bir fonksiyon var. Bu fonksiton verilen bir nesneye ait <code class="docutils literal notranslate"><span class="pre">attribute</span></code>’ları veriri.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da <code class="docutils literal notranslate"><span class="pre">callable</span></code>adlı bir fonksiyon var. Bu fonksiyon verilen nesnenin çağırılabilir olup olmadığını denetler</p>
+<p><code class="docutils literal notranslate"><span class="pre">dir</span></code> için örnek:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">math</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__doc__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;, &#39;acos&#39;, &#39;acosh&#39;, &#39;asin&#39;, &#39;asinh&#39;, &#39;atan&#39;, &#39;atan2&#39;, &#39;atanh&#39;, &#39;ceil&#39;, &#39;comb&#39;, &#39;copysign&#39;, &#39;cos&#39;, &#39;cosh&#39;, &#39;degrees&#39;, &#39;dist&#39;, &#39;e&#39;, &#39;erf&#39;, &#39;erfc&#39;, &#39;exp&#39;, &#39;expm1&#39;, &#39;fabs&#39;, &#39;factorial&#39;, &#39;floor&#39;, &#39;fmod&#39;, &#39;frexp&#39;, &#39;fsum&#39;, &#39;gamma&#39;, &#39;gcd&#39;, &#39;hypot&#39;, &#39;inf&#39;, &#39;isclose&#39;, &#39;isfinite&#39;, &#39;isinf&#39;, &#39;isnan&#39;, &#39;isqrt&#39;, &#39;lcm&#39;, &#39;ldexp&#39;, &#39;lgamma&#39;, &#39;log&#39;, &#39;log10&#39;, &#39;log1p&#39;, &#39;log2&#39;, &#39;modf&#39;, &#39;nan&#39;, &#39;nextafter&#39;, &#39;perm&#39;, &#39;pi&#39;, &#39;pow&#39;, &#39;prod&#39;, &#39;radians&#39;, &#39;remainder&#39;, &#39;sin&#39;, &#39;sinh&#39;, &#39;sqrt&#39;, &#39;tan&#39;, &#39;tanh&#39;, &#39;tau&#39;, &#39;trunc&#39;, &#39;ulp&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">callable</span></code> için örnek:
+<code class="docutils literal notranslate"><span class="pre">math</span></code> modülünde <code class="docutils literal notranslate"><span class="pre">pi</span></code>’nin bir değişken olduğunu biliyoruz. Dolayısıyla çağırılamaz. Falat aynı modülde <code class="docutils literal notranslate"><span class="pre">sin</span></code> bir metoddur, dolayısıyla çağırılabilir.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">callable</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">callable</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Şimdi dönelim asıl probleme:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">coordinates</span>
+
+<span class="n">attris</span> <span class="o">=</span> <span class="p">[</span><span class="n">attrib</span>
+           <span class="k">for</span> <span class="n">attrib</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
+           <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">attrib</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">attriblar</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_9640</span><span class="o">/</span><span class="mf">3084928523.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="nn">      4            for attrib</span> in <span class="ni">dir</span><span class="nt">(coordinates)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>            <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">attrib</span><span class="p">)]</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="n">attriblar</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;attriblar&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hepimiz ingilizce biliyoruz ya,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">metod</span>
+    <span class="k">for</span> <span class="n">metod</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">coordinates</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">metod</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>ne diyor. Bir bakalım.</p>
+<p><code class="docutils literal notranslate"><span class="pre">coordinates</span></code>’ın içinde her bir eleman’ı (<code class="docutils literal notranslate"><span class="pre">metod</span></code>)</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mohammad S.Niaei<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
