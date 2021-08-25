@@ -43,6 +43,8 @@ chapters:
         sections:
           - file: mprt/name_main
   - file: optimisation
+    sections:
+      - file: multithread
 #    sections:
 #  - file: modules
 #- file: notebooks packages
