@@ -411,6 +411,11 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ornek">
+   Örnek
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#asal-sayilar">
    Asal sayılar
   </a>
@@ -494,7 +499,8 @@
 <p><code class="docutils literal notranslate"><span class="pre">0.62</span></code> saniye süren işlemi bir milyon defa tekrarlayınca toplam süre yaklaşık <code class="docutils literal notranslate"><span class="pre">172</span></code> saat iken, <code class="docutils literal notranslate"><span class="pre">0.75</span></code> saniye süren işlemi bir milyon defa tekrarlayınca toplam süre yaklaşım <code class="docutils literal notranslate"><span class="pre">208</span></code> saat oldu. Arada <code class="docutils literal notranslate"><span class="pre">1.5</span></code> gün fark var.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/shock_2.gif"><img alt="Python resmi web sayfası" class="bg-primary mb-1 align-center" src="_images/shock_2.gif" style="width: 400px;" /></a>
 <p>Dolayısıyla bir işlemde <code class="docutils literal notranslate"><span class="pre">0.13</span></code> saniyelik bir kazanımın ne denki önemli olabileceğini görüyoruz.</p>
-<p>Optimizasyon’a örnek:</p>
+<div class="section" id="ornek">
+<h2>Örnek<a class="headerlink" href="#ornek" title="Permalink to this headline">¶</a></h2>
 <p>Bir milyon tane <code class="docutils literal notranslate"><span class="pre">0</span></code>’dan oluşan bir liste oluşturalım.</p>
 <p>Bunun için iki farklı yöntem kullanalım ve süre farkına bakalım.</p>
 <div class="admonition note">
@@ -518,7 +524,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.12597870826721191 Saniye
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.1485452651977539 Saniye
 </pre></div>
 </div>
 </div>
@@ -542,7 +548,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.005914211273193359 Saniye
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.0049896240234375 Saniye
 </pre></div>
 </div>
 </div>
@@ -550,13 +556,13 @@
 <p>Gördünüz mü. Aradaki fark büyük.</p>
 <p>Yalnızca <code class="docutils literal notranslate"><span class="pre">0</span></code>’lardan oluşan dizinin oluşturma biçimini değiştirmekle, yaklaşık <code class="docutils literal notranslate"><span class="pre">21</span></code> kat zaman kazandık.</p>
 <p>Bunu daha gerçekçi bir örnek ile anlamaya çalışalım.</p>
+</div>
+<div class="section" id="asal-sayilar">
+<h2>Asal sayılar<a class="headerlink" href="#asal-sayilar" title="Permalink to this headline">¶</a></h2>
+<p>Yalnızca 1 ve kendisine tam bölünebilen sayılardır.</p>
 <hr>
 <p>Örnek:</p>
 <p>Verilen bir tam sayının asal olup olmadığını kontrol eden fonksiyonu yazınız.</p>
-<div class="section" id="asal-sayilar">
-<h2>Asal sayılar<a class="headerlink" href="#asal-sayilar" title="Permalink to this headline">¶</a></h2>
-<p>Asal sayı tanımı:</p>
-<p>Yalnızca 1 ve kendisine tam bölünebilen sayılardır.</p>
 <p>Yöntem:
 Verilen sayıyı (<code class="docutils literal notranslate"><span class="pre">n</span></code>), <span class="math notranslate nohighlight">\([1, n]\)</span> aralığındak bütün sayılara bölelim. Tam bölme gerçekleştiği anda bir sayacın değerini arttıralım. Sonuçta sayacın değeri <code class="docutils literal notranslate"><span class="pre">2</span></code>’den büyük ise sayı asal değilmiş.</p>
 <div class="cell docutils container">
@@ -618,11 +624,11 @@ Verilen sayıyı (<code class="docutils literal notranslate"><span class="pre">n
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.7245376110076904 Saniye
+Geçen süre = 0.6669511795043945 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.6798491477966309 Saniye
+Geçen süre = 0.7767174243927002 Saniye
 </pre></div>
 </div>
 </div>
@@ -701,11 +707,11 @@ Geçen süre = 0.6798491477966309 Saniye
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.3789515495300293 Saniye
+Geçen süre = 0.43305516242980957 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.39968371391296387 Saniye
+Geçen süre = 0.3559536933898926 Saniye
 </pre></div>
 </div>
 </div>
@@ -794,11 +800,11 @@ Geçen süre = 0.39968371391296387 Saniye
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.03871583938598633 Saniye
+Geçen süre = 0.037642478942871094 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.6280784606933594 Saniye
+Geçen süre = 0.479738712310791 Saniye
 </pre></div>
 </div>
 </div>
