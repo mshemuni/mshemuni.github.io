@@ -23,6 +23,8 @@ chapters:
           - file: other_operators
       - file: conditions
       - file: loops
+        sections:
+          - file: list_comprehension
       - file: functions
         sections:
           - file: recursion
