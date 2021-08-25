@@ -411,19 +411,26 @@
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cift-sayilar">
-   Çift sayılar
+  <a class="reference internal nav-link" href="#asal-sayilar">
+   Asal sayılar
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sayac">
-   Sayac
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tum-sayilar">
-   Tüm sayılar
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cift-sayilar">
+     Çift sayılar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sayac">
+     Sayac
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tum-sayilar">
+     Tüm sayılar
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -511,7 +518,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.2148895263671875 Saniye
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.12597870826721191 Saniye
 </pre></div>
 </div>
 </div>
@@ -535,7 +542,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.006886482238769531 Saniye
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.005914211273193359 Saniye
 </pre></div>
 </div>
 </div>
@@ -546,6 +553,8 @@
 <hr>
 <p>Örnek:</p>
 <p>Verilen bir tam sayının asal olup olmadığını kontrol eden fonksiyonu yazınız.</p>
+<div class="section" id="asal-sayilar">
+<h2>Asal sayılar<a class="headerlink" href="#asal-sayilar" title="Permalink to this headline">¶</a></h2>
 <p>Asal sayı tanımı:</p>
 <p>Yalnızca 1 ve kendisine tam bölünebilen sayılardır.</p>
 <p>Yöntem:
@@ -609,18 +618,18 @@ Verilen sayıyı (<code class="docutils literal notranslate"><span class="pre">n
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.8617451190948486 Saniye
+Geçen süre = 0.7245376110076904 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.8452022075653076 Saniye
+Geçen süre = 0.6798491477966309 Saniye
 </pre></div>
 </div>
 </div>
 </div>
 <p>Şimdi bu foksiyona optimizasyonlar yapalım.</p>
 <div class="section" id="cift-sayilar">
-<h2>Çift sayılar<a class="headerlink" href="#cift-sayilar" title="Permalink to this headline">¶</a></h2>
+<h3>Çift sayılar<a class="headerlink" href="#cift-sayilar" title="Permalink to this headline">¶</a></h3>
 <p>Çift sayıların tamamı <code class="docutils literal notranslate"><span class="pre">2</span></code>’ye tam bölündüğünden, <code class="docutils literal notranslate"><span class="pre">2</span></code> dışındaki çift sayılardan kurtulalım:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -692,11 +701,11 @@ Geçen süre = 0.8452022075653076 Saniye
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.4116833209991455 Saniye
+Geçen süre = 0.3789515495300293 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.3801872730255127 Saniye
+Geçen süre = 0.39968371391296387 Saniye
 </pre></div>
 </div>
 </div>
@@ -704,7 +713,7 @@ Geçen süre = 0.3801872730255127 Saniye
 <p>Fena değil.</p>
 </div>
 <div class="section" id="sayac">
-<h2>Sayac<a class="headerlink" href="#sayac" title="Permalink to this headline">¶</a></h2>
+<h3>Sayac<a class="headerlink" href="#sayac" title="Permalink to this headline">¶</a></h3>
 <p>Biz sayacı işlemlerin en sonunda kontrol edilyoruz. Aslında sayac değeri <code class="docutils literal notranslate"><span class="pre">2</span></code>’yi aştığı anda daha fazla değere bakmamıza gerek kalmaz…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -785,11 +794,11 @@ Geçen süre = 0.3801872730255127 Saniye
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.07270979881286621 Saniye
+Geçen süre = 0.03871583938598633 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.5532345771789551 Saniye
+Geçen süre = 0.6280784606933594 Saniye
 </pre></div>
 </div>
 </div>
@@ -802,7 +811,7 @@ Geçen süre = 0.5532345771789551 Saniye
 <p>Fena değil.</p>
 </div>
 <div class="section" id="tum-sayilar">
-<h2>Tüm sayılar<a class="headerlink" href="#tum-sayilar" title="Permalink to this headline">¶</a></h2>
+<h3>Tüm sayılar<a class="headerlink" href="#tum-sayilar" title="Permalink to this headline">¶</a></h3>
 <p>Olaya matematiksel açıdan bakalım.</p>
 <p>Bir sayının bölenlerine bakalım.</p>
 <p><code class="docutils literal notranslate"><span class="pre">24</span></code> için:</p>
@@ -901,6 +910,7 @@ Geçen süre = 0.0 Saniye
 </div>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/success.gif"><img alt="Python resmi web sayfası" class="bg-primary mb-1 align-center" src="_images/success.gif" style="width: 400px;" /></a>
 <p>Gördüğünüz gibi, bir az matematik, bir az mantık ile kodumuz daha uzun ve bir az daha karmaşık görünmesine rağmen çok daha hızlı çalışıyor.</p>
+</div>
 </div>
 </div>
 
