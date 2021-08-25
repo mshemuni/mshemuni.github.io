@@ -1,114 +1,165 @@
-# Kurulum
+# Hazırlık
+Python'da kod yazmak veya yazılmış bir kodu çalıştırmak isterseniz, Python'ı kurmanız gerekiyor.
 
-ALÜP 2021 (Pyhton, IRAF ve MYRaf ile) açıklık fotometri çalıştayında kullanılcak yazılım ve kütüphane listesi:
+## Resmi Python
 
-## Python
-Python kurulumunun anaconda ile yapılması tavsiye edilir.
+Python'ı [resmi web sayfasından](https://www.python.org/) tam olarak 0&#x20BA;'ye indirip kurabilirsiniz. İndirimlerden haberdar olmak için 
+Python'ın resmi web sayfasına abone olmayı unutmayınız.
 
-Sisteminize uygun anaconda versiyonunu [anaconda individual*](https://www.anaconda.com/products/individual) 'dan 
-indirip kurabilirsiniz.
-
-:::{note}
-Python'ı farklı kaynaklardan kuaracak katılımcıların dikkatine.
-
-Lütfen python'ın 3. (python3.6 ve üstü) versiyonunu kurunuz.
-:::
-
-### IDE
-IDE (Integrated Development Environment, Tümleşik Geliştirme Ortamı) herhangi bir programlama/betik dilinde kod yazarken 
-renklendirme veya öneriler ile yardımcı olan bir yazılımdır.
-
-Python için çok sayıda IDE bulabilirsiniz. Günümüzde en yaygın kullanılan Python IDE'ler arasında
-- Pycharm 
-- Visual Studio Code
-- Spyder
-
-yer almaktadır.
-
-:::{note}
-Katılımcının kullandığı IDE ile ilgili oluşabilecek sorunlar Uzman ve Teknik ekip tarafından çözülemeyebilir.
-Dolayısıyla tecrübeli olduğunuz veya yaygın kullanılan IDE'leri tercih etmeniz rica olunur.
-:::
-
-### Python kütüphaneleri
-ALÜP 2021 çalıştayında kullanılacak kütüphaneler:
-
-- ```astropy```
-- ```photutils```
-- ```numpy```
-- ```matplotlib```
-
-#### astropy
-[Astropy](https://www.astropy.org/), astronomların kullanımına sunulmuş, pyhton programa dili ile yazılmış, bir yazılımlar koleksyonudur.
-
+```{image} ../images/hahaha.png
+:class: bg-primary mb-1
+:width: 400px
+:align: center
 ```
-pip install astropy
+<hr>
+
+Python'ın farklı versiyonları vardır. Bu metni yazdığımda kararlı en güncel versiyon ```3.10``` olmalı. Fakat biz daha
+geriden gelerek işimizi garantiye alacağız. Dolayısıyla ```3.9``` versiyonunu kullanacağız.
+
+```{image} ../images/python_official.png
+:alt: Python resmi web sayfası
+:class: bg-primary mb-1
+:width: 400px
+:align: center
 ```
 
-#### photutils
-[photutils](https://photutils.readthedocs.io/en/stable/) Astropy’ın bağlı paketlerinden olup kaynak tesbiti ve photometry için kullanılır
+### Kurulum
+Python'ı indirdik. Şimdi bir ritüel olan ``çif tıkla->next->next->next...`` yapacağımızı sanıyorsanız yanılıyorsunuz.
+Okuyup anlayacağız...
 
-```
-pip install photutils
-```
-
-#### numpy
-[numpy](https://numpy.org/), python'un bilimsel hesaplama paketi
-
-```
-pip install numpy
+```{image} ../images/official_python_installation/1.png
+:alt: Python kurulum 1
+:class: bg-primary mb-1
+:width: 400px
+:align: center
 ```
 
-:::{note}
-Astropy kurulurken bağımlılık olarak ```numpy``` da kurulur
-:::
-
-#### matplotlib
-[matplotlib](https://matplotlib.org/), python'un görselleştirme kütüphanesi
-
-```
-pip install matplotlib
+```{image} ../images/official_python_installation/2.png
+:alt: Python kurulum 2
+:class: bg-primary mb-1
+:width: 400px
+:align: center
 ```
 
-## IRAF
-### GNU/Linux
-Ubuntu dağıtımlarında ```iraf``` kurulumu basitçe ```apt``` ile gerçekleşebilir.
-```
-sudo apt install iraf saods9 xterm
-```
-
-### Windows
-Windows işletim sisteminde IRAF kurulumu için WSL (Windows Subsystem for Linux) kurulumu yapmanız gerek.
-
-Bunun için lütfen [bu](https://docs.microsoft.com/en-us/windows/wsl/install-win10) bağlantıdaki yönergeleri takip ediniz.
-
-Daha sonra Microsoft Store'dan ubuntu kurulumunu gerçekleştiriniz.
-
-Ubuntu uygulamasını çalıştırıp açılan terminalde
-
-```
-sudo apt install iraf saods9 xterm
+```{image} ../images/official_python_installation/3.png
+:alt: Python kurulum 3
+:class: bg-primary mb-1
+:width: 400px
+:align: center
 ```
 
-komutunu çalıştırınız.
+Kuruldu ya la...
 
-Bu aşamada teorik olarak iraf kurulumu tamamlanmış durumda. Fakat Windows'da IRAF'ı kullanabilmel için xserver kurulumu 
-yapmalısınız.
+## Anaconda Python
+Biz TİPlerin tembelliği ve tembellikten doğan fazla mesaimizi bildiğim için, size daha mantıklı bir python ortamı 
+tavsiye edeceğim.
 
-[Bu](https://sourceforge.net/projects/xming/) adresten xming kurulum dosyasını indirip kurduktan sonra 
-```Xming Server```'ı çalıştırın.
+Python'ın anaconda versiyonunu kuracağız. Bunun için Anaconda'nın 
+[individual edition](https://www.anaconda.com/products/individual) 'ını kuracağız.
 
-Son olarak windows'ta açtığınız ubuntu terminalde 
+### Kurulum
 
+indirme işlemi bitince kurulum işlemi yapacağız ve sizi temin ederim ``çif tıkla->next->next->next...`` olmayacak.
+
+```{image} ../images/anaconda_python_installation/1.png
+:alt: Anaconda kurulum 1
+:class: bg-primary mb-1
+:width: 400px
+:align: center
 ```
-export DISPLAY=$(route.exe print | grep 0.0.0.0 | head -1 | awk '{print $4}'):0.0
+İlk pencere merhaba penceresidir. 
+
+```{image} ../images/anaconda_python_installation/2.png
+:alt: Anaconda kurulum 2
+:class: bg-primary mb-1
+:width: 400px
+:align: center
+```
+İkinci pencere lisans ve sözleşme penceresidir. 
+
+```{image} ../images/anaconda_python_installation/3.png
+:alt: Anaconda kurulum 3
+:class: bg-primary mb-1
+:width: 400px
+:align: center
+```
+Üçüncü pencere kurulumu sistem genelinde mi yoksa kullanıcıya mı yapılacağını sorar. Yalnızca kullanıcıya kurulum 
+yapmanız tavsiye edilir.
+
+```{image} ../images/anaconda_python_installation/4.png
+:alt: Anaconda kurulum 4
+:class: bg-primary mb-1
+:width: 400px
+:align: center
+```
+Dördüncü pencere kurulumu nereye yapacağını sorar. Kullanıcı dizininde olması tavsiye edilir.
+
+```{image} ../images/anaconda_python_installation/5.png
+:alt: Anaconda kurulum 5
+:class: bg-primary mb-1
+:width: 400px
+:align: center
+```
+Beşinci pencere Python'ın sistem yoluna eklemek isteyip istemediğinizi sorar. Bence istemeyin.
+
+```{image} ../images/anaconda_python_installation/6.png
+:alt: Anaconda kurulum 6
+:class: bg-primary mb-1
+:width: 400px
+:align: center
+```
+Bu pencerede kahve alın.
+
+```{image} ../images/anaconda_python_installation/7.png
+:alt: Anaconda kurulum 7
+:class: bg-primary mb-1
+:width: 400px
+:align: center
+```
+Bu pencerede güle güle penceresidir.
+
+```{image} ../images/anaconda_python_installation/8.png
+:alt: Anaconda kurulum 18
+:class: bg-primary mb-1
+:width: 400px
+:align: center
+```
+"Gider ayak sitemize girmek ister misin?" pnceresi.
+
+Gördünüz mü? Ne kadar kolay.
+
+## Neden Anaconda?
+
+Tipik bir TİP'in kurulumu daha kolay olan resmi Python'ı kurmak yerine neden Anaconda'yı tercih edeceğini merak 
+ediyorsunuz değil mi?
+
+Zira ileride anaconda hayatımızı acayip kolaylaştıracak.
+
+## Deneme
+Bakalım Python çalışıyor mu?
+
+```{image} ../images/conda_on_start_menu.png
+:alt: Anaconda başlat menüsü
+:class: bg-primary mb-1
+:width: 400px
+:align: center
 ```
 
-komutunu çalıştırınız.
+Başlat menüsünden anaconda alt menüsü açarak ```Anaconda Prompt```'a tıklayınız.
 
-:::{note}
-Terminal her kapanıp açıldığında yukarıdaki komutu tekrarlamanız gerek.
+```{image} ../images/conda_terminal.png
+:alt: Anaconda terminal
+:class: bg-primary mb-1
+:width: 400px
+:align: center
+```
 
-Bu durumu önlemek adına yukarıdaki satırı ```.bashrc``` dosyasına yazınız
+Tebrikler. Artık aşırı gelişmiş bir hesap makineniz var.
 
-:::
+## IDE
+Python ile terminalde işlemler yapabilirsiniz. Hatta sırf bunun için geliştirilmiş ortamlar bile var. ```ipython``` gibi. 
+Lakin bizim bir geliştirme ortamına ihtiyacımız olacak.
+
+Bunun için IDE(Integrated Development Environment: Tümleşik Geliştirme Ortamı) kullanacağız. IDE'ler Steroid almış 
+metin düzenleicileridir. Hedeflendikleri dillerde yazılım geliştiricisine, kodun farklı bölgelerini renklendirerek, 
+gerektiğinde "Hop aga. Yanlışın var." diyerek yardımcı olurlar.

@@ -1,0 +1,803 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kütüphane/Modül &#8212; Tembeller için programlama</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Varsayılan olmayan modüller" href="third_party_moduls.html" />
+    <link rel="prev" title="Tip açıklamaları" href="typing.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/me.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Tembeller için programlama</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Giriş
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Hazırlık
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hello_world.html">
+   Merhaba dünya
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="data_types.html">
+   Veri tipleri
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric.html">
+     Nümerik veriler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="containers.html">
+     Konteynerler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="others_types.html">
+     Diğer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="modules.html">
+     Python modüller
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="first_examples.html">
+     Egzersizler
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="tools.html">
+   Araçlar
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="operators.html">
+     Operatörler
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="arithmetic_operators.html">
+       Aritmetik operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="comparison_operators.html">
+       Karşılaştırma operatörleri
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="logical_operators.html">
+       Mantıksal operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="other_operators.html">
+       Diğer operatörler
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conditions.html">
+     Koşullu ifadeler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loops.html">
+     Döngüler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="functions.html">
+     Fonksiyonlar
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recursion.html">
+       Özyenilemeli fonksiyonlar
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="second_examples.html">
+     Egzersizler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="classes.html">
+     Sınıf
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_method.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         method
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_attribute.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         attribute
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_example.html">
+       Sınıf Örnek
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="file_op.html">
+   Dosya işlemleri
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rules.html">
+   Kurallar
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="typing.html">
+     Tip açıklamaları
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Kütüphane/Modül
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="third_party_moduls.html">
+     Varsayılan olmayan modüller
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="my_modul.html">
+     Özel modüller
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mprt/name_main.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         if
+        </span>
+        <span class="pre">
+         __name__
+        </span>
+        <span class="pre">
+         ==
+        </span>
+        <span class="pre">
+         "__main__"
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/default_moduls.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://mshemuni.github.io/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://mshemuni.github.io//issues/new?title=Issue%20on%20page%20%2Fdefault_moduls.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#varsayilan-moduller">
+   Varsayılan modüller
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#math">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       math
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sys">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     sys
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#json">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     json
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="kutuphane-modul">
+<h1>Kütüphane/Modül<a class="headerlink" href="#kutuphane-modul" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da varsayılan ve sonradan eklenen kütüphane/modüller vardır. Bunlar içe aktarılıp kullanılabilir.</p>
+<p>Varsayılan kütüphaneler <code class="docutils literal notranslate"><span class="pre">Python</span></code> kurulumuyla beraber gelir. varsayılan olmayanlar ise sonradan kurulmalı.</p>
+<div class="section" id="varsayilan-moduller">
+<h2>Varsayılan modüller<a class="headerlink" href="#varsayilan-moduller" title="Permalink to this headline">¶</a></h2>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/default.gif"><img alt="_images/default.gif" class="bg-primary mb-1 align-center" src="_images/default.gif" style="width: 400px;" /></a>
+<p>Varsayılan modüllerin tamamını işlememiz mümkün değildir. Fakat en çok işe yarayanlarını inceleyebiliriz.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">math</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sys</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">json</span></code></p></li>
+</ul>
+<div class="section" id="math">
+<h3><code class="docutils literal notranslate"><span class="pre">math</span></code><a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">math</span></code> modülünden daha önce bahsetmiştik. Çeşitli matematik işlemleri yapacileceğimiz bir modüldür kendileri.</p>
+<hr>
+<p>Örnek</p>
+<p>Verilen bir açının, <code class="docutils literal notranslate"><span class="pre">sin</span></code> ve <code class="docutils literal notranslate"><span class="pre">cos</span></code>değerlerinin oranının, aynı açının <code class="docutils literal notranslate"><span class="pre">tan</span></code> değernie eşit olduğunu gösteriniz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">aci</span> <span class="o">=</span> <span class="mi">33</span>
+<span class="n">aci_r</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">aci</span><span class="p">)</span>
+
+<span class="n">sin</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">aci_r</span><span class="p">)</span>
+<span class="n">cos</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">aci_r</span><span class="p">)</span>
+
+<span class="n">sin_cos_ratio</span> <span class="o">=</span> <span class="n">sin</span> <span class="o">/</span> <span class="n">cos</span>
+
+<span class="n">tan</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">aci_r</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tan</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sin_cos_ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.6494075931975106
+0.6494075931975105
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">float</span></code> tipinde verilerin eşitliği sınanmaz.</p>
+<p>Float-pointing denen kavram float değerlerin bire bir olmasını engeller.</p>
+</div>
+</div>
+</div>
+<div class="section" id="sys">
+<h2><code class="docutils literal notranslate"><span class="pre">sys</span></code><a class="headerlink" href="#sys" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">sys</span></code> Sisteme özel parametreler ve fonksiyonlar içerir. <code class="docutils literal notranslate"><span class="pre">sys</span></code> ile çeşitli işlemler yapılabilir, fakat <code class="docutils literal notranslate"><span class="pre">sys</span></code>’nin sunduğu en önemli araç <code class="docutils literal notranslate"><span class="pre">argv</span></code>’dir. <code class="docutils literal notranslate"><span class="pre">argv</span></code> yazdığımız kodun dışarıdan parametrik olarak veri almasını sağlar.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sys.argv</span></code> bir <code class="docutils literal notranslate"><span class="pre">list</span></code> olup, <code class="docutils literal notranslate"><span class="pre">0</span></code>. elemanı, çalıştırdığımız <code class="docutils literal notranslate"><span class="pre">Python</span></code> betiğin adı, <code class="docutils literal notranslate"><span class="pre">1</span></code>. elemanı verilen ilk argüman, <code class="docutils literal notranslate"><span class="pre">2</span></code>. elemanı verilen ikinci argüman … şeklinde devam eder.</p>
+<p><code class="docutils literal notranslate"><span class="pre">argumanlar.py</span></code> adlı bir betik dosyamız olsun.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Söz konusu betiği aşağıdaki gibi çalıştıralım</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python argumanlar.py muhammed eve geldi mi
+</pre></div>
+</div>
+<p>Çıktı</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;argumanlar.py&#39;</span><span class="p">,</span> <span class="s1">&#39;muhammed&#39;</span><span class="p">,</span> <span class="s1">&#39;eve&#39;</span><span class="p">,</span> <span class="s1">&#39;geldi&#39;</span><span class="p">,</span> <span class="s1">&#39;mi&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Parametik olarak verilen ismileri sırayla selamlayan bir betik yazınız. betik dosyasının adı <code class="docutils literal notranslate"><span class="pre">selamla</span></code> olsun.</p>
+<p><code class="docutils literal notranslate"><span class="pre">selamla.py</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;İsim vermedizi!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">isim</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Merhaba &quot;</span> <span class="o">+</span> <span class="n">isim</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python selamla.py
+</pre></div>
+</div>
+<p>Çıktı</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>İsim vermedizi!
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python selamla.py muhammed yusuf yucel yavuz
+</pre></div>
+</div>
+<p>Çıktı</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Merhaba</span> <span class="n">muhammed</span>
+<span class="n">Merhaba</span> <span class="n">yusuf</span>
+<span class="n">Merhaba</span> <span class="n">yucel</span>
+<span class="n">Merhaba</span> <span class="n">yavuz</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="json">
+<h2><code class="docutils literal notranslate"><span class="pre">json</span></code><a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">json</span></code> (<code class="docutils literal notranslate"><span class="pre">JavaScript</span> <span class="pre">Object</span> <span class="pre">Notation</span></code>); bütün programlama dilleri arasında, yapılandırılmış veri değişimini kolaylaştıran bir metin biçimidir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">json</span></code>’ın taşıyabildiği veri tipleri:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nesne</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">array</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">number</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">null</span></code></p></li>
+</ul>
+<p>Yazım kuralı ise, <code class="docutils literal notranslate"><span class="pre">Python</span></code>’ın <code class="docutils literal notranslate"><span class="pre">dict</span></code> formatına çok benziyor.</p>
+<p><code class="docutils literal notranslate"><span class="pre">json</span></code> veriye örnek:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;personel_1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Mohammad&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni niaei&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Gelistirici&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+        <span class="s2">&quot;TCKNO&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;Uzmanlik&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Yazilim Uzmani&quot;</span><span class="p">,</span> <span class="s2">&quot;Uzman Astronom&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+<p>olarak gösterilebilir. Burada;</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nesne</span></code> bir json veri</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">array</span></code> bir <code class="docutils literal notranslate"><span class="pre">list</span></code> veri</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">true</span></code> bir <code class="docutils literal notranslate"><span class="pre">True</span></code> veri</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">false</span></code> bir <code class="docutils literal notranslate"><span class="pre">False</span></code> veri</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">null</span></code> bir <code class="docutils literal notranslate"><span class="pre">None</span></code> veri</p></li>
+</ul>
+<p>olarak algılanabilir.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Görüldüğü gibi <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code> gibi değerler <code class="docutils literal notranslate"><span class="pre">Python</span></code>’da farklı yazılmakta, <code class="docutils literal notranslate"><span class="pre">Python</span></code>’ın anladığı yazımları başka bir standartın anlayabileceği yazım şekline çevirmeye <code class="docutils literal notranslate"><span class="pre">serialization</span></code> denir.</p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">json</span></code> kütüphanesinin yapabilediği ve bizim çokça kullanma ihtiyacı duyacağımız işlemler <code class="docutils literal notranslate"><span class="pre">json</span></code>’dan <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e ve <code class="docutils literal notranslate"><span class="pre">dict</span></code>’ten <code class="docutils literal notranslate"><span class="pre">json</span></code>’a dönüşümü yapması olarak düşünülebilir.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">json.dump</span></code>, <code class="docutils literal notranslate"><span class="pre">json.dumps</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">json.load</span></code>, <code class="docutils literal notranslate"><span class="pre">json.loads</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">dump</span></code> bir <code class="docutils literal notranslate"><span class="pre">dict</span></code> veriyi <code class="docutils literal notranslate"><span class="pre">str</span></code>’ye (<code class="docutils literal notranslate"><span class="pre">json</span></code> formatlı) çecirirken, <code class="docutils literal notranslate"><span class="pre">load</span></code> bir <code class="docutils literal notranslate"><span class="pre">str</span></code>’yi bir <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e çevirir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dumps</span></code> ise bir dosya nesnei alı, içindeki veriyi okuyop <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e çevirir. Doğal olarak <code class="docutils literal notranslate"><span class="pre">loads</span></code> bir <code class="docutils literal notranslate"><span class="pre">dict</span></code> veriyi verilen bir dosya nesnesinin yoluna yazar.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Dikkat ederseniz dosya değil dosya nesnesi dedim. Dolayısıyla dosyadan okuma ve dosyaya yazma işlemleri için dosya yolu değili, <code class="docutils literal notranslate"><span class="pre">open</span></code> ile açmış olduğumuz bir dosya nesnesi sağlamalıyız.</p>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">dict</span></code> veriyi <code class="docutils literal notranslate"><span class="pre">json</span></code> formatlı bir <code class="docutils literal notranslate"><span class="pre">str</span></code>’ye çeviriniz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">dct</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;personel1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;S.Niaei&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;personel2&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Yusuf&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;Pak&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;personel3&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Yücel&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;Kılıç&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;personel4&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Yavuz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;Güney&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">dct</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;{&quot;personel1&quot;: {&quot;adi&quot;: &quot;Muhammed&quot;, &quot;soyadi&quot;: &quot;S.Niaei&quot;}, &quot;personel2&quot;: {&quot;adi&quot;: &quot;Yusuf&quot;, &quot;soyadi&quot;: &quot;Pak&quot;}, &quot;personel3&quot;: {&quot;adi&quot;: &quot;Y\\u00fccel&quot;, &quot;soyadi&quot;: &quot;K\\u0131l\\u0131\\u00e7&quot;}, &quot;personel4&quot;: {&quot;adi&quot;: &quot;Yavuz&quot;, &quot;soyadi&quot;: &quot;G\\u00fcney&quot;}}&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Elde edilen bu <code class="docutils literal notranslate"><span class="pre">str</span></code>’yi <code class="docutils literal notranslate"><span class="pre">open</span></code> ile bir dosyaya yazabilirsiniz. Fakat <code class="docutils literal notranslate"><span class="pre">write</span></code> vs metodlarıyla uğraşmak istemezseniz dosyaya direct yazabilirsiniz</p>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">dict</span></code> veriyi <code class="docutils literal notranslate"><span class="pre">json</span></code> formatlı bir dosyaya yazınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">dct</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;personel1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;S.Niaei&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;personel2&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Yusuf&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;Pak&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;personel3&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Yücel&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;Kılıç&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;personel4&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Yavuz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;Güney&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;personel.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dct</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">personel.json</span></code> dosyasının içeriği:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;personel1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;S.Niaei&quot;</span><span class="p">},</span> <span class="s2">&quot;personel2&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Yusuf&quot;</span><span class="p">,</span> <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;Pak&quot;</span><span class="p">},</span> <span class="s2">&quot;personel3&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Y</span><span class="se">\u00fc</span><span class="s2">cel&quot;</span><span class="p">,</span> <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;K</span><span class="se">\u0131</span><span class="s2">l</span><span class="se">\u0131\u00e7</span><span class="s2">&quot;</span><span class="p">},</span> <span class="s2">&quot;personel4&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;adi&quot;</span><span class="p">:</span> <span class="s2">&quot;Yavuz&quot;</span><span class="p">,</span> <span class="s2">&quot;soyadi&quot;</span><span class="p">:</span> <span class="s2">&quot;G</span><span class="se">\u00fc</span><span class="s2">ney&quot;</span><span class="p">}}</span>
+</pre></div>
+</div>
+<hr>
+<p>Örnek</p>
+<p><code class="docutils literal notranslate"><span class="pre">json</span></code> formatlı bir <code class="docutils literal notranslate"><span class="pre">str</span></code> veriyi bir <code class="docutils literal notranslate"><span class="pre">dict</span></code>’ye çeviriniz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">{</span>
+<span class="s2">    &quot;personel1&quot;: {</span>
+<span class="s2">        &quot;adi&quot;: &quot;Muhammed&quot;,</span>
+<span class="s2">        &quot;soyadi&quot;: &quot;S.Niaei&quot;</span>
+<span class="s2">    }, </span>
+
+<span class="s2">    &quot;personel2&quot;: {</span>
+<span class="s2">        &quot;adi&quot;: &quot;Yusuf&quot;, </span>
+<span class="s2">        &quot;soyadi&quot;: &quot;Pak&quot;</span>
+<span class="s2">    }, </span>
+
+<span class="s2">    &quot;personel3&quot;: {</span>
+<span class="s2">        &quot;adi&quot;: &quot;Y</span><span class="se">\u00fc</span><span class="s2">cel&quot;,</span>
+<span class="s2">        &quot;soyadi&quot;: &quot;K</span><span class="se">\u0131</span><span class="s2">l</span><span class="se">\u0131\u00e7</span><span class="s2">&quot;</span>
+<span class="s2">    },</span>
+
+<span class="s2">    &quot;personel4&quot;: {</span>
+<span class="s2">        &quot;adi&quot;: &quot;Yavuz&quot;,</span>
+<span class="s2">        &quot;soyadi&quot;: &quot;G</span><span class="se">\u00fc</span><span class="s2">ney&quot;</span>
+<span class="s2">    }</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">mtn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;personel1&#39;: {&#39;adi&#39;: &#39;Muhammed&#39;, &#39;soyadi&#39;: &#39;S.Niaei&#39;},
+ &#39;personel2&#39;: {&#39;adi&#39;: &#39;Yusuf&#39;, &#39;soyadi&#39;: &#39;Pak&#39;},
+ &#39;personel3&#39;: {&#39;adi&#39;: &#39;Yücel&#39;, &#39;soyadi&#39;: &#39;Kılıç&#39;},
+ &#39;personel4&#39;: {&#39;adi&#39;: &#39;Yavuz&#39;, &#39;soyadi&#39;: &#39;Güney&#39;}}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">str</span></code> bilgiyi dosyadan <code class="docutils literal notranslate"><span class="pre">open</span></code> ile okuyp, daha sonra <code class="docutils literal notranslate"><span class="pre">loads</span></code> ile <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e dönüşüm yapılabilir. Fakat <code class="docutils literal notranslate"><span class="pre">read</span></code> metoduyla uğraşmak istemezseniz dosyayı direct okuyabilirsiniz</p>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Bir dosyadan <code class="docutils literal notranslate"><span class="pre">json</span></code> formatlı veriyi okuyup bir <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e dönüştürünüz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;personel.json&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;personel1&#39;: {&#39;adi&#39;: &#39;Muhammed&#39;, &#39;soyadi&#39;: &#39;S.Niaei&#39;}, &#39;personel2&#39;: {&#39;adi&#39;: &#39;Yusuf&#39;, &#39;soyadi&#39;: &#39;Pak&#39;}, &#39;personel3&#39;: {&#39;adi&#39;: &#39;Yücel&#39;, &#39;soyadi&#39;: &#39;Kılıç&#39;}, &#39;personel4&#39;: {&#39;adi&#39;: &#39;Yavuz&#39;, &#39;soyadi&#39;: &#39;Güney&#39;}}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="typing.html" title="previous page">Tip açıklamaları</a>
+    <a class='right-next' id="next-link" href="third_party_moduls.html" title="next page">Varsayılan olmayan modüller</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mohammad S.Niaei<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,1629 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konteynerler &#8212; Tembeller için programlama</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Diğer" href="others_types.html" />
+    <link rel="prev" title="Nümerik veriler" href="numeric.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/me.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Tembeller için programlama</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Giriş
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Hazırlık
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hello_world.html">
+   Merhaba dünya
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="data_types.html">
+   Veri tipleri
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric.html">
+     Nümerik veriler
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Konteynerler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="others_types.html">
+     Diğer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="modules.html">
+     Python modüller
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="first_examples.html">
+     Egzersizler
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="tools.html">
+   Araçlar
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="operators.html">
+     Operatörler
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="arithmetic_operators.html">
+       Aritmetik operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="comparison_operators.html">
+       Karşılaştırma operatörleri
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="logical_operators.html">
+       Mantıksal operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="other_operators.html">
+       Diğer operatörler
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conditions.html">
+     Koşullu ifadeler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loops.html">
+     Döngüler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="functions.html">
+     Fonksiyonlar
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recursion.html">
+       Özyenilemeli fonksiyonlar
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="second_examples.html">
+     Egzersizler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="classes.html">
+     Sınıf
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_method.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         method
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_attribute.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         attribute
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_example.html">
+       Sınıf Örnek
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="file_op.html">
+   Dosya işlemleri
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rules.html">
+   Kurallar
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="typing.html">
+     Tip açıklamaları
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="default_moduls.html">
+   Kütüphane/Modül
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="third_party_moduls.html">
+     Varsayılan olmayan modüller
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="my_modul.html">
+     Özel modüller
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mprt/name_main.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         if
+        </span>
+        <span class="pre">
+         __name__
+        </span>
+        <span class="pre">
+         ==
+        </span>
+        <span class="pre">
+         "__main__"
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/containers.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://mshemuni.github.io/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://mshemuni.github.io//issues/new?title=Issue%20on%20page%20%2Fcontainers.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indeksleme-indexing">
+   İndeksleme (Indexing)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pozitif-indeksleme">
+     Pozitif indeksleme
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#negatif-indeksleme">
+     Negatif indeksleme
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aralik-indeksleme">
+     Aralık indeksleme
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#str">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     str
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#str-nin-yararli-metodlar">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       str
+      </span>
+     </code>
+     ’nin yararlı metodlar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#list">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     list
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-nin-yararli-metodlar">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       list
+      </span>
+     </code>
+     ’nin yararlı metodlar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dict">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     dict
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dict-nin-yararli-metodlar">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       dict
+      </span>
+     </code>
+     ’nin yararlı metodlar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tupe">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     tupe
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     set
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-in-yararli-metodlar">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       set
+      </span>
+     </code>
+     ’in yararlı metodlar
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="konteynerler">
+<h1>Konteynerler<a class="headerlink" href="#konteynerler" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da rastgele sayıda obje barındıran veri türleridir. Bunlara <code class="docutils literal notranslate"><span class="pre">dizi</span></code>ler diyeceğiz.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dict</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tuple</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set</span></code></p></li>
+</ul>
+<div class="section" id="indeksleme-indexing">
+<h2>İndeksleme (Indexing)<a class="headerlink" href="#indeksleme-indexing" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da bir dizi’nin elemanlarına erişmek için indeksler kullanılır.</p>
+<p>İndeksler <code class="docutils literal notranslate"><span class="pre">0</span></code>’dan başlar ve dizinin eleman sayısının bir eksiğine kadar gider.</p>
+<div class="section" id="pozitif-indeksleme">
+<h3>Pozitif indeksleme<a class="headerlink" href="#pozitif-indeksleme" title="Permalink to this headline">¶</a></h3>
+<p>İndeksler <code class="docutils literal notranslate"><span class="pre">int</span></code> olmak zorunda. Kesirli sayı indeks mümkün değildir. <code class="docutils literal notranslate"><span class="pre">0</span></code> indeksi ilk eleman, <code class="docutils literal notranslate"><span class="pre">1</span></code> indeksi ikinci eleman ve bylece devam eder.</p>
+</div>
+<div class="section" id="negatif-indeksleme">
+<h3>Negatif indeksleme<a class="headerlink" href="#negatif-indeksleme" title="Permalink to this headline">¶</a></h3>
+<p>Bir dizinin elemenlarına negatif tam sayı indekslerle ulaşılabilir. <code class="docutils literal notranslate"><span class="pre">-1</span></code> son eleman, <code class="docutils literal notranslate"><span class="pre">-2</span></code> sondan bir önceki eleman olacaktır.</p>
+</div>
+<div class="section" id="aralik-indeksleme">
+<h3>Aralık indeksleme<a class="headerlink" href="#aralik-indeksleme" title="Permalink to this headline">¶</a></h3>
+<p>Bir dizinin elemanlarına aralık vererek ulaşılabilir. Bunun için 3 adet <code class="docutils literal notranslate"><span class="pre">int</span></code> kullanılır ve bu sayılar <code class="docutils literal notranslate"><span class="pre">:</span></code> ile ayrılır.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Başlangıç</span><span class="p">:</span> <span class="n">Bitiş</span><span class="p">:</span> <span class="n">Adım</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>şeklinde ifade edilir.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Başlangıç derğeri verilmediğinde <code class="docutils literal notranslate"><span class="pre">0</span></code>, bitiş derğeri verilmediğinde <code class="docutils literal notranslate"><span class="pre">-1</span></code> ve adım değeri verilmediğinde <code class="docutils literal notranslate"><span class="pre">1</span></code> olarak kebul edileceltir.</p>
+</div>
+</div>
+</div>
+<div class="section" id="str">
+<h2><code class="docutils literal notranslate"><span class="pre">str</span></code><a class="headerlink" href="#str" title="Permalink to this headline">¶</a></h2>
+<p>Metin veri tipidir.</p>
+<hr>
+<p><code class="docutils literal notranslate"><span class="pre">str</span></code> veri tipine örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Mohammad&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Mohammad&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>İndexleme kullanarak bir <code class="docutils literal notranslate"><span class="pre">str</span></code>’in elemanlarına ulaşabiliriz.</p>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">str</span></code>’de ilk harfi gösteriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed&quot;</span>
+
+<span class="n">mtn</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;M&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>bir <code class="docutils literal notranslate"><span class="pre">str</span></code>’in son harfini gösteriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed&quot;</span>
+
+<span class="n">mtn</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;d&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">str</span></code>’nin <code class="docutils literal notranslate"><span class="pre">1.,</span> <span class="pre">3.,</span> <span class="pre">5.,</span> <span class="pre">...</span></code> harfini gösteriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed&quot;</span>
+<span class="n">mtn</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Mhme&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">str</span></code>’yi ters çeviriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed&quot;</span>
+
+<span class="n">mtn</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;demmahuM&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="str-nin-yararli-metodlar">
+<h3><code class="docutils literal notranslate"><span class="pre">str</span></code>’nin yararlı metodlar<a class="headerlink" href="#str-nin-yararli-metodlar" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>endswith, Bir metnin başka bir metinle bitip bitmediğini sınar</p></li>
+<li><p>find, Bir metinin içinde başka bir metin arar. İlk indeks verilir</p></li>
+<li><p>lower, Bir metni küçük harflre dönüştürür (I harfi sorun olabilir)</p></li>
+<li><p>join, metinleri birleştirir</p></li>
+<li><p>removeprefix, ön ek siler</p></li>
+<li><p>removesuffix, son ek siler</p></li>
+<li><p>replace, metin içinde aranan metni başka bir metinle değiştirir</p></li>
+<li><p>split, metni böler</p></li>
+<li><p>startswith, Bir metnin başka bir metinle başlayıp başlamadığını sınar</p></li>
+<li><p>strip, ön ve son boşlukları siler</p></li>
+<li><p>title, Her kelimeyi büyük harf ile başlatır</p></li>
+<li><p>upper, Bir metni büyük harflre dönüştürür (I harfi sorun olabilir)</p></li>
+</ul>
+<hr>
+<p>Örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed shameoni niaei&quot;</span>
+
+<span class="n">mtn</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;i&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed shameoni niaei&quot;</span>
+
+<span class="n">mtn</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;m&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed shameoni niaei&quot;</span>
+
+<span class="n">mtn</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;muhammed shameoni niaei&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed shameoni niaei&quot;</span>
+
+<span class="s2">&quot;,&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">mtn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;M,u,h,a,m,m,e,d, ,s,h,a,m,e,o,n,i, ,n,i,a,e,i&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed shameoni niaei&quot;</span>
+
+<span class="n">mtn</span><span class="o">.</span><span class="n">removeprefix</span><span class="p">(</span><span class="s2">&quot;Mu&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;hammed shameoni niaei&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed shameoni niaei&quot;</span>
+
+<span class="n">mtn</span><span class="o">.</span><span class="n">removesuffix</span><span class="p">(</span><span class="s2">&quot;Mu&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Muhammed shameoni niaei&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed shameoni niaei&quot;</span>
+
+<span class="n">mtn</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;m&quot;</span><span class="p">)</span> <span class="c1"># m&#39;ye göre böl.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Muha&#39;, &#39;&#39;, &#39;ed sha&#39;, &#39;eoni niaei&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed shameoni niaei&quot;</span>
+
+<span class="n">mtn</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="c1"># beyazboşluğa göre böl. Ard arda gelen boşlukları 1 sayar</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Muhammed&#39;, &#39;shameoni&#39;, &#39;niaei&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed shameoni niaei&quot;</span>
+
+<span class="n">mtn</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot; Muhammed       &quot;</span>
+
+<span class="n">mtn</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Muhammed&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed shameoni niaei&quot;</span>
+
+<span class="n">mtn</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Muhammed Shameoni Niaei&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Muhammed shameoni niaei&quot;</span>
+
+<span class="n">mtn</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;MUHAMMED SHAMEONI NIAEI&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da çoklu satır metinler de yazılabilir. Bunun için metin <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> ile çevrelenir</p>
+</div>
+<hr>
+<p>Örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Muhamed</span>
+<span class="s2">Yusuf</span>
+<span class="s2">Yücel</span>
+<span class="s2">Yavuz&quot;&quot;&quot;</span>
+
+<span class="n">mtn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Muhamed\nYusuf\nYücel\nYavuz&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="list">
+<h2><code class="docutils literal notranslate"><span class="pre">list</span></code><a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<p>Rastgele eleman ve farklı veri tiplerinden oluşan bir veri tipidir .</p>
+<hr>
+<p><code class="docutils literal notranslate"><span class="pre">list</span></code> veri tipine örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="s2">&quot;muhammed&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;shameoni&quot;</span><span class="p">,</span> <span class="s2">&quot;niaei&quot;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 1.1, &#39;muhammed&#39;, [&#39;shameoni&#39;, &#39;niaei&#39;]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>İndexleme kullanarak bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’in elemanlarına ulaşabiliriz.</p>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’te ilk elemanını gösteriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="s2">&quot;muhammed&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;shameoni&quot;</span><span class="p">,</span> <span class="s2">&quot;niaei&quot;</span><span class="p">]]</span>
+
+<span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’in son elemanını gösteriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="s2">&quot;muhammed&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;shameoni&quot;</span><span class="p">,</span> <span class="s2">&quot;niaei&quot;</span><span class="p">]]</span>
+
+<span class="n">lst</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;shameoni&#39;, &#39;niaei&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’in <code class="docutils literal notranslate"><span class="pre">1.,</span> <span class="pre">3.,</span> <span class="pre">5.,</span> <span class="pre">...</span></code> elemanını gösteriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="s2">&quot;muhammed&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;shameoni&quot;</span><span class="p">,</span> <span class="s2">&quot;niaei&quot;</span><span class="p">]]</span>
+
+<span class="n">lst</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, &#39;muhammed&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’i ters çeviriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="s2">&quot;muhammed&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;shameoni&quot;</span><span class="p">,</span> <span class="s2">&quot;niaei&quot;</span><span class="p">]]</span>
+
+<span class="n">lst</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[&#39;shameoni&#39;, &#39;niaei&#39;], &#39;muhammed&#39;, 1.1, 1]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="list-nin-yararli-metodlar">
+<h3><code class="docutils literal notranslate"><span class="pre">list</span></code>’nin yararlı metodlar<a class="headerlink" href="#list-nin-yararli-metodlar" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>append, Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’in sonuna verilen değeri ekler. <code class="docutils literal notranslate"><span class="pre">list</span></code>’in üzerinde çalışır (<code class="docutils literal notranslate"><span class="pre">inplace</span></code>)</p></li>
+<li><p>copy, Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’in kopyasını oluşturur</p></li>
+<li><p>extend, Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’in sonuna verilen <code class="docutils literal notranslate"><span class="pre">list</span></code>’in elemanlarını ekler</p></li>
+<li><p>index, Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’te aranan elemanı bulur (ilk index verilir)</p></li>
+<li><p>insert, Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’e verilen değer, istenen sıraya yerleştirilir</p></li>
+<li><p>pop, Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’in verilen indexi silinir ve silinen değer iade edilir</p></li>
+<li><p>remove, Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’in içinden bir değer silinir (ilk index)</p></li>
+<li><p>sort, Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’i sıralar. <code class="docutils literal notranslate"><span class="pre">list</span></code>’in üzerinde çalışır (<code class="docutils literal notranslate"><span class="pre">inplace</span></code>)</p></li>
+</ul>
+<hr>
+<p>Örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">]</span>
+
+<span class="n">lst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Muhammed&quot;</span><span class="p">)</span>
+<span class="n">lst</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;1&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;Muhammed&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">]</span>
+
+<span class="n">lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;1&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">]</span>
+
+<span class="n">lst</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;shameoni&quot;</span><span class="p">,</span> <span class="s2">&quot;niaei&quot;</span><span class="p">])</span>
+<span class="n">lst</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;,
+ &#39;2&#39;,
+ &#39;3&#39;,
+ &#39;4&#39;,
+ &#39;5&#39;,
+ &#39;1&#39;,
+ &#39;6&#39;,
+ &#39;7&#39;,
+ &#39;8&#39;,
+ &#39;9&#39;,
+ &#39;Muhammed&#39;,
+ &#39;shameoni&#39;,
+ &#39;niaei&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">]</span>
+
+<span class="n">lst</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">]</span>
+
+<span class="n">lst</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;muhammed&quot;</span><span class="p">)</span>
+<span class="n">lst</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;muhammed&#39;, &#39;1&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">]</span>
+
+<span class="n">silinen</span> <span class="o">=</span> <span class="n">lst</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">silinen</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;1&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">]</span>
+
+<span class="n">lst</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;3&quot;</span><span class="p">)</span>
+<span class="n">lst</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;2&#39;, &#39;4&#39;, &#39;5&#39;, &#39;1&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">]</span>
+
+<span class="n">lst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="n">lst</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">list</span></code>’ten indeks ile eleman silmek için <code class="docutils literal notranslate"><span class="pre">del</span></code> anahtar kelimesi kullanılır</p>
+<hr>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’ten <code class="docutils literal notranslate"><span class="pre">5.</span></code> elemanı siliniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">]</span>
+
+<span class="k">del</span> <span class="n">lst</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">lst</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">str</span></code>’nin <code class="docutils literal notranslate"><span class="pre">join</span></code> metodu ve <code class="docutils literal notranslate"><span class="pre">list</span></code> ile çok eğlenceli şeyler yapabilirsiniz.</p>
+<hr>
+<p>Örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;Shameoni&quot;</span><span class="p">,</span> <span class="s2">&quot;Niaei&quot;</span><span class="p">]</span>
+
+<span class="n">csv</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+<span class="n">csv</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Muhammed, Shameoni, Niaei&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dict">
+<h2><code class="docutils literal notranslate"><span class="pre">dict</span></code><a class="headerlink" href="#dict" title="Permalink to this headline">¶</a></h2>
+<p>En sevdiklerimden biridir. <code class="docutils literal notranslate"><span class="pre">Json</span></code> benzeri bir veri tipidir. Bir anahtar ve bir değerden oluşur.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Anahtarlar,</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">str</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">float</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">complex</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tuple</span></code></p></li>
+</ul>
+<p>olabilir. Fakat,</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dict</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">set</span></code></p></li>
+</ul>
+<p>olamaz.</p>
+</div>
+<hr>
+<p><code class="docutils literal notranslate"><span class="pre">dict</span></code> veri tipine örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ad&#39;: &#39;Muhammed&#39;, &#39;soyad&#39;: &#39;Shameoni Niaei&#39;, &#39;dtarihi&#39;: 1988}
+</pre></div>
+</div>
+</div>
+</div>
+<p>İndeksleme kullanarak bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’in elemanlarına ulaşamayız.</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">dict</span></code>’in <code class="docutils literal notranslate"><span class="pre">0.</span></code>, <code class="docutils literal notranslate"><span class="pre">1.</span></code> elemanına değil, <code class="docutils literal notranslate"><span class="pre">anahtar</span></code> değerine ulaşılır</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">dict</span></code>’te 1 diye bir anahtar olursa <code class="docutils literal notranslate"><span class="pre">dct[1]</span></code> yanıt verir. Ama bu <code class="docutils literal notranslate"><span class="pre">1.</span></code> indekse ulaştığımız anlamına gelmez</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">dict</span></code>’in iki anahtarı aynı olmamaz.</p>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">dict</span></code>’te herhangi bir elemanı gösteriniz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+
+<span class="n">dct</span><span class="p">[</span><span class="s2">&quot;ad&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Muhammed&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">dict</span></code>’te <code class="docutils literal notranslate"><span class="pre">Atatürk</span> <span class="pre">Üniversitesi</span></code> değerine sahip <code class="docutils literal notranslate"><span class="pre">kurumu</span></code> diye bir anahtar ekleyiniz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+
+<span class="n">dct</span><span class="p">[</span><span class="s2">&quot;kurumu&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Atatürk Üniversitesi&quot;</span>
+<span class="n">dct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ad&#39;: &#39;Muhammed&#39;,
+ &#39;soyad&#39;: &#39;Shameoni Niaei&#39;,
+ &#39;dtarihi&#39;: 1988,
+ &#39;kurumu&#39;: &#39;Atatürk Üniversitesi&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">dict</span></code>’ten herhangi bir elemanı siliniz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+
+<span class="k">del</span> <span class="n">dct</span><span class="p">[</span><span class="s2">&quot;ad&quot;</span><span class="p">]</span>
+<span class="n">dct</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;soyad&#39;: &#39;Shameoni Niaei&#39;, &#39;dtarihi&#39;: 1988}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="dict-nin-yararli-metodlar">
+<h3><code class="docutils literal notranslate"><span class="pre">dict</span></code>’nin yararlı metodlar<a class="headerlink" href="#dict-nin-yararli-metodlar" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>copy, <code class="docutils literal notranslate"><span class="pre">dict</span></code>’in kopyasını oluşturur</p></li>
+<li><p>items, <code class="docutils literal notranslate"><span class="pre">dict</span></code>’in anahtar, değer ikilikerini verir</p></li>
+<li><p>keys, <code class="docutils literal notranslate"><span class="pre">dict</span></code>’in anahtarlarını verir</p></li>
+<li><p>get, <code class="docutils literal notranslate"><span class="pre">dict</span></code>’in bir anahtarının değerini verir</p></li>
+</ul>
+<hr>
+<p>Örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+
+<span class="n">dct</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;ad&#39;: &#39;Muhammed&#39;, &#39;soyad&#39;: &#39;Shameoni Niaei&#39;, &#39;dtarihi&#39;: 1988}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+
+<span class="n">dct</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_items([(&#39;ad&#39;, &#39;Muhammed&#39;), (&#39;soyad&#39;, &#39;Shameoni Niaei&#39;), (&#39;dtarihi&#39;, 1988)])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+
+<span class="n">dct</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;ad&#39;, &#39;soyad&#39;, &#39;dtarihi&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+
+<span class="n">dct</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;ad&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Muhammed&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">dct[anahtar]</span></code>, bir <code class="docutils literal notranslate"><span class="pre">dict</span></code>’in <code class="docutils literal notranslate"><span class="pre">anahtar</span></code> değerini gösterir. <code class="docutils literal notranslate"><span class="pre">get</span></code> metodu da aynı şeyi yapar. Amaç?</p>
+<p><code class="docutils literal notranslate"><span class="pre">dct[anahtar]</span></code> yönteminde eğer <code class="docutils literal notranslate"><span class="pre">anahtar</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>’in içinde mevcüt değilse, HATA alırsınız.</p>
+<p><code class="docutils literal notranslate"><span class="pre">get</span></code> metodunda ise varayılan <code class="docutils literal notranslate"><span class="pre">None</span></code> değeri alırsınız. İsterseniz, <code class="docutils literal notranslate"><span class="pre">anahtar</span></code> bulunmadığında özel bir değer de alabilirsiniz</p>
+</div>
+<hr>
+<p>Örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+
+<span class="n">dct</span><span class="p">[</span><span class="s2">&quot;adi&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_15552</span><span class="o">/</span><span class="mf">1509176710.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">dct</span><span class="p">[</span><span class="s2">&quot;adi&quot;</span><span class="p">]</span>
+
+<span class="ne">KeyError</span>: &#39;adi&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dct</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;adi&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>None
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dct</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;adi&quot;</span><span class="p">,</span> <span class="s2">&quot;Bulamadım&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bulamadım
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tupe">
+<h2><code class="docutils literal notranslate"><span class="pre">tupe</span></code><a class="headerlink" href="#tupe" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">tupe</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>’e benzer bir dizi veri tipidir. Farklı olarak oluşturulduktan sonra düzenlenemez.</p>
+<p>Böyle bir şeye neden ihtiyacımız olsun ki?</p>
+<p>Elinizde bir konumun coğrafi koordinatları var. Söz konusu koordinatın değişme durumu olamaz. Bu durumda kod içerisinde bir yerde değeri değiştirememek adına <code class="docutils literal notranslate"><span class="pre">tupe</span></code> tercih edilebilir.</p>
+<p>Aynı şey, renk değerleri için geçerli olabilir. Rengin değeri değişmez.</p>
+<hr>
+<p><code class="docutils literal notranslate"><span class="pre">tupe</span></code> veri tipine örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;1&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>İndexleme kullanarak bir <code class="docutils literal notranslate"><span class="pre">tuple</span></code>’in elemanlarına ulaşabiliriz.</p>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">tuple</span></code>’de ilk harfi gösteriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">)</span>
+
+<span class="n">tpl</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;1&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>bir <code class="docutils literal notranslate"><span class="pre">tpl</span></code>’in son elemanını gösteriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">)</span>
+
+<span class="n">tpl</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;9&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">tpl</span></code>’in <code class="docutils literal notranslate"><span class="pre">1.,</span> <span class="pre">3.,</span> <span class="pre">5.,</span> <span class="pre">...</span></code> elemanını gösteriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">)</span>
+
+<span class="n">tpl</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;1&#39;, &#39;3&#39;, &#39;5&#39;, &#39;6&#39;, &#39;8&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">tuple</span></code>’i ters çeviriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tpl</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">)</span>
+
+<span class="n">tpl</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;9&#39;, &#39;8&#39;, &#39;7&#39;, &#39;6&#39;, &#39;1&#39;, &#39;5&#39;, &#39;4&#39;, &#39;3&#39;, &#39;2&#39;, &#39;1&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">tuple</span></code>’ın öyle acayip acapyi metodları yok. Elemanı güncelleymiyoruz bile</p>
+</div>
+<div class="section" id="set">
+<h2><code class="docutils literal notranslate"><span class="pre">set</span></code><a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">set</span></code> de, <code class="docutils literal notranslate"><span class="pre">list</span></code>’e benzer bir dizi veri tipidir. Farklı olarak tekrar veri barındıramaz. Tekil olmak zorunda.</p>
+<p>Böyle bir şeye neden ihtiyacımız olsun ki? Neden olmasın?</p>
+<hr>
+<p><code class="docutils literal notranslate"><span class="pre">tupe</span></code> veri tipine örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>İndeksleme kullanarak bir <code class="docutils literal notranslate"><span class="pre">set</span></code>’in elemanlarına ulaşamayız.</p>
+<div class="section" id="set-in-yararli-metodlar">
+<h3><code class="docutils literal notranslate"><span class="pre">set</span></code>’in yararlı metodlar<a class="headerlink" href="#set-in-yararli-metodlar" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>add, Bir <code class="docutils literal notranslate"><span class="pre">set</span></code>’e bir eleman ekler. Eleman zaten varsa hiçbir şey yapmaz. <code class="docutils literal notranslate"><span class="pre">set</span></code>’in üzerinde çalışır (<code class="docutils literal notranslate"><span class="pre">inplace</span></code>)</p></li>
+<li><p>copy, Bir <code class="docutils literal notranslate"><span class="pre">set</span></code>’in koyasını oluşturur</p></li>
+<li><p>difference, İki <code class="docutils literal notranslate"><span class="pre">set</span></code>’in farklını iade eder</p></li>
+<li><p>intersection, İki <code class="docutils literal notranslate"><span class="pre">set</span></code>’in kesişimini iade eder</p></li>
+<li><p>union, İki <code class="docutils literal notranslate"><span class="pre">set</span></code>’in birleşimini verir</p></li>
+</ul>
+<hr>
+<p>Örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">}</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;muhammed&quot;</span><span class="p">)</span>
+<span class="n">st</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;muhammed&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">}</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">}</span>
+<span class="n">st2</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;Shameoni&quot;</span><span class="p">,</span> <span class="s2">&quot;Niaei&quot;</span><span class="p">}</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">st2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;, &#39;2&#39;, &#39;4&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">}</span>
+<span class="n">st2</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;Shameoni&quot;</span><span class="p">,</span> <span class="s2">&quot;Niaei&quot;</span><span class="p">}</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">st2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;3&#39;, &#39;5&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">st</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;8&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">}</span>
+<span class="n">st2</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="s2">&quot;Shameoni&quot;</span><span class="p">,</span> <span class="s2">&quot;Niaei&quot;</span><span class="p">}</span>
+
+<span class="n">st</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">st2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;Niaei&#39;, &#39;Shameoni&#39;, &#39;muhammed&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">set</span></code>’i kullanarak bir <code class="docutils literal notranslate"><span class="pre">list</span></code>’in tekil değerlerini (unique) alabiliriz</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+
+<span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre></div>
+</div>
+</div>
+</div>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/no_idea.gif"><img alt="_images/no_idea.gif" class="bg-primary mb-1 align-center" src="_images/no_idea.gif" style="width: 400px;" /></a>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="numeric.html" title="previous page">Nümerik veriler</a>
+    <a class='right-next' id="next-link" href="others_types.html" title="next page">Diğer</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mohammad S.Niaei<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,930 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kurallar &#8212; Tembeller için programlama</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tip açıklamaları" href="typing.html" />
+    <link rel="prev" title="Dosya işlemleri" href="file_op.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/me.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Tembeller için programlama</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Giriş
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Hazırlık
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hello_world.html">
+   Merhaba dünya
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="data_types.html">
+   Veri tipleri
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric.html">
+     Nümerik veriler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="containers.html">
+     Konteynerler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="others_types.html">
+     Diğer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="modules.html">
+     Python modüller
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="first_examples.html">
+     Egzersizler
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="tools.html">
+   Araçlar
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="operators.html">
+     Operatörler
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="arithmetic_operators.html">
+       Aritmetik operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="comparison_operators.html">
+       Karşılaştırma operatörleri
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="logical_operators.html">
+       Mantıksal operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="other_operators.html">
+       Diğer operatörler
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conditions.html">
+     Koşullu ifadeler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loops.html">
+     Döngüler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="functions.html">
+     Fonksiyonlar
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recursion.html">
+       Özyenilemeli fonksiyonlar
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="second_examples.html">
+     Egzersizler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="classes.html">
+     Sınıf
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_method.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         method
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_attribute.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         attribute
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_example.html">
+       Sınıf Örnek
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="file_op.html">
+   Dosya işlemleri
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Kurallar
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="typing.html">
+     Tip açıklamaları
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="default_moduls.html">
+   Kütüphane/Modül
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="third_party_moduls.html">
+     Varsayılan olmayan modüller
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="my_modul.html">
+     Özel modüller
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mprt/name_main.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         if
+        </span>
+        <span class="pre">
+         __name__
+        </span>
+        <span class="pre">
+         ==
+        </span>
+        <span class="pre">
+         "__main__"
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/rules.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://mshemuni.github.io/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://mshemuni.github.io//issues/new?title=Issue%20on%20page%20%2Frules.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pep8">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     pep8
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aciklama-satirlari">
+   Açıklama satırları
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docstring">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     docstring
+    </span>
+   </code>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="kurallar">
+<h1>Kurallar<a class="headerlink" href="#kurallar" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> törelerine göre uymamız gereken yazılı ve yazılı olmayan kurallarımız varıdr.</p>
+<div class="section" id="pep8">
+<h2><code class="docutils literal notranslate"><span class="pre">pep8</span></code><a class="headerlink" href="#pep8" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">pep</span></code> (<code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Enhancement</span> <span class="pre">Proposal</span></code>, <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Geliştirme</span> <span class="pre">Önerisi</span></code>) <code class="docutils literal notranslate"><span class="pre">Python</span></code> topluluğuna verilen önerilerdir. Tatrışmalar sonucunda bu öneriler kabul edilebilir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pep8</span></code> bunların en önemlilerinden biridir, zira bir <code class="docutils literal notranslate"><span class="pre">Python</span></code> kodunun nasıl yazılması gerektiğinden bahseder. (Zorunlu kurallar değildir. Fakat kodunuzu paylaştığınızda, ciddiye alınmak isterseniz, <code class="docutils literal notranslate"><span class="pre">pep8</span></code>’i göz ardı etmeyin)</p>
+<p>Örneğin <code class="docutils literal notranslate"><span class="pre">Python</span></code>’da bir bloğun <code class="docutils literal notranslate"><span class="pre">indentation</span></code> ile ayrılması gerektiğinden daha önce bahsetmiştik. Fakat bu <code class="docutils literal notranslate"><span class="pre">indentation</span></code>ın (<code class="docutils literal notranslate"><span class="pre">girinti</span></code>) nasıl olmasını söyleyen bir kuraldan bahsetmedik.</p>
+<p>Dolayısıyla girinti işin, <code class="docutils literal notranslate"><span class="pre">n</span></code> adet <kbd>Tab</kbd> veya <code class="docutils literal notranslate"><span class="pre">boşluk</span></code> kullanmamızı kısıtlayn bir şey yoktur. (Aynı <code class="docutils literal notranslate"><span class="pre">indentation</span></code>’ın başındaki boşluk sayısı aynı olduğu sürece)</p>
+<p>Kısıtlama yok dedik ama <code class="docutils literal notranslate"><span class="pre">pep8</span></code> aslında bizi kısıtlıyor. <code class="docutils literal notranslate"><span class="pre">pep8</span></code> bize, <code class="docutils literal notranslate"><span class="pre">indentaion</span></code>’larn <code class="docutils literal notranslate"><span class="pre">4</span></code> <code class="docutils literal notranslate"><span class="pre">boşluk</span></code>tan oluştuğunu dikte eder.</p>
+<p>Yahut bir satırın en fazla <code class="docutils literal notranslate"><span class="pre">82</span></code> karakter olabileceğini söyler.</p>
+<p>Aslında günümüz <code class="docutils literal notranslate"><span class="pre">IDE</span></code>leri bu işleri sizin için zaten halleder, lakin ne yaptığımızı bilmekte de yarar var.</p>
+</div>
+<div class="section" id="aciklama-satirlari">
+<h2>Açıklama satırları<a class="headerlink" href="#aciklama-satirlari" title="Permalink to this headline">¶</a></h2>
+<p>Bütün dillerde olduğu gibi <code class="docutils literal notranslate"><span class="pre">Python</span></code>’da açıklama satırları (<code class="docutils literal notranslate"><span class="pre">comment</span> <span class="pre">line</span></code>) yazabilirsiniz. Bu satırlar <code class="docutils literal notranslate"><span class="pre">Python</span></code> tarafından yorumlanmazlar. Adı üstünde açıklamalar için kullanılırlar.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Açıklama satırları çok önemlidir. Bir kodu yalnızca kendiniz kullanacaksanız bile açıklama saıtları yazmalısınız. Böylece yıllar sonra aynı kodu kullanmaya kalkıştığınızda “Bu ney lan?” demezsiniz.</p>
+</div>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/three_years_old_code.gif"><img alt="_images/three_years_old_code.gif" class="bg-primary mb-1 align-center" src="_images/three_years_old_code.gif" style="width: 400px;" /></a>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da açıklama satırları <code class="docutils literal notranslate"><span class="pre">#</span></code> ile başlar.</p>
+<hr>
+<p>Örneğin daha önce yazdığımız <code class="docutils literal notranslate"><span class="pre">factorial</span></code> kodumuzu ele alalım</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
+</pre></div>
+</div>
+</div>
+</div>
+<p>Bu kod basit olduğundan ilk bakışta ne yaptığını anlayabiliriz. Fakata açıklamalar olsaydı daha iyi olmaz mıydı?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    
+    <span class="c1"># Hesaplanmak istenen değer 1 ise sonucu 1 olarka iade et</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    
+    <span class="c1"># Değilse gelen değeri, kendisinin bir eksiğinin factorial&#39;i ile çarp (n * (n - 1)!)</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da çoklu satır açıklama satırları için, çoklu satır <code class="docutils literal notranslate"><span class="pre">str</span></code>ler kullanılır.</p>
+</div>
+<hr>
+<p>Örnek</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    
+    <span class="c1"># Hesaplanmak istenen değer 1 ise sonucu 1 olarka iade et</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Bu fonksiyon tam olarak nasıl çalışır?</span>
+<span class="sd">    n! = n * (n - 1)!</span>
+<span class="sd">    (n - 1)! = (n - 1) * (n - 2)!</span>
+<span class="sd">    .</span>
+<span class="sd">    .</span>
+<span class="sd">    .</span>
+<span class="sd">    3! = 3 * 2!</span>
+<span class="sd">    2! = 2 * 1!</span>
+<span class="sd">    1! = 1</span>
+<span class="sd">    mantığını kullanır</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Değilse gelen değeri, kendisinin bir eksiğinin factorial&#39;i ile çarp (n * (n - 1)!)</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>120
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="docstring">
+<h2><code class="docutils literal notranslate"><span class="pre">docstring</span></code><a class="headerlink" href="#docstring" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">docstring</span></code> dokümantasyon için kullanılan açıklama satırlarıdır. Yazdığınız bir kodun ne işe yaradığını ifade eder ve her <code class="docutils literal notranslate"><span class="pre">akıllı</span></code> programcının sağlaması gereken bir içeriktir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">docstring</span></code>ler fonskiyonun başında yazılan açıklama metinleridir.</p>
+<p>Daha önce <code class="docutils literal notranslate"><span class="pre">help</span></code> fonksiyonundan bahsetmiştik.</p>
+<hr>
+<p>Örnek</p>
+<p><code class="docutils literal notranslate"><span class="pre">math.cos</span></code> için yardım bilgisinin ekrana yazalım.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on built-in function cos in module math:
+
+cos(x, /)
+    Return the cosine of x (measured in radians).
+</pre></div>
+</div>
+</div>
+</div>
+<p>Peki bizim yazdığımız fonskiyonların yardım metni nasıl görünüt?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    
+    <span class="c1"># Hesaplanmak istenen değer 1 ise sonucu 1 olarka iade et</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    
+    <span class="c1"># Değilse gelen değeri, kendisinin bir eksiğinin factorial&#39;i ile çarp (n * (n - 1)!)</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">factorial</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function factorial in module __main__:
+
+factorial(n)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hiçbir bilgi yok. Bunu hemen düzeltelim.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Bu fonksiyon alacağı bir pozitif tam sayının faktöriyel değerini hesaplar. n!&quot;&quot;&quot;</span>
+    <span class="c1"># Hesaplanmak istenen değer 1 ise sonucu 1 olarka iade et</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    
+    <span class="c1"># Değilse gelen değeri, kendisinin bir eksiğinin factorial&#39;i ile çarp (n * (n - 1)!)</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">factorial</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function factorial in module __main__:
+
+factorial(n)
+    Bu fonksiyon alacağı bir pozitif tam sayının faktöriyel değerini hesaplar. n!
+</pre></div>
+</div>
+</div>
+</div>
+<p>Çok daha iyi.</p>
+<p>Daha önce yazdığımız <code class="docutils literal notranslate"><span class="pre">aci</span></code> sınıfına <code class="docutils literal notranslate"><span class="pre">docstring</span></code>leri ve açıklama satırlarını ekleyelim</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+
+<span class="k">class</span> <span class="nc">Angle</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Açı sınıfı.</span>
+<span class="sd">    Bu sınıf dönüşümler yapabilir.</span>
+<span class="sd">    Aritmetik ve mantıksal işlemler yapabilir</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">angle</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor metod. Açı değerini derece cinsinden alır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">=</span> <span class="n">angle</span>
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Nesneyi str&#39;e çevirdiğimizde açının değerini iade etmek için __str__ metodu</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Nesneyi gösterdiğimizde açı değerini  iade etmek için __str__ metodu</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python + işlemini tanımlayan __add__ metodu. self.add&#39;i kullanır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__sub__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python - işlemini tanımlayan __sub__ metodu. self.subtract&#39;i kullanır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">subtract</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__mul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python * işlemini tanımlayan __mul__ metodu. self.multiply&#39;ı kullanır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__rmul__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python * işlemini (Soldan) tanımlayan __rmul__ metodu. self.multiply&#39;ı kullanır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">multiply</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__truediv__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python / işlemini tanımlayan __truediv__ metodu. self.divide&#39;ı kullanır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python == işlemini tanımlayan __eq__ metodu. Açı değerlerini karşılaştırır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">angle</span>
+    
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python != işlemini tanımlayan __ne__ metodu. Açı değerlerini karşılaştırır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">!=</span> <span class="n">other</span><span class="o">.</span><span class="n">angle</span>
+    
+    <span class="k">def</span> <span class="fm">__gt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python &gt; işlemini tanımlayan __gt__ metodu. Açı değerlerini karşılaştırır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">angle</span>
+    
+    <span class="k">def</span> <span class="fm">__ge__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python &gt;= işlemini tanımlayan __ge__ metodu. Açı değerlerini karşılaştırır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">&gt;=</span> <span class="n">other</span><span class="o">.</span><span class="n">angle</span>
+    
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python &lt; işlemini tanımlayan __lt__ metodu. Açı değerlerini karşılaştırır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">angle</span>
+    
+    <span class="k">def</span> <span class="fm">__le__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Python &lt;= işlemini tanımlayan __le__ metodu. Açı değerlerini karşılaştırır</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">&lt;=</span> <span class="n">other</span><span class="o">.</span><span class="n">angle</span>
+    
+    <span class="k">def</span> <span class="nf">radians</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Açı değerini yay deerecesinden radian&#39;a çeviren metod</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span>
+    
+    <span class="k">def</span> <span class="nf">gradians</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Açı değerini yay deerecesinden gradian&#39;a çeviren metod</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">9</span>
+    
+    <span class="k">def</span> <span class="nf">hours</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Açı değerini yay deerecesinden saat açısına çeviren metod</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">/</span> <span class="mi">15</span>
+    
+    <span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        İki açı değerini toplayıp bir açı nesnesi döndüren metod</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="c1"># Gelen diğer değer açı değilse hata yükselt</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Angle</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Other must be an Angle&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">subtract</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        İki açı değerinin farkınnı hesaplayıp bir açı nesnesi döndüren metod</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="c1"># Gelen diğer değer açı değilse hata yükselt</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Angle</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Other must be an Angle&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">-</span> <span class="n">other</span><span class="o">.</span><span class="n">angle</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Bir açı değerini bir sayı ile çarpıp bir açı nesnesi döndüren metod</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="c1"># Gelen diğer değer nümerik (int veya float) değilse hata yükselt</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Other must be a numeric value&quot;</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">*</span> <span class="n">other</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">divide</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Bir açı değerini bir sayı ile bölüp bir açı nesnesi döndüren metod</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        
+        <span class="c1"># Gelen diğer değer nümerik (int veya float) değilse hata yükselt</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Other must be a numeric value&quot;</span><span class="p">)</span>
+            
+        <span class="k">return</span> <span class="n">Angle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">angle</span> <span class="o">/</span> <span class="n">other</span><span class="p">)</span>
+
+    
+<span class="n">help</span><span class="p">(</span><span class="n">Angle</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on class Angle in module __main__:
+
+class Angle(builtins.object)
+ |  Angle(angle)
+ |  
+ |  Açı sınıfı.
+ |  Bu sınıf dönüşümler yapabilir.
+ |  Aritmetik ve mantıksal işlemler yapabilir
+ |  
+ |  Methods defined here:
+ |  
+ |  __add__(self, other)
+ |      Python + işlemini tanımlayan __add__ metodu. self.add&#39;i kullanır
+ |  
+ |  __eq__(self, other)
+ |      Python == işlemini tanımlayan __eq__ metodu. Açı değerlerini karşılaştırır
+ |  
+ |  __ge__(self, other)
+ |      Python &gt;= işlemini tanımlayan __ge__ metodu. Açı değerlerini karşılaştırır
+ |  
+ |  __gt__(self, other)
+ |      Python &gt; işlemini tanımlayan __gt__ metodu. Açı değerlerini karşılaştırır
+ |  
+ |  __init__(self, angle)
+ |      Constructor metod. Açı değerini derece cinsinden alır
+ |  
+ |  __le__(self, other)
+ |      Python &lt;= işlemini tanımlayan __le__ metodu. Açı değerlerini karşılaştırır
+ |  
+ |  __lt__(self, other)
+ |      Python &lt; işlemini tanımlayan __lt__ metodu. Açı değerlerini karşılaştırır
+ |  
+ |  __mul__(self, other)
+ |      Python * işlemini tanımlayan __mul__ metodu. self.multiply&#39;ı kullanır
+ |  
+ |  __ne__(self, other)
+ |      Python != işlemini tanımlayan __ne__ metodu. Açı değerlerini karşılaştırır
+ |  
+ |  __repr__(self)
+ |      Nesneyi gösterdiğimizde açı değerini  iade etmek için __str__ metodu
+ |  
+ |  __rmul__(self, other)
+ |      Python * işlemini (Soldan) tanımlayan __rmul__ metodu. self.multiply&#39;ı kullanır
+ |  
+ |  __str__(self)
+ |      Nesneyi str&#39;e çevirdiğimizde açının değerini iade etmek için __str__ metodu
+ |  
+ |  __sub__(self, other)
+ |      Python - işlemini tanımlayan __sub__ metodu. self.subtract&#39;i kullanır
+ |  
+ |  __truediv__(self, other)
+ |      Python / işlemini tanımlayan __truediv__ metodu. self.divide&#39;ı kullanır
+ |  
+ |  add(self, other)
+ |      İki açı değerini toplayıp bir açı nesnesi döndüren metod
+ |  
+ |  divide(self, other)
+ |      Bir açı değerini bir sayı ile bölüp bir açı nesnesi döndüren metod
+ |  
+ |  gradians(self)
+ |      Açı değerini yay deerecesinden gradian&#39;a çeviren metod
+ |  
+ |  hours(self)
+ |      Açı değerini yay deerecesinden saat açısına çeviren metod
+ |  
+ |  multiply(self, other)
+ |      Bir açı değerini bir sayı ile çarpıp bir açı nesnesi döndüren metod
+ |  
+ |  radians(self)
+ |      Açı değerini yay deerecesinden radian&#39;a çeviren metod
+ |  
+ |  subtract(self, other)
+ |      İki açı değerinin farkınnı hesaplayıp bir açı nesnesi döndüren metod
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __hash__ = None
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="file_op.html" title="previous page">Dosya işlemleri</a>
+    <a class='right-next' id="next-link" href="typing.html" title="next page">Tip açıklamaları</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mohammad S.Niaei<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

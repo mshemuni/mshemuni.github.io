@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koşullu ifadeler &#8212; Tembeller için programlama</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Döngüler" href="loops.html" />
+    <link rel="prev" title="Diğer operatörler" href="other_operators.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/me.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Tembeller için programlama</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Giriş
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Hazırlık
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hello_world.html">
+   Merhaba dünya
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="data_types.html">
+   Veri tipleri
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric.html">
+     Nümerik veriler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="containers.html">
+     Konteynerler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="others_types.html">
+     Diğer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="modules.html">
+     Python modüller
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="first_examples.html">
+     Egzersizler
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="tools.html">
+   Araçlar
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="operators.html">
+     Operatörler
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="arithmetic_operators.html">
+       Aritmetik operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="comparison_operators.html">
+       Karşılaştırma operatörleri
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="logical_operators.html">
+       Mantıksal operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="other_operators.html">
+       Diğer operatörler
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Koşullu ifadeler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="loops.html">
+     Döngüler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="functions.html">
+     Fonksiyonlar
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recursion.html">
+       Özyenilemeli fonksiyonlar
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="second_examples.html">
+     Egzersizler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="classes.html">
+     Sınıf
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_method.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         method
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_attribute.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         attribute
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_example.html">
+       Sınıf Örnek
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="file_op.html">
+   Dosya işlemleri
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rules.html">
+   Kurallar
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="typing.html">
+     Tip açıklamaları
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="default_moduls.html">
+   Kütüphane/Modül
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="third_party_moduls.html">
+     Varsayılan olmayan modüller
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="my_modul.html">
+     Özel modüller
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mprt/name_main.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         if
+        </span>
+        <span class="pre">
+         __name__
+        </span>
+        <span class="pre">
+         ==
+        </span>
+        <span class="pre">
+         "__main__"
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/conditions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://mshemuni.github.io/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://mshemuni.github.io//issues/new?title=Issue%20on%20page%20%2Fconditions.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     if
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#elif">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     elif
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#else">
+   else
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="kosullu-ifadeler">
+<h1>Koşullu ifadeler<a class="headerlink" href="#kosullu-ifadeler" title="Permalink to this headline">¶</a></h1>
+<p>Bazen yazacağımız bazı talimatların belirli bir koşula bağlı olarak çalıştırılmasını isteyebiliriz. Bunun için koşullu ifadeler kullanılır.</p>
+<p>Tükçe’de bir koşul <code class="docutils literal notranslate"><span class="pre">eğer</span></code> ile ifade edilir. İngilizce’de de <code class="docutils literal notranslate"><span class="pre">if</span></code> ile ifade edilir.</p>
+<div class="section" id="if">
+<h2><code class="docutils literal notranslate"><span class="pre">if</span></code><a class="headerlink" href="#if" title="Permalink to this headline">¶</a></h2>
+<p>Programlama/betik dillerinde de benzer bir ifade olmak zorunda. <code class="docutils literal notranslate"><span class="pre">Python</span></code> ve çoğu dil İngilizce temelli olduğundan <code class="docutils literal notranslate"><span class="pre">if</span></code> ifadesini kullanır.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da koşullu ifadeler mantıksal veri, matıksal veri olarak algılanabilen değerler yahut sonucu mantıksal veri olan mantıksal işlemler ile çalışır.
+Söz konusu mantıksal veri veya mantıksal işlemin sonucuna göre ise işlem yapar.</p>
+<p>Koşullu ifade yazım kuralı:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">MANTIKSAL_VERİ</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>Şeklindedir.</p>
+<p>Koşullu ifade bir bloktur. Buna <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">bloğu</span></code> adı verili. Bu blokta yazılan işlemler koşulun uygunluğuna göre çalıştırılır.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> bir bloğun başladığını <code class="docutils literal notranslate"><span class="pre">:</span></code> ile ifade eder. Dolayısıyla <code class="docutils literal notranslate"><span class="pre">:</span></code>’dan sonra gelen satır/satırlar <code class="docutils literal notranslate"><span class="pre">:</span></code> önce yazılan ifadeye ait bloktur.</p>
+<p>Bloğa ait ifadeler ise boşluklar ile başlayan satırlarla ifade edilir. Buna <code class="docutils literal notranslate"><span class="pre">indentation</span></code> (<code class="docutils literal notranslate"><span class="pre">girinti</span></code>) adı verilir.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Çoğu dilde bir bloğa ait satırlar <code class="docutils literal notranslate"><span class="pre">{}</span></code> içinde yazılır. Örnek olarak <code class="docutils literal notranslate"><span class="pre">c++</span></code>’ta koşullu ifadeler:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">MANTIKSAL_VERİ</span><span class="p">){</span>
+<span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>şeklinde yazılır ve kodun okunabilirliğinin artması açısından bir bloğa ait satırlarda <code class="docutils literal notranslate"><span class="pre">indentation</span></code> uygulanması beklenir. Dolayısıyla kod</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">MANTIKSAL_VERİ</span><span class="p">){</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>şeklini alır. <code class="docutils literal notranslate"><span class="pre">Python</span></code> ise parantezlerden kurtulur ve <code class="docutils literal notranslate"><span class="pre">indentation</span></code>’ları blok tanımı olarak kullanır.</p>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Yarıçapı <code class="docutils literal notranslate"><span class="pre">0</span></code>’dan büyük olarak kürenin hacmini hesaplayan bir program yazınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1415</span>
+
+<span class="k">if</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">hacim</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hacim</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65447.916666666664
+</pre></div>
+</div>
+</div>
+</div>
+<p>Peki yarıçap negatif veya <code class="docutils literal notranslate"><span class="pre">0</span></code> olarak verilmiş olsaydı?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="o">-</span><span class="mi">25</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1415</span>
+
+<span class="k">if</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">hacim</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hacim</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Gördüğünüz gibi if bloğu, koşul sağlanmadığından çalışmadı.</p>
+</div>
+<div class="section" id="elif">
+<h2><code class="docutils literal notranslate"><span class="pre">elif</span></code><a class="headerlink" href="#elif" title="Permalink to this headline">¶</a></h2>
+<p>Kimi durumda ise çoklu koşullarımız olabilir. Bu durumda ise <code class="docutils literal notranslate"><span class="pre">elif</span></code> anahtar kelimesi kullanılır.</p>
+<p>Bunun için Türkçe’de veya İngilizce’de güzel bir karşılık bulmak zor. Ama Türkçe için <code class="docutils literal notranslate"><span class="pre">eğer</span> <span class="pre">değilse</span></code>, İngilizce’de ise <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> şeklinde düşünülebilir. <code class="docutils literal notranslate"><span class="pre">elif</span></code> de <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code>’in kısaltılmış halidir. Elif ŞAFAK olmadığı kesin.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/not_funny.gif"><img alt="_images/not_funny.gif" class="bg-primary mb-1 align-center" src="_images/not_funny.gif" style="width: 400px;" /></a>
+<p><code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">if</span></code> gibi mantıksal veri bekler.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">MANTIKSAL_VERİ1</span><span class="p">:</span>
+    <span class="o">...</span>
+<span class="k">elif</span> <span class="n">MANTIKSAL_VERİ2</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">elif</span></code> ifadelerinin azami sayısı yoktur.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Çok sayıda <code class="docutils literal notranslate"><span class="pre">elif</span></code> kullanmak zorunda kalıyorsanız, muhtemelen mantıksal ifadeyi doğru kurgulayamamışsınızdır. Bir kahve alıp, kafanızı dağıttıktan sonra tekrar düşünün.</p>
+</div>
+<hr>
+<p>Örnek</p>
+<p><span class="math notranslate nohighlight">\(f(x)\)</span>’in sonucunu hesaplayan python programını yazınız</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x)=\begin{equation}
+\left\{ 
+  \begin{aligned}
+    x^2 &amp; &amp;x\ge 10\\
+    x^3 &amp; &amp;x\le -10\\
+    5 x &amp; &amp; -10 \lt x \lt 10 \\
+  \end{aligned}
+  \right.
+\end{equation}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">10</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>40
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="else">
+<h2>else<a class="headerlink" href="#else" title="Permalink to this headline">¶</a></h2>
+<p>Bazen ise kimi koşula bağlı olarak farklı işlemler yapmak isteriz.</p>
+<p>Eğer koşul sağlandıysa bir grup işlem, sağlanmadıysa başka bir grup işlem yapmak isteyebiliriz.</p>
+<p>Günlük haytta çok kullanılmasa da Türkçe’de bunun ifade etmek için <code class="docutils literal notranslate"><span class="pre">değilse</span></code> kullanılır. <code class="docutils literal notranslate"><span class="pre">değilse</span></code>’nin İngilizce karşılığı da <code class="docutils literal notranslate"><span class="pre">else</span></code> olduğundan <code class="docutils literal notranslate"><span class="pre">Python</span></code>’da <code class="docutils literal notranslate"><span class="pre">else</span></code> anahtar kelimesi kullanılır.</p>
+<p><code class="docutils literal notranslate"><span class="pre">else</span></code>’in kendi başına bir işe yaramadığını, kendisinden önce bir bloğun var olması gerektiğini unutmayalım. Ayrıca <code class="docutils literal notranslate"><span class="pre">else</span></code>’in kendisi de bir blok oluşturur. Şaşıracaksınız ama buna da <code class="docutils literal notranslate"><span class="pre">else</span></code> bloğu diyeceğiz.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">MANTIKSAL_VERİ</span><span class="p">:</span>
+    <span class="o">...</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<hr>
+Örnek
+<p>Yarıçapı <code class="docutils literal notranslate"><span class="pre">0</span></code>’dan büyük olarak kürenin hacmini hesaplayan bir program yazınız. Aksi taktirde kullanıcıya <code class="docutils literal notranslate"><span class="pre">0</span></code>’dan küçük veya <code class="docutils literal notranslate"><span class="pre">0</span></code>’a eşit uzunluğun olamayacağını bilgiren uyarı gösteriniz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1415</span>
+
+<span class="k">if</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">hacim</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hacim</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yarıçap sıfıra eşit veya sıfırdan küçük olamaz.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65447.916666666664
+</pre></div>
+</div>
+</div>
+</div>
+<p>Peki yarıçap negatif veya <code class="docutils literal notranslate"><span class="pre">0</span></code> olarak verilmiş olsaydı?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1415</span>
+
+<span class="k">if</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">hacim</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">hacim</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yarıçap sıfıra eşit veya sıfırdan küçük olamaz.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Yarıçap sıfıra eşit veya sıfırdan küçük olamaz.
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p><code class="docutils literal notranslate"><span class="pre">if</span></code>, istediğiniz sayıda <code class="docutils literal notranslate"><span class="pre">elif</span></code> ve <code class="docutils literal notranslate"><span class="pre">else</span></code> ile koşullu ifadelerinizi zenginleştirebilirsiniz.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">else</span></code> koşullu ifadelerin en sonunda yer almak zoruda. Kendisinden önce gelen blokların tamamı koşulları sağlamadıysa çalışır.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">MANTIKSAL_VERİ1</span><span class="p">:</span>
+    <span class="o">...</span>
+<span class="k">elif</span> <span class="n">MANTIKSAL_VERİ2</span><span class="p">:</span>
+    <span class="o">...</span>
+<span class="k">elif</span> <span class="n">MANTIKSAL_VERİ3</span><span class="p">:</span>
+    <span class="o">...</span>
+    
+    <span class="o">.</span>
+    <span class="o">.</span>
+    <span class="o">.</span>
+    
+<span class="k">else</span><span class="p">:</span>
+    <span class="o">...</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Çoklu bloktan oluşan koşullu ifadelerde, koşullardan birinin sağlanması durumunda geriye kalan koşullara bakılmaz.</p>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">MANTIKSAL_VERİ1</span><span class="p">:</span>
+    <span class="n">İŞLEM_1</span>
+<span class="k">elif</span> <span class="n">MANTIKSAL_VERİ2</span><span class="p">:</span>
+    <span class="n">İŞLEM_2</span>
+<span class="k">elif</span> <span class="n">MANTIKSAL_VERİ3</span><span class="p">:</span>
+    <span class="n">İŞLEM_3</span>
+<span class="k">elif</span> <span class="n">MANTIKSAL_VERİ4</span><span class="p">:</span>
+    <span class="n">İŞLEM_4</span>
+<span class="k">elif</span> <span class="n">MANTIKSAL_VERİ5</span><span class="p">:</span>
+    <span class="n">İŞLEM_5</span>
+<span class="k">elif</span> <span class="n">MANTIKSAL_VERİ6</span><span class="p">:</span>
+    <span class="n">İŞLEM_6</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">İŞLEM_7</span>
+</pre></div>
+</div>
+<p>Yukarıdaki ifade de <code class="docutils literal notranslate"><span class="pre">MANTIKSAL_VERİ3</span></code> sağlanırsa, <code class="docutils literal notranslate"><span class="pre">MANTIKSAL_VERİ4</span></code>, <code class="docutils literal notranslate"><span class="pre">MANTIKSAL_VERİ5</span></code>, <code class="docutils literal notranslate"><span class="pre">MANTIKSAL_VERİ6</span></code> ve <code class="docutils literal notranslate"><span class="pre">else</span></code> kısmına bakılmaz.</p>
+<p>Bu, kimi yerde yararlı, kimi yerde ise baş belası olabilir.</p>
+<hr>
+<p><em>Baş belası olduğu duruma</em> Örnek</p>
+<p>Verilen sayı, <code class="docutils literal notranslate"><span class="pre">8</span></code>’den büyük ise <code class="docutils literal notranslate"><span class="pre">çok</span> <span class="pre">büyük</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code>’te büyük ise <code class="docutils literal notranslate"><span class="pre">fena</span> <span class="pre">değil</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code>’den büyük ise <code class="docutils literal notranslate"><span class="pre">çok</span> <span class="pre">küçük</span></code> çıktısı veren programı yazınız. (Bir arkadaşımın sorusu bu…)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sayi</span> <span class="o">=</span> <span class="mi">65535</span>
+
+<span class="k">if</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Çok küçük&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fena değil&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Çok büyük&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Çok küçük
+</pre></div>
+</div>
+</div>
+</div>
+<p>Yukarıdaki koda baktığımızda sayı <code class="docutils literal notranslate"><span class="pre">65535</span></code> olmasına rağme <code class="docutils literal notranslate"><span class="pre">Çok</span> <span class="pre">büyük</span></code> çıktısı almadık.</p>
+<p>Bunun nedeni ise, önce <code class="docutils literal notranslate"><span class="pre">2</span></code> koşulunun denetlenmesidir. <code class="docutils literal notranslate"><span class="pre">8</span></code> ve <code class="docutils literal notranslate"><span class="pre">5</span></code> koşulunu sağlayan bütün durumlar <code class="docutils literal notranslate"><span class="pre">2</span></code> koşulunu da sağlar. dolayısıyla yazdığımız kod hiçbir zaman <code class="docutils literal notranslate"><span class="pre">8</span></code> ve <code class="docutils literal notranslate"><span class="pre">5</span></code> koşulunun doğru olduğu durumu işlemeyecektir.</p>
+<p>Düzeltmek için sorgularımızın sırasını değiştirmemiz yeterli olacaktır.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sayi</span> <span class="o">=</span> <span class="mi">65535</span>
+
+<span class="k">if</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Çok büyük&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fena değil&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Çok küçük&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Çok büyük
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p><em>Yararlı olduğu duruma</em> Örnek</p>
+<p>Verilen sayı <code class="docutils literal notranslate"><span class="pre">10</span></code>’dan büyük ise <code class="docutils literal notranslate"><span class="pre">Çok</span> <span class="pre">uzamış</span></code>, <code class="docutils literal notranslate"><span class="pre">[10,</span> <span class="pre">8)</span></code> aralığında ise <code class="docutils literal notranslate"><span class="pre">Bence</span> <span class="pre">uzun</span></code>, <code class="docutils literal notranslate"><span class="pre">[8,</span> <span class="pre">5)</span></code> aralığında ise <code class="docutils literal notranslate"><span class="pre">Bekleyebilir</span></code>, <code class="docutils literal notranslate"><span class="pre">5</span></code>’ten küçük veya <code class="docutils literal notranslate"><span class="pre">5</span></code>’e eşit ise <code class="docutils literal notranslate"><span class="pre">Çok</span> <span class="pre">kısa</span></code> çıktısı veren programı yazınız. (Saçlarımın uzunluğunu denetlemem gerekiyor)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sayi</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="k">if</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Çok uzamış&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">sayi</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bence uzun&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">sayi</span> <span class="o">&lt;=</span> <span class="mi">8</span> <span class="ow">and</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bekleyebilir&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">sayi</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Çok kısa&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bence uzun
+</pre></div>
+</div>
+</div>
+</div>
+<p>Öncelikle yine son ifadeye baktığımızda kendisinden önce gelen bütün ifadelerin dışında kalan herşeyi kapsadığını görüyoruz. Dolayısıyla kodu:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sayi</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="k">if</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Çok uzamış&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">sayi</span> <span class="o">&lt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bence uzun&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">sayi</span> <span class="o">&lt;=</span> <span class="mi">8</span> <span class="ow">and</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bekleyebilir&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Çok kısa&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bence uzun
+</pre></div>
+</div>
+</div>
+</div>
+<p>şeklinde kısaltabiliriz. Ayrıca koşullu ifadelerin çalışma şeklinden faydalanıp, ifadeyi aşağıdaki gibi düşünebiliriz:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sayi</span> <span class="o">=</span> <span class="mi">9</span>
+
+<span class="k">if</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Çok uzamış&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">8</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bence uzun&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">sayi</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bekleyebilir&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Çok kısa&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bence uzun
+</pre></div>
+</div>
+</div>
+</div>
+<p>Verilen sayı <code class="docutils literal notranslate"><span class="pre">10</span></code>’dan küçük ve <code class="docutils literal notranslate"><span class="pre">8</span></code>’den büyük olduğu anda ikinci koşula yakalanır ve if bloğu sona erer.</p>
+<p>Dolayısıyla <code class="docutils literal notranslate"><span class="pre">sayi</span> <span class="pre">&lt;=</span> <span class="pre">8</span> <span class="pre">and</span> <span class="pre">sayi</span> <span class="pre">&gt;</span> <span class="pre">5</span></code> yerine <code class="docutils literal notranslate"><span class="pre">sayi</span> <span class="pre">&gt;</span> <span class="pre">5</span></code> yazılabilir.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/not_bad.gif"><img alt="_images/not_bad.gif" class="bg-primary mb-1 align-center" src="_images/not_bad.gif" style="width: 400px;" /></a>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="other_operators.html" title="previous page">Diğer operatörler</a>
+    <a class='right-next' id="next-link" href="loops.html" title="next page">Döngüler</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mohammad S.Niaei<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

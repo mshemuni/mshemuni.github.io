@@ -1,0 +1,90 @@
+Traceback (most recent call last):
+  File "C:\Users\mshem\anaconda3\envs\mshemuni.github.io\lib\site-packages\jupyter_cache\executors\utils.py", line 51, in single_nb_execution
+    executenb(
+  File "C:\Users\mshem\anaconda3\envs\mshemuni.github.io\lib\site-packages\nbclient\client.py", line 1117, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "C:\Users\mshem\anaconda3\envs\mshemuni.github.io\lib\site-packages\nbclient\util.py", line 78, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "C:\Users\mshem\anaconda3\envs\mshemuni.github.io\lib\site-packages\nbclient\util.py", line 57, in just_run
+    return loop.run_until_complete(coro)
+  File "C:\Users\mshem\anaconda3\envs\mshemuni.github.io\lib\asyncio\base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "C:\Users\mshem\anaconda3\envs\mshemuni.github.io\lib\site-packages\nbclient\client.py", line 558, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\mshem\anaconda3\envs\mshemuni.github.io\lib\site-packages\nbclient\client.py", line 862, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "C:\Users\mshem\anaconda3\envs\mshemuni.github.io\lib\site-packages\nbclient\client.py", line 765, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from math import pi
+
+class Angle:
+    def __init__(self, angle):
+        self.angle = angle
+        
+    def __str__(self):
+        return str(self.angle)
+    
+    def __repr__(self):
+        return str(self.angle)
+    
+    def __add__(self, other):
+        return self.add(other)
+    
+    def __sub__(self, other):
+        return self.subtract(other)
+    
+    def __mul__(self, other):
+        return self.multiply(other)
+    
+    def __truediv__(self, other):
+        return self.divide(other)
+    
+    def radians(self):
+        return self.angle * pi / 180
+    
+    def gradians(self):
+        return self.angle * 10 / 9
+    
+    def hours(self):
+        return self.angle / 15
+    
+    def add(self, other):
+        if not isinstance(other, Angle):
+            raise ValueError("Other must be an Angle")
+        return Angle(self.angle + other.angle)
+    
+    def subtract(self, other):
+        if not isinstance(other, Angle):
+            raise ValueError("Other must be an Angle")
+        return Angle(self.angle - other.angle)
+    
+    def multiply(self, other):
+        if not isinstance(other, (int, float)):
+            raise ValueError("Other must be a numeric value")
+            
+        return Angle(self.angle * other)
+    
+    def divide(self, other):
+        if not isinstance(other, (int, float)):
+            raise ValueError("Other must be a numeric value")
+            
+        return Angle(self.angle / other)
+        
+ang1 = Angle(20)
+
+print(ang1 * 2)
+print(2 * ang1)
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mTypeError[0m                                 Traceback (most recent call last)
+[1;32m~\AppData\Local\Temp/ipykernel_15372/1802416175.py[0m in [0;36m<module>[1;34m[0m
+[0;32m     57[0m [1;33m[0m[0m
+[0;32m     58[0m [0mprint[0m[1;33m([0m[0mang1[0m [1;33m*[0m [1;36m2[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[1;32m---> 59[1;33m [0mprint[0m[1;33m([0m[1;36m2[0m [1;33m*[0m [0mang1[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m
+[1;31mTypeError[0m: unsupported operand type(s) for *: 'int' and 'Angle'
+TypeError: unsupported operand type(s) for *: 'int' and 'Angle'
+
