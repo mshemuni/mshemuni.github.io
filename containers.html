@@ -317,10 +317,22 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
    Optimizason
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="multithread.html">
+     Çoklu işlem
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -551,7 +563,7 @@
 <p>İndeksler <code class="docutils literal notranslate"><span class="pre">0</span></code>’dan başlar ve dizinin eleman sayısının bir eksiğine kadar gider.</p>
 <div class="section" id="pozitif-indeksleme">
 <h3>Pozitif indeksleme<a class="headerlink" href="#pozitif-indeksleme" title="Permalink to this headline">¶</a></h3>
-<p>İndeksler <code class="docutils literal notranslate"><span class="pre">int</span></code> olmak zorunda. Kesirli sayı indeks mümkün değildir. <code class="docutils literal notranslate"><span class="pre">0</span></code> indeksi ilk eleman, <code class="docutils literal notranslate"><span class="pre">1</span></code> indeksi ikinci eleman ve bylece devam eder.</p>
+<p>İndeksler <code class="docutils literal notranslate"><span class="pre">int</span></code> olmak zorunda. Kesirli sayı indeks mümkün değildir. <code class="docutils literal notranslate"><span class="pre">0</span></code> indeksi ilk eleman, <code class="docutils literal notranslate"><span class="pre">1</span></code> indeksi ikinci eleman ve böylece devam eder.</p>
 </div>
 <div class="section" id="negatif-indeksleme">
 <h3>Negatif indeksleme<a class="headerlink" href="#negatif-indeksleme" title="Permalink to this headline">¶</a></h3>
@@ -1321,7 +1333,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_18288</span><span class="o">/</span><span class="mf">1509176710.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_21988</span><span class="o">/</span><span class="mf">1509176710.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">dct</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;ad&quot;</span><span class="p">:</span> <span class="s2">&quot;Muhammed&quot;</span><span class="p">,</span> <span class="s2">&quot;soyad&quot;</span><span class="p">:</span> <span class="s2">&quot;Shameoni Niaei&quot;</span><span class="p">,</span> <span class="s2">&quot;dtarihi&quot;</span><span class="p">:</span> <span class="mi">1988</span><span class="p">}</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">dct</span><span class="p">[</span><span class="s2">&quot;adi&quot;</span><span class="p">]</span>

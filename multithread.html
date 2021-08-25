@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search &#8212; Tembeller için programlama</title>
+    <title>Çoklu işlem &#8212; Tembeller için programlama</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -33,7 +33,6 @@
     
   <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -50,16 +49,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="_static/searchtools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
-  <script src="searchindex.js" defer></script>
-  
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Optimizason" href="optimisation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
-
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -81,7 +76,7 @@
       <h1 class="site-logo" id="site-title">Tembeller için programlama</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="#" method="get">
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -93,7 +88,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="installation.html">
    Hazırlık
@@ -321,18 +316,18 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="optimisation.html">
    Optimizason
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
   <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="multithread.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Çoklu işlem
     </a>
    </li>
@@ -371,6 +366,23 @@
             </button>
             
             
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/multithread.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
             <!-- Source interaction buttons -->
 
 <div class="dropdown-buttons-trigger">
@@ -382,7 +394,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://mshemuni.github.io//issues/new?title=Issue%20on%20page%20%2Fsearch.html&body=Your%20issue%20content%20here."><button
+            href="https://mshemuni.github.io//issues/new?title=Issue%20on%20page%20%2Fmultithread.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -403,6 +415,48 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sistem-kaynaklari">
+   Sistem kaynakları
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#disk">
+     Disk
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hafiza-ram">
+     Hafıza (RAM)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#islemci-cpu">
+     İşlemci (CPU)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#orak-ram-ihtiyaci-duyanlar">
+       Orak RAM ihtiyacı duyanlar
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ortak-ram-ihtiyaci-duymayanlar">
+       Ortak RAM ihtiyacı duymayanlar
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -411,33 +465,107 @@
         
               <div>
                 
-  <h1 id="search-documentation">Search</h1>
-  <div id="fallback" class="admonition warning">
-  <script>$('#fallback').hide();</script>
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  <p>
-    Searching for multiple words only shows matches that contain
-    all words.
-  </p>
-  <form action="" method="get">
-    <input type="text" name="q" aria-labelledby="search-documentation" value="" />
-    <input type="submit" value="search" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
-  
-  <div id="search-results">
-  
-  </div>
+  <div class="section" id="coklu-islem">
+<h1>Çoklu işlem<a class="headerlink" href="#coklu-islem" title="Permalink to this headline">¶</a></h1>
+<p>Peki her kod optimize edilebilir mi? Hayır.</p>
+<p>Çoğu simülasyonlar zaten optimum durumda çalışmakta ve buna rağmen bir simülasyonun sonuç vermesi, süper bilgisayarlarla, haftalar, aylar alabilir. (Tabii bu simülasyonların evrenin ilk 12 milyar yılını simüle ediyor. Orası ayrı.)</p>
+<p>Şimdi gelelim diğer yöntemlere. Varsayalım ki bir kod yazdınız ve olabildiğince optimizasyon yaptınız. Ama haka daha yüksek performansa ihtiyacınız var. Ne yapabiliriz?</p>
+<p>Bunun için kodun yavaşlığının nedenini anlamak gerek. Koddali darboğazları (bottleneck) tespit edersek, farklı yaklaşımlarda bulunabiliriz.</p>
+<p>Örneğin kodun sistem kaynaklarını nasıl kullandığını görmek gerek.</p>
+<div class="section" id="sistem-kaynaklari">
+<h2>Sistem kaynakları<a class="headerlink" href="#sistem-kaynaklari" title="Permalink to this headline">¶</a></h2>
+<p>Sistem kaynaklarından kasıt işlem gücü olan bilgisayar birimlerdir. Bu birimleri kontrol edersek, en çok zaman kaybını nerede yaşadığımızı anlar ve gerekli düzeltmeleri yapabiliriz.</p>
+<p>Öncelikle bir örnek oluştualım. Diskte bulunan <code class="docutils literal notranslate"><span class="pre">2000</span></code> adet görüntü dosyasının (Toplamda <code class="docutils literal notranslate"><span class="pre">2GB</span></code>) ortalamasını alalım.</p>
+<div class="section" id="disk">
+<h3>Disk<a class="headerlink" href="#disk" title="Permalink to this headline">¶</a></h3>
+<p>En gıcık sistem darbağazına neden olur. <code class="docutils literal notranslate"><span class="pre">2000</span></code> adet (<code class="docutils literal notranslate"><span class="pre">2GB</span></code>) dosyayı diskten okumamız gerek. Diskimiz saniyede 10MB okuma yapabiliyorsa:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">/</span> <span class="mi">140</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14.628571428571428
+</pre></div>
+</div>
+</div>
+</div>
+<p>Diskten okuma işlemi <code class="docutils literal notranslate"><span class="pre">10</span></code> saniye sürecektir.</p>
+<p>Böyle bir durumda, sistem monitörü yazılımlarından herhangi biriyle sistem kaynaklarınızı takip ederseniz, disk kullanımının <code class="docutils literal notranslate"><span class="pre">10</span></code> saniye boyuna <code class="docutils literal notranslate"><span class="pre">%100</span></code> olduğunu görürsünüz.</p>
+<p>İyi leştirmek için çok fazla seçeneğiniz yoktur.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">2000</span></code> adet dosyadan oluşan, <code class="docutils literal notranslate"><span class="pre">2GB</span></code>’lık veriyi 10 adet ten oluşan <code class="docutils literal notranslate"><span class="pre">2GB</span></code>lik veriye çevirebilrsek belki daha da hızlanabiliriz. Ama bu da <code class="docutils literal notranslate"><span class="pre">20000</span></code> dosyayı okumamız gerektiği anlamına gelir.</p>
+</div>
+<p>Belki donanımı değiştirmek gerek. Bu nedenle sponsorumuz olan <code class="docutils literal notranslate"><span class="pre">abuzittin</span> <span class="pre">donanım</span> <span class="pre">destek</span></code>’e teşekkür deriz. <code class="docutils literal notranslate"><span class="pre">astrokod</span></code> koduyla <code class="docutils literal notranslate"><span class="pre">abuzittin</span> <span class="pre">donanım</span> <span class="pre">destek</span></code>’ten yapacağınız ilk alışverişte %3.5 indirim kazanabilirsiniz.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/hahaha_2.gif"><img alt="Python resmi web sayfası" class="bg-primary mb-1 align-center" src="_images/hahaha_2.gif" style="width: 400px;" /></a>
+</div>
+<div class="section" id="hafiza-ram">
+<h3>Hafıza (RAM)<a class="headerlink" href="#hafiza-ram" title="Permalink to this headline">¶</a></h3>
+<p>Belki de sisteminizin hafızası yetersizdir. Aslında bu durum genelde <code class="docutils literal notranslate"><span class="pre">memoryError</span></code> hatası alırsınız. Eğer optimizasyon yapmanıza rağmen (Örneğin tüm dosyaları hafızaya almaktansa, kümülatif biçimde toplarsınız) hafıza sorunu yaşıyorsanız, Donanımınızı güncellemeniz gerekebilir.</p>
+</div>
+<div class="section" id="islemci-cpu">
+<h3>İşlemci (CPU)<a class="headerlink" href="#islemci-cpu" title="Permalink to this headline">¶</a></h3>
+<p>Bu kısım daha enterasandır. <code class="docutils literal notranslate"><span class="pre">Python</span></code> bir thread üzerinde çalışır. Yani işletim sistemi <code class="docutils literal notranslate"><span class="pre">Python</span></code>’a bir bölge gösterir ve “git orda oyna” der.</p>
+<p>Bu thread bir sanal çekirdek üzerinde çalışır. Kısacası sizin, bilgisayarınız <code class="docutils literal notranslate"><span class="pre">8</span></code> çekirdekli ise, sizin toplamda <code class="docutils literal notranslate"><span class="pre">16</span></code> sanal çekirdeğiniz var anlamına gelir. Bu <code class="docutils literal notranslate"><span class="pre">16</span></code> çekirdeğin <code class="docutils literal notranslate"><span class="pre">1</span></code>’i size tahsis edilmiştir.</p>
+<p>Bunu çözebilir miyiz? Evet…</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’ın <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code> kütüphanesini kullanabilirsiniz.</p>
+<p>Elinizdeki verinin farklı threadlerce işlenmesini isteyebilirsiniz. Bizim örneğimizde <code class="docutils literal notranslate"><span class="pre">2000</span></code> tane dosyanın RAM’de olduğunu varsayalım. Bunların toplanması gerek. En sonunda ise bütün değerleri <code class="docutils literal notranslate"><span class="pre">2000</span></code>’e böler ortalamayı hesaplamış oluruz.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>4 tane sanal çekirdek kullanacağımızı varsayalım.</p>
+</div>
+<p>Benim size anlatabileceğim 2 multiprocess mantığı vardır.</p>
+<ol class="simple">
+<li><p>Orak RAM ihtiyacı duyanlar</p></li>
+<li><p>Ortak RAM ihtiyacı duymayanlar</p></li>
+</ol>
+<div class="section" id="orak-ram-ihtiyaci-duyanlar">
+<h4>Orak RAM ihtiyacı duyanlar<a class="headerlink" href="#orak-ram-ihtiyaci-duyanlar" title="Permalink to this headline">¶</a></h4>
+<p>Bu durumda RAM üzerinde boş bir görüntü oluştururuz. Daha sonra bütün görüntüleri bu boş görüntüye ekleriz. En sonda ise bölme işlemini yaparız.</p>
+<ul class="simple">
+<li><p>RAM’de bir yerde boş görüntüyü oluşturdum</p></li>
+<li><p>4 thread oluşturup, bu threadlere boş görüntünün yerini gösteririm.</p></li>
+<li><p>Toplayın arkadaşlar derim.</p></li>
+</ul>
+<p>En sonunda ise bu toplam veriyi <code class="docutils literal notranslate"><span class="pre">2000</span></code>’e bölelim.</p>
+</div>
+<div class="section" id="ortak-ram-ihtiyaci-duymayanlar">
+<h4>Ortak RAM ihtiyacı duymayanlar<a class="headerlink" href="#ortak-ram-ihtiyaci-duymayanlar" title="Permalink to this headline">¶</a></h4>
+<p>Bu durumda götüntülerimizi 4 tane <code class="docutils literal notranslate"><span class="pre">500</span></code> adet görüntüden oluşan gruplara böleriz. Her thread kısmetine düşen <code class="docutils literal notranslate"><span class="pre">500</span></code> görüntüyü toplar. En sonunda oluşan 4 görüntüyü de toplar ve <code class="docutils literal notranslate"><span class="pre">2000</span></code>’e böleriz.</p>
+<p>Burada threadler birbiriyle konuşmadı, aynı veri üzerinde çalışmadılar.</p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="optimisation.html" title="previous page">Optimizason</a>
 
         </div>
         

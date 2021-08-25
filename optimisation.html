@@ -53,6 +53,7 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Çoklu işlem" href="multithread.html" />
     <link rel="prev" title="if __name__ == &#34;__main__&#34;" href="mprt/name_main.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -318,10 +319,22 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    Optimizason
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="multithread.html">
+     Çoklu işlem
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -524,7 +537,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.12178802490234375 Saniye
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.22304368019104004 Saniye
 </pre></div>
 </div>
 </div>
@@ -548,7 +561,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.010827779769897461 Saniye
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.005965232849121094 Saniye
 </pre></div>
 </div>
 </div>
@@ -624,11 +637,11 @@ Verilen sayıyı (<code class="docutils literal notranslate"><span class="pre">n
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.7514910697937012 Saniye
+Geçen süre = 0.8125576972961426 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.7331037521362305 Saniye
+Geçen süre = 0.6866939067840576 Saniye
 </pre></div>
 </div>
 </div>
@@ -707,11 +720,11 @@ Geçen süre = 0.7331037521362305 Saniye
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.33220529556274414 Saniye
+Geçen süre = 0.3606438636779785 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.3710787296295166 Saniye
+Geçen süre = 0.407604455947876 Saniye
 </pre></div>
 </div>
 </div>
@@ -800,11 +813,11 @@ Geçen süre = 0.3710787296295166 Saniye
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.0365447998046875 Saniye
+Geçen süre = 0.09362435340881348 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.4940977096557617 Saniye
+Geçen süre = 0.5210311412811279 Saniye
 </pre></div>
 </div>
 </div>
@@ -907,9 +920,9 @@ Geçen süre = 0.4940977096557617 Saniye
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.0009999275207519531 Saniye
-10000019 Asaldır
 Geçen süre = 0.0 Saniye
+10000019 Asaldır
+Geçen süre = 0.0009677410125732422 Saniye
 </pre></div>
 </div>
 </div>
@@ -917,6 +930,8 @@ Geçen süre = 0.0 Saniye
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/success.gif"><img alt="Python resmi web sayfası" class="bg-primary mb-1 align-center" src="_images/success.gif" style="width: 400px;" /></a>
 <p>Gördüğünüz gibi, bir az matematik, bir az mantık ile kodumuz daha uzun ve bir az daha karmaşık görünmesine rağmen çok daha hızlı çalışıyor.</p>
 </div>
+</div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
@@ -946,6 +961,7 @@ Geçen süre = 0.0 Saniye
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="mprt/name_main.html" title="previous page"><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">&quot;__main__&quot;</span></code></a>
+    <a class='right-next' id="next-link" href="multithread.html" title="next page">Çoklu işlem</a>
 
         </div>
         

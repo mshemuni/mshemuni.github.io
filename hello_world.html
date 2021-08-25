@@ -319,10 +319,22 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
    Optimizason
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="multithread.html">
+     Çoklu işlem
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -484,7 +496,7 @@ yapacağız.</p>
 <h3>Betik Dosyası<a class="headerlink" href="#betik-dosyasi" title="Permalink to this headline">¶</a></h3>
 <p>Öncelikle bir metin belgesi oluşturun. Adı da <code class="docutils literal notranslate"><span class="pre">merhaba.py</span></code> olsun.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/hello_world_script.png"><img alt="Betik dosyası" class="bg-primary mb-1 align-center" src="_images/hello_world_script.png" style="width: 400px;" /></a>
-<p>Şimdi bu belgeyi düzenlemek için herhangi bir metin editörüyle dosyamızı açalıkm ve kodumuzu içine yazalım.</p>
+<p>Şimdi bu belgeyi düzenlemek için herhangi bir metin editörüyle dosyamızı açalım ve kodumuzu içine yazalım.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/hello_world_script_text.png"><img alt="Betik Metni" class="bg-primary mb-1 align-center" src="_images/hello_world_script_text.png" style="width: 400px;" /></a>
 <p>Şimdi eğer <code class="docutils literal notranslate"><span class="pre">Python</span></code> yorumlayıcıyı çalıştırırken bu dosyanın yolunu da sağlarsak, yorumlayıcı dosyanın içindeki
 satıları tek tek talimat olarak algılayacaktır ve gerekli işlemleri yapacaktır.</p>
@@ -505,11 +517,8 @@ A = \pi r^2\\C = 2 \pi r
 <p>olarak hesaplanır.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.1415</span>
-
-<span class="n">alan</span> <span class="o">=</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">2</span>
-<span class="n">cevre</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alan</span> <span class="o">=</span> <span class="mf">3.1415</span> <span class="o">*</span> <span class="mi">25</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">cevre</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="mf">3.1415</span> <span class="o">*</span> <span class="mi">25</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">alan</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">cevre</span><span class="p">)</span>
