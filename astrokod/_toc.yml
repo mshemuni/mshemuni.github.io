@@ -42,6 +42,7 @@ chapters:
       - file: my_modul
         sections:
           - file: mprt/name_main
-
+  - file: optimisation
+#    sections:
 #  - file: modules
 #- file: notebooks packages
