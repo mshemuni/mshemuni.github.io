@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Kütüphane/Modül" href="default_moduls.html" />
@@ -193,7 +195,12 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list_comprehension.html">
+       List Comprehension
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -326,7 +333,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
-   Optimizason
+   Optimizasyon
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -340,6 +347,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -443,7 +455,7 @@
 </pre></div>
 </div>
 <p>olabilir.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da ise <code class="docutils literal notranslate"><span class="pre">0</span></code> değerli <code class="docutils literal notranslate"><span class="pre">int</span></code> bir değişken tanımlamak istersek aşağıdaki gibi bir satır yazarız:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da ise <span class="math notranslate nohighlight">\(0\)</span> değerli <code class="docutils literal notranslate"><span class="pre">int</span></code> bir değişken tanımlamak istersek aşağıdaki gibi bir satır yazarız:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DEĞİŞKEN_ADI</span> <span class="o">=</span> <span class="n">DEĞER</span>
 </pre></div>
 </div>
@@ -459,7 +471,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">type-annotation</span></code> için değişen adı ile değeri arasında <code class="docutils literal notranslate"><span class="pre">:</span></code> değeri kullanılır.</p>
 <hr>
 <p>Örnek.</p>
-<p>İçinde 2 değeri olan, <code class="docutils literal notranslate"><span class="pre">sayi</span></code> adlı bir <code class="docutils literal notranslate"><span class="pre">int</span></code> tanımlayınız.</p>
+<p>İçinde <span class="math notranslate nohighlight">\(2\)</span> değeri olan, <code class="docutils literal notranslate"><span class="pre">sayi</span></code> adlı bir <code class="docutils literal notranslate"><span class="pre">int</span></code> tanımlayınız.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sayi</span> <span class="o">=</span> <span class="mi">2</span>

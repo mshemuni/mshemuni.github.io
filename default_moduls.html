@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Varsayılan olmayan modüller" href="third_party_moduls.html" />
@@ -193,7 +195,12 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list_comprehension.html">
+       List Comprehension
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -326,7 +333,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
-   Optimizason
+   Optimizasyon
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -340,6 +347,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -476,7 +488,7 @@
   <div class="section" id="kutuphane-modul">
 <h1>Kütüphane/Modül<a class="headerlink" href="#kutuphane-modul" title="Permalink to this headline">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da varsayılan ve sonradan eklenen kütüphane/modüller vardır. Bunlar içe aktarılıp kullanılabilir.</p>
-<p>Varsayılan kütüphaneler <code class="docutils literal notranslate"><span class="pre">Python</span></code> kurulumuyla beraber gelir. varsayılan olmayanlar ise sonradan kurulmalı.</p>
+<p>Varsayılan kütüphaneler <code class="docutils literal notranslate"><span class="pre">Python</span></code> kurulumuyla beraber gelir. Varsayılan olmayanlar ise sonradan kurulmalı.</p>
 <div class="section" id="varsayilan-moduller">
 <h2>Varsayılan modüller<a class="headerlink" href="#varsayilan-moduller" title="Permalink to this headline">¶</a></h2>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/default.gif"><img alt="_images/default.gif" class="bg-primary mb-1 align-center" src="_images/default.gif" style="width: 400px;" /></a>
@@ -488,10 +500,10 @@
 </ul>
 <div class="section" id="math">
 <h3><code class="docutils literal notranslate"><span class="pre">math</span></code><a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">math</span></code> modülünden daha önce bahsetmiştik. Çeşitli matematik işlemleri yapacileceğimiz bir modüldür kendileri.</p>
+<p><code class="docutils literal notranslate"><span class="pre">math</span></code> modülünden daha önce bahsetmiştik. Çeşitli matematik işlemleri yapabileceğimiz bir modüldür kendileri.</p>
 <hr>
 <p>Örnek</p>
-<p>Verilen bir açının, <code class="docutils literal notranslate"><span class="pre">sin</span></code> ve <code class="docutils literal notranslate"><span class="pre">cos</span></code>değerlerinin oranının, aynı açının <code class="docutils literal notranslate"><span class="pre">tan</span></code> değernie eşit olduğunu gösteriniz.</p>
+<p>Verilen bir açının, <code class="docutils literal notranslate"><span class="pre">sin</span></code> ve <code class="docutils literal notranslate"><span class="pre">cos</span></code>değerlerinin oranının, aynı açının <code class="docutils literal notranslate"><span class="pre">tan</span></code> değerine eşit olduğunu gösteriniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -527,8 +539,8 @@
 </div>
 <div class="section" id="sys">
 <h2><code class="docutils literal notranslate"><span class="pre">sys</span></code><a class="headerlink" href="#sys" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">sys</span></code> Sisteme özel parametreler ve fonksiyonlar içerir. <code class="docutils literal notranslate"><span class="pre">sys</span></code> ile çeşitli işlemler yapılabilir, fakat <code class="docutils literal notranslate"><span class="pre">sys</span></code>’nin sunduğu en önemli araç <code class="docutils literal notranslate"><span class="pre">argv</span></code>’dir. <code class="docutils literal notranslate"><span class="pre">argv</span></code> yazdığımız kodun dışarıdan parametrik olarak veri almasını sağlar.</p>
-<p><code class="docutils literal notranslate"><span class="pre">sys.argv</span></code> bir <code class="docutils literal notranslate"><span class="pre">list</span></code> olup, <code class="docutils literal notranslate"><span class="pre">0</span></code>. elemanı, çalıştırdığımız <code class="docutils literal notranslate"><span class="pre">Python</span></code> betiğin adı, <code class="docutils literal notranslate"><span class="pre">1</span></code>. elemanı verilen ilk argüman, <code class="docutils literal notranslate"><span class="pre">2</span></code>. elemanı verilen ikinci argüman … şeklinde devam eder.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sys</span></code> Sisteme özel parametreler ve fonksiyonlar içerir. <code class="docutils literal notranslate"><span class="pre">sys</span></code> ile çeşitli işlemler yapılabilir. Fakat, <code class="docutils literal notranslate"><span class="pre">sys</span></code>’nin sunduğu en önemli araç <code class="docutils literal notranslate"><span class="pre">argv</span></code>’dir. <code class="docutils literal notranslate"><span class="pre">argv</span></code> yazdığımız kodun dışarıdan parametrik olarak veri almasını sağlar.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sys.argv</span></code> bir <code class="docutils literal notranslate"><span class="pre">list</span></code> olup, <span class="math notranslate nohighlight">\(0\)</span>. elemanı, çalıştırdığımız <code class="docutils literal notranslate"><span class="pre">Python</span></code> betiğin adı, <span class="math notranslate nohighlight">\(1\)</span>. elemanı verilen ilk argüman, <span class="math notranslate nohighlight">\(2\)</span>. elemanı verilen ikinci argüman … şeklinde devam eder.</p>
 <p><code class="docutils literal notranslate"><span class="pre">argumanlar.py</span></code> adlı bir betik dosyamız olsun.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
@@ -545,7 +557,7 @@
 </div>
 <hr>
 <p>Örnek</p>
-<p>Parametik olarak verilen ismileri sırayla selamlayan bir betik yazınız. betik dosyasının adı <code class="docutils literal notranslate"><span class="pre">selamla</span></code> olsun.</p>
+<p>Parametik olarak verilen isimileri sırayla selamlayan bir betik yazınız. Betik dosyasının adı <code class="docutils literal notranslate"><span class="pre">selamla</span></code> olsun.</p>
 <p><code class="docutils literal notranslate"><span class="pre">selamla.py</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 
@@ -612,18 +624,18 @@
 <p>olarak algılanabilir.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Görüldüğü gibi <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code> gibi değerler <code class="docutils literal notranslate"><span class="pre">Python</span></code>’da farklı yazılmakta, <code class="docutils literal notranslate"><span class="pre">Python</span></code>’ın anladığı yazımları başka bir standartın anlayabileceği yazım şekline çevirmeye <code class="docutils literal notranslate"><span class="pre">serialization</span></code> denir.</p>
+<p>Görüldüğü gibi <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code> gibi değerler <code class="docutils literal notranslate"><span class="pre">Python</span></code>’da farklı yazılmakta, <code class="docutils literal notranslate"><span class="pre">Python</span></code>’ın anladığı yazımları başka bir standardın anlayabileceği yazım şekline çevirmeye <code class="docutils literal notranslate"><span class="pre">serialization</span></code> denir.</p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">json</span></code> kütüphanesinin yapabilediği ve bizim çokça kullanma ihtiyacı duyacağımız işlemler <code class="docutils literal notranslate"><span class="pre">json</span></code>’dan <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e ve <code class="docutils literal notranslate"><span class="pre">dict</span></code>’ten <code class="docutils literal notranslate"><span class="pre">json</span></code>’a dönüşümü yapması olarak düşünülebilir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">json</span></code> kütüphanesinin yapabildiği ve bizim çokça kullanma ihtiyacı duyacağımız işlemler <code class="docutils literal notranslate"><span class="pre">json</span></code>’dan <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e ve <code class="docutils literal notranslate"><span class="pre">dict</span></code>’ten <code class="docutils literal notranslate"><span class="pre">json</span></code>’a dönüşümü yapması olarak düşünülebilir.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">json.dump</span></code>, <code class="docutils literal notranslate"><span class="pre">json.dumps</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">json.load</span></code>, <code class="docutils literal notranslate"><span class="pre">json.loads</span></code></p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">dump</span></code> bir <code class="docutils literal notranslate"><span class="pre">dict</span></code> veriyi <code class="docutils literal notranslate"><span class="pre">str</span></code>’ye (<code class="docutils literal notranslate"><span class="pre">json</span></code> formatlı) çecirirken, <code class="docutils literal notranslate"><span class="pre">load</span></code> bir <code class="docutils literal notranslate"><span class="pre">str</span></code>’yi bir <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e çevirir.</p>
-<p><code class="docutils literal notranslate"><span class="pre">dumps</span></code> ise bir dosya nesnei alı, içindeki veriyi okuyop <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e çevirir. Doğal olarak <code class="docutils literal notranslate"><span class="pre">loads</span></code> bir <code class="docutils literal notranslate"><span class="pre">dict</span></code> veriyi verilen bir dosya nesnesinin yoluna yazar.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dump</span></code> bir <code class="docutils literal notranslate"><span class="pre">dict</span></code> veriyi <code class="docutils literal notranslate"><span class="pre">str</span></code>’ye (<code class="docutils literal notranslate"><span class="pre">json</span></code> formatlı) çevirirken, <code class="docutils literal notranslate"><span class="pre">load</span></code> bir <code class="docutils literal notranslate"><span class="pre">str</span></code>’yi bir <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e çevirir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dumps</span></code> ise bir dosya nesnesi alır, içindeki veriyi okuyup <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e çevirir. Doğal olarak <code class="docutils literal notranslate"><span class="pre">loads</span></code> bir <code class="docutils literal notranslate"><span class="pre">dict</span></code> veriyi verilen bir dosya nesnesinin yoluna yazar.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Dikkat ederseniz dosya değil dosya nesnesi dedim. Dolayısıyla dosyadan okuma ve dosyaya yazma işlemleri için dosya yolu değili, <code class="docutils literal notranslate"><span class="pre">open</span></code> ile açmış olduğumuz bir dosya nesnesi sağlamalıyız.</p>
+<p>Dikkat ederseniz dosya değil dosya nesnesi dedim. Dolayısıyla dosyadan okuma ve dosyaya yazma işlemleri için dosya yolu değil, <code class="docutils literal notranslate"><span class="pre">open</span></code> ile açmış olduğumuz bir dosya nesnesi sağlamalıyız.</p>
 </div>
 <hr>
 <p>Örnek</p>
@@ -663,7 +675,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Elde edilen bu <code class="docutils literal notranslate"><span class="pre">str</span></code>’yi <code class="docutils literal notranslate"><span class="pre">open</span></code> ile bir dosyaya yazabilirsiniz. Fakat <code class="docutils literal notranslate"><span class="pre">write</span></code> vs metodlarıyla uğraşmak istemezseniz dosyaya direct yazabilirsiniz</p>
+<p>Elde edilen bu <code class="docutils literal notranslate"><span class="pre">str</span></code>’yi <code class="docutils literal notranslate"><span class="pre">open</span></code> ile bir dosyaya yazabilirsiniz. Fakat <code class="docutils literal notranslate"><span class="pre">write</span></code> vs metodlarıyla uğraşmak istemezseniz dosyaya direkt yazabilirsiniz</p>
 </div>
 <hr>
 <p>Örnek</p>
@@ -747,7 +759,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Bir <code class="docutils literal notranslate"><span class="pre">str</span></code> bilgiyi dosyadan <code class="docutils literal notranslate"><span class="pre">open</span></code> ile okuyp, daha sonra <code class="docutils literal notranslate"><span class="pre">loads</span></code> ile <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e dönüşüm yapılabilir. Fakat <code class="docutils literal notranslate"><span class="pre">read</span></code> metoduyla uğraşmak istemezseniz dosyayı direct okuyabilirsiniz</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">str</span></code> bilgiyi dosyadan <code class="docutils literal notranslate"><span class="pre">open</span></code> ile okuyup, daha sonra <code class="docutils literal notranslate"><span class="pre">loads</span></code> ile <code class="docutils literal notranslate"><span class="pre">dict</span></code>’e dönüşüm yapılabilir. Fakat <code class="docutils literal notranslate"><span class="pre">read</span></code> metoduyla uğraşmak istemezseniz dosyayı direkt okuyabilirsiniz</p>
 </div>
 <hr>
 <p>Örnek</p>

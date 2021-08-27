@@ -195,7 +195,12 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list_comprehension.html">
+       List Comprehension
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -328,7 +333,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
-   Optimizason
+   Optimizasyon
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -342,6 +347,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -478,7 +488,7 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">MSC</span> <span class="n">v</span><span class="mf">.1916</span> <span class="mi">64</span> <span class="n">bit</span> <span class="p">(</span><span class="n">AMD64</span><span class="p">)]</span> <span class="p">::</span> <span class="n">Anaconda</span><span class="p">,</span> <span class="n">Inc</span><span class="o">.</span> <span class="n">on</span> <span class="n">win32</span>
 </pre></div>
 </div>
-<p>Daha sonra ise bir az yardımcı oluyor:</p>
+<p>Daha sonra ise biraz yardımcı oluyor:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
 </pre></div>
 </div>
@@ -494,10 +504,10 @@ fonksiyonu kullanılır.</p>
 </div>
 <p>yazıp <kbd>enter</kbd> tuşuna basınız.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/hello_world.png"><img alt="Merhaba Dünya" class="bg-primary mb-1 align-center" src="_images/hello_world.png" style="width: 400px;" /></a>
-<p>Bu terminal ekranında yazacağımız herşey <code class="docutils literal notranslate"><span class="pre">Python</span></code> yorumlayıcı tarafından yorumlanacak ve gerekli işlemler
+<p>Bu terminal ekranında yazacağımız her şey <code class="docutils literal notranslate"><span class="pre">Python</span></code> yorumlayıcı tarafından yorumlanacak ve gerekli işlemler
 yapılacaktır.</p>
 <p>Fakat bu ortamda çalışmanın büyük dezavantajları var. Bunlardan en önemlisi, uzun bir metin yazıp,
-son kontolleri yapıp rötüşledikten sonra kodu çalıştıramıyorsunuz. Dolayısıyla bundan sonra işlerimizi daha farklı
+son kontrolleri yapıp rötüşleadıktan sonra kodu çalıştıramıyorsunuz. Dolayısıyla bundan sonra işlerimizi daha farklı
 yapacağız.</p>
 <div class="section" id="betik-dosyasi">
 <h3>Betik Dosyası<a class="headerlink" href="#betik-dosyasi" title="Permalink to this headline">¶</a></h3>
@@ -505,8 +515,8 @@ yapacağız.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/hello_world_script.png"><img alt="Betik dosyası" class="bg-primary mb-1 align-center" src="_images/hello_world_script.png" style="width: 400px;" /></a>
 <p>Şimdi bu belgeyi düzenlemek için herhangi bir metin editörüyle dosyamızı açalım ve kodumuzu içine yazalım.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/hello_world_script_text.png"><img alt="Betik Metni" class="bg-primary mb-1 align-center" src="_images/hello_world_script_text.png" style="width: 400px;" /></a>
-<p>Şimdi eğer <code class="docutils literal notranslate"><span class="pre">Python</span></code> yorumlayıcıyı çalıştırırken bu dosyanın yolunu da sağlarsak, yorumlayıcı dosyanın içindeki
-satıları tek tek talimat olarak algılayacaktır ve gerekli işlemleri yapacaktır.</p>
+<p>Şimdi eğer, <code class="docutils literal notranslate"><span class="pre">Python</span></code> yorumlayıcıyı çalıştırırken bu dosyanın yolunu da sağlarsak, yorumlayıcı dosyanın içindeki
+satırları tek tek talimat olarak algılayacaktır ve gerekli işlemleri yapacaktır.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/hello_world_execute.png"><img alt="Betik Çalıştırma" class="bg-primary mb-1 align-center" src="_images/hello_world_execute.png" style="width: 400px;" /></a>
 <p>Tebrikler. İlk <code class="docutils literal notranslate"><span class="pre">Python</span></code> kodunuzu yazdınız.</p>
 <hr>
@@ -514,9 +524,11 @@ satıları tek tek talimat olarak algılayacaktır ve gerekli işlemleri yapacak
 <p>Yarıçapı verilen bir dairenin alanını ve çevresini hesaplayan programı yazınız.</p>
 <p>Dairenin alanı ve çevresi,</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-A = \pi r^2\\C = 2 \pi r
-\end{aligned}\end{align} \]</div>
+\[\begin{split}
+A = \pi r^2
+\\
+C = 2 \pi r
+\end{split}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><span class="math notranslate nohighlight">\(A\)</span> dairenin alanı, <span class="math notranslate nohighlight">\(C\)</span> dairenin çevresi ve <span class="math notranslate nohighlight">\(r\)</span> dairenin yarıçapı olmak üzere</p>

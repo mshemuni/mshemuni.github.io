@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Diğer operatörler" href="other_operators.html" />
@@ -193,7 +195,12 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list_comprehension.html">
+       List Comprehension
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -326,7 +333,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
-   Optimizason
+   Optimizasyon
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -340,6 +347,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -604,7 +616,7 @@
 <h2>Karşılaştırma ve mantıksal operatörler<a class="headerlink" href="#karsilastirma-ve-mantiksal-operatorler" title="Permalink to this headline">¶</a></h2>
 <p>Mantıksal operatörler, karşılaştırma operatörler ile birleştirilebilir</p>
 <hr>
-<p>Örnek 55’in 1 ve 100 arasında olup olmadığını kontrol ediniz (1 ve 100 dahil)</p>
+<p>Örnek <span class="math notranslate nohighlight">\(55\)</span>’in <span class="math notranslate nohighlight">\(1\)</span> ve <span class="math notranslate nohighlight">\(100\)</span> arasında olup olmadığını kontrol ediniz (<span class="math notranslate nohighlight">\(1\)</span> ve <span class="math notranslate nohighlight">\(100\)</span> dahil)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="mi">55</span> <span class="ow">and</span> <span class="mi">55</span> <span class="o">&lt;=</span> <span class="mi">100</span>
@@ -630,7 +642,7 @@
 </div>
 </div>
 <hr>
-<p>Örnek 55’in -1 ve -100 arasında olup olmadığını kontrol ediniz (1 ve 100 dahil)</p>
+<p>Örnek <span class="math notranslate nohighlight">\(55\)</span>’in <span class="math notranslate nohighlight">\(-1\)</span> ve <span class="math notranslate nohighlight">\(-100\)</span> arasında olup olmadığını kontrol ediniz (<span class="math notranslate nohighlight">\(1\)</span> ve <span class="math notranslate nohighlight">\(100\)</span> dahil)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">55</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span> <span class="ow">or</span> <span class="mi">55</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">100</span>

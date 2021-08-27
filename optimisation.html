@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Optimizason &#8212; Tembeller için programlama</title>
+    <title>Optimizasyon &#8212; Tembeller için programlama</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -195,7 +195,12 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list_comprehension.html">
+       List Comprehension
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -328,7 +333,7 @@
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   Optimizason
+   Optimizasyon
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -342,6 +347,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -447,7 +457,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#sayac">
-     Sayac
+     Sayaç
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -468,13 +478,13 @@
         
               <div>
                 
-  <div class="section" id="optimizason">
-<h1>Optimizason<a class="headerlink" href="#optimizason" title="Permalink to this headline">¶</a></h1>
-<p>Şimdiye kadar az çok kod yazmayı öğrendik. Artık sorgulamamız gereken, yazdığımız kodun ne kadar etikili (efektif) olduğudur.</p>
-<p>Aslında bilimsel programlama yaptığımız için, milisaniyelerin önemi var diyemeyiz. Bir işlemi <code class="docutils literal notranslate"><span class="pre">0.62</span></code> sainyede yapmak ile <code class="docutils literal notranslate"><span class="pre">0.75</span></code> saniyede yapmak yarasında bir fark yok gibi.</p>
+  <div class="section" id="optimizasyon">
+<h1>Optimizasyon<a class="headerlink" href="#optimizasyon" title="Permalink to this headline">¶</a></h1>
+<p>Şimdiye kadar az çok kod yazmayı öğrendik. Artık sorgulamamız gereken, yazdığımız kodun ne kadar etkili (efektif) olduğudur.</p>
+<p>Aslında bilimsel programlama yaptığımız için, milisaniyelerin önemi var diyemeyiz. Bir işlemi <span class="math notranslate nohighlight">\(0.62\)</span> saniyede yapmak ile <span class="math notranslate nohighlight">\(0.75\)</span> saniyede yapmak arasında bir fark yok gibi.</p>
 <p>Yoksa var mı? Söz konusu işlemi bir milyon defa yapmak zorunda kalmış olsak?</p>
 <p>Hemen hesaplayalım:</p>
-<p>İşlem süresi <code class="docutils literal notranslate"><span class="pre">0.62</span></code> saniye iken:</p>
+<p>İşlem süresi <span class="math notranslate nohighlight">\(0.62\)</span> saniye iken:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">islem_suresi</span> <span class="o">=</span> <span class="mf">0.62</span>
@@ -493,7 +503,7 @@
 </div>
 </div>
 </div>
-<p>İşlem süresi <code class="docutils literal notranslate"><span class="pre">0.62</span></code> saniye iken:</p>
+<p>İşlem süresi <span class="math notranslate nohighlight">\(0.62\)</span> saniye iken:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">islem_suresi</span> <span class="o">=</span> <span class="mf">0.75</span>
@@ -514,14 +524,14 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Sayıyı ifade ederken ne yaptığımız gördünüz mü? <code class="docutils literal notranslate"><span class="pre">_</span></code> kullandım. Sayı ifade ederken <code class="docutils literal notranslate"><span class="pre">_</span></code> sayıyı etilemez. Dolayısıyla büyük sayıları yazarken binler ayracı olarak kullanabiliriz.</p>
+<p>Sayıyı ifade ederken ne yaptığımız gördünüz mü? <code class="docutils literal notranslate"><span class="pre">_</span></code> kullandım. Sayı ifade ederken <code class="docutils literal notranslate"><span class="pre">_</span></code> sayıyı etkilemez. Dolayısıyla büyük sayıları yazarken binler ayracı olarak kullanabiliriz.</p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">0.62</span></code> saniye süren işlemi bir milyon defa tekrarlayınca toplam süre yaklaşık <code class="docutils literal notranslate"><span class="pre">172</span></code> saat iken, <code class="docutils literal notranslate"><span class="pre">0.75</span></code> saniye süren işlemi bir milyon defa tekrarlayınca toplam süre yaklaşım <code class="docutils literal notranslate"><span class="pre">208</span></code> saat oldu. Arada <code class="docutils literal notranslate"><span class="pre">1.5</span></code> gün fark var.</p>
+<p><span class="math notranslate nohighlight">\(0.62\)</span> saniye süren işlemi bir milyon defa tekrarlayınca toplam süre yaklaşık <span class="math notranslate nohighlight">\(172\)</span> saat iken, <span class="math notranslate nohighlight">\(0.75\)</span> saniye süren işlemi bir milyon defa tekrarlayınca toplam süre yaklaşım <span class="math notranslate nohighlight">\(208\)</span> saat oldu. Arada <span class="math notranslate nohighlight">\(1.5\)</span> gün fark var.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/shock_2.gif"><img alt="Python resmi web sayfası" class="bg-primary mb-1 align-center" src="_images/shock_2.gif" style="width: 400px;" /></a>
-<p>Dolayısıyla bir işlemde <code class="docutils literal notranslate"><span class="pre">0.13</span></code> saniyelik bir kazanımın ne denli önemli olabileceğini görüyoruz.</p>
+<p>Dolayısıyla bir işlemde <span class="math notranslate nohighlight">\(0.13\)</span> saniyelik bir kazanımın ne denli önemli olabileceğini görüyoruz.</p>
 <div class="section" id="ornek">
 <h2>Örnek<a class="headerlink" href="#ornek" title="Permalink to this headline">¶</a></h2>
-<p>Bir milyon tane <code class="docutils literal notranslate"><span class="pre">0</span></code>’dan oluşan bir liste oluşturalım.</p>
+<p>Bir milyon tane <span class="math notranslate nohighlight">\(0\)</span>’dan oluşan bir liste oluşturalım.</p>
 <p>Bunun için iki farklı yöntem kullanalım ve süre farkına bakalım.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -529,7 +539,7 @@
 </div>
 <hr>
 <p>Yöntem 1:</p>
-<p>Bir döngü ile bir milyon adet <code class="docutils literal notranslate"><span class="pre">0</span></code>’ı listeye ekleyelim:</p>
+<p>Bir döngü ile bir milyon adet <span class="math notranslate nohighlight">\(0\)</span>’ı listeye ekleyelim:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">time</span>
@@ -544,14 +554,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.15284276008605957 Saniye
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.19808697700500488 Saniye
 </pre></div>
 </div>
 </div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Döngüde <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">999999]</span></code> aralığındaki değerler üretildi. Fakat bu değerleri kullanmak istemiyorum. Sadece <code class="docutils literal notranslate"><span class="pre">1000000</span></code> defa tekrar istiyorum. Dolayısıyla <code class="docutils literal notranslate"><span class="pre">for</span></code>’un iterasyon değişkenine <code class="docutils literal notranslate"><span class="pre">_</span></code> diyorum.</p>
+<p>Döngüde <span class="math notranslate nohighlight">\([0, 999999]\)</span> aralığındaki değerler üretildi. Fakat bu değerleri kullanmak istemiyorum. Sadece <span class="math notranslate nohighlight">\(1000000\)</span> defa tekrar istiyorum. Dolayısıyla <code class="docutils literal notranslate"><span class="pre">for</span></code>’un iterasyon değişkenine <code class="docutils literal notranslate"><span class="pre">_</span></code> diyorum.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da <code class="docutils literal notranslate"><span class="pre">_</span></code> değişkeni, umursamadığımız değerler için kullanılır.</p>
 </div>
 <p>Yöntem 2:</p>
@@ -568,13 +578,13 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.005997896194458008 Saniye
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Geçen süre = 0.012540578842163086 Saniye
 </pre></div>
 </div>
 </div>
 </div>
-<p>Gördünüz mü. Aradaki fark büyük.</p>
-<p>Yalnızca <code class="docutils literal notranslate"><span class="pre">0</span></code>’lardan oluşan dizinin oluşturma biçimini değiştirmekle, yaklaşık <code class="docutils literal notranslate"><span class="pre">21</span></code> kat zaman kazandık.</p>
+<p>Gördünüz mü? Aradaki fark büyük.</p>
+<p>Yalnızca <span class="math notranslate nohighlight">\(0\)</span>’lardan oluşan dizinin oluşturma biçimini değiştirmekle, yaklaşık <span class="math notranslate nohighlight">\(21\)</span> kat zaman kazandık.</p>
 <p>Bunu daha gerçekçi bir örnek ile anlamaya çalışalım.</p>
 </div>
 <div class="section" id="asal-sayilar">
@@ -584,7 +594,7 @@
 <p>Örnek:</p>
 <p>Verilen bir tam sayının asal olup olmadığını kontrol eden fonksiyonu yazınız.</p>
 <p>Yöntem:
-Verilen sayıyı (<code class="docutils literal notranslate"><span class="pre">n</span></code>), <span class="math notranslate nohighlight">\([1, n]\)</span> aralığındak bütün sayılara bölelim. Tam bölme gerçekleştiği anda bir sayacın değerini arttıralım. Sonuçta sayacın değeri <code class="docutils literal notranslate"><span class="pre">2</span></code>’den büyük ise sayı asal değilmiş.</p>
+Verilen sayıyı (<code class="docutils literal notranslate"><span class="pre">n</span></code>), <span class="math notranslate nohighlight">\([1, n]\)</span> aralığındaki bütün sayılara bölelim. Tam bölme gerçekleştiği anda bir sayacın değerini arttıralım. Sonuçta sayacın değeri <span class="math notranslate nohighlight">\(2\)</span>’den büyük ise sayı asal değilmiş.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">asal</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -644,19 +654,19 @@ Verilen sayıyı (<code class="docutils literal notranslate"><span class="pre">n
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.836280345916748 Saniye
+Geçen süre = 0.8767399787902832 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.7098209857940674 Saniye
+Geçen süre = 0.8091704845428467 Saniye
 </pre></div>
 </div>
 </div>
 </div>
-<p>Şimdi bu foksiyona optimizasyonlar yapalım.</p>
+<p>Şimdi bu fonksiyona optimizasyonlar yapalım.</p>
 <div class="section" id="cift-sayilar">
 <h3>Çift sayılar<a class="headerlink" href="#cift-sayilar" title="Permalink to this headline">¶</a></h3>
-<p>Çift sayıların tamamı <code class="docutils literal notranslate"><span class="pre">2</span></code>’ye tam bölündüğünden, <code class="docutils literal notranslate"><span class="pre">2</span></code> dışındaki çift sayılardan kurtulalım:</p>
+<p>Çift sayıların tamamı <span class="math notranslate nohighlight">\(2\)</span>’ye tam bölündüğünden, <span class="math notranslate nohighlight">\(2\)</span> dışındaki çift sayılardan kurtulalım:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">asal</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -727,11 +737,11 @@ Geçen süre = 0.7098209857940674 Saniye
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.49179863929748535 Saniye
+Geçen süre = 0.4389338493347168 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.4168241024017334 Saniye
+Geçen süre = 0.37275147438049316 Saniye
 </pre></div>
 </div>
 </div>
@@ -739,8 +749,8 @@ Geçen süre = 0.4168241024017334 Saniye
 <p>Fena değil.</p>
 </div>
 <div class="section" id="sayac">
-<h3>Sayac<a class="headerlink" href="#sayac" title="Permalink to this headline">¶</a></h3>
-<p>Biz sayacı işlemlerin en sonunda kontrol edilyoruz. Aslında sayac değeri <code class="docutils literal notranslate"><span class="pre">2</span></code>’yi aştığı anda daha fazla değere bakmamıza gerek kalmaz…</p>
+<h3>Sayaç<a class="headerlink" href="#sayac" title="Permalink to this headline">¶</a></h3>
+<p>Biz sayacı işlemlerin en sonunda kontrol ediyoruz. Aslında sayaç değeri <span class="math notranslate nohighlight">\(2\)</span>’yi aştığı anda daha fazla değere bakmamıza gerek kalmaz…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">asal</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -820,11 +830,11 @@ Geçen süre = 0.4168241024017334 Saniye
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.048429012298583984 Saniye
+Geçen süre = 0.06799674034118652 Saniye
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000019 Asaldır
-Geçen süre = 0.515005350112915 Saniye
+Geçen süre = 0.5159680843353271 Saniye
 </pre></div>
 </div>
 </div>
@@ -832,7 +842,7 @@ Geçen süre = 0.515005350112915 Saniye
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Fonksiyonumuz asal olmayan sayılarda, asal sayılarda olduğundan çok daha hızlı çalışıyor.</p>
-<p>Zira verilen sayı <code class="docutils literal notranslate"><span class="pre">2</span></code> defa tam bölündüğünde döngü duruyor. Fakat sayı asal olunca döngünün sonuna kadar gitmek zorunda.</p>
+<p>Zira verilen sayı <span class="math notranslate nohighlight">\(2\)</span> defa tam bölündüğünde döngü duruyor. Fakat sayı asal olunca döngünün sonuna kadar gitmek zorunda.</p>
 </div>
 <p>Fena değil.</p>
 </div>
@@ -927,9 +937,9 @@ Geçen süre = 0.515005350112915 Saniye
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000001 Asal değildir
-Geçen süre = 0.0 Saniye
+Geçen süre = 0.0010001659393310547 Saniye
 10000019 Asaldır
-Geçen süre = 0.0 Saniye
+Geçen süre = 0.0010204315185546875 Saniye
 </pre></div>
 </div>
 </div>

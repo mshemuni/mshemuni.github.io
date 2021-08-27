@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Hazırlık" href="installation.html" />
@@ -330,7 +332,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
-   Optimizason
+   Optimizasyon
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -344,6 +346,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -476,7 +483,7 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#betik-vs-programlama">
-     Betik vs Programlama
+     Betik VS Programlama
     </a>
    </li>
   </ul>
@@ -525,42 +532,42 @@
 <div class="section" id="yazilim">
 <h3>Yazılım<a class="headerlink" href="#yazilim" title="Permalink to this headline">¶</a></h3>
 <p>Donanım ile insan arasında kalan tercüman olarak algılanabilir.</p>
-<p>Örneğin, depolama birimi olan hard disk’te bir bilgiyi depolamak isterseniz, bu bilginin büyüklüğü, içeriği, türü vb
+<p>Örneğin, depolama birimi olan hard disk’te bir bilgiyi depolamak isterseniz, bu bilginin büyüklüğü, içeriği, türü vb.
 özelliklerini bilmeniz, daha sonra hard disk üzerindeki boş olarak işaretlenmiş sektörleri tespit edip söz konusu
 bilgiyi o sektörlere yazdıktan sonra, kaydetmiş olduğunuz bilginin hangi sektörlere yayıldığını bildiren index
 bilgisini girmeniz gerek.</p>
 <p>Bu işlemleri, işlemciye yaptırmak <code class="docutils literal notranslate"><span class="pre">talimat</span></code>lar ile gerçekleşir. Bu talimatlar ise Makine Dili (Machine Code) ile
 verilir.</p>
-<p>Maline dili şuna benzer:</p>
+<p>Makine dili şuna benzer:</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="3e1b91cd-f3e6-4ee7-9442-c97f1e0549da" name="6b3a14f2-6aae-473b-b317-2474da198991" type="radio">
-</input><label class="tabbed-label" for="3e1b91cd-f3e6-4ee7-9442-c97f1e0549da">
+<input checked="checked" id="6b52fef8-99e0-4db4-91c8-d7dbf48df1c8" name="5dfa6c48-69cd-4cb0-9818-4e37290194b6" type="radio">
+</input><label class="tabbed-label" for="6b52fef8-99e0-4db4-91c8-d7dbf48df1c8">
 Binary</label><div class="tabbed-content docutils">
 <p>001000 00001 00010 0000000101011110</p>
 </div>
-<input id="0fd48f5d-c1bb-41ef-9e4a-b4ea270cba06" name="6b3a14f2-6aae-473b-b317-2474da198991" type="radio">
-</input><label class="tabbed-label" for="0fd48f5d-c1bb-41ef-9e4a-b4ea270cba06">
+<input id="b6bf8433-49ed-4e9e-b1d4-34c16f1144b1" name="5dfa6c48-69cd-4cb0-9818-4e37290194b6" type="radio">
+</input><label class="tabbed-label" for="b6bf8433-49ed-4e9e-b1d4-34c16f1144b1">
 Hexadecimal</label><div class="tabbed-content docutils">
 <p>080102015E</p>
 </div>
 </div>
-<p>Gördüğünüz değerler işlemciye <code class="docutils literal notranslate"><span class="pre">bir</span> <span class="pre">şeyler</span></code> yaptırıyor. Fakat görüdüğünüzden de anlaşılacağı üzere bizim bunun bir bakışta
-(2. bakıştan da pek emin değilim) anlamamız pek olası değil. Bu talimatların daha anlaşılabilir olması  adına
+<p>Gördüğünüz değerler işlemciye <code class="docutils literal notranslate"><span class="pre">bir</span> <span class="pre">şeyler</span></code> yaptırıyor. Fakat gördüğünüzden de anlaşılacağı üzere bizim bunu bir bakışta
+(2. bakıştan da pek emin değilim) anlamamız pek olası değildir. Bu talimatların daha anlaşılabilir olması  adına
 <code class="docutils literal notranslate"><span class="pre">Tercüman</span></code>lar kullanırız. Bu tercümanlar, insan dilini, makine diline dönüştürür. Bunlar <code class="docutils literal notranslate"><span class="pre">Kabuklar</span></code>,
 <code class="docutils literal notranslate"><span class="pre">Betik/Programlama</span> <span class="pre">dilleri</span></code>’dir.</p>
 </div>
 </div>
 <div class="section" id="kullanici-ile-donanim-arasindaki-haberlesme">
 <h2>Kullanıcı ile Donanım arasındaki haberleşme<a class="headerlink" href="#kullanici-ile-donanim-arasindaki-haberlesme" title="Permalink to this headline">¶</a></h2>
-<p>Bir kullanıcı donanıma bir şeyler yaptırmak istediğinde bunu çok farklı şekilde yapabilir. Anlaşılabilir olması için
+<p>Bir kullanıcı donanıma bir şeyler yaptırmak istediğinde bunu çok farklı şekillerde yapabilir. Anlaşılabilir olması için
 örnekle açıklayalım.</p>
-<p>Kullanıcı <code class="docutils literal notranslate"><span class="pre">a</span></code> adlı dosyı <code class="docutils literal notranslate"><span class="pre">b</span></code> olarak yeniden adlandırmak istiyor. Bunun için nasıl yollar izlenebilir?</p>
+<p>Kullanıcı <code class="docutils literal notranslate"><span class="pre">a</span></code> adlı dosyayı <code class="docutils literal notranslate"><span class="pre">b</span></code> olarak yeniden adlandırmak istiyor. Bunun için nasıl yollar izlenebilir?</p>
 <ol>
 <li><p>Makine dili ile, <code class="docutils literal notranslate"><span class="pre">a</span></code> dosyasının diskte bulunduğu bölgeyi okuyup… Yok ya anlatırken sıkıldım. Geç!</p></li>
-<li><p>İşetim sisteminde bulunan yeniden adlandırma işi yapabilen programa başvurabiliriz. <code class="docutils literal notranslate"><span class="pre">ren</span></code> veya <code class="docutils literal notranslate"><span class="pre">mv</span></code>.
+<li><p>İşletim sisteminde bulunan yeniden adlandırma işi yapabilen programa başvurabiliriz. <code class="docutils literal notranslate"><span class="pre">ren</span></code> veya <code class="docutils literal notranslate"><span class="pre">mv</span></code>.
 Bunun için terminal açıp <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">a</span> <span class="pre">b</span></code> yazarız. Yeniden adlandırma işlemi tamamlanmış olur.
 Fena değil. Ama ben tembelim. Daha kolayı?</p></li>
-<li><p>Arayüzden dosyaya sağtıkla, açılan meünden <code class="docutils literal notranslate"><span class="pre">yeniden</span> <span class="pre">adlandır</span></code>’a tıkla. Dosya adını yaz <kbd>enter</kbd>’a bas.
+<li><p>Arayüzden dosyaya sağ tıkla, açılan menüden <code class="docutils literal notranslate"><span class="pre">yeniden</span> <span class="pre">adlandır</span></code>’a tıkla. Dosya adını yaz <kbd>enter</kbd>’a bas.
 Daha iyi.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">Python</span></code> terminali aç. <code class="docutils literal notranslate"><span class="pre">shutil</span></code> kütüphanesini içe aktar. <code class="docutils literal notranslate"><span class="pre">copyfile</span></code> metodunu kullanarak, kaynak ve
 hedef yolları sağla. Kodu çalıştır.</p>
@@ -572,7 +579,7 @@ hedef yolları sağla. Kodu çalıştır.</p>
 İşletim sistemi çekirdeği ise donanımla konuşup işi yaptı.</p>
 <p>Üçüncü adımda ise yeniden adlandırma yapan program ile kullanıcı arasına bir arayüz yerleştirdik. İşi daha da
 kolaylaştırdık.</p>
-<p>Peki biz yeniden adlandırma kodunu kendimiz yazsaydı ne olurdu? Kodu hangi dilde yazdığımıza bağlı olarak değişir ama
+<p>Peki, biz yeniden adlandırma kodunu kendimiz yazsaydık ne olurdu? Kodu hangi dilde yazdığımıza bağlı olarak değişir ama
 aşağı yukarı ayni şeyler gerçekleşir.</p>
 <p>Kod ile donanım arasındaki haberleşme <a class="reference internal" href="#code-hardware-communication"><span class="std std-numref">Fig. 1</span></a>’de verilmiştir.</p>
 <div class="figure align-default" id="code-hardware-communication">
@@ -584,15 +591,15 @@ aşağı yukarı ayni şeyler gerçekleşir.</p>
 <h2>Kod<a class="headerlink" href="#kod" title="Permalink to this headline">¶</a></h2>
 <p>Kod neydi? Kod iyilikti, dostluktu, kod emekti. Başlarsam bir daha kurtulamam…</p>
 <p>Kod, bir programlama veya betik (script) dili için hazırlanmış, talimatlar (metin) dizisidir. Söz konusu metin
-(ki bu metin yazılışı itibariyle insan diline daha yakındır) derkeyici veya yorumlayıcı yardımyla işleme dönüşür.</p>
-<p>Peki nedir programlama veya betik dili? Prensipte benzer işleri yaparlar fakat art alanda çok farklı yollar izlerler.</p>
+(ki bu metin yazılışı itibariyle insan diline daha yakındır) derleyici veya yorumlayıcı yardımıyla işleme dönüşür.</p>
+<p>Peki, nedir programlama veya betik dili? Prensipte benzer işleri yaparlar fakat art alanda çok farklı yollar izlerler.</p>
 <div class="section" id="dil-seviyesi">
 <h3>Dil seviyesi<a class="headerlink" href="#dil-seviyesi" title="Permalink to this headline">¶</a></h3>
-<p>Programlamada dil seviyesi diye bir kavram vardır. Bir programlama veya betik dilininin seviyesi insan diline
+<p>Programlamada dil seviyesi diye bir kavram vardır. Bir programlama veya betik dilinin seviyesi insan diline
 yakınlığıyla (ve diğer parametrelerle) ölçülür.</p>
 <ul class="simple">
 <li><p>Yüksek seviye bir dil: İnsan diline daha yakın</p></li>
-<li><p>Düşük seviye vir dil: Makine diline daha yakın</p></li>
+<li><p>Düşük seviye bir dil: Makine diline daha yakın</p></li>
 </ul>
 <p>anlamına gelir.</p>
 <p>Seviyelerin bir rankı yoktur. Göreli olarak ifade edilir. Örneğin:
@@ -610,7 +617,7 @@ yakınlığıyla (ve diğer parametrelerle) ölçülür.</p>
 </ol>
 <p>Derleyici ise metni okur, hata görmez ise, size çalıştırabileceğiniz bir dosya sunar. O dosyayı kullanarak talimat
 listesinde verdiğiniz işlemleri makineye yaptırabileceksiniz.</p>
-<p>Derleyiciye verdiğiniz metin <code class="docutils literal notranslate"><span class="pre">kaynak</span> <span class="pre">kod</span></code> (<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">code</span></code>), ortayaçıkan çalıştırılabilir dosya ise
+<p>Derleyiciye verdiğiniz metin <code class="docutils literal notranslate"><span class="pre">kaynak</span> <span class="pre">kod</span></code> (<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">code</span></code>), ortaya çıkan çalıştırılabilir dosya ise
 <code class="docutils literal notranslate"><span class="pre">program</span></code>’dır.</p>
 <p>Buradaki anahtar kelime derlemek ve derlemenin sonucunda çalıştırılabilir dosyanın oluşmasıdır.</p>
 <p>Derlediğiniz kodun çıktısı olan program işletim sistemi çekirdeği ile konuşur. Dolayısıyla bu programı başkasıyla
@@ -618,7 +625,7 @@ paylaşırsanız insanlara yardımcı olabilirsiniz.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Kodu hangi işletim sisteminde derlediyseniz, oluşan program söz konusu işletim sisteminde çalışır.</p>
-<p>Windows’da derkedim, Linux’ta çalışmadı. E çalışmaz tabii.</p>
+<p>Windows’da derledim, Linux’ta çalışmadı. E, çalışmaz tabii.</p>
 </div>
 <p>Programınızı kullanacak insanların derleyiciye ihtiyacı olmaz. Programı çalıştırır.</p>
 </div>
@@ -638,7 +645,7 @@ barındırdığı araçlar vardır.</p>
 <p class="admonition-title">Note</p>
 <p>Betik dili derleme yapmaz demek doğru olmayabilir. Derleme işlemi ve çalıştırma işlemini aynı anda yapar…</p>
 </div>
-<p>Betik dillerinde program dosyası oluşmaz. Eğer yazdığınızı biriyle paylaşmak istersesniz, kaynak kodu paylaşmanız
+<p>Betik dillerinde program dosyası oluşmaz. Eğer yazdığınızı biriyle paylaşmak isterseniz, kaynak kodu paylaşmanız
 gerekecek.</p>
 <p>Herkes ne kadar berbat kod yazdığınızı görecek.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/oh_god_please_no.gif"><img alt="_images/oh_god_please_no.gif" class="bg-primary mb-1 align-center" src="_images/oh_god_please_no.gif" style="width: 400px;" /></a>
@@ -646,43 +653,43 @@ gerekecek.</p>
 Python’ı kurması gerekiyor.</p>
 </div>
 <div class="section" id="betik-vs-programlama">
-<h3>Betik vs Programlama<a class="headerlink" href="#betik-vs-programlama" title="Permalink to this headline">¶</a></h3>
-<p>Haydi programlama ve betiği karşılaştıralım. Bu sırada puan da verelim.</p>
+<h3>Betik VS Programlama<a class="headerlink" href="#betik-vs-programlama" title="Permalink to this headline">¶</a></h3>
+<p>Haydi, programlama ve betiği karşılaştıralım. Bu sırada puan da verelim.</p>
 <ol>
 <li><p><strong>Round</strong>:
 Programlama dilinde kaynak kodu gizleyebilirsiniz. Böylece insanlar yazdığınız şiirimsi içerikten mahrum kalabilir.
 Betik dilinde kaynağı paylaşmak zorundasınız.(Buradan kimseye puan çıkmaz)</p>
-<p>Programlama: 0</p>
-<p>Betik: 0</p>
+<p>Programlama: <span class="math notranslate nohighlight">\(0\)</span></p>
+<p>Betik: <span class="math notranslate nohighlight">\(0\)</span></p>
 </li>
 <li><p><strong>Round</strong>:
 Programlama dilinde oluşturduğunuz programı paylaşırsınız. Tek başına çalışır.
 Betik dilinde kodu paylaşırsınız ve yorumlayıcıya ihtiyaç duyulur.</p>
-<p>Programlama: 1</p>
-<p>Betik: 0</p>
+<p>Programlama: <span class="math notranslate nohighlight">\(1\)</span></p>
+<p>Betik: <span class="math notranslate nohighlight">\(0\)</span></p>
 </li>
 <li><p><strong>Round</strong>:
-Programlama dilinde direkt işletim sistemi çekirği ile muhattap olduğunuzdan teoride, betik diline göre çok daha
+Programlama dilinde direkt işletim sistemi çekirdeği ile muhatap olduğunuzdan teoride, betik diline göre çok daha
 hızlıdır.</p>
-<p>Programlama: 2</p>
-<p>Betik: 0</p>
+<p>Programlama: <span class="math notranslate nohighlight">\(2\)</span></p>
+<p>Betik: <span class="math notranslate nohighlight">\(0\)</span></p>
 </li>
 <li><p><strong>Round</strong>:
 Programlama dilleri bir defa derlenir, sonra defalarca çalıştırılabilir.
 Betik dillerinde her çalıştırmada kod yorumlanmak zorunda.</p>
-<p>Programlama: 3</p>
-<p>Betik: 0</p>
+<p>Programlama: <span class="math notranslate nohighlight">\(3\)</span></p>
+<p>Betik: <span class="math notranslate nohighlight">\(0\)</span></p>
 </li>
 <li><p><strong>Round</strong>:
 Programlama dilleri donanımın tüm kaynaklarından yararlanabilir, betik dillerinde ise bu kaynaklar çok
 daha kısıtlıdır.</p>
-<p>Programlama: 4</p>
-<p>Betik: 0</p>
+<p>Programlama: <span class="math notranslate nohighlight">\(4\)</span></p>
+<p>Betik: <span class="math notranslate nohighlight">\(0\)</span></p>
 </li>
 <li><p><strong>Round</strong>: Programlama dillerinin kullanımı daha zordur ve maliyeti daha fazladır. Betik dillerinde ise kullanım
 daha kolay ve maliyeti daha azdır.</p>
-<p>Programlama: 4</p>
-<p>Betik: 65535</p>
+<p>Programlama: <span class="math notranslate nohighlight">\(4\)</span></p>
+<p>Betik: <span class="math notranslate nohighlight">\(65535\)</span></p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/one_billion_point.png"><img alt="_images/one_billion_point.png" class="bg-primary mb-1 align-center" src="_images/one_billion_point.png" style="width: 400px;" /></a>
 </li>
 </ol>
@@ -690,8 +697,8 @@ daha kolay ve maliyeti daha azdır.</p>
 </div>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
-<p>Aslında yaptığımız tanımlara göre Python bir betik olmalı, fakat prensipte Python bir programlama dilidir.</p>
-<p>Biz yinede betikmiş gibi davranacağız.</p>
+<p>Aslında yaptığımız tanımlara göre Python bir betik olmalı. Fakat, prensipte Python bir programlama dilidir.</p>
+<p>Biz yine de betikmiş gibi davranacağız.</p>
 <p>Python, nesne yönelimli, yorumlamalı, birimsel (modüler) ve etkileşimli yüksek seviyeli bir programlama dilidir.
 <a class="reference external" href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia</a></p>
 <p>Python kodu yalın metinde tutulur. Fakat dosya uzantısı olarak <code class="docutils literal notranslate"><span class="pre">py</span></code> kullanılır.</p>

@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Koşullu ifadeler" href="conditions.html" />
@@ -193,7 +195,12 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list_comprehension.html">
+       List Comprehension
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -326,7 +333,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
-   Optimizason
+   Optimizasyon
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -340,6 +347,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -476,7 +488,7 @@
 </div>
 <hr>
 <p>Örnek</p>
-<p>1 sayısının [3, 4, 5] dizisinde var olup olmadığını kontrol ediniz</p>
+<p><span class="math notranslate nohighlight">\(1\)</span> sayısının <span class="math notranslate nohighlight">\([3, 4, 5]\)</span> dizisinde var olup olmadığını kontrol ediniz</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
@@ -495,7 +507,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">=</span></code> bir değişken ataması yapar.</p>
 <hr>
 <p>Örnek</p>
-<p><code class="docutils literal notranslate"><span class="pre">sayi</span></code> adlı bir değişkene <code class="docutils literal notranslate"><span class="pre">1</span></code> atayınız ve <code class="docutils literal notranslate"><span class="pre">sayi</span></code>’nin değerini gösteriniz.</p>
+<p><code class="docutils literal notranslate"><span class="pre">sayi</span></code> adlı bir değişkene <span class="math notranslate nohighlight">\(1\)</span> atayınız ve <code class="docutils literal notranslate"><span class="pre">sayi</span></code>’nin değerini gösteriniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sayi</span> <span class="o">=</span> <span class="mi">1</span>
@@ -515,7 +527,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">is</span></code> operatörü iki verinin, birbirine tam olarak eşit (özdeş) olup olmadığını karşılaştırır</p>
 <hr>
 <p>Örnek</p>
-<p><code class="docutils literal notranslate"><span class="pre">1</span></code> sayısının <code class="docutils literal notranslate"><span class="pre">1.0</span></code>’a eşit olup olmadığını gösteriniz</p>
+<p><span class="math notranslate nohighlight">\(1\)</span> sayısının <span class="math notranslate nohighlight">\(1.0\)</span>’a eşit olup olmadığını gösteriniz</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">==</span> <span class="mf">1.0</span>
@@ -530,7 +542,7 @@
 </div>
 <hr>
 <p>Örnek</p>
-<p><code class="docutils literal notranslate"><span class="pre">1</span></code> sayısının <code class="docutils literal notranslate"><span class="pre">1.0</span></code>’a tam olarak eşit olup olmadığını gösteriniz</p>
+<p><span class="math notranslate nohighlight">\(1\)</span> sayısının <span class="math notranslate nohighlight">\(1.0\)</span>’a tam olarak eşit olup olmadığını gösteriniz</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="ow">is</span> <span class="mf">1.0</span>
@@ -540,7 +552,7 @@
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;&gt;:1: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
 &lt;&gt;:1: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
-C:\Users\mshem\AppData\Local\Temp/ipykernel_19772/3336455986.py:1: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
+C:\Users\mshem\AppData\Local\Temp/ipykernel_17912/3336455986.py:1: SyntaxWarning: &quot;is&quot; with a literal. Did you mean &quot;==&quot;?
   1 is 1.0
 </pre></div>
 </div>
@@ -551,7 +563,7 @@ C:\Users\mshem\AppData\Local\Temp/ipykernel_19772/3336455986.py:1: SyntaxWarning
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code> ve <code class="docutils literal notranslate"><span class="pre">1.0</span></code>’ı karşılaştırdığımız için şaşırdı.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code>, <span class="math notranslate nohighlight">\(1\)</span> ve <span class="math notranslate nohighlight">\(1.0\)</span>’ı karşılaştırdığımız için şaşırdı.</p>
 <p>Acaba <code class="docutils literal notranslate"><span class="pre">is</span></code> yerine <code class="docutils literal notranslate"><span class="pre">==</span></code> mi kullansan diyor</p>
 </div>
 </div>

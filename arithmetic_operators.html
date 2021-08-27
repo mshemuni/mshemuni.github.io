@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Karşılaştırma operatörleri" href="comparison_operators.html" />
@@ -193,7 +195,12 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list_comprehension.html">
+       List Comprehension
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -326,7 +333,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
-   Optimizason
+   Optimizasyon
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -340,6 +347,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -721,7 +733,7 @@
 </div>
 </div>
 <hr>
-<p>Bir <code class="docutils literal notranslate"><span class="pre">list</span></code> veriyi 2 ile çarpımını gösteriniz</p>
+<p>Bir <code class="docutils literal notranslate"><span class="pre">list</span></code> veriyi <span class="math notranslate nohighlight">\(2\)</span> ile çarpımını gösteriniz</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s2">&quot;Muhammed&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
@@ -751,7 +763,7 @@
 <div class="section" id="matiksal-verilerde-aritmetik-islemler">
 <h2>Matıksal verilerde aritmetik işlemler<a class="headerlink" href="#matiksal-verilerde-aritmetik-islemler" title="Permalink to this headline">¶</a></h2>
 <p>Mantıksal verilerin <code class="docutils literal notranslate"><span class="pre">int</span></code> verinin bir alt sınıfından olduğunu söylemiştik.</p>
-<p>Bunun anlamı, mantıksal verilerden <code class="docutils literal notranslate"><span class="pre">True</span></code> <code class="docutils literal notranslate"><span class="pre">1</span></code>’e ve <code class="docutils literal notranslate"><span class="pre">False</span></code> <code class="docutils literal notranslate"><span class="pre">2</span></code>’ye eşittir.</p>
+<p>Bunun anlamı, mantıksal verilerden <code class="docutils literal notranslate"><span class="pre">True</span></code> <span class="math notranslate nohighlight">\(1\)</span>’e ve <code class="docutils literal notranslate"><span class="pre">False</span></code> <span class="math notranslate nohighlight">\(0\)</span>’ye eşittir.</p>
 <p>Dolayısıyla Mantıksal verileri <code class="docutils literal notranslate"><span class="pre">int</span></code> olarak algılayabiliriz.</p>
 <hr>
 <p>Örnek</p>
@@ -769,7 +781,7 @@
 </div>
 </div>
 <hr>
-<p>Bir sayının <code class="docutils literal notranslate"><span class="pre">0</span></code>’a bölümü <code class="docutils literal notranslate"><span class="pre">Tanımsız</span></code>dır. <code class="docutils literal notranslate"><span class="pre">Python</span></code> ise <code class="docutils literal notranslate"><span class="pre">0</span></code>’a bölmelerde hata (<code class="docutils literal notranslate"><span class="pre">division</span> <span class="pre">by</span> <span class="pre">zero</span></code>) verir.</p>
+<p>Bir sayının <span class="math notranslate nohighlight">\(0\)</span>’a bölümü <code class="docutils literal notranslate"><span class="pre">Tanımsız</span></code>dır. <code class="docutils literal notranslate"><span class="pre">Python</span></code> ise <span class="math notranslate nohighlight">\(0\)</span>’a bölmelerde hata (<code class="docutils literal notranslate"><span class="pre">division</span> <span class="pre">by</span> <span class="pre">zero</span></code>) verir.</p>
 <p>Örnek</p>
 <p>Bir sayının <code class="docutils literal notranslate"><span class="pre">False</span></code>’a bölümününü gösteriniz</p>
 <div class="cell docutils container">
@@ -781,7 +793,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ZeroDivisionError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_23144</span><span class="o">/</span><span class="mf">339779746.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_17212</span><span class="o">/</span><span class="mf">339779746.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="mi">55</span> <span class="o">/</span> <span class="kc">False</span>
 
 <span class="ne">ZeroDivisionError</span>: division by zero

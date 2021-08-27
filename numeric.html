@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Konteynerler" href="containers.html" />
@@ -193,7 +195,12 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list_comprehension.html">
+       List Comprehension
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -326,7 +333,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
-   Optimizason
+   Optimizasyon
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -340,6 +347,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -493,8 +505,8 @@
 <div class="section" id="float">
 <h2><code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#float" title="Permalink to this headline">¶</a></h2>
 <p>Kesirli sayı veri tipidir. Bir <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code> olarak tanımlanabilir.</p>
-<p><code class="docutils literal notranslate"><span class="pre">float</span></code> olarak gösterilir, alabileceği en büyük değer <code class="docutils literal notranslate"><span class="pre">1.7976931348623157e+308</span></code> ve alabileceği en küçük değer
-<code class="docutils literal notranslate"><span class="pre">-1.7976931348623157e+308</span></code>’dir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">float</span></code> olarak gösterilir, alabileceği en büyük değer <span class="math notranslate nohighlight">\(1.7976931348623157e+308\)</span> ve alabileceği en küçük değer
+<span class="math notranslate nohighlight">\(-1.7976931348623157e+308\)</span>’dir.</p>
 <hr>
 <p><code class="docutils literal notranslate"><span class="pre">float</span></code> veri tipine örnek:</p>
 <div class="cell docutils container">
@@ -510,7 +522,7 @@
 </div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">Python</span></code>’da bütün veri tipleri birer objedir demiştik. Bunun anlamı, bir veriyi incelemek için özellikler/metodlara sahibiz.</p>
-<p>Örnek olarak <code class="docutils literal notranslate"><span class="pre">float</span></code> tipli objelerin, <code class="docutils literal notranslate"><span class="pre">is_integer</span></code> metodu vardır. Söz konusu <code class="docutils literal notranslate"><span class="pre">float</span></code>’un <code class="docutils literal notranslate"><span class="pre">int</span></code> olup olmadığını ifade eder. (<code class="docutils literal notranslate"><span class="pre">1.0</span></code> her ne kadar <code class="docutils literal notranslate"><span class="pre">float</span></code> olsa da, aslında bir tam sayıdır)</p>
+<p>Örnek olarak <code class="docutils literal notranslate"><span class="pre">float</span></code> tipli objelerin, <code class="docutils literal notranslate"><span class="pre">is_integer</span></code> metodu vardır. Söz konusu <code class="docutils literal notranslate"><span class="pre">float</span></code>’un <code class="docutils literal notranslate"><span class="pre">int</span></code> olup olmadığını ifade eder. (<span class="math notranslate nohighlight">\(1.0\)</span> her ne kadar <code class="docutils literal notranslate"><span class="pre">float</span></code> olsa da, aslında bir tam sayıdır)</p>
 <hr>
 <p>Örnek</p>
 <div class="cell docutils container">
@@ -531,8 +543,8 @@
 <div class="section" id="complex">
 <h2><code class="docutils literal notranslate"><span class="pre">complex</span></code><a class="headerlink" href="#complex" title="Permalink to this headline">¶</a></h2>
 <p>Karmaşık sayı veri tipidir.</p>
-<p><code class="docutils literal notranslate"><span class="pre">complex</span></code> olarak gösterilir, alabileceği en büyük değer (reel ve karmaşık kısımlar için ayrı aryı) <code class="docutils literal notranslate"><span class="pre">1.7976931348623157e+308</span></code> ve alabileceği en küçük değer
-<code class="docutils literal notranslate"><span class="pre">-1.7976931348623157e+308</span></code>’dir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">complex</span></code> olarak gösterilir, alabileceği en büyük değer (reel ve karmaşık kısımlar için ayrı aryı) <span class="math notranslate nohighlight">\(1.7976931348623157e+308\)</span> ve alabileceği en küçük değer
+<span class="math notranslate nohighlight">\(-1.7976931348623157e+308\)</span>’dir.</p>
 <hr>
 <p><code class="docutils literal notranslate"><span class="pre">complex</span></code> veri tipine örnek:</p>
 <div class="cell docutils container">
@@ -596,7 +608,7 @@
 <p class="admonition-title">Note</p>
 <p>Şimdi siz sorarsınız neden <code class="docutils literal notranslate"><span class="pre">i</span></code> değil de <code class="docutils literal notranslate"><span class="pre">j</span></code>. Matematikte <code class="docutils literal notranslate"><span class="pre">i</span></code> kullanılır.</p>
 <p>Evet haklısınız. Bir TİP olarak bunun nedenini açıklayarak kendimle çelişeceğim.</p>
-<p><code class="docutils literal notranslate"><span class="pre">i</span></code> ve <code class="docutils literal notranslate"><span class="pre">I</span></code> bazı fontlarda <code class="docutils literal notranslate"><span class="pre">1</span></code> ve <code class="docutils literal notranslate"><span class="pre">l</span></code> (küçük L)’ye benzediği için <code class="docutils literal notranslate"><span class="pre">j</span></code> seçilmiştir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">i</span></code> ve <code class="docutils literal notranslate"><span class="pre">I</span></code> bazı fontlarda <span class="math notranslate nohighlight">\(1\)</span> ve <code class="docutils literal notranslate"><span class="pre">l</span></code> (küçük L)’ye benzediği için <code class="docutils literal notranslate"><span class="pre">j</span></code> seçilmiştir.</p>
 <p>Bu konuyu daha detaylı incelemek isteyenler aşağıdaki bağlantıya bakabilirler.</p>
 <p><a class="reference external" href="https://bugs.python.org/issue10562">https://bugs.python.org/issue10562</a></p>
 </div>

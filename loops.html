@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="List Comprehension" href="list_comprehension.html" />
@@ -331,7 +333,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
-   Optimizason
+   Optimizasyon
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -345,6 +347,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -533,7 +540,7 @@
 <p>şeklinde yazılır.</p>
 <hr>
 <p>Örnek</p>
-<p><code class="docutils literal notranslate"><span class="pre">1</span></code>’den <code class="docutils literal notranslate"><span class="pre">10</span></code>’a kadar olan bütün tam sayıları yazınız.</p>
+<p><span class="math notranslate nohighlight">\(1\)</span>’den <span class="math notranslate nohighlight">\(10\)</span>’a kadar olan bütün tam sayıları yazınız.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$i = 1;
 
 while($i&lt;=10){
@@ -577,7 +584,7 @@ while($i&lt;=10){
 <p>şeklinde yazılır.</p>
 <hr>
 Örnek
-<p><code class="docutils literal notranslate"><span class="pre">1</span></code>’den <code class="docutils literal notranslate"><span class="pre">10</span></code>’a kadar olan bütün tam sayıları yazınız.</p>
+<p><span class="math notranslate nohighlight">\(1\)</span>’den <span class="math notranslate nohighlight">\(10\)</span>’a kadar olan bütün tam sayıları yazınız.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>for($i=1; $i&lt;=10; $i++){
     echo $i . &quot;&lt;br&gt;&quot;;
 }
@@ -669,7 +676,7 @@ foreach($ar as $a){
 <p><code class="docutils literal notranslate"><span class="pre">indentation</span></code> içinde kalan bütün işlemler <code class="docutils literal notranslate"><span class="pre">while</span></code> bloğuna ait.</p>
 <hr>
 <p>Örnek</p>
-<p><code class="docutils literal notranslate"><span class="pre">1</span></code>’den <code class="docutils literal notranslate"><span class="pre">10</span></code>’a kadar olan bütün tam sayıları ekrana yazınız. (<code class="docutils literal notranslate"><span class="pre">10</span></code> dahil)</p>
+<p><span class="math notranslate nohighlight">\(1\)</span>’den <span class="math notranslate nohighlight">\(10\)</span>’a kadar olan bütün tam sayıları ekrana yazınız. <span class="math notranslate nohighlight">\(10\)</span> dahil)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
@@ -725,15 +732,15 @@ foreach($ar as $a){
 </div>
 </div>
 </div>
-<p>“Peki <code class="docutils literal notranslate"><span class="pre">1</span></code>’den <code class="docutils literal notranslate"><span class="pre">10</span></code>’a kadar olan sayıları <code class="docutils literal notranslate"><span class="pre">for</span></code> döngüsünde gösteremeyecek miyiz?” diye sorduğunuzu duyar gibiyim. (Sormasanız da söyleyeceğim.)</p>
-<p><code class="docutils literal notranslate"><span class="pre">1</span></code>’den <code class="docutils literal notranslate"><span class="pre">10</span></code>’a kadar olan değerleri barındıran bir dizi oluşturuyoruz. Sonra o dizi için <code class="docutils literal notranslate"><span class="pre">for</span></code> çalıştırıyoruz.</p>
+<p>“Peki <span class="math notranslate nohighlight">\(1\)</span>’den <span class="math notranslate nohighlight">\(10\)</span>’a kadar olan sayıları <code class="docutils literal notranslate"><span class="pre">for</span></code> döngüsünde gösteremeyecek miyiz?” diye sorduğunuzu duyar gibiyim. (Sormasanız da söyleyeceğim.)</p>
+<p><span class="math notranslate nohighlight">\(1\)</span>’den <span class="math notranslate nohighlight">\(10\)</span>’a kadar olan değerleri barındıran bir dizi oluşturuyoruz. Sonra o dizi için <code class="docutils literal notranslate"><span class="pre">for</span></code> çalıştırıyoruz.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Demin söylediğim aslında doğru değil. Ama <code class="docutils literal notranslate"><span class="pre">generator</span></code> kavramını işlemeden, ki ilerleyen başlıklarda işleyeceğiz, bunu anlamanın daha kolay yolu yok malesef.</p>
 </div>
 <hr>
 <p>Örnek</p>
-<p><code class="docutils literal notranslate"><span class="pre">1</span></code>’den <code class="docutils literal notranslate"><span class="pre">10</span></code>’a kadar olan bütün tam sayıları yazınız.</p>
+<p><span class="math notranslate nohighlight">\(1\)</span>’den <span class="math notranslate nohighlight">\(10\)</span>’a kadar olan bütün tam sayıları yazınız.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">11</span><span class="p">))</span>

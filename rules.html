@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Tip açıklamaları" href="typing.html" />
@@ -193,7 +195,12 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list_comprehension.html">
+       List Comprehension
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -326,7 +333,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
-   Optimizason
+   Optimizasyon
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -340,6 +347,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -464,15 +476,15 @@
                 
   <div class="section" id="kurallar">
 <h1>Kurallar<a class="headerlink" href="#kurallar" title="Permalink to this headline">¶</a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> törelerine göre uymamız gereken yazılı ve yazılı olmayan kurallarımız varıdr.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Python</span></code> törelerine göre uymamız gereken yazılı ve yazılı olmayan kurallarımız vardr.</p>
 <div class="section" id="pep8">
 <h2><code class="docutils literal notranslate"><span class="pre">pep8</span></code><a class="headerlink" href="#pep8" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">pep</span></code> (<code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Enhancement</span> <span class="pre">Proposal</span></code>, <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Geliştirme</span> <span class="pre">Önerisi</span></code>) <code class="docutils literal notranslate"><span class="pre">Python</span></code> topluluğuna verilen önerilerdir. Tatrışmalar sonucunda bu öneriler kabul edilebilir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pep</span></code> (<code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Enhancement</span> <span class="pre">Proposal</span></code>, <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">Geliştirme</span> <span class="pre">Önerisi</span></code>) <code class="docutils literal notranslate"><span class="pre">Python</span></code> topluluğuna verilen önerilerdir. Tartışmalar sonucunda bu öneriler kabul edilebilir.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pep8</span></code> bunların en önemlilerinden biridir, zira bir <code class="docutils literal notranslate"><span class="pre">Python</span></code> kodunun nasıl yazılması gerektiğinden bahseder. (Zorunlu kurallar değildir. Fakat kodunuzu paylaştığınızda, ciddiye alınmak isterseniz, <code class="docutils literal notranslate"><span class="pre">pep8</span></code>’i göz ardı etmeyin)</p>
 <p>Örneğin <code class="docutils literal notranslate"><span class="pre">Python</span></code>’da bir bloğun <code class="docutils literal notranslate"><span class="pre">indentation</span></code> ile ayrılması gerektiğinden daha önce bahsetmiştik. Fakat bu <code class="docutils literal notranslate"><span class="pre">indentation</span></code>ın (<code class="docutils literal notranslate"><span class="pre">girinti</span></code>) nasıl olmasını söyleyen bir kuraldan bahsetmedik.</p>
-<p>Dolayısıyla girinti işin, <code class="docutils literal notranslate"><span class="pre">n</span></code> adet <kbd>Tab</kbd> veya <code class="docutils literal notranslate"><span class="pre">boşluk</span></code> kullanmamızı kısıtlayn bir şey yoktur. (Aynı <code class="docutils literal notranslate"><span class="pre">indentation</span></code>’ın başındaki boşluk sayısı aynı olduğu sürece)</p>
-<p>Kısıtlama yok dedik ama <code class="docutils literal notranslate"><span class="pre">pep8</span></code> aslında bizi kısıtlıyor. <code class="docutils literal notranslate"><span class="pre">pep8</span></code> bize, <code class="docutils literal notranslate"><span class="pre">indentaion</span></code>’larn <code class="docutils literal notranslate"><span class="pre">4</span></code> <code class="docutils literal notranslate"><span class="pre">boşluk</span></code>tan oluştuğunu dikte eder.</p>
-<p>Yahut bir satırın en fazla <code class="docutils literal notranslate"><span class="pre">82</span></code> karakter olabileceğini söyler.</p>
+<p>Dolayısıyla girinti işin, <code class="docutils literal notranslate"><span class="pre">n</span></code> adet <kbd>Tab</kbd> veya <code class="docutils literal notranslate"><span class="pre">boşluk</span></code> kullanmamızı kısıtlayan bir şey yoktur. (Aynı <code class="docutils literal notranslate"><span class="pre">indentation</span></code>’ın başındaki boşluk sayısı aynı olduğu sürece)</p>
+<p>Kısıtlama yok dedik ama <code class="docutils literal notranslate"><span class="pre">pep8</span></code> aslında bizi kısıtlıyor. <code class="docutils literal notranslate"><span class="pre">pep8</span></code> bize, <code class="docutils literal notranslate"><span class="pre">indentaion</span></code>’larn <span class="math notranslate nohighlight">\(4\)</span> <code class="docutils literal notranslate"><span class="pre">boşluk</span></code>tan oluştuğunu dikte eder.</p>
+<p>Yahut bir satırın en fazla <span class="math notranslate nohighlight">\(82\)</span> karakter olabileceğini söyler.</p>
 <p>Aslında günümüz <code class="docutils literal notranslate"><span class="pre">IDE</span></code>leri bu işleri sizin için zaten halleder, lakin ne yaptığımızı bilmekte de yarar var.</p>
 </div>
 <div class="section" id="aciklama-satirlari">
@@ -592,7 +604,7 @@ cos(x, /)
 </div>
 </div>
 </div>
-<p>Peki bizim yazdığımız fonskiyonların yardım metni nasıl görünüt?</p>
+<p>Peki, bizim yazdığımız fonskiyonların yardım metni nasıl görünür?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>

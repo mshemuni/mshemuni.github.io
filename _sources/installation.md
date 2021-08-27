@@ -124,7 +124,7 @@ Bu pencerede güle güle penceresidir.
 :width: 400px
 :align: center
 ```
-"Gider ayak sitemize girmek ister misin?" pnceresi.
+"Giderayak sitemize girmek ister misin?" penceresi.
 
 Gördünüz mü? Ne kadar kolay.
 
@@ -161,5 +161,5 @@ Python ile terminalde işlemler yapabilirsiniz. Hatta sırf bunun için gelişti
 Lakin bizim bir geliştirme ortamına ihtiyacımız olacak.
 
 Bunun için IDE(Integrated Development Environment: Tümleşik Geliştirme Ortamı) kullanacağız. IDE'ler Steroid almış 
-metin düzenleicileridir. Hedeflendikleri dillerde yazılım geliştiricisine, kodun farklı bölgelerini renklendirerek, 
+metin düzenleyicileridir. Hedeflendikleri dillerde yazılım geliştiricisine, kodun farklı bölgelerini renklendirerek, 
 gerektiğinde "Hop aga. Yanlışın var." diyerek yardımcı olurlar.

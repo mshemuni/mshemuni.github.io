@@ -1,0 +1,942 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilimsel programlama &#8212; Tembeller için programlama</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.5f77b4aec8189eecf79907ce328c390d.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Çoklu işlem" href="multithread.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/me.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Tembeller için programlama</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Giriş
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="installation.html">
+   Hazırlık
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hello_world.html">
+   Merhaba dünya
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="data_types.html">
+   Veri tipleri
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="numeric.html">
+     Nümerik veriler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="containers.html">
+     Konteynerler
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="others_types.html">
+     Diğer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="modules.html">
+     Python modüller
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="first_examples.html">
+     Egzersizler
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="tools.html">
+   Araçlar
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="operators.html">
+     Operatörler
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="arithmetic_operators.html">
+       Aritmetik operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="comparison_operators.html">
+       Karşılaştırma operatörleri
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="logical_operators.html">
+       Mantıksal operatörler
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="other_operators.html">
+       Diğer operatörler
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conditions.html">
+     Koşullu ifadeler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="loops.html">
+     Döngüler
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list_comprehension.html">
+       List Comprehension
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="functions.html">
+     Fonksiyonlar
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="recursion.html">
+       Özyenilemeli fonksiyonlar
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="second_examples.html">
+     Egzersizler
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="classes.html">
+     Sınıf
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_method.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         method
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_attribute.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         attribute
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class_example.html">
+       Sınıf Örnek
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="file_op.html">
+   Dosya işlemleri
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="rules.html">
+   Kurallar
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="typing.html">
+     Tip açıklamaları
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="default_moduls.html">
+   Kütüphane/Modül
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="third_party_moduls.html">
+     Varsayılan olmayan modüller
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="my_modul.html">
+     Özel modüller
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="mprt/name_main.html">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         if
+        </span>
+        <span class="pre">
+         __name__
+        </span>
+        <span class="pre">
+         ==
+        </span>
+        <span class="pre">
+         "__main__"
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="optimisation.html">
+   Optimizasyon
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="multithread.html">
+     Çoklu işlem
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Bilimsel programlama
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/scientific_programming.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://mshemuni.github.io/"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://mshemuni.github.io//issues/new?title=Issue%20on%20page%20%2Fscientific_programming.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#astropy-units-birimler">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     astropy.units
+    </span>
+   </code>
+   (birimler)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#donusum">
+     Dönüşüm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#temel-birimlere-donusum">
+     Temel birimlere dönüşüm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ozel-birimler">
+     Özel birimler
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#astropy-constants-sabitler">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     astropy.constants
+    </span>
+   </code>
+   (sabitler)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="bilimsel-programlama">
+<h1>Bilimsel programlama<a class="headerlink" href="#bilimsel-programlama" title="Permalink to this headline">¶</a></h1>
+<p>Bilimsel amaçla programlama yaparken, veri yalnızca bilgisayar ortamında işlenesi bir değer değildir. Artık anlamı olan bir değerdir.</p>
+<p>Örneğin <span class="math notranslate nohighlight">\(25 {}^o C\)</span>’i bir sayı ile ifade edebiliriz. Fakat bu değerin artık bir anlamı var.</p>
+<p>Dolayısyıla birimlere çok dikkat etmemiz gerek.</p>
+<p>Bunu yapmak için çok dikkatlı olabiliriz. Kullanıcıyı verdiği değerler konusunda uyarabiliriz. Fakata <code class="docutils literal notranslate"><span class="pre">Python</span></code>’da bu işin daha şık bir yolu var.</p>
+<p><code class="docutils literal notranslate"><span class="pre">astropy</span></code> birim ve sabitler.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">astropy</span></code>’ın sisteminizde kurulmuş olduğunu varsayıyorum.</p>
+<p>Değilse:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install astropy
+</pre></div>
+</div>
+</div>
+<div class="section" id="astropy-units-birimler">
+<h2><code class="docutils literal notranslate"><span class="pre">astropy.units</span></code> (birimler)<a class="headerlink" href="#astropy-units-birimler" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">astropy.units</span></code> elinizdeki verinin değeriyle işlenmesi ve gerektiğinde dönüşümler sağlar.</p>
+<p>İçinde ne var ne yok bir bakalım.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">units</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;A&#39;, &#39;AA&#39;, &#39;AB&#39;, &#39;ABflux&#39;, &#39;ABmag&#39;, &#39;AU&#39;, &#39;Angstrom&#39;, &#39;B&#39;, &#39;Ba&#39;, &#39;Barye&#39;, &#39;Bi&#39;, &#39;Biot&#39;, &#39;Bol&#39;, &#39;Bq&#39;, &#39;C&#39;, &#39;Celsius&#39;, &#39;Ci&#39;, &#39;CompositeUnit&#39;, &#39;D&#39;, &#39;DN&#39;, &#39;Da&#39;, &#39;Dalton&#39;, &#39;Debye&#39;, &#39;Decibel&#39;, &#39;DecibelUnit&#39;, &#39;Dex&#39;, &#39;DexUnit&#39;, &#39;EA&#39;, &#39;EAU&#39;, &#39;EB&#39;, &#39;EBa&#39;, &#39;EC&#39;, &#39;ED&#39;, &#39;EF&#39;, &#39;EG&#39;, &#39;EGal&#39;, &#39;EH&#39;, &#39;EHz&#39;, &#39;EJ&#39;, &#39;EJy&#39;, &#39;EK&#39;, &#39;EL&#39;, &#39;EN&#39;, &#39;EOhm&#39;, &#39;EP&#39;, &#39;EPa&#39;, &#39;ER&#39;, &#39;ERy&#39;, &#39;ES&#39;, &#39;ESt&#39;, &#39;ET&#39;, &#39;EV&#39;, &#39;EW&#39;, &#39;EWb&#39;, &#39;Ea&#39;, &#39;Eadu&#39;, &#39;Earcmin&#39;, &#39;Earcsec&#39;, &#39;Eau&#39;, &#39;Eb&#39;, &#39;Ebarn&#39;, &#39;Ebeam&#39;, &#39;Ebin&#39;, &#39;Ebit&#39;, &#39;Ebyte&#39;, &#39;Ecd&#39;, &#39;Echan&#39;, &#39;Ecount&#39;, &#39;Ect&#39;, &#39;Ed&#39;, &#39;Edeg&#39;, &#39;Edyn&#39;, &#39;EeV&#39;, &#39;Eerg&#39;, &#39;Eg&#39;, &#39;Eh&#39;, &#39;EiB&#39;, &#39;Eib&#39;, &#39;Eibit&#39;, &#39;Eibyte&#39;, &#39;Ek&#39;, &#39;El&#39;, &#39;Elm&#39;, &#39;Elx&#39;, &#39;Elyr&#39;, &#39;Em&#39;, &#39;Emag&#39;, &#39;Emin&#39;, &#39;Emol&#39;, &#39;Eohm&#39;, &#39;Epc&#39;, &#39;Eph&#39;, &#39;Ephoton&#39;, &#39;Epix&#39;, &#39;Epixel&#39;, &#39;Equivalency&#39;, &#39;Erad&#39;, &#39;Es&#39;, &#39;Esr&#39;, &#39;Eu&#39;, &#39;Evox&#39;, &#39;Evoxel&#39;, &#39;Eyr&#39;, &#39;F&#39;, &#39;Farad&#39;, &#39;Fr&#39;, &#39;Franklin&#39;, &#39;FunctionQuantity&#39;, &#39;FunctionUnitBase&#39;, &#39;G&#39;, &#39;GA&#39;, &#39;GAU&#39;, &#39;GB&#39;, &#39;GBa&#39;, &#39;GC&#39;, &#39;GD&#39;, &#39;GF&#39;, &#39;GG&#39;, &#39;GGal&#39;, &#39;GH&#39;, &#39;GHz&#39;, &#39;GJ&#39;, &#39;GJy&#39;, &#39;GK&#39;, &#39;GL&#39;, &#39;GN&#39;, &#39;GOhm&#39;, &#39;GP&#39;, &#39;GPa&#39;, &#39;GR&#39;, &#39;GRy&#39;, &#39;GS&#39;, &#39;GSt&#39;, &#39;GT&#39;, &#39;GV&#39;, &#39;GW&#39;, &#39;GWb&#39;, &#39;Ga&#39;, &#39;Gadu&#39;, &#39;Gal&#39;, &#39;Garcmin&#39;, &#39;Garcsec&#39;, &#39;Gau&#39;, &#39;Gauss&#39;, &#39;Gb&#39;, &#39;Gbarn&#39;, &#39;Gbeam&#39;, &#39;Gbin&#39;, &#39;Gbit&#39;, &#39;Gbyte&#39;, &#39;Gcd&#39;, &#39;Gchan&#39;, &#39;Gcount&#39;, &#39;Gct&#39;, &#39;Gd&#39;, &#39;Gdeg&#39;, &#39;Gdyn&#39;, &#39;GeV&#39;, &#39;Gerg&#39;, &#39;Gg&#39;, &#39;Gh&#39;, &#39;GiB&#39;, &#39;Gib&#39;, &#39;Gibit&#39;, &#39;Gibyte&#39;, &#39;Gk&#39;, &#39;Gl&#39;, &#39;Glm&#39;, &#39;Glx&#39;, &#39;Glyr&#39;, &#39;Gm&#39;, &#39;Gmag&#39;, &#39;Gmin&#39;, &#39;Gmol&#39;, &#39;Gohm&#39;, &#39;Gpc&#39;, &#39;Gph&#39;, &#39;Gphoton&#39;, &#39;Gpix&#39;, &#39;Gpixel&#39;, &#39;Grad&#39;, &#39;Gs&#39;, &#39;Gsr&#39;, &#39;Gu&#39;, &#39;Gvox&#39;, &#39;Gvoxel&#39;, &#39;Gyr&#39;, &#39;H&#39;, &#39;Henry&#39;, &#39;Hertz&#39;, &#39;Hz&#39;, &#39;IrreducibleUnit&#39;, &#39;J&#39;, &#39;Jansky&#39;, &#39;Joule&#39;, &#39;Jy&#39;, &#39;K&#39;, &#39;Kayser&#39;, &#39;Kelvin&#39;, &#39;KiB&#39;, &#39;Kib&#39;, &#39;Kibit&#39;, &#39;Kibyte&#39;, &#39;L&#39;, &#39;L_bol&#39;, &#39;L_sun&#39;, &#39;LogQuantity&#39;, &#39;LogUnit&#39;, &#39;Lsun&#39;, &#39;MA&#39;, &#39;MAU&#39;, &#39;MB&#39;, &#39;MBa&#39;, &#39;MC&#39;, &#39;MD&#39;, &#39;MF&#39;, &#39;MG&#39;, &#39;MGal&#39;, &#39;MH&#39;, &#39;MHz&#39;, &#39;MJ&#39;, &#39;MJy&#39;, &#39;MK&#39;, &#39;ML&#39;, &#39;MN&#39;, &#39;MOhm&#39;, &#39;MP&#39;, &#39;MPa&#39;, &#39;MR&#39;, &#39;MRy&#39;, &#39;MS&#39;, &#39;MSt&#39;, &#39;MT&#39;, &#39;MV&#39;, &#39;MW&#39;, &#39;MWb&#39;, &#39;M_bol&#39;, &#39;M_e&#39;, &#39;M_earth&#39;, &#39;M_jup&#39;, &#39;M_jupiter&#39;, &#39;M_p&#39;, &#39;M_sun&#39;, &#39;Ma&#39;, &#39;Madu&#39;, &#39;MagUnit&#39;, &#39;Magnitude&#39;, &#39;Marcmin&#39;, &#39;Marcsec&#39;, &#39;Mau&#39;, &#39;Mb&#39;, &#39;Mbarn&#39;, &#39;Mbeam&#39;, &#39;Mbin&#39;, &#39;Mbit&#39;, &#39;Mbyte&#39;, &#39;Mcd&#39;, &#39;Mchan&#39;, &#39;Mcount&#39;, &#39;Mct&#39;, &#39;Md&#39;, &#39;Mdeg&#39;, &#39;Mdyn&#39;, &#39;MeV&#39;, &#39;Mearth&#39;, &#39;Merg&#39;, &#39;Mg&#39;, &#39;Mh&#39;, &#39;MiB&#39;, &#39;Mib&#39;, &#39;Mibit&#39;, &#39;Mibyte&#39;, &#39;Mjup&#39;, &#39;Mjupiter&#39;, &#39;Mk&#39;, &#39;Ml&#39;, &#39;Mlm&#39;, &#39;Mlx&#39;, &#39;Mlyr&#39;, &#39;Mm&#39;, &#39;Mmag&#39;, &#39;Mmin&#39;, &#39;Mmol&#39;, &#39;Mohm&#39;, &#39;Mpc&#39;, &#39;Mph&#39;, &#39;Mphoton&#39;, &#39;Mpix&#39;, &#39;Mpixel&#39;, &#39;Mrad&#39;, &#39;Ms&#39;, &#39;Msr&#39;, &#39;Msun&#39;, &#39;Mu&#39;, &#39;Mvox&#39;, &#39;Mvoxel&#39;, &#39;Myr&#39;, &#39;N&#39;, &#39;NamedUnit&#39;, &#39;Newton&#39;, &#39;Ohm&#39;, &#39;P&#39;, &#39;PA&#39;, &#39;PAU&#39;, &#39;PB&#39;, &#39;PBa&#39;, &#39;PC&#39;, &#39;PD&#39;, &#39;PF&#39;, &#39;PG&#39;, &#39;PGal&#39;, &#39;PH&#39;, &#39;PHz&#39;, &#39;PJ&#39;, &#39;PJy&#39;, &#39;PK&#39;, &#39;PL&#39;, &#39;PN&#39;, &#39;POhm&#39;, &#39;PP&#39;, &#39;PPa&#39;, &#39;PR&#39;, &#39;PRy&#39;, &#39;PS&#39;, &#39;PSt&#39;, &#39;PT&#39;, &#39;PV&#39;, &#39;PW&#39;, &#39;PWb&#39;, &#39;Pa&#39;, &#39;Padu&#39;, &#39;Parcmin&#39;, &#39;Parcsec&#39;, &#39;Pascal&#39;, &#39;Pau&#39;, &#39;Pb&#39;, &#39;Pbarn&#39;, &#39;Pbeam&#39;, &#39;Pbin&#39;, &#39;Pbit&#39;, &#39;Pbyte&#39;, &#39;Pcd&#39;, &#39;Pchan&#39;, &#39;Pcount&#39;, &#39;Pct&#39;, &#39;Pd&#39;, &#39;Pdeg&#39;, &#39;Pdyn&#39;, &#39;PeV&#39;, &#39;Perg&#39;, &#39;Pg&#39;, &#39;Ph&#39;, &#39;PhysicalType&#39;, &#39;PiB&#39;, &#39;Pib&#39;, &#39;Pibit&#39;, &#39;Pibyte&#39;, &#39;Pk&#39;, &#39;Pl&#39;, &#39;Plm&#39;, &#39;Plx&#39;, &#39;Plyr&#39;, &#39;Pm&#39;, &#39;Pmag&#39;, &#39;Pmin&#39;, &#39;Pmol&#39;, &#39;Pohm&#39;, &#39;Ppc&#39;, &#39;Pph&#39;, &#39;Pphoton&#39;, &#39;Ppix&#39;, &#39;Ppixel&#39;, &#39;Prad&#39;, &#39;PrefixUnit&#39;, &#39;Ps&#39;, &#39;Psr&#39;, &#39;Pu&#39;, &#39;Pvox&#39;, &#39;Pvoxel&#39;, &#39;Pyr&#39;, &#39;Quantity&#39;, &#39;QuantityInfo&#39;, &#39;QuantityInfoBase&#39;, &#39;R&#39;, &#39;R_earth&#39;, &#39;R_jup&#39;, &#39;R_jupiter&#39;, &#39;R_sun&#39;, &#39;Rayleigh&#39;, &#39;Rearth&#39;, &#39;Rjup&#39;, &#39;Rjupiter&#39;, &#39;Rsun&#39;, &#39;Ry&#39;, &#39;S&#39;, &#39;ST&#39;, &#39;STflux&#39;, &#39;STmag&#39;, &#39;Siemens&#39;, &#39;SpecificTypeQuantity&#39;, &#39;St&#39;, &#39;Sun&#39;, &#39;T&#39;, &#39;TA&#39;, &#39;TAU&#39;, &#39;TB&#39;, &#39;TBa&#39;, &#39;TC&#39;, &#39;TD&#39;, &#39;TF&#39;, &#39;TG&#39;, &#39;TGal&#39;, &#39;TH&#39;, &#39;THz&#39;, &#39;TJ&#39;, &#39;TJy&#39;, &#39;TK&#39;, &#39;TL&#39;, &#39;TN&#39;, &#39;TOhm&#39;, &#39;TP&#39;, &#39;TPa&#39;, &#39;TR&#39;, &#39;TRy&#39;, &#39;TS&#39;, &#39;TSt&#39;, &#39;TT&#39;, &#39;TV&#39;, &#39;TW&#39;, &#39;TWb&#39;, &#39;Ta&#39;, &#39;Tadu&#39;, &#39;Tarcmin&#39;, &#39;Tarcsec&#39;, &#39;Tau&#39;, &#39;Tb&#39;, &#39;Tbarn&#39;, &#39;Tbeam&#39;, &#39;Tbin&#39;, &#39;Tbit&#39;, &#39;Tbyte&#39;, &#39;Tcd&#39;, &#39;Tchan&#39;, &#39;Tcount&#39;, &#39;Tct&#39;, &#39;Td&#39;, &#39;Tdeg&#39;, &#39;Tdyn&#39;, &#39;TeV&#39;, &#39;Terg&#39;, &#39;Tesla&#39;, &#39;Tg&#39;, &#39;Th&#39;, &#39;TiB&#39;, &#39;Tib&#39;, &#39;Tibit&#39;, &#39;Tibyte&#39;, &#39;Tk&#39;, &#39;Tl&#39;, &#39;Tlm&#39;, &#39;Tlx&#39;, &#39;Tlyr&#39;, &#39;Tm&#39;, &#39;Tmag&#39;, &#39;Tmin&#39;, &#39;Tmol&#39;, &#39;Tohm&#39;, &#39;Torr&#39;, &#39;Tpc&#39;, &#39;Tph&#39;, &#39;Tphoton&#39;, &#39;Tpix&#39;, &#39;Tpixel&#39;, &#39;Trad&#39;, &#39;Ts&#39;, &#39;Tsr&#39;, &#39;Tu&#39;, &#39;Tvox&#39;, &#39;Tvoxel&#39;, &#39;Tyr&#39;, &#39;Unit&#39;, &#39;UnitBase&#39;, &#39;UnitConversionError&#39;, &#39;UnitTypeError&#39;, &#39;UnitsError&#39;, &#39;UnitsWarning&#39;, &#39;UnrecognizedUnit&#39;, &#39;V&#39;, &#39;Volt&#39;, &#39;W&#39;, &#39;Watt&#39;, &#39;Wb&#39;, &#39;Weber&#39;, &#39;YA&#39;, &#39;YAU&#39;, &#39;YB&#39;, &#39;YBa&#39;, &#39;YC&#39;, &#39;YD&#39;, &#39;YF&#39;, &#39;YG&#39;, &#39;YGal&#39;, &#39;YH&#39;, &#39;YHz&#39;, &#39;YJ&#39;, &#39;YJy&#39;, &#39;YK&#39;, &#39;YL&#39;, &#39;YN&#39;, &#39;YOhm&#39;, &#39;YP&#39;, &#39;YPa&#39;, &#39;YR&#39;, &#39;YRy&#39;, &#39;YS&#39;, &#39;YSt&#39;, &#39;YT&#39;, &#39;YV&#39;, &#39;YW&#39;, &#39;YWb&#39;, &#39;Ya&#39;, &#39;Yadu&#39;, &#39;Yarcmin&#39;, &#39;Yarcsec&#39;, &#39;Yau&#39;, &#39;Yb&#39;, &#39;Ybarn&#39;, &#39;Ybeam&#39;, &#39;Ybin&#39;, &#39;Ybit&#39;, &#39;Ybyte&#39;, &#39;Ycd&#39;, &#39;Ychan&#39;, &#39;Ycount&#39;, &#39;Yct&#39;, &#39;Yd&#39;, &#39;Ydeg&#39;, &#39;Ydyn&#39;, &#39;YeV&#39;, &#39;Yerg&#39;, &#39;Yg&#39;, &#39;Yh&#39;, &#39;Yk&#39;, &#39;Yl&#39;, &#39;Ylm&#39;, &#39;Ylx&#39;, &#39;Ylyr&#39;, &#39;Ym&#39;, &#39;Ymag&#39;, &#39;Ymin&#39;, &#39;Ymol&#39;, &#39;Yohm&#39;, &#39;Ypc&#39;, &#39;Yph&#39;, &#39;Yphoton&#39;, &#39;Ypix&#39;, &#39;Ypixel&#39;, &#39;Yrad&#39;, &#39;Ys&#39;, &#39;Ysr&#39;, &#39;Yu&#39;, &#39;Yvox&#39;, &#39;Yvoxel&#39;, &#39;Yyr&#39;, &#39;ZA&#39;, &#39;ZAU&#39;, &#39;ZB&#39;, &#39;ZBa&#39;, &#39;ZC&#39;, &#39;ZD&#39;, &#39;ZF&#39;, &#39;ZG&#39;, &#39;ZGal&#39;, &#39;ZH&#39;, &#39;ZHz&#39;, &#39;ZJ&#39;, &#39;ZJy&#39;, &#39;ZK&#39;, &#39;ZL&#39;, &#39;ZN&#39;, &#39;ZOhm&#39;, &#39;ZP&#39;, &#39;ZPa&#39;, &#39;ZR&#39;, &#39;ZRy&#39;, &#39;ZS&#39;, &#39;ZSt&#39;, &#39;ZT&#39;, &#39;ZV&#39;, &#39;ZW&#39;, &#39;ZWb&#39;, &#39;Za&#39;, &#39;Zadu&#39;, &#39;Zarcmin&#39;, &#39;Zarcsec&#39;, &#39;Zau&#39;, &#39;Zb&#39;, &#39;Zbarn&#39;, &#39;Zbeam&#39;, &#39;Zbin&#39;, &#39;Zbit&#39;, &#39;Zbyte&#39;, &#39;Zcd&#39;, &#39;Zchan&#39;, &#39;Zcount&#39;, &#39;Zct&#39;, &#39;Zd&#39;, &#39;Zdeg&#39;, &#39;Zdyn&#39;, &#39;ZeV&#39;, &#39;Zerg&#39;, &#39;Zg&#39;, &#39;Zh&#39;, &#39;Zk&#39;, &#39;Zl&#39;, &#39;Zlm&#39;, &#39;Zlx&#39;, &#39;Zlyr&#39;, &#39;Zm&#39;, &#39;Zmag&#39;, &#39;Zmin&#39;, &#39;Zmol&#39;, &#39;Zohm&#39;, &#39;Zpc&#39;, &#39;Zph&#39;, &#39;Zphoton&#39;, &#39;Zpix&#39;, &#39;Zpixel&#39;, &#39;Zrad&#39;, &#39;Zs&#39;, &#39;Zsr&#39;, &#39;Zu&#39;, &#39;Zvox&#39;, &#39;Zvoxel&#39;, &#39;Zyr&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__path__&#39;, &#39;__spec__&#39;, &#39;a&#39;, &#39;aA&#39;, &#39;aAU&#39;, &#39;aB&#39;, &#39;aBa&#39;, &#39;aC&#39;, &#39;aD&#39;, &#39;aF&#39;, &#39;aG&#39;, &#39;aGal&#39;, &#39;aH&#39;, &#39;aHz&#39;, &#39;aJ&#39;, &#39;aJy&#39;, &#39;aK&#39;, &#39;aL&#39;, &#39;aN&#39;, &#39;aOhm&#39;, &#39;aP&#39;, &#39;aPa&#39;, &#39;aR&#39;, &#39;aRy&#39;, &#39;aS&#39;, &#39;aSt&#39;, &#39;aT&#39;, &#39;aV&#39;, &#39;aW&#39;, &#39;aWb&#39;, &#39;aa&#39;, &#39;aadu&#39;, &#39;aarcmin&#39;, &#39;aarcsec&#39;, &#39;aau&#39;, &#39;ab&#39;, &#39;abA&#39;, &#39;abC&#39;, &#39;abampere&#39;, &#39;abarn&#39;, &#39;abcoulomb&#39;, &#39;abeam&#39;, &#39;abin&#39;, &#39;abit&#39;, &#39;abyte&#39;, &#39;acd&#39;, &#39;achan&#39;, &#39;acount&#39;, &#39;act&#39;, &#39;ad&#39;, &#39;add_enabled_aliases&#39;, &#39;add_enabled_equivalencies&#39;, &#39;add_enabled_units&#39;, &#39;adeg&#39;, &#39;adu&#39;, &#39;adyn&#39;, &#39;aeV&#39;, &#39;aerg&#39;, &#39;ag&#39;, &#39;ah&#39;, &#39;ak&#39;, &#39;al&#39;, &#39;allclose&#39;, &#39;alm&#39;, &#39;alx&#39;, &#39;alyr&#39;, &#39;am&#39;, &#39;amag&#39;, &#39;amin&#39;, &#39;amol&#39;, &#39;amp&#39;, &#39;ampere&#39;, &#39;angstrom&#39;, &#39;annum&#39;, &#39;aohm&#39;, &#39;apc&#39;, &#39;aph&#39;, &#39;aphoton&#39;, &#39;apix&#39;, &#39;apixel&#39;, &#39;arad&#39;, &#39;arcmin&#39;, &#39;arcminute&#39;, &#39;arcsec&#39;, &#39;arcsecond&#39;, &#39;asr&#39;, &#39;astronomical_unit&#39;, &#39;astrophys&#39;, &#39;attoBarye&#39;, &#39;attoDa&#39;, &#39;attoDalton&#39;, &#39;attoDebye&#39;, &#39;attoFarad&#39;, &#39;attoGauss&#39;, &#39;attoHenry&#39;, &#39;attoHertz&#39;, &#39;attoJansky&#39;, &#39;attoJoule&#39;, &#39;attoKayser&#39;, &#39;attoKelvin&#39;, &#39;attoNewton&#39;, &#39;attoOhm&#39;, &#39;attoPascal&#39;, &#39;attoRayleigh&#39;, &#39;attoSiemens&#39;, &#39;attoTesla&#39;, &#39;attoVolt&#39;, &#39;attoWatt&#39;, &#39;attoWeber&#39;, &#39;attoamp&#39;, &#39;attoampere&#39;, &#39;attoannum&#39;, &#39;attoarcminute&#39;, &#39;attoarcsecond&#39;, &#39;attoastronomical_unit&#39;, &#39;attobarn&#39;, &#39;attobarye&#39;, &#39;attobit&#39;, &#39;attobyte&#39;, &#39;attocandela&#39;, &#39;attocoulomb&#39;, &#39;attocount&#39;, &#39;attoday&#39;, &#39;attodebye&#39;, &#39;attodegree&#39;, &#39;attodyne&#39;, &#39;attoelectronvolt&#39;, &#39;attofarad&#39;, &#39;attogal&#39;, &#39;attogauss&#39;, &#39;attogram&#39;, &#39;attohenry&#39;, &#39;attohertz&#39;, &#39;attohour&#39;, &#39;attohr&#39;, &#39;attojansky&#39;, &#39;attojoule&#39;, &#39;attokayser&#39;, &#39;attolightyear&#39;, &#39;attoliter&#39;, &#39;attolumen&#39;, &#39;attolux&#39;, &#39;attometer&#39;, &#39;attominute&#39;, &#39;attomole&#39;, &#39;attonewton&#39;, &#39;attoparsec&#39;, &#39;attopascal&#39;, &#39;attophoton&#39;, &#39;attopixel&#39;, &#39;attopoise&#39;, &#39;attoradian&#39;, &#39;attorayleigh&#39;, &#39;attorydberg&#39;, &#39;attosecond&#39;, &#39;attosiemens&#39;, &#39;attosteradian&#39;, &#39;attostokes&#39;, &#39;attotesla&#39;, &#39;attovolt&#39;, &#39;attovoxel&#39;, &#39;attowatt&#39;, &#39;attoweber&#39;, &#39;attoyear&#39;, &#39;au&#39;, &#39;avox&#39;, &#39;avoxel&#39;, &#39;ayr&#39;, &#39;b&#39;, &#39;bar&#39;, &#39;barn&#39;, &#39;barye&#39;, &#39;beam&#39;, &#39;beam_angular_area&#39;, &#39;becquerel&#39;, &#39;bin&#39;, &#39;binary_prefixes&#39;, &#39;bit&#39;, &#39;bol&#39;, &#39;brightness_temperature&#39;, &#39;byte&#39;, &#39;cA&#39;, &#39;cAU&#39;, &#39;cB&#39;, &#39;cBa&#39;, &#39;cC&#39;, &#39;cD&#39;, &#39;cF&#39;, &#39;cG&#39;, &#39;cGal&#39;, &#39;cH&#39;, &#39;cHz&#39;, &#39;cJ&#39;, &#39;cJy&#39;, &#39;cK&#39;, &#39;cL&#39;, &#39;cN&#39;, &#39;cOhm&#39;, &#39;cP&#39;, &#39;cPa&#39;, &#39;cR&#39;, &#39;cRy&#39;, &#39;cS&#39;, &#39;cSt&#39;, &#39;cT&#39;, &#39;cV&#39;, &#39;cW&#39;, &#39;cWb&#39;, &#39;ca&#39;, &#39;cadu&#39;, &#39;candela&#39;, &#39;carcmin&#39;, &#39;carcsec&#39;, &#39;cau&#39;, &#39;cb&#39;, &#39;cbarn&#39;, &#39;cbeam&#39;, &#39;cbin&#39;, &#39;cbit&#39;, &#39;cbyte&#39;, &#39;ccd&#39;, &#39;cchan&#39;, &#39;ccount&#39;, &#39;cct&#39;, &#39;cd&#39;, &#39;cdeg&#39;, &#39;cdyn&#39;, &#39;ceV&#39;, &#39;centiBarye&#39;, &#39;centiDa&#39;, &#39;centiDalton&#39;, &#39;centiDebye&#39;, &#39;centiFarad&#39;, &#39;centiGauss&#39;, &#39;centiHenry&#39;, &#39;centiHertz&#39;, &#39;centiJansky&#39;, &#39;centiJoule&#39;, &#39;centiKayser&#39;, &#39;centiKelvin&#39;, &#39;centiNewton&#39;, &#39;centiOhm&#39;, &#39;centiPascal&#39;, &#39;centiRayleigh&#39;, &#39;centiSiemens&#39;, &#39;centiTesla&#39;, &#39;centiVolt&#39;, &#39;centiWatt&#39;, &#39;centiWeber&#39;, &#39;centiamp&#39;, &#39;centiampere&#39;, &#39;centiannum&#39;, &#39;centiarcminute&#39;, &#39;centiarcsecond&#39;, &#39;centiastronomical_unit&#39;, &#39;centibarn&#39;, &#39;centibarye&#39;, &#39;centibit&#39;, &#39;centibyte&#39;, &#39;centicandela&#39;, &#39;centicoulomb&#39;, &#39;centicount&#39;, &#39;centiday&#39;, &#39;centidebye&#39;, &#39;centidegree&#39;, &#39;centidyne&#39;, &#39;centielectronvolt&#39;, &#39;centifarad&#39;, &#39;centigal&#39;, &#39;centigauss&#39;, &#39;centigram&#39;, &#39;centihenry&#39;, &#39;centihertz&#39;, &#39;centihour&#39;, &#39;centihr&#39;, &#39;centijansky&#39;, &#39;centijoule&#39;, &#39;centikayser&#39;, &#39;centilightyear&#39;, &#39;centiliter&#39;, &#39;centilumen&#39;, &#39;centilux&#39;, &#39;centimeter&#39;, &#39;centiminute&#39;, &#39;centimole&#39;, &#39;centinewton&#39;, &#39;centiparsec&#39;, &#39;centipascal&#39;, &#39;centiphoton&#39;, &#39;centipixel&#39;, &#39;centipoise&#39;, &#39;centiradian&#39;, &#39;centirayleigh&#39;, &#39;centirydberg&#39;, &#39;centisecond&#39;, &#39;centisiemens&#39;, &#39;centisteradian&#39;, &#39;centistokes&#39;, &#39;centitesla&#39;, &#39;centivolt&#39;, &#39;centivoxel&#39;, &#39;centiwatt&#39;, &#39;centiweber&#39;, &#39;centiyear&#39;, &#39;cerg&#39;, &#39;cg&#39;, &#39;cgs&#39;, &#39;ch&#39;, &#39;chan&#39;, &#39;ck&#39;, &#39;cl&#39;, &#39;clm&#39;, &#39;clx&#39;, &#39;clyr&#39;, &#39;cm&#39;, &#39;cmag&#39;, &#39;cmin&#39;, &#39;cmol&#39;, &#39;cohm&#39;, &#39;core&#39;, &#39;coulomb&#39;, &#39;count&#39;, &#39;cpc&#39;, &#39;cph&#39;, &#39;cphoton&#39;, &#39;cpix&#39;, &#39;cpixel&#39;, &#39;crad&#39;, &#39;cs&#39;, &#39;csr&#39;, &#39;ct&#39;, &#39;cu&#39;, &#39;curie&#39;, &#39;cvox&#39;, &#39;cvoxel&#39;, &#39;cy&#39;, &#39;cycle&#39;, &#39;cyr&#39;, &#39;d&#39;, &#39;dA&#39;, &#39;dAU&#39;, &#39;dB&#39;, &#39;dBa&#39;, &#39;dC&#39;, &#39;dD&#39;, &#39;dF&#39;, &#39;dG&#39;, &#39;dGal&#39;, &#39;dH&#39;, &#39;dHz&#39;, &#39;dJ&#39;, &#39;dJy&#39;, &#39;dK&#39;, &#39;dL&#39;, &#39;dN&#39;, &#39;dOhm&#39;, &#39;dP&#39;, &#39;dPa&#39;, &#39;dR&#39;, &#39;dRy&#39;, &#39;dS&#39;, &#39;dSt&#39;, &#39;dT&#39;, &#39;dV&#39;, &#39;dW&#39;, &#39;dWb&#39;, &#39;da&#39;, &#39;daA&#39;, &#39;daAU&#39;, &#39;daB&#39;, &#39;daBa&#39;, &#39;daC&#39;, &#39;daD&#39;, &#39;daF&#39;, &#39;daG&#39;, &#39;daGal&#39;, &#39;daH&#39;, &#39;daHz&#39;, &#39;daJ&#39;, &#39;daJy&#39;, &#39;daK&#39;, &#39;daL&#39;, &#39;daN&#39;, &#39;daOhm&#39;, &#39;daP&#39;, &#39;daPa&#39;, &#39;daR&#39;, &#39;daRy&#39;, &#39;daS&#39;, &#39;daSt&#39;, &#39;daT&#39;, &#39;daV&#39;, &#39;daW&#39;, &#39;daWb&#39;, &#39;daa&#39;, &#39;daadu&#39;, &#39;daarcmin&#39;, &#39;daarcsec&#39;, &#39;daau&#39;, &#39;dab&#39;, &#39;dabarn&#39;, &#39;dabeam&#39;, &#39;dabin&#39;, &#39;dabit&#39;, &#39;dabyte&#39;, &#39;dacd&#39;, &#39;dachan&#39;, &#39;dacount&#39;, &#39;dact&#39;, &#39;dad&#39;, &#39;dadeg&#39;, &#39;dadu&#39;, &#39;dadyn&#39;, &#39;daeV&#39;, &#39;daerg&#39;, &#39;dag&#39;, &#39;dah&#39;, &#39;dak&#39;, &#39;dal&#39;, &#39;dalm&#39;, &#39;dalx&#39;, &#39;dalyr&#39;, &#39;dam&#39;, &#39;damag&#39;, &#39;damin&#39;, &#39;damol&#39;, &#39;daohm&#39;, &#39;dapc&#39;, &#39;daph&#39;, &#39;daphoton&#39;, &#39;dapix&#39;, &#39;dapixel&#39;, &#39;darad&#39;, &#39;darcmin&#39;, &#39;darcsec&#39;, &#39;das&#39;, &#39;dasr&#39;, &#39;dau&#39;, &#39;davox&#39;, &#39;davoxel&#39;, &#39;day&#39;, &#39;dayr&#39;, &#39;db&#39;, &#39;dbarn&#39;, &#39;dbeam&#39;, &#39;dbin&#39;, &#39;dbit&#39;, &#39;dcd&#39;, &#39;dchan&#39;, &#39;dcount&#39;, &#39;dct&#39;, &#39;dd&#39;, &#39;ddeg&#39;, &#39;ddyn&#39;, &#39;deV&#39;, &#39;debye&#39;, &#39;decaBarye&#39;, &#39;decaDa&#39;, &#39;decaDalton&#39;, &#39;decaDebye&#39;, &#39;decaFarad&#39;, &#39;decaGauss&#39;, &#39;decaHenry&#39;, &#39;decaHertz&#39;, &#39;decaJansky&#39;, &#39;decaJoule&#39;, &#39;decaKayser&#39;, &#39;decaKelvin&#39;, &#39;decaNewton&#39;, &#39;decaOhm&#39;, &#39;decaPascal&#39;, &#39;decaRayleigh&#39;, &#39;decaSiemens&#39;, &#39;decaTesla&#39;, &#39;decaVolt&#39;, &#39;decaWatt&#39;, &#39;decaWeber&#39;, &#39;decaamp&#39;, &#39;decaampere&#39;, &#39;decaannum&#39;, &#39;decaarcminute&#39;, &#39;decaarcsecond&#39;, &#39;decaastronomical_unit&#39;, &#39;decabarn&#39;, &#39;decabarye&#39;, &#39;decabit&#39;, &#39;decabyte&#39;, &#39;decacandela&#39;, &#39;decacoulomb&#39;, &#39;decacount&#39;, &#39;decaday&#39;, &#39;decadebye&#39;, &#39;decadegree&#39;, &#39;decadyne&#39;, &#39;decaelectronvolt&#39;, &#39;decafarad&#39;, &#39;decagal&#39;, &#39;decagauss&#39;, &#39;decagram&#39;, &#39;decahenry&#39;, &#39;decahertz&#39;, &#39;decahour&#39;, &#39;decahr&#39;, &#39;decajansky&#39;, &#39;decajoule&#39;, &#39;decakayser&#39;, &#39;decalightyear&#39;, &#39;decaliter&#39;, &#39;decalumen&#39;, &#39;decalux&#39;, &#39;decameter&#39;, &#39;decaminute&#39;, &#39;decamole&#39;, &#39;decanewton&#39;, &#39;decaparsec&#39;, &#39;decapascal&#39;, &#39;decaphoton&#39;, &#39;decapixel&#39;, &#39;decapoise&#39;, &#39;decaradian&#39;, &#39;decarayleigh&#39;, &#39;decarydberg&#39;, &#39;decasecond&#39;, &#39;decasiemens&#39;, &#39;decasteradian&#39;, &#39;decastokes&#39;, &#39;decatesla&#39;, &#39;decavolt&#39;, &#39;decavoxel&#39;, &#39;decawatt&#39;, &#39;decaweber&#39;, &#39;decayear&#39;, &#39;deciBarye&#39;, &#39;deciDa&#39;, &#39;deciDalton&#39;, &#39;deciDebye&#39;, &#39;deciFarad&#39;, &#39;deciGauss&#39;, &#39;deciHenry&#39;, &#39;deciHertz&#39;, &#39;deciJansky&#39;, &#39;deciJoule&#39;, &#39;deciKayser&#39;, &#39;deciKelvin&#39;, &#39;deciNewton&#39;, &#39;deciOhm&#39;, &#39;deciPascal&#39;, &#39;deciRayleigh&#39;, &#39;deciSiemens&#39;, &#39;deciTesla&#39;, &#39;deciVolt&#39;, &#39;deciWatt&#39;, &#39;deciWeber&#39;, &#39;deciamp&#39;, &#39;deciampere&#39;, &#39;deciannum&#39;, &#39;deciarcminute&#39;, &#39;deciarcsecond&#39;, &#39;deciastronomical_unit&#39;, &#39;decibarn&#39;, &#39;decibarye&#39;, &#39;decibel&#39;, &#39;decibit&#39;, &#39;decibyte&#39;, &#39;decicandela&#39;, &#39;decicoulomb&#39;, &#39;decicount&#39;, &#39;deciday&#39;, &#39;decidebye&#39;, &#39;decidegree&#39;, &#39;decidyne&#39;, &#39;decielectronvolt&#39;, &#39;decifarad&#39;, &#39;decigal&#39;, &#39;decigauss&#39;, &#39;decigram&#39;, &#39;decihenry&#39;, &#39;decihertz&#39;, &#39;decihour&#39;, &#39;decihr&#39;, &#39;decijansky&#39;, &#39;decijoule&#39;, &#39;decikayser&#39;, &#39;decilightyear&#39;, &#39;deciliter&#39;, &#39;decilumen&#39;, &#39;decilux&#39;, &#39;decimeter&#39;, &#39;deciminute&#39;, &#39;decimole&#39;, &#39;decinewton&#39;, &#39;deciparsec&#39;, &#39;decipascal&#39;, &#39;deciphoton&#39;, &#39;decipixel&#39;, &#39;decipoise&#39;, &#39;deciradian&#39;, &#39;decirayleigh&#39;, &#39;decirydberg&#39;, &#39;decisecond&#39;, &#39;decisiemens&#39;, &#39;decisteradian&#39;, &#39;decistokes&#39;, &#39;decitesla&#39;, &#39;decivolt&#39;, &#39;decivoxel&#39;, &#39;deciwatt&#39;, &#39;deciweber&#39;, &#39;deciyear&#39;, &#39;decorators&#39;, &#39;def_physical_type&#39;, &#39;def_unit&#39;, &#39;deg&#39;, &#39;deg_C&#39;, &#39;degree&#39;, &#39;dekaBarye&#39;, &#39;dekaDa&#39;, &#39;dekaDalton&#39;, &#39;dekaDebye&#39;, &#39;dekaFarad&#39;, &#39;dekaGauss&#39;, &#39;dekaHenry&#39;, &#39;dekaHertz&#39;, &#39;dekaJansky&#39;, &#39;dekaJoule&#39;, &#39;dekaKayser&#39;, &#39;dekaKelvin&#39;, &#39;dekaNewton&#39;, &#39;dekaOhm&#39;, &#39;dekaPascal&#39;, &#39;dekaRayleigh&#39;, &#39;dekaSiemens&#39;, &#39;dekaTesla&#39;, &#39;dekaVolt&#39;, &#39;dekaWatt&#39;, &#39;dekaWeber&#39;, &#39;dekaamp&#39;, &#39;dekaampere&#39;, &#39;dekaannum&#39;, &#39;dekaarcminute&#39;, &#39;dekaarcsecond&#39;, &#39;dekaastronomical_unit&#39;, &#39;dekabarn&#39;, &#39;dekabarye&#39;, &#39;dekabit&#39;, &#39;dekabyte&#39;, &#39;dekacandela&#39;, &#39;dekacoulomb&#39;, &#39;dekacount&#39;, &#39;dekaday&#39;, &#39;dekadebye&#39;, &#39;dekadegree&#39;, &#39;dekadyne&#39;, &#39;dekaelectronvolt&#39;, &#39;dekafarad&#39;, &#39;dekagal&#39;, &#39;dekagauss&#39;, &#39;dekagram&#39;, &#39;dekahenry&#39;, &#39;dekahertz&#39;, &#39;dekahour&#39;, &#39;dekahr&#39;, &#39;dekajansky&#39;, &#39;dekajoule&#39;, &#39;dekakayser&#39;, &#39;dekalightyear&#39;, &#39;dekaliter&#39;, &#39;dekalumen&#39;, &#39;dekalux&#39;, &#39;dekameter&#39;, &#39;dekaminute&#39;, &#39;dekamole&#39;, &#39;dekanewton&#39;, &#39;dekaparsec&#39;, &#39;dekapascal&#39;, &#39;dekaphoton&#39;, &#39;dekapixel&#39;, &#39;dekapoise&#39;, &#39;dekaradian&#39;, &#39;dekarayleigh&#39;, &#39;dekarydberg&#39;, &#39;dekasecond&#39;, &#39;dekasiemens&#39;, &#39;dekasteradian&#39;, &#39;dekastokes&#39;, &#39;dekatesla&#39;, &#39;dekavolt&#39;, &#39;dekavoxel&#39;, &#39;dekawatt&#39;, &#39;dekaweber&#39;, &#39;dekayear&#39;, &#39;derg&#39;, &#39;dex&#39;, &#39;dg&#39;, &#39;dh&#39;, &#39;dimensionless_angles&#39;, &#39;dimensionless_unscaled&#39;, &#39;dk&#39;, &#39;dl&#39;, &#39;dlm&#39;, &#39;dlx&#39;, &#39;dlyr&#39;, &#39;dm&#39;, &#39;dmag&#39;, &#39;dmin&#39;, &#39;dmol&#39;, &#39;dn&#39;, &#39;dohm&#39;, &#39;doppler_optical&#39;, &#39;doppler_radio&#39;, &#39;doppler_relativistic&#39;, &#39;dpc&#39;, &#39;dph&#39;, &#39;dphoton&#39;, &#39;dpix&#39;, &#39;dpixel&#39;, &#39;drad&#39;, &#39;ds&#39;, &#39;dsr&#39;, &#39;du&#39;, &#39;dvox&#39;, &#39;dvoxel&#39;, &#39;dyn&#39;, &#39;dyne&#39;, &#39;dyr&#39;, &#39;eV&#39;, &#39;earthMass&#39;, &#39;earthRad&#39;, &#39;electron&#39;, &#39;electronvolt&#39;, &#39;equivalencies&#39;, &#39;erg&#39;, &#39;esu&#39;, &#39;exaBarye&#39;, &#39;exaDa&#39;, &#39;exaDalton&#39;, &#39;exaDebye&#39;, &#39;exaFarad&#39;, &#39;exaGauss&#39;, &#39;exaHenry&#39;, &#39;exaHertz&#39;, &#39;exaJansky&#39;, &#39;exaJoule&#39;, &#39;exaKayser&#39;, &#39;exaKelvin&#39;, &#39;exaNewton&#39;, &#39;exaOhm&#39;, &#39;exaPascal&#39;, &#39;exaRayleigh&#39;, &#39;exaSiemens&#39;, &#39;exaTesla&#39;, &#39;exaVolt&#39;, &#39;exaWatt&#39;, &#39;exaWeber&#39;, &#39;exaamp&#39;, &#39;exaampere&#39;, &#39;exaannum&#39;, &#39;exaarcminute&#39;, &#39;exaarcsecond&#39;, &#39;exaastronomical_unit&#39;, &#39;exabarn&#39;, &#39;exabarye&#39;, &#39;exabit&#39;, &#39;exabyte&#39;, &#39;exacandela&#39;, &#39;exacoulomb&#39;, &#39;exacount&#39;, &#39;exaday&#39;, &#39;exadebye&#39;, &#39;exadegree&#39;, &#39;exadyne&#39;, &#39;exaelectronvolt&#39;, &#39;exafarad&#39;, &#39;exagal&#39;, &#39;exagauss&#39;, &#39;exagram&#39;, &#39;exahenry&#39;, &#39;exahertz&#39;, &#39;exahour&#39;, &#39;exahr&#39;, &#39;exajansky&#39;, &#39;exajoule&#39;, &#39;exakayser&#39;, &#39;exalightyear&#39;, &#39;exaliter&#39;, &#39;exalumen&#39;, &#39;exalux&#39;, &#39;exameter&#39;, &#39;examinute&#39;, &#39;examole&#39;, &#39;exanewton&#39;, &#39;exaparsec&#39;, &#39;exapascal&#39;, &#39;exaphoton&#39;, &#39;exapixel&#39;, &#39;exapoise&#39;, &#39;exaradian&#39;, &#39;exarayleigh&#39;, &#39;exarydberg&#39;, &#39;exasecond&#39;, &#39;exasiemens&#39;, &#39;exasteradian&#39;, &#39;exastokes&#39;, &#39;exatesla&#39;, &#39;exavolt&#39;, &#39;exavoxel&#39;, &#39;exawatt&#39;, &#39;exaweber&#39;, &#39;exayear&#39;, &#39;exbibit&#39;, &#39;exbibyte&#39;, &#39;fA&#39;, &#39;fAU&#39;, &#39;fB&#39;, &#39;fBa&#39;, &#39;fC&#39;, &#39;fD&#39;, &#39;fF&#39;, &#39;fG&#39;, &#39;fGal&#39;, &#39;fH&#39;, &#39;fHz&#39;, &#39;fJ&#39;, &#39;fJy&#39;, &#39;fK&#39;, &#39;fL&#39;, &#39;fN&#39;, &#39;fOhm&#39;, &#39;fP&#39;, &#39;fPa&#39;, &#39;fR&#39;, &#39;fRy&#39;, &#39;fS&#39;, &#39;fSt&#39;, &#39;fT&#39;, &#39;fV&#39;, &#39;fW&#39;, &#39;fWb&#39;, &#39;f_bol&#39;, &#39;fa&#39;, &#39;fadu&#39;, &#39;farad&#39;, &#39;farcmin&#39;, &#39;farcsec&#39;, &#39;fau&#39;, &#39;fb&#39;, &#39;fbarn&#39;, &#39;fbeam&#39;, &#39;fbin&#39;, &#39;fbit&#39;, &#39;fbyte&#39;, &#39;fcd&#39;, &#39;fchan&#39;, &#39;fcount&#39;, &#39;fct&#39;, &#39;fd&#39;, &#39;fdeg&#39;, &#39;fdyn&#39;, &#39;feV&#39;, &#39;femtoBarye&#39;, &#39;femtoDa&#39;, &#39;femtoDalton&#39;, &#39;femtoDebye&#39;, &#39;femtoFarad&#39;, &#39;femtoGauss&#39;, &#39;femtoHenry&#39;, &#39;femtoHertz&#39;, &#39;femtoJansky&#39;, &#39;femtoJoule&#39;, &#39;femtoKayser&#39;, &#39;femtoKelvin&#39;, &#39;femtoNewton&#39;, &#39;femtoOhm&#39;, &#39;femtoPascal&#39;, &#39;femtoRayleigh&#39;, &#39;femtoSiemens&#39;, &#39;femtoTesla&#39;, &#39;femtoVolt&#39;, &#39;femtoWatt&#39;, &#39;femtoWeber&#39;, &#39;femtoamp&#39;, &#39;femtoampere&#39;, &#39;femtoannum&#39;, &#39;femtoarcminute&#39;, &#39;femtoarcsecond&#39;, &#39;femtoastronomical_unit&#39;, &#39;femtobarn&#39;, &#39;femtobarye&#39;, &#39;femtobit&#39;, &#39;femtobyte&#39;, &#39;femtocandela&#39;, &#39;femtocoulomb&#39;, &#39;femtocount&#39;, &#39;femtoday&#39;, &#39;femtodebye&#39;, &#39;femtodegree&#39;, &#39;femtodyne&#39;, &#39;femtoelectronvolt&#39;, &#39;femtofarad&#39;, &#39;femtogal&#39;, &#39;femtogauss&#39;, &#39;femtogram&#39;, &#39;femtohenry&#39;, &#39;femtohertz&#39;, &#39;femtohour&#39;, &#39;femtohr&#39;, &#39;femtojansky&#39;, &#39;femtojoule&#39;, &#39;femtokayser&#39;, &#39;femtolightyear&#39;, &#39;femtoliter&#39;, &#39;femtolumen&#39;, &#39;femtolux&#39;, &#39;femtometer&#39;, &#39;femtominute&#39;, &#39;femtomole&#39;, &#39;femtonewton&#39;, &#39;femtoparsec&#39;, &#39;femtopascal&#39;, &#39;femtophoton&#39;, &#39;femtopixel&#39;, &#39;femtopoise&#39;, &#39;femtoradian&#39;, &#39;femtorayleigh&#39;, &#39;femtorydberg&#39;, &#39;femtosecond&#39;, &#39;femtosiemens&#39;, &#39;femtosteradian&#39;, &#39;femtostokes&#39;, &#39;femtotesla&#39;, &#39;femtovolt&#39;, &#39;femtovoxel&#39;, &#39;femtowatt&#39;, &#39;femtoweber&#39;, &#39;femtoyear&#39;, &#39;ferg&#39;, &#39;fg&#39;, &#39;fh&#39;, &#39;fk&#39;, &#39;fl&#39;, &#39;flm&#39;, &#39;flx&#39;, &#39;flyr&#39;, &#39;fm&#39;, &#39;fmag&#39;, &#39;fmin&#39;, &#39;fmol&#39;, &#39;fohm&#39;, &#39;format&#39;, &#39;fortnight&#39;, &#39;fpc&#39;, &#39;fph&#39;, &#39;fphoton&#39;, &#39;fpix&#39;, &#39;fpixel&#39;, &#39;frad&#39;, &#39;fs&#39;, &#39;fsr&#39;, &#39;fu&#39;, &#39;function&#39;, &#39;function_units&#39;, &#39;fvox&#39;, &#39;fvoxel&#39;, &#39;fyr&#39;, &#39;g&#39;, &#39;gal&#39;, &#39;gauss&#39;, &#39;get_current_unit_registry&#39;, &#39;get_physical_type&#39;, &#39;gibibit&#39;, &#39;gibibyte&#39;, &#39;gigaBarye&#39;, &#39;gigaDa&#39;, &#39;gigaDalton&#39;, &#39;gigaDebye&#39;, &#39;gigaFarad&#39;, &#39;gigaGauss&#39;, &#39;gigaHenry&#39;, &#39;gigaHertz&#39;, &#39;gigaJansky&#39;, &#39;gigaJoule&#39;, &#39;gigaKayser&#39;, &#39;gigaKelvin&#39;, &#39;gigaNewton&#39;, &#39;gigaOhm&#39;, &#39;gigaPascal&#39;, &#39;gigaRayleigh&#39;, &#39;gigaSiemens&#39;, &#39;gigaTesla&#39;, &#39;gigaVolt&#39;, &#39;gigaWatt&#39;, &#39;gigaWeber&#39;, &#39;gigaamp&#39;, &#39;gigaampere&#39;, &#39;gigaannum&#39;, &#39;gigaarcminute&#39;, &#39;gigaarcsecond&#39;, &#39;gigaastronomical_unit&#39;, &#39;gigabarn&#39;, &#39;gigabarye&#39;, &#39;gigabit&#39;, &#39;gigabyte&#39;, &#39;gigacandela&#39;, &#39;gigacoulomb&#39;, &#39;gigacount&#39;, &#39;gigaday&#39;, &#39;gigadebye&#39;, &#39;gigadegree&#39;, &#39;gigadyne&#39;, &#39;gigaelectronvolt&#39;, &#39;gigafarad&#39;, &#39;gigagal&#39;, &#39;gigagauss&#39;, &#39;gigagram&#39;, &#39;gigahenry&#39;, &#39;gigahertz&#39;, &#39;gigahour&#39;, &#39;gigahr&#39;, &#39;gigajansky&#39;, &#39;gigajoule&#39;, &#39;gigakayser&#39;, &#39;gigalightyear&#39;, &#39;gigaliter&#39;, &#39;gigalumen&#39;, &#39;gigalux&#39;, &#39;gigameter&#39;, &#39;gigaminute&#39;, &#39;gigamole&#39;, &#39;giganewton&#39;, &#39;gigaparsec&#39;, &#39;gigapascal&#39;, &#39;gigaphoton&#39;, &#39;gigapixel&#39;, &#39;gigapoise&#39;, &#39;gigaradian&#39;, &#39;gigarayleigh&#39;, &#39;gigarydberg&#39;, &#39;gigasecond&#39;, &#39;gigasiemens&#39;, &#39;gigasteradian&#39;, &#39;gigastokes&#39;, &#39;gigatesla&#39;, &#39;gigavolt&#39;, &#39;gigavoxel&#39;, &#39;gigawatt&#39;, &#39;gigaweber&#39;, &#39;gigayear&#39;, &#39;gram&#39;, &#39;h&#39;, &#39;hA&#39;, &#39;hAU&#39;, &#39;hB&#39;, &#39;hBa&#39;, &#39;hC&#39;, &#39;hD&#39;, &#39;hF&#39;, &#39;hG&#39;, &#39;hGal&#39;, &#39;hH&#39;, &#39;hHz&#39;, &#39;hJ&#39;, &#39;hJy&#39;, &#39;hK&#39;, &#39;hL&#39;, &#39;hN&#39;, &#39;hOhm&#39;, &#39;hP&#39;, &#39;hPa&#39;, &#39;hR&#39;, &#39;hRy&#39;, &#39;hS&#39;, &#39;hSt&#39;, &#39;hT&#39;, &#39;hV&#39;, &#39;hW&#39;, &#39;hWb&#39;, &#39;ha&#39;, &#39;hadu&#39;, &#39;harcmin&#39;, &#39;harcsec&#39;, &#39;hau&#39;, &#39;hb&#39;, &#39;hbarn&#39;, &#39;hbeam&#39;, &#39;hbin&#39;, &#39;hbit&#39;, &#39;hbyte&#39;, &#39;hcd&#39;, &#39;hchan&#39;, &#39;hcount&#39;, &#39;hct&#39;, &#39;hd&#39;, &#39;hdeg&#39;, &#39;hdyn&#39;, &#39;heV&#39;, &#39;hectoBarye&#39;, &#39;hectoDa&#39;, &#39;hectoDalton&#39;, &#39;hectoDebye&#39;, &#39;hectoFarad&#39;, &#39;hectoGauss&#39;, &#39;hectoHenry&#39;, &#39;hectoHertz&#39;, &#39;hectoJansky&#39;, &#39;hectoJoule&#39;, &#39;hectoKayser&#39;, &#39;hectoKelvin&#39;, &#39;hectoNewton&#39;, &#39;hectoOhm&#39;, &#39;hectoPascal&#39;, &#39;hectoRayleigh&#39;, &#39;hectoSiemens&#39;, &#39;hectoTesla&#39;, &#39;hectoVolt&#39;, &#39;hectoWatt&#39;, &#39;hectoWeber&#39;, &#39;hectoamp&#39;, &#39;hectoampere&#39;, &#39;hectoannum&#39;, &#39;hectoarcminute&#39;, &#39;hectoarcsecond&#39;, &#39;hectoastronomical_unit&#39;, &#39;hectobarn&#39;, &#39;hectobarye&#39;, &#39;hectobit&#39;, &#39;hectobyte&#39;, &#39;hectocandela&#39;, &#39;hectocoulomb&#39;, &#39;hectocount&#39;, &#39;hectoday&#39;, &#39;hectodebye&#39;, &#39;hectodegree&#39;, &#39;hectodyne&#39;, &#39;hectoelectronvolt&#39;, &#39;hectofarad&#39;, &#39;hectogal&#39;, &#39;hectogauss&#39;, &#39;hectogram&#39;, &#39;hectohenry&#39;, &#39;hectohertz&#39;, &#39;hectohour&#39;, &#39;hectohr&#39;, &#39;hectojansky&#39;, &#39;hectojoule&#39;, &#39;hectokayser&#39;, &#39;hectolightyear&#39;, &#39;hectoliter&#39;, &#39;hectolumen&#39;, &#39;hectolux&#39;, &#39;hectometer&#39;, &#39;hectominute&#39;, &#39;hectomole&#39;, &#39;hectonewton&#39;, &#39;hectoparsec&#39;, &#39;hectopascal&#39;, &#39;hectophoton&#39;, &#39;hectopixel&#39;, &#39;hectopoise&#39;, &#39;hectoradian&#39;, &#39;hectorayleigh&#39;, &#39;hectorydberg&#39;, &#39;hectosecond&#39;, &#39;hectosiemens&#39;, &#39;hectosteradian&#39;, &#39;hectostokes&#39;, &#39;hectotesla&#39;, &#39;hectovolt&#39;, &#39;hectovoxel&#39;, &#39;hectowatt&#39;, &#39;hectoweber&#39;, &#39;hectoyear&#39;, &#39;henry&#39;, &#39;herg&#39;, &#39;hertz&#39;, &#39;hg&#39;, &#39;hh&#39;, &#39;hk&#39;, &#39;hl&#39;, &#39;hlm&#39;, &#39;hlx&#39;, &#39;hlyr&#39;, &#39;hm&#39;, &#39;hmag&#39;, &#39;hmin&#39;, &#39;hmol&#39;, &#39;hohm&#39;, &#39;hour&#39;, &#39;hourangle&#39;, &#39;hpc&#39;, &#39;hph&#39;, &#39;hphoton&#39;, &#39;hpix&#39;, &#39;hpixel&#39;, &#39;hr&#39;, &#39;hrad&#39;, &#39;hs&#39;, &#39;hsr&#39;, &#39;hu&#39;, &#39;hvox&#39;, &#39;hvoxel&#39;, &#39;hyr&#39;, &#39;imperial&#39;, &#39;isclose&#39;, &#39;jansky&#39;, &#39;joule&#39;, &#39;jupiterMass&#39;, &#39;jupiterRad&#39;, &#39;k&#39;, &#39;kA&#39;, &#39;kAU&#39;, &#39;kB&#39;, &#39;kBa&#39;, &#39;kC&#39;, &#39;kD&#39;, &#39;kF&#39;, &#39;kG&#39;, &#39;kGal&#39;, &#39;kH&#39;, &#39;kHz&#39;, &#39;kJ&#39;, &#39;kJy&#39;, &#39;kK&#39;, &#39;kL&#39;, &#39;kN&#39;, &#39;kOhm&#39;, &#39;kP&#39;, &#39;kPa&#39;, &#39;kR&#39;, &#39;kRy&#39;, &#39;kS&#39;, &#39;kSt&#39;, &#39;kT&#39;, &#39;kV&#39;, &#39;kW&#39;, &#39;kWb&#39;, &#39;ka&#39;, &#39;kadu&#39;, &#39;karcmin&#39;, &#39;karcsec&#39;, &#39;kau&#39;, &#39;kayser&#39;, &#39;kb&#39;, &#39;kbarn&#39;, &#39;kbeam&#39;, &#39;kbin&#39;, &#39;kbit&#39;, &#39;kbyte&#39;, &#39;kcd&#39;, &#39;kchan&#39;, &#39;kcount&#39;, &#39;kct&#39;, &#39;kd&#39;, &#39;kdeg&#39;, &#39;kdyn&#39;, &#39;keV&#39;, &#39;kerg&#39;, &#39;kg&#39;, &#39;kh&#39;, &#39;kibibit&#39;, &#39;kibibyte&#39;, &#39;kiloBarye&#39;, &#39;kiloDa&#39;, &#39;kiloDalton&#39;, &#39;kiloDebye&#39;, &#39;kiloFarad&#39;, &#39;kiloGauss&#39;, &#39;kiloHenry&#39;, &#39;kiloHertz&#39;, &#39;kiloJansky&#39;, &#39;kiloJoule&#39;, &#39;kiloKayser&#39;, &#39;kiloKelvin&#39;, &#39;kiloNewton&#39;, &#39;kiloOhm&#39;, &#39;kiloPascal&#39;, &#39;kiloRayleigh&#39;, &#39;kiloSiemens&#39;, &#39;kiloTesla&#39;, &#39;kiloVolt&#39;, &#39;kiloWatt&#39;, &#39;kiloWeber&#39;, &#39;kiloamp&#39;, &#39;kiloampere&#39;, &#39;kiloannum&#39;, &#39;kiloarcminute&#39;, &#39;kiloarcsecond&#39;, &#39;kiloastronomical_unit&#39;, &#39;kilobarn&#39;, &#39;kilobarye&#39;, &#39;kilobit&#39;, &#39;kilobyte&#39;, &#39;kilocandela&#39;, &#39;kilocoulomb&#39;, &#39;kilocount&#39;, &#39;kiloday&#39;, &#39;kilodebye&#39;, &#39;kilodegree&#39;, &#39;kilodyne&#39;, &#39;kiloelectronvolt&#39;, &#39;kilofarad&#39;, &#39;kilogal&#39;, &#39;kilogauss&#39;, &#39;kilogram&#39;, &#39;kilohenry&#39;, &#39;kilohertz&#39;, &#39;kilohour&#39;, &#39;kilohr&#39;, &#39;kilojansky&#39;, &#39;kilojoule&#39;, &#39;kilokayser&#39;, &#39;kilolightyear&#39;, &#39;kiloliter&#39;, &#39;kilolumen&#39;, &#39;kilolux&#39;, &#39;kilometer&#39;, &#39;kilominute&#39;, &#39;kilomole&#39;, &#39;kilonewton&#39;, &#39;kiloparsec&#39;, &#39;kilopascal&#39;, &#39;kilophoton&#39;, &#39;kilopixel&#39;, &#39;kilopoise&#39;, &#39;kiloradian&#39;, &#39;kilorayleigh&#39;, &#39;kilorydberg&#39;, &#39;kilosecond&#39;, &#39;kilosiemens&#39;, &#39;kilosteradian&#39;, &#39;kilostokes&#39;, &#39;kilotesla&#39;, &#39;kilovolt&#39;, &#39;kilovoxel&#39;, &#39;kilowatt&#39;, &#39;kiloweber&#39;, &#39;kiloyear&#39;, &#39;kk&#39;, &#39;kl&#39;, &#39;klm&#39;, &#39;klx&#39;, &#39;klyr&#39;, &#39;km&#39;, &#39;kmag&#39;, &#39;kmin&#39;, &#39;kmol&#39;, &#39;kohm&#39;, &#39;kpc&#39;, &#39;kph&#39;, &#39;kphoton&#39;, &#39;kpix&#39;, &#39;kpixel&#39;, &#39;krad&#39;, &#39;ks&#39;, &#39;ksr&#39;, &#39;ku&#39;, &#39;kvox&#39;, &#39;kvoxel&#39;, &#39;kyr&#39;, &#39;l&#39;, &#39;lightyear&#39;, &#39;liter&#39;, &#39;littleh&#39;, &#39;lm&#39;, &#39;logarithmic&#39;, &#39;lumen&#39;, &#39;lux&#39;, &#39;lx&#39;, &#39;lyr&#39;, &#39;m&#39;, &#39;mA&#39;, &#39;mAU&#39;, &#39;mB&#39;, &#39;mBa&#39;, &#39;mC&#39;, &#39;mD&#39;, &#39;mF&#39;, &#39;mG&#39;, &#39;mGal&#39;, &#39;mH&#39;, &#39;mHz&#39;, &#39;mJ&#39;, &#39;mJy&#39;, &#39;mK&#39;, &#39;mL&#39;, &#39;mN&#39;, &#39;mOhm&#39;, &#39;mP&#39;, &#39;mPa&#39;, &#39;mR&#39;, &#39;mRy&#39;, &#39;mS&#39;, &#39;mSt&#39;, &#39;mT&#39;, &#39;mTorr&#39;, &#39;mV&#39;, &#39;mW&#39;, &#39;mWb&#39;, &#39;m_bol&#39;, &#39;ma&#39;, &#39;madu&#39;, &#39;mag&#39;, &#39;maggy&#39;, &#39;marcmin&#39;, &#39;marcsec&#39;, &#39;mas&#39;, &#39;mass_energy&#39;, &#39;mau&#39;, &#39;mb&#39;, &#39;mbar&#39;, &#39;mbarn&#39;, &#39;mbeam&#39;, &#39;mbin&#39;, &#39;mbit&#39;, &#39;mbyte&#39;, &#39;mcd&#39;, &#39;mchan&#39;, &#39;mcount&#39;, &#39;mct&#39;, &#39;md&#39;, &#39;mdeg&#39;, &#39;mdyn&#39;, &#39;meV&#39;, &#39;mebibit&#39;, &#39;mebibyte&#39;, &#39;megaBarye&#39;, &#39;megaDa&#39;, &#39;megaDalton&#39;, &#39;megaDebye&#39;, &#39;megaFarad&#39;, &#39;megaGauss&#39;, &#39;megaHenry&#39;, &#39;megaHertz&#39;, &#39;megaJansky&#39;, &#39;megaJoule&#39;, &#39;megaKayser&#39;, &#39;megaKelvin&#39;, &#39;megaNewton&#39;, &#39;megaOhm&#39;, &#39;megaPascal&#39;, &#39;megaRayleigh&#39;, &#39;megaSiemens&#39;, &#39;megaTesla&#39;, &#39;megaVolt&#39;, &#39;megaWatt&#39;, &#39;megaWeber&#39;, &#39;megaamp&#39;, &#39;megaampere&#39;, &#39;megaannum&#39;, &#39;megaarcminute&#39;, &#39;megaarcsecond&#39;, &#39;megaastronomical_unit&#39;, &#39;megabarn&#39;, &#39;megabarye&#39;, &#39;megabit&#39;, &#39;megabyte&#39;, &#39;megacandela&#39;, &#39;megacoulomb&#39;, &#39;megacount&#39;, &#39;megaday&#39;, &#39;megadebye&#39;, &#39;megadegree&#39;, &#39;megadyne&#39;, &#39;megaelectronvolt&#39;, &#39;megafarad&#39;, &#39;megagal&#39;, &#39;megagauss&#39;, &#39;megagram&#39;, &#39;megahenry&#39;, &#39;megahertz&#39;, &#39;megahour&#39;, &#39;megahr&#39;, &#39;megajansky&#39;, &#39;megajoule&#39;, &#39;megakayser&#39;, &#39;megalightyear&#39;, &#39;megaliter&#39;, &#39;megalumen&#39;, &#39;megalux&#39;, &#39;megameter&#39;, &#39;megaminute&#39;, &#39;megamole&#39;, &#39;meganewton&#39;, &#39;megaparsec&#39;, &#39;megapascal&#39;, &#39;megaphoton&#39;, &#39;megapixel&#39;, &#39;megapoise&#39;, &#39;megaradian&#39;, &#39;megarayleigh&#39;, &#39;megarydberg&#39;, &#39;megasecond&#39;, &#39;megasiemens&#39;, &#39;megasteradian&#39;, &#39;megastokes&#39;, &#39;megatesla&#39;, &#39;megavolt&#39;, &#39;megavoxel&#39;, &#39;megawatt&#39;, &#39;megaweber&#39;, &#39;megayear&#39;, &#39;merg&#39;, &#39;meter&#39;, &#39;mg&#39;, &#39;mgy&#39;, &#39;mh&#39;, &#39;microBarye&#39;, &#39;microDa&#39;, &#39;microDalton&#39;, &#39;microDebye&#39;, &#39;microFarad&#39;, &#39;microGauss&#39;, &#39;microHenry&#39;, &#39;microHertz&#39;, &#39;microJansky&#39;, &#39;microJoule&#39;, &#39;microKayser&#39;, &#39;microKelvin&#39;, &#39;microNewton&#39;, &#39;microOhm&#39;, &#39;microPascal&#39;, &#39;microRayleigh&#39;, &#39;microSiemens&#39;, &#39;microTesla&#39;, &#39;microVolt&#39;, &#39;microWatt&#39;, &#39;microWeber&#39;, &#39;microamp&#39;, &#39;microampere&#39;, &#39;microannum&#39;, &#39;microarcminute&#39;, &#39;microarcsecond&#39;, &#39;microastronomical_unit&#39;, &#39;microbarn&#39;, &#39;microbarye&#39;, &#39;microbit&#39;, &#39;microbyte&#39;, &#39;microcandela&#39;, &#39;microcoulomb&#39;, &#39;microcount&#39;, &#39;microday&#39;, &#39;microdebye&#39;, &#39;microdegree&#39;, &#39;microdyne&#39;, &#39;microelectronvolt&#39;, &#39;microfarad&#39;, &#39;microgal&#39;, &#39;microgauss&#39;, &#39;microgram&#39;, &#39;microhenry&#39;, &#39;microhertz&#39;, &#39;microhour&#39;, &#39;microhr&#39;, &#39;microjansky&#39;, &#39;microjoule&#39;, &#39;microkayser&#39;, &#39;microlightyear&#39;, &#39;microliter&#39;, &#39;microlumen&#39;, &#39;microlux&#39;, &#39;micrometer&#39;, &#39;microminute&#39;, &#39;micromole&#39;, &#39;micron&#39;, &#39;micronewton&#39;, &#39;microparsec&#39;, &#39;micropascal&#39;, &#39;microphoton&#39;, &#39;micropixel&#39;, &#39;micropoise&#39;, &#39;microradian&#39;, &#39;microrayleigh&#39;, &#39;microrydberg&#39;, &#39;microsecond&#39;, &#39;microsiemens&#39;, &#39;microsteradian&#39;, &#39;microstokes&#39;, &#39;microtesla&#39;, &#39;microvolt&#39;, &#39;microvoxel&#39;, &#39;microwatt&#39;, &#39;microweber&#39;, &#39;microyear&#39;, &#39;milliBarye&#39;, &#39;milliDa&#39;, &#39;milliDalton&#39;, &#39;milliDebye&#39;, &#39;milliFarad&#39;, &#39;milliGauss&#39;, &#39;milliHenry&#39;, &#39;milliHertz&#39;, &#39;milliJansky&#39;, &#39;milliJoule&#39;, &#39;milliKayser&#39;, &#39;milliKelvin&#39;, &#39;milliNewton&#39;, &#39;milliOhm&#39;, &#39;milliPascal&#39;, &#39;milliRayleigh&#39;, &#39;milliSiemens&#39;, &#39;milliTesla&#39;, &#39;milliVolt&#39;, &#39;milliWatt&#39;, &#39;milliWeber&#39;, &#39;milliamp&#39;, &#39;milliampere&#39;, &#39;milliannum&#39;, &#39;milliarcminute&#39;, &#39;milliarcsecond&#39;, &#39;milliastronomical_unit&#39;, &#39;millibarn&#39;, &#39;millibarye&#39;, &#39;millibit&#39;, &#39;millibyte&#39;, &#39;millicandela&#39;, &#39;millicoulomb&#39;, &#39;millicount&#39;, &#39;milliday&#39;, &#39;millidebye&#39;, &#39;millidegree&#39;, &#39;millidyne&#39;, &#39;millielectronvolt&#39;, &#39;millifarad&#39;, &#39;milligal&#39;, &#39;milligauss&#39;, &#39;milligram&#39;, &#39;millihenry&#39;, &#39;millihertz&#39;, &#39;millihour&#39;, &#39;millihr&#39;, &#39;millijansky&#39;, &#39;millijoule&#39;, &#39;millikayser&#39;, &#39;millilightyear&#39;, &#39;milliliter&#39;, &#39;millilumen&#39;, &#39;millilux&#39;, &#39;millimeter&#39;, &#39;milliminute&#39;, &#39;millimole&#39;, &#39;millinewton&#39;, &#39;milliparsec&#39;, &#39;millipascal&#39;, &#39;milliphoton&#39;, &#39;millipixel&#39;, &#39;millipoise&#39;, &#39;milliradian&#39;, &#39;millirayleigh&#39;, &#39;millirydberg&#39;, &#39;millisecond&#39;, &#39;millisiemens&#39;, &#39;millisteradian&#39;, &#39;millistokes&#39;, &#39;millitesla&#39;, &#39;millitorr&#39;, &#39;millivolt&#39;, &#39;millivoxel&#39;, &#39;milliwatt&#39;, &#39;milliweber&#39;, &#39;milliyear&#39;, &#39;min&#39;, &#39;minute&#39;, &#39;misc&#39;, &#39;mk&#39;, &#39;ml&#39;, &#39;mlm&#39;, &#39;mlx&#39;, &#39;mlyr&#39;, &#39;mm&#39;, &#39;mmag&#39;, &#39;mmin&#39;, &#39;mmol&#39;, &#39;mohm&#39;, &#39;mol&#39;, &#39;molar_mass_amu&#39;, &#39;mole&#39;, &#39;mpc&#39;, &#39;mph&#39;, &#39;mphoton&#39;, &#39;mpix&#39;, &#39;mpixel&#39;, &#39;mrad&#39;, &#39;ms&#39;, &#39;msr&#39;, &#39;mu&#39;, &#39;mvox&#39;, &#39;mvoxel&#39;, &#39;myr&#39;, &#39;nA&#39;, &#39;nAU&#39;, &#39;nB&#39;, &#39;nBa&#39;, &#39;nC&#39;, &#39;nD&#39;, &#39;nF&#39;, &#39;nG&#39;, &#39;nGal&#39;, &#39;nH&#39;, &#39;nHz&#39;, &#39;nJ&#39;, &#39;nJy&#39;, &#39;nK&#39;, &#39;nL&#39;, &#39;nN&#39;, &#39;nOhm&#39;, &#39;nP&#39;, &#39;nPa&#39;, &#39;nR&#39;, &#39;nRy&#39;, &#39;nS&#39;, &#39;nSt&#39;, &#39;nT&#39;, &#39;nV&#39;, &#39;nW&#39;, &#39;nWb&#39;, &#39;na&#39;, &#39;nadu&#39;, &#39;nanoBarye&#39;, &#39;nanoDa&#39;, &#39;nanoDalton&#39;, &#39;nanoDebye&#39;, &#39;nanoFarad&#39;, &#39;nanoGauss&#39;, &#39;nanoHenry&#39;, &#39;nanoHertz&#39;, &#39;nanoJansky&#39;, &#39;nanoJoule&#39;, &#39;nanoKayser&#39;, &#39;nanoKelvin&#39;, &#39;nanoNewton&#39;, &#39;nanoOhm&#39;, &#39;nanoPascal&#39;, &#39;nanoRayleigh&#39;, &#39;nanoSiemens&#39;, &#39;nanoTesla&#39;, &#39;nanoVolt&#39;, &#39;nanoWatt&#39;, &#39;nanoWeber&#39;, &#39;nanoamp&#39;, &#39;nanoampere&#39;, &#39;nanoannum&#39;, &#39;nanoarcminute&#39;, &#39;nanoarcsecond&#39;, &#39;nanoastronomical_unit&#39;, &#39;nanobarn&#39;, &#39;nanobarye&#39;, &#39;nanobit&#39;, &#39;nanobyte&#39;, &#39;nanocandela&#39;, &#39;nanocoulomb&#39;, &#39;nanocount&#39;, &#39;nanoday&#39;, &#39;nanodebye&#39;, &#39;nanodegree&#39;, &#39;nanodyne&#39;, &#39;nanoelectronvolt&#39;, &#39;nanofarad&#39;, &#39;nanogal&#39;, &#39;nanogauss&#39;, &#39;nanogram&#39;, &#39;nanohenry&#39;, &#39;nanohertz&#39;, &#39;nanohour&#39;, &#39;nanohr&#39;, &#39;nanojansky&#39;, &#39;nanojoule&#39;, &#39;nanokayser&#39;, &#39;nanolightyear&#39;, &#39;nanoliter&#39;, &#39;nanolumen&#39;, &#39;nanolux&#39;, &#39;nanomaggy&#39;, &#39;nanometer&#39;, &#39;nanominute&#39;, &#39;nanomole&#39;, &#39;nanonewton&#39;, &#39;nanoparsec&#39;, &#39;nanopascal&#39;, &#39;nanophoton&#39;, &#39;nanopixel&#39;, &#39;nanopoise&#39;, &#39;nanoradian&#39;, &#39;nanorayleigh&#39;, &#39;nanorydberg&#39;, &#39;nanosecond&#39;, &#39;nanosiemens&#39;, &#39;nanosteradian&#39;, &#39;nanostokes&#39;, &#39;nanotesla&#39;, &#39;nanovolt&#39;, &#39;nanovoxel&#39;, &#39;nanowatt&#39;, &#39;nanoweber&#39;, &#39;nanoyear&#39;, &#39;narcmin&#39;, &#39;narcsec&#39;, &#39;nau&#39;, &#39;nb&#39;, &#39;nbarn&#39;, &#39;nbeam&#39;, &#39;nbin&#39;, &#39;nbit&#39;, &#39;nbyte&#39;, &#39;ncd&#39;, &#39;nchan&#39;, &#39;ncount&#39;, &#39;nct&#39;, &#39;nd&#39;, &#39;ndeg&#39;, &#39;ndyn&#39;, &#39;neV&#39;, &#39;nerg&#39;, &#39;newton&#39;, &#39;ng&#39;, &#39;nh&#39;, &#39;nk&#39;, &#39;nl&#39;, &#39;nlm&#39;, &#39;nlx&#39;, &#39;nlyr&#39;, &#39;nm&#39;, &#39;nmag&#39;, &#39;nmgy&#39;, &#39;nmin&#39;, &#39;nmol&#39;, &#39;nohm&#39;, &#39;npc&#39;, &#39;nph&#39;, &#39;nphoton&#39;, &#39;npix&#39;, &#39;npixel&#39;, &#39;nrad&#39;, &#39;ns&#39;, &#39;nsr&#39;, &#39;nu&#39;, &#39;nvox&#39;, &#39;nvoxel&#39;, &#39;nyr&#39;, &#39;ohm&#39;, &#39;one&#39;, &#39;pA&#39;, &#39;pAU&#39;, &#39;pB&#39;, &#39;pBa&#39;, &#39;pC&#39;, &#39;pD&#39;, &#39;pF&#39;, &#39;pG&#39;, &#39;pGal&#39;, &#39;pH&#39;, &#39;pHz&#39;, &#39;pJ&#39;, &#39;pJy&#39;, &#39;pK&#39;, &#39;pL&#39;, &#39;pN&#39;, &#39;pOhm&#39;, &#39;pP&#39;, &#39;pPa&#39;, &#39;pR&#39;, &#39;pRy&#39;, &#39;pS&#39;, &#39;pSt&#39;, &#39;pT&#39;, &#39;pV&#39;, &#39;pW&#39;, &#39;pWb&#39;, &#39;pa&#39;, &#39;padu&#39;, &#39;parallax&#39;, &#39;parcmin&#39;, &#39;parcsec&#39;, &#39;parsec&#39;, &#39;pascal&#39;, &#39;pau&#39;, &#39;pb&#39;, &#39;pbarn&#39;, &#39;pbeam&#39;, &#39;pbin&#39;, &#39;pbit&#39;, &#39;pbyte&#39;, &#39;pc&#39;, &#39;pcd&#39;, &#39;pchan&#39;, &#39;pct&#39;, &#39;pd&#39;, &#39;pdeg&#39;, &#39;pdyn&#39;, &#39;peV&#39;, &#39;pebibit&#39;, &#39;pebibyte&#39;, &#39;percent&#39;, &#39;perg&#39;, &#39;petaBarye&#39;, &#39;petaDa&#39;, &#39;petaDalton&#39;, &#39;petaDebye&#39;, &#39;petaFarad&#39;, &#39;petaGauss&#39;, &#39;petaHenry&#39;, &#39;petaHertz&#39;, &#39;petaJansky&#39;, &#39;petaJoule&#39;, &#39;petaKayser&#39;, &#39;petaKelvin&#39;, &#39;petaNewton&#39;, &#39;petaOhm&#39;, &#39;petaPascal&#39;, &#39;petaRayleigh&#39;, &#39;petaSiemens&#39;, &#39;petaTesla&#39;, &#39;petaVolt&#39;, &#39;petaWatt&#39;, &#39;petaWeber&#39;, &#39;petaamp&#39;, &#39;petaampere&#39;, &#39;petaannum&#39;, &#39;petaarcminute&#39;, &#39;petaarcsecond&#39;, &#39;petaastronomical_unit&#39;, &#39;petabarn&#39;, &#39;petabarye&#39;, &#39;petabit&#39;, &#39;petabyte&#39;, &#39;petacandela&#39;, &#39;petacoulomb&#39;, &#39;petacount&#39;, &#39;petaday&#39;, &#39;petadebye&#39;, &#39;petadegree&#39;, &#39;petadyne&#39;, &#39;petaelectronvolt&#39;, &#39;petafarad&#39;, &#39;petagal&#39;, &#39;petagauss&#39;, &#39;petagram&#39;, &#39;petahenry&#39;, &#39;petahertz&#39;, &#39;petahour&#39;, &#39;petahr&#39;, &#39;petajansky&#39;, &#39;petajoule&#39;, &#39;petakayser&#39;, &#39;petalightyear&#39;, &#39;petaliter&#39;, &#39;petalumen&#39;, &#39;petalux&#39;, &#39;petameter&#39;, &#39;petaminute&#39;, &#39;petamole&#39;, &#39;petanewton&#39;, &#39;petaparsec&#39;, &#39;petapascal&#39;, &#39;petaphoton&#39;, &#39;petapixel&#39;, &#39;petapoise&#39;, &#39;petaradian&#39;, &#39;petarayleigh&#39;, &#39;petarydberg&#39;, &#39;petasecond&#39;, &#39;petasiemens&#39;, &#39;petasteradian&#39;, &#39;petastokes&#39;, &#39;petatesla&#39;, &#39;petavolt&#39;, &#39;petavoxel&#39;, &#39;petawatt&#39;, &#39;petaweber&#39;, &#39;petayear&#39;, &#39;pg&#39;, &#39;ph&#39;, &#39;photometric&#39;, &#39;photon&#39;, &#39;physical&#39;, &#39;picoBarye&#39;, &#39;picoDa&#39;, &#39;picoDalton&#39;, &#39;picoDebye&#39;, &#39;picoFarad&#39;, &#39;picoGauss&#39;, &#39;picoHenry&#39;, &#39;picoHertz&#39;, &#39;picoJansky&#39;, &#39;picoJoule&#39;, &#39;picoKayser&#39;, &#39;picoKelvin&#39;, &#39;picoNewton&#39;, &#39;picoOhm&#39;, &#39;picoPascal&#39;, &#39;picoRayleigh&#39;, &#39;picoSiemens&#39;, &#39;picoTesla&#39;, &#39;picoVolt&#39;, &#39;picoWatt&#39;, &#39;picoWeber&#39;, &#39;picoamp&#39;, &#39;picoampere&#39;, &#39;picoannum&#39;, &#39;picoarcminute&#39;, &#39;picoarcsecond&#39;, &#39;picoastronomical_unit&#39;, &#39;picobarn&#39;, &#39;picobarye&#39;, &#39;picobit&#39;, &#39;picobyte&#39;, &#39;picocandela&#39;, &#39;picocoulomb&#39;, &#39;picocount&#39;, &#39;picoday&#39;, &#39;picodebye&#39;, &#39;picodegree&#39;, &#39;picodyne&#39;, &#39;picoelectronvolt&#39;, &#39;picofarad&#39;, &#39;picogal&#39;, &#39;picogauss&#39;, &#39;picogram&#39;, &#39;picohenry&#39;, &#39;picohertz&#39;, &#39;picohour&#39;, &#39;picohr&#39;, &#39;picojansky&#39;, &#39;picojoule&#39;, &#39;picokayser&#39;, &#39;picolightyear&#39;, &#39;picoliter&#39;, &#39;picolumen&#39;, &#39;picolux&#39;, &#39;picometer&#39;, &#39;picominute&#39;, &#39;picomole&#39;, &#39;piconewton&#39;, &#39;picoparsec&#39;, &#39;picopascal&#39;, &#39;picophoton&#39;, &#39;picopixel&#39;, &#39;picopoise&#39;, &#39;picoradian&#39;, &#39;picorayleigh&#39;, &#39;picorydberg&#39;, &#39;picosecond&#39;, &#39;picosiemens&#39;, &#39;picosteradian&#39;, &#39;picostokes&#39;, &#39;picotesla&#39;, &#39;picovolt&#39;, &#39;picovoxel&#39;, &#39;picowatt&#39;, &#39;picoweber&#39;, &#39;picoyear&#39;, &#39;pix&#39;, &#39;pixel&#39;, &#39;pixel_scale&#39;, &#39;pk&#39;, &#39;pl&#39;, &#39;plate_scale&#39;, &#39;plm&#39;, &#39;plx&#39;, &#39;plyr&#39;, &#39;pm&#39;, &#39;pmag&#39;, &#39;pmin&#39;, &#39;pmol&#39;, &#39;pohm&#39;, &#39;poise&#39;, &#39;ppc&#39;, &#39;pph&#39;, &#39;pphoton&#39;, &#39;ppix&#39;, &#39;ppixel&#39;, &#39;prad&#39;, &#39;ps&#39;, &#39;psr&#39;, &#39;pu&#39;, &#39;pvox&#39;, &#39;pvoxel&#39;, &#39;pyr&#39;, &#39;quantity&#39;, &#39;quantity_helper&#39;, &#39;quantity_input&#39;, &#39;rad&#39;, &#39;radian&#39;, &#39;rayleigh&#39;, &#39;rydberg&#39;, &#39;s&#39;, &#39;sday&#39;, &#39;second&#39;, &#39;set_enabled_aliases&#39;, &#39;set_enabled_equivalencies&#39;, &#39;set_enabled_units&#39;, &#39;si&#39;, &#39;si_prefixes&#39;, &#39;siemens&#39;, &#39;solLum&#39;, &#39;solMass&#39;, &#39;solRad&#39;, &#39;sp&#39;, &#39;spat&#39;, &#39;spectral&#39;, &#39;spectral_density&#39;, &#39;sr&#39;, &#39;statA&#39;, &#39;statC&#39;, &#39;statampere&#39;, &#39;statcoulomb&#39;, &#39;steradian&#39;, &#39;stokes&#39;, &#39;t&#39;, &#39;tebibit&#39;, &#39;tebibyte&#39;, &#39;temperature&#39;, &#39;temperature_energy&#39;, &#39;teraBarye&#39;, &#39;teraDa&#39;, &#39;teraDalton&#39;, &#39;teraDebye&#39;, &#39;teraFarad&#39;, &#39;teraGauss&#39;, &#39;teraHenry&#39;, &#39;teraHertz&#39;, &#39;teraJansky&#39;, &#39;teraJoule&#39;, &#39;teraKayser&#39;, &#39;teraKelvin&#39;, &#39;teraNewton&#39;, &#39;teraOhm&#39;, &#39;teraPascal&#39;, &#39;teraRayleigh&#39;, &#39;teraSiemens&#39;, &#39;teraTesla&#39;, &#39;teraVolt&#39;, &#39;teraWatt&#39;, &#39;teraWeber&#39;, &#39;teraamp&#39;, &#39;teraampere&#39;, &#39;teraannum&#39;, &#39;teraarcminute&#39;, &#39;teraarcsecond&#39;, &#39;teraastronomical_unit&#39;, &#39;terabarn&#39;, &#39;terabarye&#39;, &#39;terabit&#39;, &#39;terabyte&#39;, &#39;teracandela&#39;, &#39;teracoulomb&#39;, &#39;teracount&#39;, &#39;teraday&#39;, &#39;teradebye&#39;, &#39;teradegree&#39;, &#39;teradyne&#39;, &#39;teraelectronvolt&#39;, &#39;terafarad&#39;, &#39;teragal&#39;, &#39;teragauss&#39;, &#39;teragram&#39;, &#39;terahenry&#39;, &#39;terahertz&#39;, &#39;terahour&#39;, &#39;terahr&#39;, &#39;terajansky&#39;, &#39;terajoule&#39;, &#39;terakayser&#39;, &#39;teralightyear&#39;, &#39;teraliter&#39;, &#39;teralumen&#39;, &#39;teralux&#39;, &#39;terameter&#39;, &#39;teraminute&#39;, &#39;teramole&#39;, &#39;teranewton&#39;, &#39;teraparsec&#39;, &#39;terapascal&#39;, &#39;teraphoton&#39;, &#39;terapixel&#39;, &#39;terapoise&#39;, &#39;teraradian&#39;, &#39;terarayleigh&#39;, &#39;terarydberg&#39;, &#39;terasecond&#39;, &#39;terasiemens&#39;, &#39;terasteradian&#39;, &#39;terastokes&#39;, &#39;teratesla&#39;, &#39;teravolt&#39;, &#39;teravoxel&#39;, &#39;terawatt&#39;, &#39;teraweber&#39;, &#39;terayear&#39;, &#39;tesla&#39;, &#39;thermodynamic_temperature&#39;, &#39;tonne&#39;, &#39;torr&#39;, &#39;u&#39;, &#39;uA&#39;, &#39;uAU&#39;, &#39;uB&#39;, &#39;uBa&#39;, &#39;uC&#39;, &#39;uD&#39;, &#39;uF&#39;, &#39;uG&#39;, &#39;uGal&#39;, &#39;uH&#39;, &#39;uHz&#39;, &#39;uJ&#39;, &#39;uJy&#39;, &#39;uK&#39;, &#39;uL&#39;, &#39;uN&#39;, &#39;uOhm&#39;, &#39;uP&#39;, &#39;uPa&#39;, &#39;uR&#39;, &#39;uRy&#39;, &#39;uS&#39;, &#39;uSt&#39;, &#39;uT&#39;, &#39;uV&#39;, &#39;uW&#39;, &#39;uWb&#39;, &#39;ua&#39;, &#39;uadu&#39;, &#39;uarcmin&#39;, &#39;uarcsec&#39;, &#39;uas&#39;, &#39;uau&#39;, &#39;ub&#39;, &#39;ubarn&#39;, &#39;ubeam&#39;, &#39;ubin&#39;, &#39;ubit&#39;, &#39;ubyte&#39;, &#39;ucd&#39;, &#39;uchan&#39;, &#39;ucount&#39;, &#39;uct&#39;, &#39;ud&#39;, &#39;udeg&#39;, &#39;udyn&#39;, &#39;ueV&#39;, &#39;uerg&#39;, &#39;ug&#39;, &#39;uh&#39;, &#39;uk&#39;, &#39;ul&#39;, &#39;ulm&#39;, &#39;ulx&#39;, &#39;ulyr&#39;, &#39;um&#39;, &#39;umag&#39;, &#39;umin&#39;, &#39;umol&#39;, &#39;uohm&#39;, &#39;upc&#39;, &#39;uph&#39;, &#39;uphoton&#39;, &#39;upix&#39;, &#39;upixel&#39;, &#39;urad&#39;, &#39;us&#39;, &#39;usr&#39;, &#39;utils&#39;, &#39;uu&#39;, &#39;uvox&#39;, &#39;uvoxel&#39;, &#39;uyr&#39;, &#39;volt&#39;, &#39;vox&#39;, &#39;voxel&#39;, &#39;watt&#39;, &#39;weber&#39;, &#39;week&#39;, &#39;with_H0&#39;, &#39;wk&#39;, &#39;yA&#39;, &#39;yAU&#39;, &#39;yB&#39;, &#39;yBa&#39;, &#39;yC&#39;, &#39;yD&#39;, &#39;yF&#39;, &#39;yG&#39;, &#39;yGal&#39;, &#39;yH&#39;, &#39;yHz&#39;, &#39;yJ&#39;, &#39;yJy&#39;, &#39;yK&#39;, &#39;yL&#39;, &#39;yN&#39;, &#39;yOhm&#39;, &#39;yP&#39;, &#39;yPa&#39;, &#39;yR&#39;, &#39;yRy&#39;, &#39;yS&#39;, &#39;ySt&#39;, &#39;yT&#39;, &#39;yV&#39;, &#39;yW&#39;, &#39;yWb&#39;, &#39;ya&#39;, &#39;yadu&#39;, &#39;yarcmin&#39;, &#39;yarcsec&#39;, &#39;yau&#39;, &#39;yb&#39;, &#39;ybarn&#39;, &#39;ybeam&#39;, &#39;ybin&#39;, &#39;ybit&#39;, &#39;ybyte&#39;, &#39;ycd&#39;, &#39;ychan&#39;, &#39;ycount&#39;, &#39;yct&#39;, &#39;ydeg&#39;, &#39;ydyn&#39;, &#39;yeV&#39;, &#39;year&#39;, &#39;yerg&#39;, &#39;yg&#39;, &#39;yh&#39;, &#39;yk&#39;, &#39;yl&#39;, &#39;ylm&#39;, &#39;ylx&#39;, &#39;ylyr&#39;, &#39;ym&#39;, &#39;ymag&#39;, &#39;ymin&#39;, &#39;ymol&#39;, &#39;yoctoBarye&#39;, &#39;yoctoDa&#39;, &#39;yoctoDalton&#39;, &#39;yoctoDebye&#39;, &#39;yoctoFarad&#39;, &#39;yoctoGauss&#39;, &#39;yoctoHenry&#39;, &#39;yoctoHertz&#39;, &#39;yoctoJansky&#39;, &#39;yoctoJoule&#39;, &#39;yoctoKayser&#39;, &#39;yoctoKelvin&#39;, &#39;yoctoNewton&#39;, &#39;yoctoOhm&#39;, &#39;yoctoPascal&#39;, &#39;yoctoRayleigh&#39;, &#39;yoctoSiemens&#39;, &#39;yoctoTesla&#39;, &#39;yoctoVolt&#39;, &#39;yoctoWatt&#39;, &#39;yoctoWeber&#39;, &#39;yoctoamp&#39;, &#39;yoctoampere&#39;, &#39;yoctoannum&#39;, &#39;yoctoarcminute&#39;, &#39;yoctoarcsecond&#39;, &#39;yoctoastronomical_unit&#39;, &#39;yoctobarn&#39;, &#39;yoctobarye&#39;, &#39;yoctobit&#39;, &#39;yoctobyte&#39;, &#39;yoctocandela&#39;, &#39;yoctocoulomb&#39;, &#39;yoctocount&#39;, &#39;yoctoday&#39;, &#39;yoctodebye&#39;, &#39;yoctodegree&#39;, &#39;yoctodyne&#39;, &#39;yoctoelectronvolt&#39;, &#39;yoctofarad&#39;, &#39;yoctogal&#39;, &#39;yoctogauss&#39;, &#39;yoctogram&#39;, &#39;yoctohenry&#39;, &#39;yoctohertz&#39;, &#39;yoctohour&#39;, &#39;yoctohr&#39;, &#39;yoctojansky&#39;, &#39;yoctojoule&#39;, &#39;yoctokayser&#39;, &#39;yoctolightyear&#39;, &#39;yoctoliter&#39;, &#39;yoctolumen&#39;, &#39;yoctolux&#39;, &#39;yoctometer&#39;, &#39;yoctominute&#39;, &#39;yoctomole&#39;, &#39;yoctonewton&#39;, &#39;yoctoparsec&#39;, &#39;yoctopascal&#39;, &#39;yoctophoton&#39;, &#39;yoctopixel&#39;, &#39;yoctopoise&#39;, &#39;yoctoradian&#39;, &#39;yoctorayleigh&#39;, &#39;yoctorydberg&#39;, &#39;yoctosecond&#39;, &#39;yoctosiemens&#39;, &#39;yoctosteradian&#39;, &#39;yoctostokes&#39;, &#39;yoctotesla&#39;, &#39;yoctovolt&#39;, &#39;yoctovoxel&#39;, &#39;yoctowatt&#39;, &#39;yoctoweber&#39;, &#39;yoctoyear&#39;, &#39;yohm&#39;, &#39;yottaBarye&#39;, &#39;yottaDa&#39;, &#39;yottaDalton&#39;, &#39;yottaDebye&#39;, &#39;yottaFarad&#39;, &#39;yottaGauss&#39;, &#39;yottaHenry&#39;, &#39;yottaHertz&#39;, &#39;yottaJansky&#39;, &#39;yottaJoule&#39;, &#39;yottaKayser&#39;, &#39;yottaKelvin&#39;, &#39;yottaNewton&#39;, &#39;yottaOhm&#39;, &#39;yottaPascal&#39;, &#39;yottaRayleigh&#39;, &#39;yottaSiemens&#39;, &#39;yottaTesla&#39;, &#39;yottaVolt&#39;, &#39;yottaWatt&#39;, &#39;yottaWeber&#39;, &#39;yottaamp&#39;, &#39;yottaampere&#39;, &#39;yottaannum&#39;, &#39;yottaarcminute&#39;, &#39;yottaarcsecond&#39;, &#39;yottaastronomical_unit&#39;, &#39;yottabarn&#39;, &#39;yottabarye&#39;, &#39;yottabit&#39;, &#39;yottabyte&#39;, &#39;yottacandela&#39;, &#39;yottacoulomb&#39;, &#39;yottacount&#39;, &#39;yottaday&#39;, &#39;yottadebye&#39;, &#39;yottadegree&#39;, &#39;yottadyne&#39;, &#39;yottaelectronvolt&#39;, &#39;yottafarad&#39;, &#39;yottagal&#39;, &#39;yottagauss&#39;, &#39;yottagram&#39;, &#39;yottahenry&#39;, &#39;yottahertz&#39;, &#39;yottahour&#39;, &#39;yottahr&#39;, &#39;yottajansky&#39;, &#39;yottajoule&#39;, &#39;yottakayser&#39;, &#39;yottalightyear&#39;, &#39;yottaliter&#39;, &#39;yottalumen&#39;, &#39;yottalux&#39;, &#39;yottameter&#39;, &#39;yottaminute&#39;, &#39;yottamole&#39;, &#39;yottanewton&#39;, &#39;yottaparsec&#39;, &#39;yottapascal&#39;, &#39;yottaphoton&#39;, &#39;yottapixel&#39;, &#39;yottapoise&#39;, &#39;yottaradian&#39;, &#39;yottarayleigh&#39;, &#39;yottarydberg&#39;, &#39;yottasecond&#39;, &#39;yottasiemens&#39;, &#39;yottasteradian&#39;, &#39;yottastokes&#39;, &#39;yottatesla&#39;, &#39;yottavolt&#39;, &#39;yottavoxel&#39;, &#39;yottawatt&#39;, &#39;yottaweber&#39;, &#39;yottayear&#39;, &#39;ypc&#39;, &#39;yph&#39;, &#39;yphoton&#39;, &#39;ypix&#39;, &#39;ypixel&#39;, &#39;yr&#39;, &#39;yrad&#39;, &#39;ys&#39;, &#39;ysr&#39;, &#39;yu&#39;, &#39;yvox&#39;, &#39;yvoxel&#39;, &#39;yyr&#39;, &#39;zA&#39;, &#39;zAU&#39;, &#39;zB&#39;, &#39;zBa&#39;, &#39;zC&#39;, &#39;zD&#39;, &#39;zF&#39;, &#39;zG&#39;, &#39;zGal&#39;, &#39;zH&#39;, &#39;zHz&#39;, &#39;zJ&#39;, &#39;zJy&#39;, &#39;zK&#39;, &#39;zL&#39;, &#39;zN&#39;, &#39;zOhm&#39;, &#39;zP&#39;, &#39;zPa&#39;, &#39;zR&#39;, &#39;zRy&#39;, &#39;zS&#39;, &#39;zSt&#39;, &#39;zT&#39;, &#39;zV&#39;, &#39;zW&#39;, &#39;zWb&#39;, &#39;za&#39;, &#39;zadu&#39;, &#39;zarcmin&#39;, &#39;zarcsec&#39;, &#39;zau&#39;, &#39;zb&#39;, &#39;zbarn&#39;, &#39;zbeam&#39;, &#39;zbin&#39;, &#39;zbit&#39;, &#39;zbyte&#39;, &#39;zcd&#39;, &#39;zchan&#39;, &#39;zcount&#39;, &#39;zct&#39;, &#39;zd&#39;, &#39;zdeg&#39;, &#39;zdyn&#39;, &#39;zeV&#39;, &#39;zeptoBarye&#39;, &#39;zeptoDa&#39;, &#39;zeptoDalton&#39;, &#39;zeptoDebye&#39;, &#39;zeptoFarad&#39;, &#39;zeptoGauss&#39;, &#39;zeptoHenry&#39;, &#39;zeptoHertz&#39;, &#39;zeptoJansky&#39;, &#39;zeptoJoule&#39;, &#39;zeptoKayser&#39;, &#39;zeptoKelvin&#39;, &#39;zeptoNewton&#39;, &#39;zeptoOhm&#39;, &#39;zeptoPascal&#39;, &#39;zeptoRayleigh&#39;, &#39;zeptoSiemens&#39;, &#39;zeptoTesla&#39;, &#39;zeptoVolt&#39;, &#39;zeptoWatt&#39;, &#39;zeptoWeber&#39;, &#39;zeptoamp&#39;, &#39;zeptoampere&#39;, &#39;zeptoannum&#39;, &#39;zeptoarcminute&#39;, &#39;zeptoarcsecond&#39;, &#39;zeptoastronomical_unit&#39;, &#39;zeptobarn&#39;, &#39;zeptobarye&#39;, &#39;zeptobit&#39;, &#39;zeptobyte&#39;, &#39;zeptocandela&#39;, &#39;zeptocoulomb&#39;, &#39;zeptocount&#39;, &#39;zeptoday&#39;, &#39;zeptodebye&#39;, &#39;zeptodegree&#39;, &#39;zeptodyne&#39;, &#39;zeptoelectronvolt&#39;, &#39;zeptofarad&#39;, &#39;zeptogal&#39;, &#39;zeptogauss&#39;, &#39;zeptogram&#39;, &#39;zeptohenry&#39;, &#39;zeptohertz&#39;, &#39;zeptohour&#39;, &#39;zeptohr&#39;, &#39;zeptojansky&#39;, &#39;zeptojoule&#39;, &#39;zeptokayser&#39;, &#39;zeptolightyear&#39;, &#39;zeptoliter&#39;, &#39;zeptolumen&#39;, &#39;zeptolux&#39;, &#39;zeptometer&#39;, &#39;zeptominute&#39;, &#39;zeptomole&#39;, &#39;zeptonewton&#39;, &#39;zeptoparsec&#39;, &#39;zeptopascal&#39;, &#39;zeptophoton&#39;, &#39;zeptopixel&#39;, &#39;zeptopoise&#39;, &#39;zeptoradian&#39;, &#39;zeptorayleigh&#39;, &#39;zeptorydberg&#39;, &#39;zeptosecond&#39;, &#39;zeptosiemens&#39;, &#39;zeptosteradian&#39;, &#39;zeptostokes&#39;, &#39;zeptotesla&#39;, &#39;zeptovolt&#39;, &#39;zeptovoxel&#39;, &#39;zeptowatt&#39;, &#39;zeptoweber&#39;, &#39;zeptoyear&#39;, &#39;zerg&#39;, &#39;zero_point_flux&#39;, &#39;zettaBarye&#39;, &#39;zettaDa&#39;, &#39;zettaDalton&#39;, &#39;zettaDebye&#39;, &#39;zettaFarad&#39;, &#39;zettaGauss&#39;, &#39;zettaHenry&#39;, &#39;zettaHertz&#39;, &#39;zettaJansky&#39;, &#39;zettaJoule&#39;, &#39;zettaKayser&#39;, &#39;zettaKelvin&#39;, &#39;zettaNewton&#39;, &#39;zettaOhm&#39;, &#39;zettaPascal&#39;, &#39;zettaRayleigh&#39;, &#39;zettaSiemens&#39;, &#39;zettaTesla&#39;, &#39;zettaVolt&#39;, &#39;zettaWatt&#39;, &#39;zettaWeber&#39;, &#39;zettaamp&#39;, &#39;zettaampere&#39;, &#39;zettaannum&#39;, &#39;zettaarcminute&#39;, &#39;zettaarcsecond&#39;, &#39;zettaastronomical_unit&#39;, &#39;zettabarn&#39;, &#39;zettabarye&#39;, &#39;zettabit&#39;, &#39;zettabyte&#39;, &#39;zettacandela&#39;, &#39;zettacoulomb&#39;, &#39;zettacount&#39;, &#39;zettaday&#39;, &#39;zettadebye&#39;, &#39;zettadegree&#39;, &#39;zettadyne&#39;, &#39;zettaelectronvolt&#39;, &#39;zettafarad&#39;, &#39;zettagal&#39;, &#39;zettagauss&#39;, &#39;zettagram&#39;, &#39;zettahenry&#39;, &#39;zettahertz&#39;, &#39;zettahour&#39;, &#39;zettahr&#39;, &#39;zettajansky&#39;, &#39;zettajoule&#39;, &#39;zettakayser&#39;, &#39;zettalightyear&#39;, &#39;zettaliter&#39;, &#39;zettalumen&#39;, &#39;zettalux&#39;, &#39;zettameter&#39;, &#39;zettaminute&#39;, &#39;zettamole&#39;, &#39;zettanewton&#39;, &#39;zettaparsec&#39;, &#39;zettapascal&#39;, &#39;zettaphoton&#39;, &#39;zettapixel&#39;, &#39;zettapoise&#39;, &#39;zettaradian&#39;, &#39;zettarayleigh&#39;, &#39;zettarydberg&#39;, &#39;zettasecond&#39;, &#39;zettasiemens&#39;, &#39;zettasteradian&#39;, &#39;zettastokes&#39;, &#39;zettatesla&#39;, &#39;zettavolt&#39;, &#39;zettavoxel&#39;, &#39;zettawatt&#39;, &#39;zettaweber&#39;, &#39;zettayear&#39;, &#39;zg&#39;, &#39;zh&#39;, &#39;zk&#39;, &#39;zl&#39;, &#39;zlm&#39;, &#39;zlx&#39;, &#39;zlyr&#39;, &#39;zm&#39;, &#39;zmag&#39;, &#39;zmin&#39;, &#39;zmol&#39;, &#39;zohm&#39;, &#39;zpc&#39;, &#39;zph&#39;, &#39;zphoton&#39;, &#39;zpix&#39;, &#39;zpixel&#39;, &#39;zrad&#39;, &#39;zs&#39;, &#39;zsr&#39;, &#39;zu&#39;, &#39;zvox&#39;, &#39;zvoxel&#39;, &#39;zyr&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/yokamk.gif"><img alt="Anaconda terminal" class="bg-primary mb-1 align-center" src="_images/yokamk.gif" style="width: 400px;" /></a>
+<p>Çokmuş. Ama arada tanıdıklar var. <span class="math notranslate nohighlight">\(metre\)</span>, <span class="math notranslate nohighlight">\(gram\)</span>, <span class="math notranslate nohighlight">\(second\)</span> gibi. Bunlar üzerinden gidelim.</p>
+<hr>
+<p>Örnek</p>
+<p><span class="math notranslate nohighlight">\(3\)</span> metrelik bir değer oluşturunuz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+<span class="n">deger</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">meter</span>
+<span class="n">deger</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[3 \; \mathrm{m}\]</div>
+</div>
+</div>
+<p>oluşan değerin “değeri” ve “birimi”ni gösteriniz</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+<span class="n">deger</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">meter</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">deger</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">deger</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0
+m
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Yarıçapı <span class="math notranslate nohighlight">\(3\)</span> <span class="math notranslate nohighlight">\(metre\)</span> olan dairenin alanını hesaplayınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">pi</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">meter</span>
+<span class="n">alan</span> <span class="o">=</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">alan</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.274333882308138 m2
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Kenarları sırasıyla <span class="math notranslate nohighlight">\(75 cm\)</span> ve <span class="math notranslate nohighlight">\(2 m\)</span> olan dikdörtgenin alanını hesaplayınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">75</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">centimeter</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">meter</span>
+
+<span class="n">alan</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<span class="n">alan</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[150 \; \mathrm{cm\,m}\]</div>
+</div>
+</div>
+<p><span class="math notranslate nohighlight">\(150 m cm\)</span> ne biçin değerdir ya hu? Aslında değerde bir sorun yok. Sadece alışık değiliz böyle gösterimlere. Alışık olduğumuz hale getirmek için bu değeri <span class="math notranslate nohighlight">\(m^2\)</span>’ye veya temel birimlere dönüştürmek gerek.</p>
+<div class="section" id="donusum">
+<h3>Dönüşüm<a class="headerlink" href="#donusum" title="Permalink to this headline">¶</a></h3>
+<p>Her astropy <code class="docutils literal notranslate"><span class="pre">units</span></code> nesnesinin bir <code class="docutils literal notranslate"><span class="pre">to</span></code> metodu var. Bu metod bir birim değeri alır ve dönüşüm yapar.</p>
+<hr>
+<p>Örnek</p>
+<p>Kenarları sırasıyla <span class="math notranslate nohighlight">\(75 cm\)</span> ve <span class="math notranslate nohighlight">\(2 m\)</span> olan dikdörtgenin alanını <span class="math notranslate nohighlight">\(m^2\)</span> cinsinden hesaplayınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">75</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">centimeter</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">meter</span>
+
+<span class="n">alan</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<span class="n">alan</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">m</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[1.5 \; \mathrm{m^{2}}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="temel-birimlere-donusum">
+<h3>Temel birimlere dönüşüm<a class="headerlink" href="#temel-birimlere-donusum" title="Permalink to this headline">¶</a></h3>
+<p>Bir birim veya birimlerin kombinasyonları çok farklılık gösterebilir. Lakin ne kadar karmaşık olursa olsun bir sonucu temel birimler cinsinden görmek isteyebiliriz. <code class="docutils literal notranslate"><span class="pre">astropy.units</span></code>’da temel birim, <span class="math notranslate nohighlight">\(mks\)</span>’dir.</p>
+<p><code class="docutils literal notranslate"><span class="pre">astropy.units</span></code> temel birimlere dönüşüm için <code class="docutils literal notranslate"><span class="pre">decompose</span></code> metodunu kullanır.</p>
+<hr>
+<p>Örnek</p>
+<p><span class="math notranslate nohighlight">\(10 mil\)</span>’lik mesafeyi <span class="math notranslate nohighlight">\(25\)</span> dakikada kateden bir aracın hızını <span class="math notranslate nohighlight">\(mks\)</span> cinsinden hesaplayınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+
+<span class="n">yol</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">imperial</span><span class="o">.</span><span class="n">mile</span>
+<span class="n">sure</span> <span class="o">=</span> <span class="mi">25</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">minute</span>
+
+<span class="n">hiz</span> <span class="o">=</span> <span class="n">yol</span> <span class="o">/</span> <span class="n">sure</span>
+
+<span class="n">hiz</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[10.72896 \; \mathrm{\frac{m}{s}}\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="ozel-birimler">
+<h3>Özel birimler<a class="headerlink" href="#ozel-birimler" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">astropy.units</span></code> kullanarak yeni birimler tanımlayabilirsiniz.</p>
+<hr>
+<p>Örnek</p>
+<p>Birim zamanda, metre başına kilogram olarak bir birim tanımlayınız.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+<span class="n">birim</span> <span class="o">=</span> <span class="n">units</span><span class="o">.</span><span class="n">kilogram</span> <span class="o">/</span> <span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">second</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">meter</span><span class="p">)</span>
+
+<span class="n">deger</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">birim</span>
+<span class="n">deger</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[4 \; \mathrm{\frac{kg}{m\,s}}\]</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="astropy-constants-sabitler">
+<h2><code class="docutils literal notranslate"><span class="pre">astropy.constants</span></code> (sabitler)<a class="headerlink" href="#astropy-constants-sabitler" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">astropy.constants</span></code> astronomide işe yarayan bir takım sabitlerdir.</p>
+<p>İçinde ne var ne yok bir bakalım.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">constants</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">constants</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Constant&#39;, &#39;EMConstant&#39;, &#39;G&#39;, &#39;GM_earth&#39;, &#39;GM_jup&#39;, &#39;GM_sun&#39;, &#39;L_bol0&#39;, &#39;L_sun&#39;, &#39;M_earth&#39;, &#39;M_jup&#39;, &#39;M_sun&#39;, &#39;N_A&#39;, &#39;R&#39;, &#39;R_earth&#39;, &#39;R_jup&#39;, &#39;R_sun&#39;, &#39;Ryd&#39;, &#39;__builtins__&#39;, &#39;__cached__&#39;, &#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__path__&#39;, &#39;__spec__&#39;, &#39;a0&#39;, &#39;alpha&#39;, &#39;atm&#39;, &#39;au&#39;, &#39;b_wien&#39;, &#39;c&#39;, &#39;cgs&#39;, &#39;codata&#39;, &#39;codata2018&#39;, &#39;config&#39;, &#39;constant&#39;, &#39;e&#39;, &#39;eps0&#39;, &#39;g0&#39;, &#39;h&#39;, &#39;hbar&#39;, &#39;iau2015&#39;, &#39;iaudata&#39;, &#39;k_B&#39;, &#39;kpc&#39;, &#39;m_e&#39;, &#39;m_n&#39;, &#39;m_p&#39;, &#39;mu0&#39;, &#39;muB&#39;, &#39;pc&#39;, &#39;set_enabled_constants&#39;, &#39;si&#39;, &#39;sigma_T&#39;, &#39;sigma_sb&#39;, &#39;u&#39;, &#39;utils&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Sabitlerin sayısı daha azmış…</p>
+<p>Bir tanesine bakalım.</p>
+<hr>
+<p>Örnek</p>
+<p>Işık hızının değerini, birimini ve tanımını gösteriniz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">constants</span>
+
+
+<span class="nb">print</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">c</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">constants</span><span class="o">.</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>299792458.0
+m / s
+  Name   = Speed of light in vacuum
+  Value  = 299792458.0
+  Uncertainty  = 0.0
+  Unit  = m / s
+  Reference = CODATA 2018
+</pre></div>
+</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p><span class="math notranslate nohighlight">\(E = m c^2\)</span>’yi kullanarak, <span class="math notranslate nohighlight">\(1 gr\)</span> maddenin ne kadar enerji üretebildiğini, <span class="math notranslate nohighlight">\(erg\)</span> ninsinden gösteriniz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+<span class="n">kutle</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">kilogram</span>
+<span class="n">enerji</span> <span class="o">=</span> <span class="n">kutle</span> <span class="o">*</span> <span class="n">constants</span><span class="o">.</span><span class="n">c</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">enerji</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">erg</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[8.9875518 \times 10^{23} \; \mathrm{erg}\]</div>
+</div>
+</div>
+<hr>
+<p>Örnek</p>
+<p>Wien kayma yasasını kullanarak, <span class="math notranslate nohighlight">\(25{}^o K\)</span> sıcaklığındaki bir cismin maksimum dalgaboyunu, Angstrom cinsinden, hesaplayan fonksiyonu yazınız.</p>
+<p>Wien Kayma yasası</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda_{max} = \frac{b}{T}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(\lambda_{max}\)</span> maksimum dalgaboyu, <span class="math notranslate nohighlight">\(b\)</span> Wien kayma sabiti, <span class="math notranslate nohighlight">\(T\)</span> ise kelvin cinsinden sıcaklığı ifade eder.</p>
+</div>
+<p>şeklinde hsaplanır.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+
+<span class="k">def</span> <span class="nf">wien</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">constants</span><span class="o">.</span><span class="n">b_wien</span> <span class="o">/</span> <span class="n">T</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">wien</span><span class="p">(</span><span class="mi">25</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">K</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">angstrom</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1159108.782074069 Angstrom
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Yazdığımız fonksiyon, sıcaklık değerini Kelvin olarak bekler. Celsius veya Fahrenheit, cinsinden sıcaklık değeri verilirse, bu fonksiyon hata verir. Dolayısıyla, verilen sıcaklık değerinin türüne bakmaksızın, değeri Kelvin’e dönüştürmekte yarar var.</p>
+</div>
+<p>Sıcaklık dönüşümleri gibi, dönüşümlerde <code class="docutils literal notranslate"><span class="pre">Equivalencies</span></code> kullanma zorunluluğu vardır. Burada yine <code class="docutils literal notranslate"><span class="pre">to</span></code> metodu kullanılır ve dönüştütülmesi sitenen birim sağlanır. Fakat ek olarak <code class="docutils literal notranslate"><span class="pre">equivalencies</span></code> yani dönüşümü yapabilen nesne verilmelidir.</p>
+<hr>
+<p>Örnek</p>
+<p><span class="math notranslate nohighlight">\(25\)</span> Fahrenheit değerini Kelvine’e dönüştürünüz.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="mi">25</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">imperial</span><span class="o">.</span><span class="n">deg_F</span>
+<span class="n">t</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">K</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">UnitConversionError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_9468</span><span class="o">/</span><span class="mf">3749233363.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">t</span> <span class="o">=</span> <span class="mi">25</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">imperial</span><span class="o">.</span><span class="n">deg_F</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">t</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">K</span><span class="p">)</span>
+
+<span class="nn">~\anaconda3\envs\mshemuni.github.io\lib\site-packages\astropy\units\quantity.py</span> in <span class="ni">to</span><span class="nt">(self, unit, equivalencies, copy)</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span>             <span class="c1"># Avoid using to_value to ensure that we make a copy. We also</span>
+<span class="g g-Whitespace">    </span><span class="mi">704</span>             <span class="c1"># don&#39;t want to slow down this method (esp. the scalar case).</span>
+<span class="ne">--&gt; </span><span class="mi">705</span>             <span class="n">value</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_to_value</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="n">equivalencies</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">707</span>             <span class="c1"># to_value only copies if necessary</span>
+
+<span class="nn">~\anaconda3\envs\mshemuni.github.io\lib\site-packages\astropy\units\quantity.py</span> in <span class="ni">_to_value</span><span class="nt">(self, unit, equivalencies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">667</span>         <span class="k">if</span> <span class="n">equivalencies</span> <span class="o">==</span> <span class="p">[]:</span>
+<span class="g g-Whitespace">    </span><span class="mi">668</span>             <span class="n">equivalencies</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_equivalencies</span>
+<span class="ne">--&gt; </span><span class="mi">669</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">unit</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">670</span>                             <span class="n">equivalencies</span><span class="o">=</span><span class="n">equivalencies</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">671</span> 
+
+<span class="nn">~\anaconda3\envs\mshemuni.github.io\lib\site-packages\astropy\units\core.py</span> in <span class="ni">to</span><span class="nt">(self, other, value, equivalencies)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1131</span>             <span class="k">return</span> <span class="n">UNITY</span>
+<span class="g g-Whitespace">   </span><span class="mi">1132</span>         <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1133</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_converter</span><span class="p">(</span><span class="n">Unit</span><span class="p">(</span><span class="n">other</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1134</span>                                        <span class="n">equivalencies</span><span class="o">=</span><span class="n">equivalencies</span><span class="p">)(</span><span class="n">value</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1135</span> 
+
+<span class="nn">~\anaconda3\envs\mshemuni.github.io\lib\site-packages\astropy\units\core.py</span> in <span class="ni">_get_converter</span><span class="nt">(self, other, equivalencies)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1062</span>                             <span class="k">pass</span>
+<span class="g g-Whitespace">   </span><span class="mi">1063</span> 
+<span class="ne">-&gt; </span><span class="mi">1064</span>             <span class="k">raise</span> <span class="n">exc</span>
+<span class="g g-Whitespace">   </span><span class="mi">1065</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1066</span>     <span class="k">def</span> <span class="nf">_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+
+<span class="nn">~\anaconda3\envs\mshemuni.github.io\lib\site-packages\astropy\units\core.py</span> in <span class="ni">_get_converter</span><span class="nt">(self, other, equivalencies)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1047</span>         <span class="c1"># if that doesn&#39;t work, maybe we can do it with equivalencies?</span>
+<span class="g g-Whitespace">   </span><span class="mi">1048</span>         <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1049</span>             <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_apply_equivalencies</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1050</span>                 <span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_normalize_equivalencies</span><span class="p">(</span><span class="n">equivalencies</span><span class="p">))</span>
+<span class="g g-Whitespace">   </span><span class="mi">1051</span>         <span class="k">except</span> <span class="n">UnitsError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+
+<span class="nn">~\anaconda3\envs\mshemuni.github.io\lib\site-packages\astropy\units\core.py</span> in <span class="ni">_apply_equivalencies</span><span class="nt">(self, unit, other, equivalencies)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1023</span>         <span class="n">other_str</span> <span class="o">=</span> <span class="n">get_err_str</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1024</span> 
+<span class="ne">-&gt; </span><span class="mi">1025</span>         <span class="k">raise</span> <span class="n">UnitConversionError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1026</span>             <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">unit_str</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">other_str</span><span class="si">}</span><span class="s2"> are not convertible&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1027</span> 
+
+<span class="ne">UnitConversionError</span>: &#39;deg_F&#39; (temperature) and &#39;K&#39; (temperature) are not convertible
+</pre></div>
+</div>
+</div>
+</div>
+<p>Gördüğünüz gibi <span class="math notranslate nohighlight">\(deg_F\)</span>’den <span class="math notranslate nohighlight">\(K\)</span>’ye dönüşüm yapamadından yakındı.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="mi">25</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">imperial</span><span class="o">.</span><span class="n">deg_F</span>
+<span class="n">t</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">K</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">units</span><span class="o">.</span><span class="n">temperature</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[269.26111 \; \mathrm{K}\]</div>
+</div>
+</div>
+<p>Şimdi fonksiyonumuzu düzenleyelim:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">astropy</span> <span class="kn">import</span> <span class="n">units</span>
+
+
+<span class="k">def</span> <span class="nf">wien</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="n">t_k</span> <span class="o">=</span> <span class="n">T</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">K</span><span class="p">,</span> <span class="n">equivalencies</span><span class="o">=</span><span class="n">units</span><span class="o">.</span><span class="n">temperature</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">constants</span><span class="o">.</span><span class="n">b_wien</span> <span class="o">/</span> <span class="n">t_k</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">wien</span><span class="p">(</span><span class="mi">25</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">K</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">angstrom</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wien</span><span class="p">(</span><span class="mi">25</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">deg_C</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">angstrom</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">wien</span><span class="p">(</span><span class="mi">25</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">imperial</span><span class="o">.</span><span class="n">deg_F</span><span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">units</span><span class="o">.</span><span class="n">angstrom</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1159108.782074069 Angstrom
+97191.74761647401 Angstrom
+107619.40122832671 Angstrom
+</pre></div>
+</div>
+</div>
+</div>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/cfk.png"><img alt="Anaconda terminal" class="bg-primary mb-1 align-center" src="_images/cfk.png" style="width: 400px;" /></a>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="multithread.html" title="previous page">Çoklu işlem</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mohammad S.Niaei<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

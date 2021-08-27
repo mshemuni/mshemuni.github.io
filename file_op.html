@@ -49,6 +49,8 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Kurallar" href="rules.html" />
@@ -193,7 +195,12 @@
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="simple">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="list_comprehension.html">
+       List Comprehension
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
@@ -326,7 +333,7 @@
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="optimisation.html">
-   Optimizason
+   Optimizasyon
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -340,6 +347,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   Bilimsel programlama
+  </a>
  </li>
 </ul>
 
@@ -490,11 +502,11 @@
                 
   <div class="section" id="dosya-islemleri">
 <h1>Dosya işlemleri<a class="headerlink" href="#dosya-islemleri" title="Permalink to this headline">¶</a></h1>
-<p>Bir programcının çokça yapmak zorunda kalabileceği işlemlerden biride dosya işlemleridir.</p>
+<p>Bir programcının çokça yapmak zorunda kalabileceği işlemlerden biri de dosya işlemleridir.</p>
 <p>Dosya işlemlerinden kasıt ise, bir dosyayı okumak, yazmak veya güncellemektir.</p>
 <div class="section" id="dosya-turleri">
 <h2>Dosya türleri<a class="headerlink" href="#dosya-turleri" title="Permalink to this headline">¶</a></h2>
-<p>Öncelikle dosya türleri hakkında kouşalım.</p>
+<p>Öncelikle dosya türleri hakkında konuşalım.</p>
 <p>Temelde iki çeşit dosyadan bahsedebiliriz.</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ascii</span></code></p></li>
@@ -521,10 +533,10 @@
 <li><p>Yazma, <code class="docutils literal notranslate"><span class="pre">w</span></code> (write)</p></li>
 <li><p>Güncelleme, <code class="docutils literal notranslate"><span class="pre">a</span></code> (append)</p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">open</span></code> bir <code class="docutils literal notranslate"><span class="pre">TextOIWrapper</span></code> nesnesi oluşturur. Bu nesneyi kullanarak söz konusu dosyayı okyabilir, güncelleyebilir veya dosyaya yazabilirsiniz.</p>
+<p><code class="docutils literal notranslate"><span class="pre">open</span></code> bir <code class="docutils literal notranslate"><span class="pre">TextOIWrapper</span></code> nesnesi oluşturur. Bu nesneyi kullanarak söz konusu dosyayı okuyabilir, güncelleyebilir veya dosyaya yazabilirsiniz.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Bir dosya okunurken dosya açma modunu ifade etmek gerek. Edilmezse, dosya varsaıylan olarak okuma (<code class="docutils literal notranslate"><span class="pre">r</span></code>) modunda açılır.</p>
+<p>Bir dosya okunurken dosya açma modunu ifade etmek gerek. Edilmezse, dosya varsayılan olarak okuma (<code class="docutils literal notranslate"><span class="pre">r</span></code>) modunda açılır.</p>
 </div>
 <div class="section" id="dosya-okuma">
 <h3>Dosya okuma<a class="headerlink" href="#dosya-okuma" title="Permalink to this headline">¶</a></h3>
@@ -608,7 +620,7 @@ Proin interdum leo ut tortor dictum suscipit. Proin sollicitudin enim sollicitud
 <p class="admonition-title">Warning</p>
 <p><code class="docutils literal notranslate"><span class="pre">open</span></code>’dan sonra <code class="docutils literal notranslate"><span class="pre">close</span></code> kullanılmak zorunda. Dosya açıldıktan sonra kapanması şarttır.</p>
 </div>
-<p>Açılan dosyanın her zaman kapanacağından emin olamayabiliriz. Örneğin dosya kapanmadan önce kodumuz hata verirse, dosya kapnma işlemi gerçekleşmeden programımız duracaktır.</p>
+<p>Açılan dosyanın her zaman kapanacağından emin olamayabiliriz. Örneğin, dosya kapanmadan önce kodumuz hata verirse, dosya kapanma işlemi gerçekleşmeden programımız duracaktır.</p>
 <hr>
 <p>Örnek</p>
 <div class="cell docutils container">
@@ -634,7 +646,7 @@ Proin interdum leo ut tortor dictum suscipit. Proin sollicitudin enim sollicitud
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_19056</span><span class="o">/</span><span class="mf">2632306783.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">~</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Temp</span><span class="o">/</span><span class="n">ipykernel_16036</span><span class="o">/</span><span class="mf">2632306783.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="n">satir</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> 
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">hatali_satir</span>
@@ -793,7 +805,7 @@ Proin interdum leo ut tortor dictum suscipit. Proin sollicitudin enim sollicitud
 </div>
 <hr>
 <p>Örnek</p>
-<p>daha önce yazdığımız <code class="docutils literal notranslate"><span class="pre">yazdigim_dsya.txt</span></code> isimli dosyaya, 20 satır <code class="docutils literal notranslate"><span class="pre">&quot;Yücel</span> <span class="pre">işe</span> <span class="pre">git&quot;</span></code> metni ekleyiniz.</p>
+<p>daha önce yazdığımız <code class="docutils literal notranslate"><span class="pre">yazdigim_dsya.txt</span></code> isimli dosyaya, <span class="math notranslate nohighlight">\(20\)</span> satır <code class="docutils literal notranslate"><span class="pre">&quot;Yücel</span> <span class="pre">işe</span> <span class="pre">git&quot;</span></code> metni ekleyiniz.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mtn</span> <span class="o">=</span> <span class="s2">&quot;Yücel işe git&quot;</span>
